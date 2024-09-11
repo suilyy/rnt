@@ -1,6 +1,7 @@
-/oh_modules
+/node_modules
 /.preview
 /build
 /.cxx
 package-lock.json
-!build-profile.json5
+/oh_modules
+/assets

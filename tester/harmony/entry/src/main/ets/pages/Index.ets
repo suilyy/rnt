@@ -11,15 +11,28 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
+import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 
-const arkTsComponentNames: Array<string> = ["SampleView", "GeneratedSampleView", "PropsDisplayer"];
+const arkTsComponentNames: Array<string> = [
+  "SampleView",
+  "GeneratedSampleView",
+  "PropsDisplayer",
+  SVG_VIEW_TYPE_NAME
+];
+
 @Builder
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
-  Stack(){
+  Stack() {
+    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
+      SVGView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
   }
-  .position({x:0, y: 0})
+  .position({ x: 0, y: 0 })
 
 }
 
@@ -46,7 +59,6 @@ struct Index {
   @StorageLink('RNOHCoreContext') private rnohCoreContext: RNOHCoreContext | undefined = undefined
   @State shouldShow: boolean = false
   private logger!: RNOHLogger
-
 
   aboutToAppear() {
     this.logger = this.rnohCoreContext!.logger.clone("Index")

@@ -1,0 +1,10 @@
+**/.vscode/
+**/node_modules/
+**/oh_modules/
+*.code-workspace
+.DS_Store
+*.drawio.*
+build
+tester/harmony/entry/src/main/cpp/generated/
+tester/harmony/react_native_openharmony/
+tester/harmony/entry/src/main/resources/rawfile/assets/assets/
