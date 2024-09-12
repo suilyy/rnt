@@ -2,8 +2,21 @@ import React from 'react';
 import RNTesterListFilters from './RNTesterListFilters';
 import { StyleSheet, TextInput, View, ScrollView, Image, Platform } from 'react-native';
 import { RNTesterThemeContext } from './RNTesterTheme';
+import type { CommonSectionType } from '../types/RNTesterTypes';
 
-class RNTesterExampleFilter extends React.Component {
+type Props = {
+  filter: Function;
+  render: Function;
+  disableSearch?: boolean;
+  testID?: string;
+  hideFilterPills?: boolean;
+  page: 'examples_page' | 'components_page' | 'bookmarks_page';
+  sections: CommonSectionType;
+};
+
+type State = { filter: string; category: string };
+
+class RNTesterExampleFilter extends React.Component<Props, State> {
   state = { filter: '', category: '' };
 
   render() {

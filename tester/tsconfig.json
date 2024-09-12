@@ -8,6 +8,7 @@
       ],
     },
   },
+  "include": ["./rn-tester/types/rn-tester.d.ts"],
   "exclude": [
     "harmony"
   ]

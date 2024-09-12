@@ -123,7 +123,7 @@ function Header(props: { description: string; theme: RNTesterTheme; noBottomPadd
 
 const styles = StyleSheet.create({
   headerContainer: {
-    paddingHorizontal: Platform.OS === 'android' ? 15 : 6,
+    paddingHorizontal: 6,
     paddingVertical: 6,
     alignItems: 'center',
   },
@@ -138,10 +138,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   separator: {
-    borderBottomWidth: Platform.select({
-      ios: StyleSheet.hairlineWidth,
-      android: 0,
-    }),
+    borderBottomWidth: StyleSheet.hairlineWidth,
     marginHorizontal: 15,
   },
 });

@@ -108,22 +108,27 @@ const RNTesterApp = () => {
     activeModuleExampleKey != null
       ? activeModule?.examples.find(e => e.name === activeModuleExampleKey)
       : null;
-  const title =
-    activeModuleTitle != null
-      ? activeModuleTitle
-      : screen === Screens.COMPONENTS
-      ? 'Components'
-      : screen === Screens.APIS
-      ? 'APIs'
-      : 'Bookmarks';
 
+  const screenMappings = {
+    [Screens.COMPONENTS]: {
+      title: 'Components',
+      examples: examplesList.components,
+    },
+    [Screens.APIS]: {
+      title: 'APIs',
+      examples: examplesList.apis,
+    },
+    [Screens.BOOKMARKS]: {
+      title: 'Bookmarks',
+      examples: examplesList.bookmarks,
+    },
+  };
+
+  const title = activeModuleTitle || (screen ? screenMappings[screen]?.title : 'Bookmarks');
   const activeExampleList =
-    screen === Screens.COMPONENTS
-      ? examplesList.components
-      : screen === Screens.APIS
-      ? examplesList.apis
-      : examplesList.bookmarks;
+    (screen ? screenMappings[screen]?.examples : examplesList.bookmarks) || examplesList.bookmarks;
 
+  const showEmptyBookmark = screen === Screens.BOOKMARKS && examplesList.bookmarks.length === 0;
   return (
     <RNTesterThemeContext.Provider value={theme}>
       <RNTTitleBar
@@ -142,7 +147,7 @@ const RNTesterApp = () => {
             example={activeModuleExample}
             onExampleCardPress={handleModuleExampleCardPress}
           />
-        ) : screen === Screens.BOOKMARKS && examplesList.bookmarks.length === 0 ? (
+        ) : showEmptyBookmark ? (
           <RNTesterEmptyBookmarksState />
         ) : (
           <RNTesterModuleList

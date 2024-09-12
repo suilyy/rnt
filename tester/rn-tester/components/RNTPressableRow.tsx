@@ -11,10 +11,30 @@
 import * as React from 'react';
 import { RNTesterThemeContext } from './RNTesterTheme';
 import RNTesterComponentTitle from './RNTesterComponentTitle';
+import {
+  Platform,
+  StyleSheet,
+  Pressable,
+  Text,
+  View,
+  ViewStyle,
+  StyleProp,
+  PressableStateCallbackType,
+} from 'react-native';
 
-import { Platform, StyleSheet, Pressable, Text, View } from 'react-native';
-
-type Props = any;
+type Props = {
+  accessibilityLabel?: string;
+  testID?: string;
+  onPressIn?: () => void;
+  onPressOut?: () => void;
+  rightAddOn?: React.ReactNode;
+  bottomAddOn?: React.ReactNode;
+  children?: React.ReactNode;
+  title: string;
+  description?: string;
+  onPress: () => void;
+  style?: StyleProp<ViewStyle> | ((state: PressableStateCallbackType) => StyleProp<ViewStyle>);
+};
 
 export default function RNTPressableRow({
   onPressIn,
@@ -26,7 +46,7 @@ export default function RNTPressableRow({
   onPress,
   style,
   accessibilityLabel,
-}: Props): any {
+}: Props): React.ReactNode {
   const theme = React.useContext(RNTesterThemeContext);
   const label = accessibilityLabel ?? `${title} ${description ?? ''}`;
   return (
@@ -37,7 +57,7 @@ export default function RNTPressableRow({
       accessibilityLabel={label}
       style={({ pressed }) => [
         styles.row,
-        typeof style === 'function' ? style(pressed) : style,
+        typeof style === 'function' ? style({ pressed }) : style,
         pressed
           ? { backgroundColor: theme.SecondarySystemFillColor }
           : { backgroundColor: theme.SecondaryGroupedBackgroundColor },

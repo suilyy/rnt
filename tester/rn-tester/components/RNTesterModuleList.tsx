@@ -11,9 +11,8 @@ import {
   View,
 } from 'react-native';
 import { RNTesterThemeContext } from './RNTesterTheme';
+import type { CommonSectionType } from '../types/RNTesterTypes';
 
-/* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
- * LTI update could not be added via codemod */
 const ExampleModuleRow = ({
   onShowUnderlay,
   onHideUnderlay,
@@ -34,7 +33,14 @@ const ExampleModuleRow = ({
           key: item.key,
         })
       }>
-      <Image style={styles.imageStyle} />
+      <Image
+        style={styles.imageStyle}
+        source={
+          item.isBookmarked
+            ? require('../assets/bookmark-outline-blue.png')
+            : require('../assets/bookmark-outline-gray.png')
+        }
+      />
     </TouchableHighlight>
   );
   return (
@@ -99,50 +105,56 @@ const renderSectionHeader = ({ section }) => (
   </RNTesterThemeContext.Consumer>
 );
 
-const RNTesterModuleList = React.memo(({ sections, toggleBookmark, handleModuleCardPress }) => {
-  const filter = ({ example, filterRegex, category }) =>
-    filterRegex.test(example.module.title) && (!category || example.category === category);
+const RNTesterModuleList = React.memo(
+  ({
+    sections,
+    toggleBookmark,
+    handleModuleCardPress,
+  }: {
+    sections: CommonSectionType;
+    toggleBookmark: ({ exampleType, key }: any) => void;
+    handleModuleCardPress: ({ exampleType, key, title }: any) => void;
+  }) => {
+    const filter = ({ example, filterRegex, category }) =>
+      filterRegex.test(example.module.title) && (!category || example.category === category);
 
-  /* $FlowFixMe[missing-local-annot] The type annotation(s) required by
-   * Flow's LTI update could not be added via codemod */
-  const renderListItem = ({ item, section, separators }) => {
+    const renderListItem = ({ item, section, separators }) => {
+      return (
+        <ExampleModuleRow
+          item={item}
+          onShowUnderlay={separators.highlight}
+          onHideUnderlay={separators.unhighlight}
+          toggleBookmark={toggleBookmark}
+          handlePress={handleModuleCardPress}
+        />
+      );
+    };
+
     return (
-      <ExampleModuleRow
-        item={item}
-        section={section}
-        onShowUnderlay={separators.highlight}
-        onHideUnderlay={separators.unhighlight}
-        toggleBookmark={toggleBookmark}
-        handlePress={handleModuleCardPress}
-      />
+      <View style={styles.listContainer}>
+        <RNTesterExampleFilter
+          testID="explorer_search"
+          page="components_page"
+          sections={sections}
+          filter={filter}
+          hideFilterPills={true}
+          render={({ filteredSections }) => (
+            <SectionList
+              sections={filteredSections}
+              extraData={filteredSections}
+              renderItem={renderListItem}
+              keyboardShouldPersistTaps="handled"
+              automaticallyAdjustContentInsets={false}
+              keyboardDismissMode="on-drag"
+              renderSectionHeader={renderSectionHeader}
+              ListFooterComponent={() => <View style={{ height: 80 }} />}
+            />
+          )}
+        />
+      </View>
     );
-  };
-
-  return (
-    <View style={styles.listContainer}>
-      <RNTesterExampleFilter
-        testID="explorer_search"
-        page="components_page"
-        sections={sections}
-        filter={filter}
-        hideFilterPills={true}
-        render={({ filteredSections }) => (
-          <SectionList
-            sections={filteredSections}
-            extraData={filteredSections}
-            renderItem={renderListItem}
-            keyboardShouldPersistTaps="handled"
-            automaticallyAdjustContentInsets={false}
-            keyboardDismissMode="on-drag"
-            renderSectionHeader={renderSectionHeader}
-            // eslint-disable-next-line react/no-unstable-nested-components
-            ListFooterComponent={() => <View style={{ height: 80 }} />}
-          />
-        )}
-      />
-    </View>
-  );
-});
+  },
+);
 
 const styles = StyleSheet.create({
   listContainer: {

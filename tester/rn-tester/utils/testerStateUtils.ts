@@ -5,8 +5,13 @@ import type {
   RNTesterNavigationState,
   SectionData,
 } from '../types/RNTesterTypes';
-
 import RNTesterList from './RNTesterList';
+
+export enum ScreensEnum {
+  COMPONENTS = 'components',
+  APIS = 'apis',
+  BOOKMARKS = 'bookmarks',
+}
 
 export const Screens = {
   COMPONENTS: 'components',
@@ -24,9 +29,7 @@ export const initialNavigationState: RNTesterNavigationState = {
 };
 
 const filterEmptySections = (examplesList: ExamplesList): any => {
-  const filteredSections: {
-    ['apis' | 'bookmarks' | 'components']: Array<SectionData<RNTesterModuleInfo>>;
-  } = {};
+  const filteredSections: Record<ScreensEnum, Array<SectionData<RNTesterModuleInfo>>> | {} = {};
   const sectionKeys = Object.keys(examplesList);
 
   sectionKeys.forEach(key => {
@@ -77,7 +80,7 @@ export const getExamplesListWithBookmarksAndRecentlyUsed = ({
   const bookmarkedAPIs = apis.filter(apiExample => apiExample.isBookmarked);
 
   const examplesList: ExamplesList = {
-    [Screens.COMPONENTS]: [
+    [ScreensEnum.COMPONENTS]: [
       {
         key: 'RECENT_COMPONENTS',
         data: recentlyUsedComponents,
@@ -89,7 +92,7 @@ export const getExamplesListWithBookmarksAndRecentlyUsed = ({
         title: 'Components',
       },
     ],
-    [Screens.APIS]: [
+    [ScreensEnum.APIS]: [
       {
         key: 'RECENT_APIS',
         data: recentlyUsedAPIs,
@@ -101,7 +104,7 @@ export const getExamplesListWithBookmarksAndRecentlyUsed = ({
         title: 'APIs',
       },
     ],
-    [Screens.BOOKMARKS]: [
+    [ScreensEnum.BOOKMARKS]: [
       {
         key: 'COMPONENTS',
         data: bookmarkedComponents,

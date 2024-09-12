@@ -2,9 +2,13 @@ import * as React from 'react';
 import { RNTesterThemeContext } from './RNTesterTheme';
 import { StyleSheet, Text, View } from 'react-native';
 
-type Props = any;
+type Props = {
+  description?: string;
+  title?: string;
+  children?: React.ReactNode;
+};
 
-const RNTesterBlock = ({ description, title, children }: Props): React.Node => {
+const RNTesterBlock = ({ description, title, children }: Props): React.ReactNode => {
   const theme = React.useContext(RNTesterThemeContext);
   return (
     <View

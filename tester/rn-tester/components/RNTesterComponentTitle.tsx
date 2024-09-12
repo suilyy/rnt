@@ -2,7 +2,9 @@ import * as React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { RNTesterThemeContext } from './RNTesterTheme';
 
-type Props = any;
+type Props = {
+  children: string;
+};
 
 class RNTesterComponentTitle extends React.Component<Props> {
   constructor(props: Props) {

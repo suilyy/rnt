@@ -8,7 +8,7 @@ type Props = {
   onFilterButtonPress: (filter: string) => any; //optional only for testing
 };
 
-class RNTesterListFilters extends React.Component<Props> {
+class RNTesterListFilters extends React.Component<Props, { currentFilter: string }> {
   constructor(props: Props) {
     super(props);
     this.state = {

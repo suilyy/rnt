@@ -43,7 +43,7 @@ export type RNTesterTheme = {
   BorderColor: ColorValue;
 };
 
-export const RNTesterLightTheme = {
+export const RNTesterLightTheme: RNTesterTheme = {
   LabelColor: '#000000ff',
   SecondaryLabelColor: '#3c3c4399',
   TertiaryLabelColor: '#3c3c434c',
@@ -75,7 +75,7 @@ export const RNTesterLightTheme = {
   BorderColor: '#005dffff',
 };
 
-export const RNTesterDarkTheme = {
+export const RNTesterDarkTheme: RNTesterTheme = {
   LabelColor: '#ffffffff',
   SecondaryLabelColor: '#ebebf599',
   TertiaryLabelColor: '#ebebf54c',
@@ -108,6 +108,4 @@ export const RNTesterDarkTheme = {
 };
 
 export const themes = { light: RNTesterLightTheme, dark: RNTesterDarkTheme };
-export const RNTesterThemeContext: React.Context<RNTesterTheme> = React.createContext(
-  'light' === 'dark' ? themes.dark : themes.light,
-);
+export const RNTesterThemeContext: React.Context<RNTesterTheme> = React.createContext(themes.light);

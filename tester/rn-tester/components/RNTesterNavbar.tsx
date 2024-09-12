@@ -94,7 +94,11 @@ const APITab = ({
   />
 );
 
-type Props = any;
+type Props = {
+  handleNavBarPress: (data: { screen: string }) => void;
+  screen: string;
+  isExamplePageOpen: boolean;
+};
 
 const RNTesterNavbar = ({ handleNavBarPress, screen, isExamplePageOpen }: Props) => {
   const theme = React.useContext(RNTesterThemeContext);
