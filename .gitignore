@@ -8,3 +8,9 @@ build
 tester/harmony/entry/src/main/cpp/generated/
 tester/harmony/react_native_openharmony/
 tester/harmony/entry/src/main/resources/rawfile/assets/assets/
+2024-phase1-tester/harmony/dependencies/
+2024-phase2-tester/harmony/dependencies/
+2024-phase3-tester/harmony/dependencies/
+2024-phase4-tester/harmony/dependencies/
+2024-phase5-tester/harmony/dependencies/
+2024-phase6-tester/harmony/dependencies/
