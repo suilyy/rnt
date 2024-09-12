@@ -60,17 +60,10 @@ const ExampleModuleRow = ({
           <View style={styles.platformLabelStyle}>
             <Text
               style={{
-                color: onIos ? '#787878' : theme.SeparatorColor,
-                fontWeight: onIos ? '500' : '300',
+                color: '#787878',
+                fontWeight: '500',
               }}>
-              iOS
-            </Text>
-            <Text
-              style={{
-                color: onAndroid ? '#787878' : theme.SeparatorColor,
-                fontWeight: onAndroid ? '500' : '300',
-              }}>
-              Android
+              Harmony
             </Text>
           </View>
         </View>
@@ -198,7 +191,6 @@ const styles = StyleSheet.create({
   },
   platformLabelStyle: {
     flexDirection: 'row',
-    width: 100,
     justifyContent: 'space-between',
   },
 });

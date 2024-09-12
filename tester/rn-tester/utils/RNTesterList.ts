@@ -9,12 +9,12 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeButton',
     category: 'Basic',
-    module: require('../examples/react-native-button/index'),
+    module: require('../examples/react-native-button/index').default,
   },
   {
     key: 'ReactNativeSVG',
     category: 'Basic',
-    module: require('../examples/react-native-svg/App'),
+    module: require('../examples/react-native-svg/App').default,
   },
 ];
 

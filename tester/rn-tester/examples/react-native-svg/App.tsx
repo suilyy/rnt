@@ -17,7 +17,7 @@ comList.sort((a, b) => {
 
 function App() {
   return (
-    <View style={{ backgroundColor: 'black' }}>
+    <View style={{ backgroundColor: 'black', flex: 1 }}>
       <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <NavigationContainer>
@@ -37,18 +37,20 @@ function App() {
   );
 }
 
-export const displayName = 'Svg';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'Svg';
-export const documentationURL = 'https://reactnative.dev/docs/button';
-export const description = 'React Native svg';
 
-export const examples = [
-  {
-    title: 'React Native svg',
-    render: function (): any {
-      return <App />;
+export default {
+  displayName: 'react-native-svg',
+  framework: 'React',
+  category: 'UI',
+  title: 'react-native-svg',
+  documentationURL: 'https://github.com/software-mansion/react-native-svg',
+  description: 'React Native svg',
+  examples: [
+    {
+      title: 'React Native svg',
+      render: function (): any {
+        return <App />;
+      },
     },
-  },
-];
+  ]
+}

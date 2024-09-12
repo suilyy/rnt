@@ -59,6 +59,7 @@ npm install
   - 每个用例文件需按照如下结构导出
 
     ```tsx
+    // 使用 export 导出
     export const displayName = "ButtonExample";
     export const framework = "React";
     export const category = "UI";
@@ -74,6 +75,44 @@ npm install
         },
       },
     ];
+
+    // 或者使用 export default 导出
+    export default {
+      displayName: "ButtonExample",
+      framework: "React",
+      category: "UI",
+      title: "react-native-button",
+      documentationURL: "https://reactnative.dev/docs/button",
+      description: "React Native button",
+      examples: [
+        {
+          title: "react-native-button",
+          render: function (): any {
+            return <ReactNativeButtonTest />;
+          },
+        },
+      ],
+    };
     ```
 
 - 在 `utils/RNTesterList.ts` 的 Components 中添加各自的用例用于导出
+  ```js
+  const Components: Array<RNTesterModuleInfo> = [
+    {
+      key: "ButtonExample",
+      category: "UI",
+      module: require("../examples/Button/ButtonExample"),
+    },
+    {
+      key: "ReactNativeButton",
+      category: "Basic",
+      // 若使用 export default 导出，这里导入需要加 default
+      module: require("../examples/react-native-button/index").default,
+    },
+    {
+      key: "ReactNativeSVG",
+      category: "Basic",
+      module: require("../examples/react-native-svg/App").default,
+    },
+  ];
+  ```

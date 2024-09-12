@@ -5,7 +5,7 @@ import { Tester, TestCase, TestSuite } from '@rnoh/testerino';
 
 const ReactNativeButtonTest = () => {
   return (
-    <Tester>
+    <Tester style={{flex: 1}}>
       <ScrollView>
         <TestSuite name="Button">
           <TestCase itShould="render a button that should be disabled">
@@ -343,21 +343,22 @@ function ButtonwithchildGroupStyle() {
   );
 }
 
-export const displayName = 'ButtonExample';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'react-native-button';
-export const documentationURL = 'https://reactnative.dev/docs/button';
-export const description = 'React Native button';
-
-export const examples = [
-  {
-    title: 'react-native-button',
-    render: function (): any {
-      return <ReactNativeButtonTest />;
+export default {
+  displayName: 'ButtonExample',
+  framework: 'React',
+  category: 'UI',
+  title: 'react-native-button',
+  documentationURL: 'https://reactnative.dev/docs/button',
+  description: 'React Native button',
+  examples: [
+    {
+      title: 'react-native-button',
+      render: function (): any {
+        return <ReactNativeButtonTest />;
+      },
     },
-  },
-];
+  ]
+}
 
 const styles = StyleSheet.create({
   buttonContainer: {
