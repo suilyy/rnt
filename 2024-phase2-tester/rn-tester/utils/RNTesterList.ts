@@ -16,6 +16,21 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-svg/App'),
   },
+  {
+    key: 'ReactNativeEzswiper',
+    category: 'Basic',
+    module: require('../examples/react-native-ezswiper/App'),
+  },
+  {
+    key: 'ReactNativeDocumentPicker',
+    category: 'Basic',
+    module: require('../examples/react-native-document-picker/documentPicker'),
+  },
+  {
+    key: 'ReactNativeImageGallery',
+    category: 'Basic',
+    module: require('../examples/react-native-image-gallery/DemoGallery'),
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
