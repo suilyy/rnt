@@ -91,6 +91,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-json-tree/App'),
   },
+  {
+    key: 'ReactNativeReconnectingWebSocketDemo',
+    category: 'Basic',
+    module: require('../examples/react-native-reconnecting-websocket/Test')
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
