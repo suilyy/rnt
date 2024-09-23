@@ -31,6 +31,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-material-menu/ReactNativeMaterialMenuDemo'),
   },
+  {
+    key: 'SensitiveInfo',
+    category: 'Basic',
+    module: require('../examples/react-native-sensitive-info/SensitiveInfoDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
