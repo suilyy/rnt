@@ -51,6 +51,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-contacts/ContactsExample').default,
   },
+  {
+    key: 'ReactNativeScrollableTabview',
+    category: 'Basic',
+    module: require('../examples/react-native-scrollable-tabview/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
