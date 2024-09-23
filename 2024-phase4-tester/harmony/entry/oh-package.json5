@@ -6,7 +6,19 @@
   "version": "1.0.0",
   "dependencies": {
     "@rnoh/react-native-openharmony": "file:../react_native_openharmony",
-    "@react-native-oh-tpl/svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har"
-
+    "@react-native-oh-tpl/slider": "file:../../node_modules/@react-native-oh-tpl/slider/harmony/slider.har",
+    "@react-native-oh-tpl/blur": "file:../../node_modules/@react-native-oh-tpl/blur/harmony/blur.har",
+    "@react-native-oh-tpl/react-native-fs": "file:../../node_modules/@react-native-oh-tpl/react-native-fs/harmony/fs.har",
+    "@react-native-oh-tpl/react-native-view-shot": "file:../../node_modules/@react-native-oh-tpl/react-native-view-shot/harmony/view_shot.har",
+    "@react-native-oh-tpl/geolocation": "file:../../node_modules/@react-native-oh-tpl/geolocation/harmony/geolocation.har",
+    "@react-native-oh-tpl/react-native-image-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-picker/harmony/image_picker.har",
+    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
+    "@react-native-oh-tpl/async-storage": "file:../../node_modules/@react-native-oh-tpl/async-storage/harmony/async_storage.har",
+    "@react-native-oh-tpl/cookies": "file:../../node_modules/@react-native-oh-tpl/cookies/harmony/rn_cookies.har",
+    "@react-native-oh-tpl/toolbar-android": "file:../../node_modules/@react-native-oh-tpl/toolbar-android/harmony/toolbar_android.har",
+    "@react-native-oh-tpl/react-native-webview": "file:../../node_modules/@react-native-oh-tpl/react-native-webview/harmony/rn_webview.har",
+    "@react-native-oh-tpl/react-native-permissions": "file:../../node_modules/@react-native-oh-tpl/react-native-permissions/harmony/permissions.har",
+    "@react-native-oh-tpl/checkbox": "file:../../node_modules/@react-native-oh-tpl/checkbox/harmony/checkbox.har",
+    "@react-native-oh-tpl/progress-bar-android": "file:../../node_modules/@react-native-oh-tpl/progress-bar-android/harmony/progress_bar_android.har"
   }
 }

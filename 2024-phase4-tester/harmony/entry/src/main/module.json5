@@ -11,7 +11,49 @@
     "installationFree": false,
     "pages": "$profile:main_pages",
     "requestPermissions": [
-      {"name":  "ohos.permission.INTERNET"}
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": "$string:Access_location",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:Access_location",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name" : "ohos.permission.PERMISSION1",
+        "reason": "$string:reason",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
+      },
+      {
+        "name" : "ohos.permission.PERMISSION2",
+        "reason": "$string:reason",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"always"
+        }
+      }
     ],
     "abilities": [
       {

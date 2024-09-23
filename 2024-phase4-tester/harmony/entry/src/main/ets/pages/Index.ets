@@ -11,22 +11,65 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
+import { ProgressBarAndroid, PROGRESS_BAR_TYPE } from "@react-native-oh-tpl/progress-bar-android"
+import { BlurView, BLUR_TYPE } from "@react-native-oh-tpl/blur"
+import { RNCSlider, SLIDER_TYPE } from "@react-native-oh-tpl/slider"
+import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview"
+import {
+  RNCToolbarAndroid,
+  RNC_TOOLBAR_ANDROID_TYPE
+} from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid'
+import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-oh-tpl/checkbox"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME
+  PROGRESS_BAR_TYPE,
+  RNC_TOOLBAR_ANDROID_TYPE,
+  BLUR_TYPE,
+  SLIDER_TYPE,
+  WEB_VIEW,
+  CHECKBOX_TYPE
 ];
 
 @Builder
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
-      SVGView({
+    if (ctx.componentName === BLUR_TYPE) {
+      BlurView({
+        ctx: ctx.rnohContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === CHECKBOX_TYPE) {
+      RNCCheckbox({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === RNC_TOOLBAR_ANDROID_TYPE) {
+      RNCToolbarAndroid({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === WEB_VIEW) {
+      WebView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === SLIDER_TYPE) {
+      RNCSlider({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === PROGRESS_BAR_TYPE) {
+      ProgressBarAndroid({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })

@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "Access_location",
+      "value": "access location"
+    },
+    {
+      "name": "reason",
+      "value": "允许应用使用相机。"
     }
   ]
 }
