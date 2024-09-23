@@ -21,6 +21,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-fast-image/FastImageDemo'),
   },
+  {
+    key: 'ReactNativeMaterialMenu',
+    category: 'Basic',
+    module: require('../examples/react-native-material-menu/ReactNativeMaterialMenuDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
