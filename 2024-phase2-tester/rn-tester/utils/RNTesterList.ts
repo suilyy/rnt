@@ -36,6 +36,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-linear-gradient-text/index').default,
   },
+  {
+    key: 'ReactNativeBetterBanner',
+    category: 'Basic',
+    module: require('../examples/react-native-better-banner/App').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
