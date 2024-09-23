@@ -56,6 +56,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-scrollable-tabview/App'),
   },
+  {
+    key: 'ReactNativeNativeWaterfallFlow',
+    category: 'Basic',
+    module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
