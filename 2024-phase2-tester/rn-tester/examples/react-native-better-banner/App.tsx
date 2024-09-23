@@ -263,7 +263,7 @@ export const displayName = 'App';
 export const framework = 'React';
 export const category = 'UI';
 export const title = 'react-native-better-banner';
-export const documentationURL = 'https://reactnative.dev/docs/button';
+export const documentationURL = 'https://github.com/tmxiong/better-banner';
 export const description = 'React Native Better Banner';
 
 export const examples = [

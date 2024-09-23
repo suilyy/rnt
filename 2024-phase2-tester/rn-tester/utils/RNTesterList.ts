@@ -39,7 +39,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeBetterBanner',
     category: 'Basic',
-    module: require('../examples/react-native-better-banner/App').default,
+    module: require('../examples/react-native-better-banner/App'),
   },
   {
     key: 'EasyToast',
