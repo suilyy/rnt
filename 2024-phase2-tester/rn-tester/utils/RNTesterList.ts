@@ -66,6 +66,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-marquee-ab/TestPage'),
   },
+  {
+    key: 'ReactNativeHttpBridge',
+    category: 'Basic',
+    module: require('../examples/react-native-http-bridge/index'),
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
