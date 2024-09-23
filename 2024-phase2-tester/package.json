@@ -21,7 +21,8 @@
     "react-native-button": "^3.1.0",
     "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.28.tgz",
     "react-native-qrcode-svg": "^6.2.0",
-    "react-native-linear-gradient-text": "^1.2.10"
+    "react-native-linear-gradient-text": "^1.2.10",
+     "react-native-easy-toast":"2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
