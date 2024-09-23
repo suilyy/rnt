@@ -76,6 +76,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-url-polyfill/index'),
   },
+  {
+    key: 'ConsoleTest',
+    category: 'Basic',
+    module: require('../examples/react-native-vconsole/VConsoleTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
