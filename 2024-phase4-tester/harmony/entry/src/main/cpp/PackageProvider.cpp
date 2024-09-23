@@ -10,8 +10,9 @@
 #include "BlurPackage.h"
 #include "PermissionsPackage.h"
 #include "ToolbarAndroidPackage.h"
- #include "CheckboxPackage.h"
+#include "CheckboxPackage.h"
 #include "WebViewPackage.h"
+#include "FsPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -28,7 +29,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<CookiesPackage>(ctx),
         std::make_shared<ToolbarAndroidPackage>(ctx),
         std::make_shared<CheckboxPackage>(ctx),
-        std::make_shared<WebViewPackage>(ctx)
-
+        std::make_shared<WebViewPackage>(ctx),
+        std::make_shared<FsPackage>(ctx),
     };
 }

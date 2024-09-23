@@ -10,7 +10,7 @@ import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
-  return [new SvgPackage(ctx), new ImagePickerViewPackage(ctx), new GeoLocationPackage(ctx),
-    new AsyncStoragePackage(ctx), new ViewShotPackage(ctx), new FsPackage(ctx), new CookiesPackage(ctx),
+  return [new SvgPackage(ctx), new ImagePickerViewPackage(ctx), new GeoLocationPackage(ctx), new FsPackage(ctx),
+    new ViewShotPackage(ctx), new CookiesPackage(ctx), new AsyncStoragePackage(ctx),
     new PermissionsPackage(ctx), new WebViewPackage(ctx)];
 }

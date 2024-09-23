@@ -17,11 +17,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/rn-placeholder/Index'),
   },
-  // {
-  //   key: 'reactNativeQRCodeSVG',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-qrcode-svg/Index'),
-  // },
+  {
+    key: 'reactNativeQRCodeSVG',
+    category: 'Basic',
+    module: require('../examples/react-native-qrcode-svg/Index'),
+  },
    {
     key: 'react-native-section-list-get-item-layout',
     category: 'Basic',
@@ -47,26 +47,27 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-community-geolocation/Index'),
   },
-  // {
-  //   key: 'async-storage',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-async-storage-async-storage/Index'),
-  // },
-  // {
-  //   key: 'react-native-view-shot',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-view-shot/Index'),
-  // },
+
   {
     key: 'react-native-community-blur',
     category: 'UI',
     module: require('../examples/react-native-community-blur/Index'),
   },
-  // {
-  //   key: 'react-native-fs',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-fs/Index'),
-  // },
+  {
+    key: 'async-storage',
+    category: 'Basic',
+    module: require('../examples/react-native-async-storage-async-storage/Index'),
+  },
+  {
+    key: 'react-native-view-shot',
+    category: 'Basic',
+    module: require('../examples/react-native-view-shot/Index'),
+  },
+  {
+    key: 'react-native-fs',
+    category: 'Basic',
+    module: require('../examples/react-native-fs/Index'),
+  },
   {
     key: 'ReactNativeAria',
     category: 'Basic',
@@ -148,6 +149,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-snap-carousel/SnapCarousel'),
   },
+  // {
+  //   key: 'react-native-vector-icons',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-vector-icons/TestIcon'),
+  // },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
