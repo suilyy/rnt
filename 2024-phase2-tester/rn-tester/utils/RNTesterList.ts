@@ -61,6 +61,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
   },
+  {
+    key: 'ReactNativeMarquee',
+    category: 'Basic',
+    module: require('../examples/react-native-marquee-ab/TestPage'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
