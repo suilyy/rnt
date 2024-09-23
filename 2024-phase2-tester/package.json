@@ -26,7 +26,8 @@
     "react-native-waterfall-flow": "1.1.5",
     "react-native-linear-gradient-text": "^1.2.10",
      "react-native-easy-toast":"2.1.0",
-    "react-native-http-bridge": "^0.6.1"
+    "react-native-http-bridge": "^0.6.1",
+    "react-native-url-polyfill": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

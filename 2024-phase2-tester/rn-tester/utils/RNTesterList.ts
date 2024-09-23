@@ -70,7 +70,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeHttpBridge',
     category: 'Basic',
     module: require('../examples/react-native-http-bridge/index'),
-  }
+  },
+  {
+    key: 'ReactNativeURLPolyfill',
+    category: 'Basic',
+    module: require('../examples/react-native-url-polyfill/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
