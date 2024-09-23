@@ -15,6 +15,7 @@
   "dependencies": {
     "@gorhom/portal": "^1.0.14",
     "@react-native-oh-tpl/react-native-svg": "file:rnoh_package/react-native-oh-tpl-react-native-svg-13.14.0-0.2.5.tgz",
+    "@react-native-oh-tpl/react-native-fast-image": "file:rnoh_package/react-native-oh-tpl-react-native-fast-image-8.6.3-0.4.14.tgz",
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-button": "^3.1.0",
