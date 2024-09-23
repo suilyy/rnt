@@ -30,7 +30,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeImageGallery',
     category: 'Basic',
     module: require('../examples/react-native-image-gallery/DemoGallery'),
-  }
+  },
+  {
+    key: 'ReactNativeGradientText',
+    category: 'Basic',
+    module: require('../examples/react-native-linear-gradient-text/index').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
