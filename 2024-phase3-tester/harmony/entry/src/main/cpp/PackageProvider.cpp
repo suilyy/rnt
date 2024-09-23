@@ -1,5 +1,6 @@
 #include "RNOH/PackageProvider.h"
 #include "SVGPackage.h"
+#include "FastImagePackage.h"
 
 using namespace rnoh;
 
@@ -7,5 +8,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     Package::Context ctx) {
   return {
     std::make_shared<SVGPackage>(ctx),
+    std::make_shared<FastImagePackage>(ctx),
   };
 } 

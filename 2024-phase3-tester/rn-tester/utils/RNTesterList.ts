@@ -16,6 +16,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-svg/App'),
   },
+  {
+    key: 'ReactNativeFastImage',
+    category: 'Basic',
+    module: require('../examples/react-native-fast-image/FastImageDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
