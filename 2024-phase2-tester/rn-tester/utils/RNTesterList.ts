@@ -81,6 +81,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-vconsole/VConsoleTest'),
   },
+  {
+    key: 'ReactNativeSortableList',
+    category: 'UI',
+    module: require('../examples/react-native-sortable-list/App'),
+  },
+  {
+    key: 'RNJsonTree',
+    category: 'UI',
+    module: require('../examples/react-native-json-tree/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
