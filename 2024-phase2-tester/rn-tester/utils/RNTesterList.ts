@@ -46,6 +46,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-easy-toast/EasyToast'),
   },
+  {
+    key: 'ReactNativeContacts',
+    category: 'Basic',
+    module: require('../examples/react-native-contacts/ContactsExample').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
