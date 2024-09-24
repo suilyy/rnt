@@ -22,11 +22,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-fast-image/FastImageDemo'),
   },
   {
-    key: 'ReactNativePerformance',
-    category: 'UI',
-    module: require('../examples/react-native-performance/index'),
-  },
-  {
     key: 'ReactNativeMaterialMenu',
     category: 'Basic',
     module: require('../examples/react-native-material-menu/ReactNativeMaterialMenuDemo'),
