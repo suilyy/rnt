@@ -67,6 +67,16 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-marquee-ab/TestPage'),
   },
   {
+    key: "ReactNativePerformanceExample",
+    category: "UI",
+    module: require("../examples/react-native-performance/index"),
+  },
+  {
+    key: "ReactNativeRestart",
+    category: "UI",
+    module: require("../examples/react-native-restart/index"),
+  },
+  {
     key: 'ReactNativeHttpBridge',
     category: 'Basic',
     module: require('../examples/react-native-http-bridge/index'),
