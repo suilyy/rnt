@@ -116,6 +116,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/Nativewind/App').default,
   },
+  {
+    key: 'ReactNativeImageHeaderScrollView',
+    category: 'Basic',
+    module: require('../examples/react-native-image-header-scroll-view/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
