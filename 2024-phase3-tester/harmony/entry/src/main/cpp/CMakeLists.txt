@@ -11,7 +11,7 @@ add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 
 
 # RNOH_BEGIN: manual_package_linking_1
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/svg/src/main/cpp" ./svg)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-fast-image/src/main/cpp" ./fast-image)
 # RNOH_END: manual_package_linking_1
 

@@ -5,8 +5,7 @@ import { GenMain } from './gen'
 import { genTransformProps, genFillProps , genStrokeProps, CaseParams, commonProps, genTextSpecificProps, genFontProps } from '../genUtil'
 const basicProps = {
     x: 10,
-    y: 20,
-    fontSize: 12
+    y: 20
 }
 
 const basicCases: CaseParams[] = [
