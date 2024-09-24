@@ -95,7 +95,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeReconnectingWebSocketDemo',
     category: 'Basic',
     module: require('../examples/react-native-reconnecting-websocket/Test')
-  }
+  },
+  {
+    key: 'react-native-shadow-2',
+    category: 'Basic',
+    module: require('../examples/react-native-shadow-2/Shadow2Demo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

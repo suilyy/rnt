@@ -36,6 +36,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-sensitive-info/SensitiveInfoDemo'),
   },
+  {
+    key: '@react-navigation',
+    category: 'Basic',
+    module: require('../examples/@react-navigation/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
