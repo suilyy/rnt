@@ -113,25 +113,25 @@ function App({}): JSX.Element {
                 actions={[
                   {
                     title: "Action1",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "always",
                     showWithText: true,
                   },
                   {
                     title: "Action2",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "always",
                     showWithText: true,
                   },
                   {
                     title: "Action3",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "always",
                     showWithText: true,
                   },
                   {
                     title: "Action4",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "always",
                     showWithText: true,
                   },
@@ -154,25 +154,25 @@ function App({}): JSX.Element {
                 actions={[
                   {
                     title: "Action1",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "never",
                     showWithText: true,
                   },
                   {
                     title: "Action2",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "never",
                     showWithText: true,
                   },
                   {
                     title: "Action3",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "never",
                     showWithText: true,
                   },
                   {
                     title: "Action4",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "never",
                     showWithText: true,
                   },
@@ -195,37 +195,37 @@ function App({}): JSX.Element {
                 actions={[
                   {
                     title: "Action1",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   },
                   {
                     title: "Action2",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   },
                   {
                     title: "Action3",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   },
                   {
                     title: "Action4",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   },
                   {
                     title: "Action5",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   },
                   {
                     title: "Action6",
-                    icon: require("./assets/star.jpg"),
+                    icon: require("./assets/setting.png"),
                     show: "ifRoom",
                     showWithText: true,
                   }
