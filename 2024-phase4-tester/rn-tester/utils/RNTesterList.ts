@@ -149,11 +149,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-snap-carousel/SnapCarousel'),
   },
-  // {
-  //   key: 'react-native-vector-icons',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-vector-icons/TestIcon'),
-  // },
+  {
+    key: 'react-native-vector-icons',
+    category: 'Basic',
+    module: require('../examples/react-native-vector-icons/TestIcon'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
