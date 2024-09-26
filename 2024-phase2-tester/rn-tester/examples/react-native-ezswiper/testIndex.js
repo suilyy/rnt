@@ -20,7 +20,7 @@ import EZSwiper from 'react-native-ezswiper';
 import { Tester, TestSuite } from '@rnoh/testerino';
 import { TestCase } from './TestCase';
 
-const images = [require(`./resource/0.jpg`), require(`./resource/1.jpg`), require(`./resource/2.jpg`), require(`./resource/3.jpg`), require(`./resource/4.jpg`), require(`./resource/5.png`), require(`./resource/6.jpg`)]
+const images = [require(`./resource/0.jpg`), require(`./resource/1.jpg`), require(`./resource/2.jpg`), require(`./resource/3.jpg`), require(`./resource/4.jpg`), require(`./resource/5.jpg`), require(`./resource/6.jpg`)]
 
 export default class ezswiperApp extends Component<{}> {
   constructor(props) {
