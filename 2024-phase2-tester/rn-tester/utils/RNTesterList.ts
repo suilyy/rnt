@@ -99,7 +99,11 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'RNJsonTree',
     category: 'UI',
-    module: require('../examples/react-native-json-tree/App'),
+    module: require('../examples/react-native-json-tree/JsonTreeTest'),
+  },{
+    key: 'RNJsonTree',
+    category: 'UI',
+    module: require('../examples/react-native-json-tree/JsonTreeTest'),
   },
   {
     key: 'ReactNativeReconnectingWebSocketDemo',

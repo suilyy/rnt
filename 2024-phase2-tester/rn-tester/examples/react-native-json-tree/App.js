@@ -5,7 +5,7 @@ import JSONTree from 'react-native-json-tree';
 import {Tester, TestSuite} from '@rnoh/testerino';
 import {TestCase} from './TestCase';
 
-const App = () => {
+export  const RNJsonTree = () => {
   return (
     <ScrollView>
       <Tester>
@@ -136,19 +136,3 @@ const TestTree4 = () => {
     </ScrollView>
   );
 };
-
-export const displayName = 'RNJsonTree';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'JsonTree';
-export const documentationURL = "https://github.com/Dean177/react-native-json-tree";
-export const description = 'React Native json tree';
-
-export const examples = [
-  {
-    title: 'React Native json tree',
-    render: function (){
-      return <App />;
-    },
-  },
-];
