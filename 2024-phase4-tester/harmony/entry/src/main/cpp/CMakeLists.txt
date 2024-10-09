@@ -9,7 +9,6 @@ add_compile_definitions(WITH_HITRACE_SYSTRACE)
 
 add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 
-
 # RNOH_BEGIN: manual_package_linking_1
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/progress-bar-android/src/main/cpp" ./progress-bar-android)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/slider/src/main/cpp" ./slider)
@@ -23,6 +22,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/blur/src/main/cpp" ./blur)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/toolbar-android/src/main/cpp" ./toolbar-android)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/cookies/src/main/cpp" ./rn_cookies)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
+ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
  add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-webview/src/main/cpp" ./webview)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/checkbox/src/main/cpp" ./checkbox)
 # RNOH_END: manual_package_linking_1
@@ -43,6 +43,7 @@ target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_image_picker)
 target_link_libraries(rnoh_app PUBLIC rnoh_blur)
 target_link_libraries(rnoh_app PUBLIC rnoh_view_shot)
+target_link_libraries(rnoh_app PUBLIC rnoh_video)
 target_link_libraries(rnoh_app PUBLIC rnoh_permissions)
 target_link_libraries(rnoh_app PUBLIC rnoh_cookies)
 target_link_libraries(rnoh_app PUBLIC rnoh_checkbox)

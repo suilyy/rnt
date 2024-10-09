@@ -19,6 +19,15 @@
     {
       "name": "reason",
       "value": "允许应用使用相机。"
+    },
+    {
+      "name": "print_reason",
+      "value": "使用打印机"
+    },
+    {
+      "name": "fs_reason",
+      "value": "读取数据"
     }
+    
   ]
 }

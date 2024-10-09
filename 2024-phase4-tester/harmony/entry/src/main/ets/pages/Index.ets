@@ -21,6 +21,7 @@ import {
   RNC_TOOLBAR_ANDROID_TYPE
 } from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid'
 import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-oh-tpl/checkbox"
+import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -31,6 +32,7 @@ const arkTsComponentNames: Array<string> = [
   BLUR_TYPE,
   SLIDER_TYPE,
   WEB_VIEW,
+  RNC_VIDEO_TYPE,
   CHECKBOX_TYPE
 ];
 
@@ -42,6 +44,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       BlurView({
         ctx: ctx.rnohContext,
         tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === RNC_VIDEO_TYPE) {
+      RNCVideo({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
       })
     }
     if (ctx.componentName === CHECKBOX_TYPE) {

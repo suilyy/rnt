@@ -154,6 +154,51 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-vector-icons/TestIcon'),
   },
+  {
+    key: 'react-native-webview',
+    category: 'Basic',
+    module: require('../examples/react-native-webview/tests/WebViewTest'),
+  },
+  {
+    key: 'react-native-autoheight-webview',
+    category: 'Basic',
+    module: require('../examples/react-native-autoheight-webview/TestCase/index'),
+  },
+  {
+    key: 'react-native-video',
+    category: 'Basic',
+    module: require('../examples/react-native-video/TestVideo'),
+  },
+  // {
+  //   key: 'react-native-ui-lib',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-ui-lib/test/react_native_ui_lib/App'),
+  // },
+  // {
+  //   key: 'react-native-print',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-print/test/PrintTest'),
+  // },
+  {
+    key: 'react-native-md5',
+    category: 'Basic',
+    module: require('../examples/react-native-md5/md5TestExample'),
+  },
+  {
+    key: 'react-native-modalbox',
+    category: 'Basic',
+    module: require('../examples/react-native-modalBox/ModalBoxDemo'),
+  },
+  {
+    key: 'react-native-zoomable-view',
+    category: 'Basic',
+    module: require('../examples/react-native-zoomable-view/tester/ReactNativeZoomableViewExample'),
+  },
+  {
+    key: 'react-native-modals',
+    category: 'Basic',
+    module: require('../examples/react-native-modals/test/ReactNativeModalsExample'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

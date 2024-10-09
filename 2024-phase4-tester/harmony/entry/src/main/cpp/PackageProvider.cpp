@@ -13,10 +13,13 @@
 #include "CheckboxPackage.h"
 #include "WebViewPackage.h"
 #include "FsPackage.h"
+ #include "RNCVideoPackage.h"
+ #include "generated/RNOHGeneratedPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
     return {
+            std::make_shared<RNOHGeneratedPackage>(ctx),
         std::make_shared<SVGPackage>(ctx),
         std::make_shared<ProgressBarAndroidPackage>(ctx),
         std::make_shared<SliderPackage>(ctx),
@@ -24,6 +27,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<GeoLocationPackage>(ctx),
         std::make_shared<AsyncStoragePackage>(ctx),
         std::make_shared<ViewShotPackage>(ctx),
+         std::make_shared<RNCVideoPackage>(ctx),
         std::make_shared<PermissionsPackage>(ctx),
         std::make_shared<BlurPackage>(ctx),
         std::make_shared<CookiesPackage>(ctx),

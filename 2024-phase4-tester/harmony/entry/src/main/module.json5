@@ -25,6 +25,26 @@
         }
       },
       {
+          "name": "ohos.permission.PRINT",
+          "reason": "$string:print_reason",
+          "usedScene": {
+              "abilities": [
+                  "EntryAbility"
+                ],
+              "when":"always"
+            }
+        },
+      {
+          "name": "fs.OpenMode.READ_ONLY",
+          "reason": "$string:fs_reason",
+          "usedScene": {
+              "abilities": [
+                  "EntryAbility"
+                ],
+              "when":"always"
+            }
+        },
+      {
         "name": "ohos.permission.LOCATION",
         "reason": "$string:Access_location",
         "usedScene": {
