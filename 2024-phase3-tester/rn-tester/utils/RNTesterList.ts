@@ -36,6 +36,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/@react-navigation/App'),
   },
+  {
+    key: 'ReactNativeTts',
+    category: 'Basic',
+    module: require('../examples/react-native-tts/TtsTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
