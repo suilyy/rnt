@@ -10,11 +10,18 @@ import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
 import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
-import { RNPrintPackage } from '@react-native-oh-tpl/react-native-print/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
-  return [new SvgPackage(ctx), new ImagePickerViewPackage(ctx), new GeoLocationPackage(ctx), new FsPackage(ctx),
-    new ViewShotPackage(ctx), new CookiesPackage(ctx), new AsyncStoragePackage(ctx),
-    new PermissionsPackage(ctx), new WebViewPackage(ctx), new RNCVideoPackage(ctx), new DocumentPickerPackage(ctx),
-    new RNPrintPackage(ctx)];
+  return [new SvgPackage(ctx),
+    new ImagePickerViewPackage(ctx),
+    new GeoLocationPackage(ctx),
+    new FsPackage(ctx),
+    new ViewShotPackage(ctx),
+    new CookiesPackage(ctx),
+    new AsyncStoragePackage(ctx),
+    new PermissionsPackage(ctx),
+    new WebViewPackage(ctx),
+    new RNCVideoPackage(ctx),
+    new DocumentPickerPackage(ctx),
+  ];
 }

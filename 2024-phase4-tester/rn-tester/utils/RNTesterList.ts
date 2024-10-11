@@ -169,16 +169,6 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-video/TestVideo'),
   },
-  // {
-  //   key: 'react-native-ui-lib',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-ui-lib/test/react_native_ui_lib/App'),
-  // },
-  // {
-  //   key: 'react-native-print',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-print/test/PrintTest'),
-  // },
   {
     key: 'react-native-md5',
     category: 'Basic',
@@ -198,6 +188,16 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'react-native-modals',
     category: 'Basic',
     module: require('../examples/react-native-modals/test/ReactNativeModalsExample'),
+  },
+  {
+    key: 'react-native-mqtt',
+    category: 'Basic',
+    module: require('../examples/react-native-mqtt/MqttDemoTest'),
+  },
+  {
+    key: 'react-native-qrcode',
+    category: 'Basic',
+    module: require('../examples/react-native-qrcode/QrCodeExample'),
   },
 ];
 
