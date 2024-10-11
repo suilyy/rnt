@@ -41,6 +41,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-tts/TtsTest'),
   },
+  {
+    key: 'ReactNativeMaskText',
+    category: 'Basic',
+    module: require('../examples/react-native-mask-text/MaskTextDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
