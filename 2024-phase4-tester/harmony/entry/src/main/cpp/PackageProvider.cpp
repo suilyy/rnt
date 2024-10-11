@@ -14,7 +14,9 @@
 #include "WebViewPackage.h"
 #include "FsPackage.h"
 #include "RNCVideoPackage.h"
+#include "GestureHandlerPackage.h"
 #include "generated/RNOHGeneratedPackage.h"
+#include "ReanimatedPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -35,5 +37,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<CheckboxPackage>(ctx),
         std::make_shared<WebViewPackage>(ctx),
         std::make_shared<FsPackage>(ctx),
+        std::make_shared<GestureHandlerPackage>(ctx),
+          std::make_shared<ReanimatedPackage>(ctx),
     };
 }

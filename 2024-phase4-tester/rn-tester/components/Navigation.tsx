@@ -93,6 +93,7 @@ export function IndexPage({ hasHeader }: { hasHeader: boolean }) {
               alignItems: 'center',
               paddingHorizontal: 16,
               paddingVertical: 16,
+              backgroundColor:'black'
             }}>
             <Image
               style={{ width: 32, height: 32 }}
@@ -106,7 +107,7 @@ export function IndexPage({ hasHeader }: { hasHeader: boolean }) {
                 fontWeight: 'bold',
                 padding: 16,
               }}>
-              RN Svg Capi Tester
+              RN Tester
               {'rnohArchitecture' in Platform.constants
                 ? (` (${Platform.constants.rnohArchitecture})` as string)
                 : ''}

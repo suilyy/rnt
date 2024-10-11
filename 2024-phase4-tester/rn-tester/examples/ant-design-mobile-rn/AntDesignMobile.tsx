@@ -53,8 +53,8 @@ export function AntDesignMobile() {
   return (
     <Provider>
       <NavigationContainer>
-        <ScrollView {...Tooltip.scrollProps} keyboardShouldPersistTaps="always">
-          <Tester>
+        <ScrollView {...Tooltip.scrollProps} keyboardShouldPersistTaps="always" style={{ backgroundColor: 'black' }}>
+          <Tester style={{ paddingTop: 40, paddingBottom: 40 }}>
             <Page name='1.Button'><ButtonAntTest /></Page>
             <Page name='2.Accordion'><AccordionTest /></Page>
             <Page name='3.ActionSheet'><ActionSheetTest /></Page>

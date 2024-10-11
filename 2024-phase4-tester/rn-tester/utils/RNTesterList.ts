@@ -199,6 +199,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-qrcode/QrCodeExample'),
   },
+  {
+    key: 'ant-design-mobile-rn',
+    category: 'Basic',
+    module: require('../examples/ant-design-mobile-rn/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

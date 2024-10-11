@@ -14,7 +14,7 @@ module.exports = function (api) {
         'BLOCK_LIST'
       ],
       'allowUndefined': true,
-    }]]
+    }], 'react-native-reanimated/plugin',]
   };
 };
 
@@ -27,6 +27,8 @@ module.exports = function (api) {
       path: '.env',
       'allowlist': null,
       'blocklist': null,
-    }]]
+    }],
+      'react-native-reanimated/plugin',
+    ]
   };
 };

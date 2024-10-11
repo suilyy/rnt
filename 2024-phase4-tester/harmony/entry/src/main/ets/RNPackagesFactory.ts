@@ -10,7 +10,8 @@ import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
 import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
-
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
@@ -23,5 +24,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new WebViewPackage(ctx),
     new RNCVideoPackage(ctx),
     new DocumentPickerPackage(ctx),
+    new GestureHandlerPackage(ctx),
+    new ReanimatedPackage(ctx),
   ];
 }

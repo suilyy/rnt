@@ -20,7 +20,10 @@
     "@react-native-oh-tpl/react-native-permissions": "file:../../node_modules/@react-native-oh-tpl/react-native-permissions/harmony/permissions.har",
     "@react-native-oh-tpl/checkbox": "file:../../node_modules/@react-native-oh-tpl/checkbox/harmony/checkbox.har",
     "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har",
+    "@react-native-oh-tpl/react-native-gesture-handler": "file:../../node_modules/@react-native-oh-tpl/react-native-gesture-handler/harmony/gesture_handler.har",
     "@react-native-oh-tpl/react-native-document-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-document-picker/harmony/document_picker.har",
-    "@react-native-oh-tpl/progress-bar-android": "file:../../node_modules/@react-native-oh-tpl/progress-bar-android/harmony/progress_bar_android.har"
+    "@react-native-oh-tpl/react-native-reanimated": "file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har",
+
+    "@react-native-oh-tpl/progress-bar-android": "file:../../node_modules/@react-native-oh-tpl/progress-bar-android/harmony/progress_bar_android.har",
   }
 }

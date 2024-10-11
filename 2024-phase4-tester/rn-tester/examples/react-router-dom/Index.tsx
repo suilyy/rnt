@@ -709,7 +709,7 @@ export default function ReactRouterDomTest() {
                         }}>
                     </TestCase>
                     <TestCase
-                        itShould="useHref"
+                        itShould="useHref and parsePath"
                         initialState={{
                             changeStatus: false
                         }}
