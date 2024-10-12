@@ -41,7 +41,7 @@ export const displayName = 'Svg';
 export const framework = 'React';
 export const category = 'UI';
 export const title = 'Svg';
-export const documentationURL = 'https://reactnative.dev/docs/button';
+export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-svg-capi.md';
 export const description = 'React Native svg';
 
 export const examples = [

@@ -204,6 +204,27 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/ant-design-mobile-rn/index'),
   },
+  {
+    key: 'react-native-modal-popover',
+    category: 'Basic',
+    module: require('../examples/react-native-modal-popover/index'),
+  },
+  // {
+  //   key: 'react-native-tab-navigator',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-tab-navigator/TabNavigatorTest'),
+  // },
+  {
+    key: 'react-native-action-button',
+    category: 'Basic',
+    module: require('../examples/react-native-action-button/index'),
+  },
+  {
+    key: 'react-native-progress',
+    category: 'Basic',
+    module: require('../examples/react-native-progress/Test/index'),
+  },
+  
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
