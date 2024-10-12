@@ -50,6 +50,22 @@ const fonts: font.FontOptions[] = [
   {
     familyName: 'StintUltraCondensed-Regular',
     familySrc: '/assets/fonts/StintUltraCondensed-Regular.ttf'
+  },
+    {
+    familyName: 'FontAwesome',
+    familySrc: '/assets/fonts/FontAwesome.ttf'
+  },
+  {
+    familyName: 'FontAwesome5_Brands',
+    familySrc: '/assets/fonts/FontAwesome5_Brands.ttf'
+  },
+  {
+    familyName: 'FontAwesome5_Regular',
+    familySrc: '/assets/fonts/FontAwesome5_Regular.ttf'
+  },
+  {
+    familyName: 'FontAwesome5_Solid',
+    familySrc: '/assets/fonts/FontAwesome5_Solid.ttf'
   }
 ]
 

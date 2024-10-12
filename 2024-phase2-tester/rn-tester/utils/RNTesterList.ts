@@ -125,6 +125,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-image-header-scroll-view/App'),
   },
+  {
+    key: 'ReactNativeElements (demo)',
+    category: 'Basic',
+    module: require('../examples/react-native-elements/demo/Elements'),
+  },
+  {
+    key: 'ReactNativeElements (test)',
+    category: 'Basic',
+    module: require('../examples/react-native-elements/test/SampleElementExample'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
