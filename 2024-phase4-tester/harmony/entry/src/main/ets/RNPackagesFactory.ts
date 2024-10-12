@@ -12,6 +12,11 @@ import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
 import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
+import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
+import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
+import { PushNotificationPackage } from '@react-native-oh-tpl/push-notification-ios/ts';
+import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
+// import {BlobUtilPackage} from '@react-native-oh-tpl/react-native-blob-util/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
@@ -26,5 +31,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new DocumentPickerPackage(ctx),
     new GestureHandlerPackage(ctx),
     new ReanimatedPackage(ctx),
+    new SoundPackage(ctx),
+    new RNTextSizePackage(ctx),
+    new PushNotificationPackage(ctx),
+    new RNCPickerPackage(ctx),
+    // new BlobUtilPackage(ctx)
   ];
 }

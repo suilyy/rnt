@@ -50,7 +50,7 @@ export default ViewshotTest
 
 export const displayName = 'react-native-view-shot';
 export const framework = 'React';
-export const category = 'UI';
+export const category = 'basic';
 export const title = 'react-native-view-shot';
 export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-section-list-get-item-layout.md';
 export const description = 'react-native-view-shot';

@@ -1,0 +1,596 @@
+import React, { useState } from "react";
+import type { PropsWithChildren } from "react";
+import {
+  useColorScheme,
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  Button
+} from "react-native";
+
+import { TestSuite, Tester, TestCase } from '@rnoh/testerino';
+
+
+import Sound from "react-native-sound";
+
+type SectionProps = PropsWithChildren<{
+  title: string;
+  func: () => void;
+}>;
+
+type SliderSectionProps = PropsWithChildren<{
+  duration: number;
+  value: number;
+  func: () => void;
+}>;
+
+
+let sound: Sound;
+let state = ""
+export function TextSound(): JSX.Element {
+  return (
+    <Tester style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1 }}>
+        <TestSuite name="Sound">
+          <TestCase
+            itShould="Start playing audio"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuPlayTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="pause audio"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuPauseTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="stop audio"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuStopTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="reset audio"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuResetTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="getFileName"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuFileNameTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="getDuration"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuDurationTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="getVolume"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuVolumeTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="setVolume0.2"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetVolumeTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="setVolume0.5"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetVolume05Test setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="setVolume1"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetVolume10Test setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="getSpeed"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSpeedTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="setSpeed0.5"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetSpeedTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="setSpeed1"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetSpeed1Test setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="setSpeed2"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetSpeed2Test setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="getNumberOfLoops"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuLoopTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="setNumberOfLoops"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetLoopTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="getCurrentTime"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuGetCurrentTimeTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="setCurrentTime"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuSetCurrentTimeTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+
+          <TestCase
+            itShould="isPlaying"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuisPlayingTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+          <TestCase
+            itShould="isLoaded"
+            initialState={false}
+            arrange={({ setState }) => <AddMenuisLoadedTest setState={setState} />}
+            assert={({ state, expect }) => {
+              expect(state).to.be.true;
+            }}
+          />
+        </TestSuite>
+      </ScrollView>
+    </Tester>
+
+  );
+}
+
+const AddMenuisLoadedTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [isLoaded,setIsLoaded] = useState("")
+  const addCustomMenuItem = () => {
+    setIsLoaded(`${sound?.isLoaded()}`)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>load状态{isLoaded}</Text>
+      <Button title={"获取load状态"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuisPlayingTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [isPlaying,setIsPlaying] = useState("")
+  const addCustomMenuItem = () => {
+    setIsPlaying(`${sound?.isPlaying()}`)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>播放状态{isPlaying}</Text>
+      <Button title={"获取播放状态"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetCurrentTimeTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+
+  const addCustomMenuItem = () => {
+    sound?.setCurrentTime(3000)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置在3000毫秒播放"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuGetCurrentTimeTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [CurrentTime, setCurrentTime] = useState(0)
+
+  const addCustomMenuItem = () => {
+    sound?.getCurrentTime((currentTime: number, isPlaying: boolean) => {
+
+      setCurrentTime(currentTime)
+    })
+
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>{CurrentTime}毫秒</Text>
+      <Button title={"获取当前时间"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetLoopTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+
+  const addCustomMenuItem = () => {
+    sound?.setNumberOfLoops(true)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置循环播放"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+
+const AddMenuLoopTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [NumberOfLoops, setNumberOfLoops] = useState("")
+
+  const addCustomMenuItem = () => {
+    const NumberOfLoops = sound?.getNumberOfLoops()
+    setNumberOfLoops(NumberOfLoops)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>{`${NumberOfLoops}`}</Text>
+      <Button title={"获取是否循环播放"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetSpeed2Test = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setSpeed(4)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置播放速度为2"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetSpeed1Test = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setSpeed(1)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置播放速度为1"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetSpeedTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setSpeed(5)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置播放速度为0.5"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSpeedTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [speed, setSpeed] = useState("")
+
+  const addCustomMenuItem = () => {
+    const speed = sound?.getSpeed()
+    setSpeed(speed)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>{speed}</Text>
+      <Button title={"获取播放速度"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetVolume10Test= (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setVolume(1)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置音量为1"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetVolume05Test= (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setVolume(0.5)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置音量为0.5"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuSetVolumeTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.setVolume(0.2)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Button title={"设置音量为0.2"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuVolumeTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [volume, setVolume] = useState("")
+
+  const addCustomMenuItem = () => {
+    const volume = sound?.getVolume()
+    setVolume(volume)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>{volume}</Text>
+      <Button title={"获取音量"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuDurationTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [duration, setDuration] = useState("")
+
+  const addCustomMenuItem = () => {
+    const duration = sound?.getDuration()
+    setDuration(duration)
+    props.setState(true);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={{ fontSize: 20 }}>{duration}</Text>
+      <Button title={"获取时长"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuFileNameTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const [fileName, setFileName] = useState("")
+
+  const addCustomMenuItem = () => {
+    const fileName = sound?.getFilename()
+    setFileName(fileName)
+    props.setState(true);
+  };
+
+  return (
+    <View style={{height:150}}>
+      <Text style={{ fontSize: 20,height:110 }}>{fileName}</Text>
+      <Button title={"获取文件名称"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuResetTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  const addCustomMenuItem = () => {
+    sound?.reset().release();
+    state = "reset"
+    props.setState(true);
+  };
+  return (
+    <View style={styles.container}>
+      <Button title="重置" onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuStopTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+
+  const addCustomMenuItem = () => {
+    sound?.stop(() => {
+      state = "stop"
+    }).release();
+    props.setState(true);
+  };
+  return (
+    <View style={styles.container}>
+      <Button title={"停止"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuPauseTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+
+  const addCustomMenuItem = () => {
+    sound?.pause(() => {
+      state = "pause"
+    });
+    props.setState(true);
+  };
+  return (
+    <View style={styles.container}>
+      <Button title={"暂停"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const AddMenuPlayTest = (props: {
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+
+  const addCustomMenuItem = () => {
+    if (state === "pause") {
+      sound.play(() => {
+        state = ""
+        sound.release();
+      });
+    } else {
+      if (state !== "play") {
+        sound = new Sound("https://sis-sample-audio.obs.cn-north-1.myhuaweicloud.com/16k16bit.mp3", "", (error) => {
+          if (error) {
+            return;
+          }
+          state = "play"
+          sound.play((a) => {
+            console.log(556)
+            state = ""
+            sound.release();
+          });
+
+        });
+      }
+
+    }
+    props.setState(true);
+  };
+  return (
+    <View style={styles.container}>
+      <Button title={"播放"} onPress={addCustomMenuItem} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    height: 50,
+    justifyContent: 'center',
+  },
+});
+
+
+export const displayName = 'react-native-sound';
+export const framework = 'React';
+export const category = 'baisc';
+export const title = 'react-native-sound';
+export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-sound.md';
+export const description = 'react-native-sound';
+
+export const examples = [
+  {
+    title: 'react-native-sound',
+    render: function (): any {
+      return <TextSound />;
+    },
+  },
+];

@@ -224,7 +224,41 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-progress/Test/index'),
   },
-  
+  {
+    key: 'react-native-pdf',
+    category: 'ui',
+    module: require('../examples/react-native-pdf/testCase/App'),
+  },
+  {
+    key: 'react-native-sound',
+    category: 'Basic',
+    module: require('../examples/react-native-sound/TextSound'),
+  },
+  {
+    key: 'react-native-text-size',
+    category: 'Basic',
+    module: require('../examples/react-native-text-size/test/TextSizeTest'),
+  },
+  {
+    key: 'react-native-community-push-notification-ios',
+    category: 'Basic',
+    module: require('../examples/react-native-community-push-notification-ios/test/PushNotificationIos'),
+  },
+  {
+    key: 'react-native-community-segmented-control',
+    category: 'Basic',
+    module: require('../examples/react-native-community-segmented-control/SegmentedControl'),
+  },
+  {
+    key: 'react-native-community-picker',
+    category: 'Basic',
+    module: require('../examples/react-native-community-picker/App'),
+  },
+  // {
+  //   key: 'react-native-blob-util',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-blob-util/testCase/blobTest'),
+  // },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

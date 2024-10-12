@@ -860,7 +860,7 @@ const styles = StyleSheet.create({
 
 export const displayName = 'react-native-snap-carousel';
 export const framework = 'React';
-export const category = 'UI';
+export const category = 'basic';
 export const title = 'react-native-snap-carousel';
 export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-snap-carousel.md';
 export const description = 'react-native-snap-carousel';

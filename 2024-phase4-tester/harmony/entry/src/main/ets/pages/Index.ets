@@ -22,6 +22,8 @@ import {
 } from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid'
 import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-oh-tpl/checkbox"
 import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
+import { RTNPdfView, PDF_VIEW_TYPE } from '@react-native-oh-tpl/react-native-pdf';
+import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -33,7 +35,9 @@ const arkTsComponentNames: Array<string> = [
   SLIDER_TYPE,
   WEB_VIEW,
   RNC_VIDEO_TYPE,
-  CHECKBOX_TYPE
+  CHECKBOX_TYPE,
+  PDF_VIEW_TYPE,
+  PICKER_TYPE,
 ];
 
 @Builder
@@ -43,6 +47,18 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     if (ctx.componentName === BLUR_TYPE) {
       BlurView({
         ctx: ctx.rnohContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === PICKER_TYPE) {
+      RNCPicker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === PDF_VIEW_TYPE) {
+      RTNPdfView({
+        ctx: ctx.rnComponentContext,
         tag: ctx.tag,
       })
     }

@@ -17,6 +17,11 @@
 #include "GestureHandlerPackage.h"
 #include "generated/RNOHGeneratedPackage.h"
 #include "ReanimatedPackage.h"
+#include "PdfViewPackage.h"
+#include "SoundPackage.h"
+#include "RNTextSizePackage.h"
+#include "PushNotificationPackage.h"
+// #include "BlobUtilPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -38,6 +43,11 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<WebViewPackage>(ctx),
         std::make_shared<FsPackage>(ctx),
         std::make_shared<GestureHandlerPackage>(ctx),
-          std::make_shared<ReanimatedPackage>(ctx),
+        std::make_shared<ReanimatedPackage>(ctx),
+        std::make_shared<PdfViewPackage>(ctx),
+        std::make_shared<SoundPackage>(ctx),
+        std::make_shared<RNTextSizePackage>(ctx),
+//         std::make_shared<BlobUtilPackage>(ctx),
+        std::make_shared<PushNotificationPackage>(ctx)
     };
 }

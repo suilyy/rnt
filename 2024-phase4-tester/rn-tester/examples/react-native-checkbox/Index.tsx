@@ -247,9 +247,9 @@ export default function CheckBoxTest() {
 export const displayName = 'CheckBoxTest';
 export const framework = 'React';
 export const category = 'UI';
-export const title = 'CheckBoxTest';
-export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-community-checkbox.md';
-export const description = 'CheckBoxTest';
+export const title = 'react-native-checkbox';
+export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-check-box.md';
+export const description = 'react-native-checkbox';
 
 export const examples = [
     {
