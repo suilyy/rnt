@@ -46,6 +46,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-mask-text/MaskTextDemo'),
   },
+  {
+    key: 'ReactNativeSecureRandom',
+    category: 'Basic',
+    module: require('../examples/react-native-securerandom/Securerandom'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
