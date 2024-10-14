@@ -76,6 +76,26 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-udp/react-native-udp').default,
   },
+  {
+    key: 'ReactNativeDismissKeyboard',
+    category: 'Basic',
+    module: require('../examples/react-native-dismiss-keyboard/ReactNativeDismissKeyboardDemo'),
+  },
+  {
+    key: 'ReactNativeParsedText',
+    category: 'Basic',
+    module: require('../examples/react-native-parsed-text/TestNativeParsedTextDemo'),
+  },
+  {
+    key: 'ReactNativeAutocompleteInput',
+    category: 'Basic',
+    module: require('../examples/react-native-autocomplete-input/AutoCompleteInputExample'),
+  },
+  {
+    key: 'ReactNativeNeomorphShadows',
+    category: 'Basic',
+    module: require('../examples/react-native-neomorph-shadows/ShadowsDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
