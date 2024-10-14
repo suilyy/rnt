@@ -135,6 +135,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-elements/test/SampleElementExample'),
   },
+  {
+    key: 'NativeBase',
+    category: 'UI',
+    module: require('../examples/NativeBase/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

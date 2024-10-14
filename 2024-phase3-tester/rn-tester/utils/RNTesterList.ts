@@ -56,6 +56,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-file-access/ReactNativeFileAccess').default,
   },
+  {
+    key: 'ReactNativeAudioRecordPlayer',
+    category: 'UI',
+    module: require('../examples/react-native-audio-recorder-player/AudioRecordPlayerExample'),
+  },
+  {
+    key: 'ReactNativeSafeModules',
+    category: 'Basic',
+    module: require('../examples/react-native-safe-modules/SafeModuleExample'),
+  },  
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
