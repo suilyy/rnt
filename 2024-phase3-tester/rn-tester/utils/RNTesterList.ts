@@ -71,6 +71,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-signature-canvas/index'),
   },
+  {
+    key: 'ReactNativeUdp',
+    category: 'Basic',
+    module: require('../examples/react-native-udp/react-native-udp').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
