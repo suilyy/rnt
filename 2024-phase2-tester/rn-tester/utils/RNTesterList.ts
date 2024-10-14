@@ -140,6 +140,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/NativeBase/App'),
   },
+  {
+    key: 'HoleViewDemo',
+    category: 'Basic',
+    module: require('../examples/react-native-hole-view/HoleViewDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

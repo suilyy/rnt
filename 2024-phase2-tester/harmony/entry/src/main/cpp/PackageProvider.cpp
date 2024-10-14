@@ -2,6 +2,7 @@
 #include "SVGPackage.h"
 #include "SafeAreaViewPackage.h"
 #include "LinearGradientPackage.h"
+#include "HoleViewPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -10,5 +11,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<SVGPackage>(ctx),
     std::make_shared<SafeAreaViewPackage>(ctx),
     std::make_shared<LinearGradientPackage>(ctx),
+    std::make_shared<RNOHHoleViewPackage>(ctx),
   };
 } 
