@@ -66,6 +66,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-safe-modules/SafeModuleExample'),
   },  
+  {
+    key: 'react-native-signature-canvas',
+    category: 'Basic',
+    module: require('../examples/react-native-signature-canvas/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
