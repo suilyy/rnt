@@ -51,6 +51,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-securerandom/Securerandom'),
   },
+   {
+    key: 'ReactNativeFileAccess',
+    category: 'UI',
+    module: require('../examples/react-native-file-access/ReactNativeFileAccess').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
