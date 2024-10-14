@@ -259,6 +259,11 @@ const Components: Array<RNTesterModuleInfo> = [
   //   category: 'Basic',
   //   module: require('../examples/react-native-blob-util/testCase/blobTest'),
   // },
+  {
+    key: 'ReactNativeProgressView',
+    category: 'Basic',
+    module: require('../examples/react-native-community/progress-view/App').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

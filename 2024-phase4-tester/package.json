@@ -28,6 +28,7 @@
     "@react-native-community/push-notification-ios": "^1.11.0",
     "@react-native-community/slider": "^4.5.3",
     "@react-native-cookies/cookies": "^6.2.1",
+    "@react-native-oh-tpl/progress-view": "file:react-native-oh-library-progress-view-1.4.2-0.0.6.tgz",
     "@react-native-oh-tpl/async-storage": "file:./libs/react-native-oh-tpl-async-storage-1.21.0-0.1.7.tgz",
     "@react-native-oh-tpl/blur": "file:./libs/react-native-oh-tpl-blur-4.4.0-0.0.5.tgz",
     "@react-native-oh-tpl/checkbox": "file:./libs/react-native-oh-tpl-checkbox-0.5.16-0.0.7.tgz",
