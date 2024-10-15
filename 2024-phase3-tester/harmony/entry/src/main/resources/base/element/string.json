@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "Access_Create_Audio",
+      "value": "access create Audio"
     }
   ]
 }
