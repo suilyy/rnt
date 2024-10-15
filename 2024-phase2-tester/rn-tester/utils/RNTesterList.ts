@@ -170,6 +170,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-shake/ShakeExampleDemo'),
   },
+  {
+    key: 'ReactNativeElementDropdownView',
+    category: 'Basic',
+    module: require('../examples/react-native-element-dropdown/App').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

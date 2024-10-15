@@ -56,7 +56,8 @@
     "@react-native-oh-tpl/react-native-sortable-list": "file:rnoh_package/react-native-oh-tpl-react-native-sortable-list-0.0.25-0.0.1.tgz",
     "@react-native-community/hooks": "^3.0.0",
     "react-native-countdown-circle-timer": "^3.2.1",
-    "react-native-json-tree": "^1.3.0"
+    "react-native-json-tree": "^1.3.0",
+    "react-native-element-dropdown": "^2.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
