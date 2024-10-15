@@ -7,6 +7,7 @@ import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
 import {ContextMenuPackage} from '@react-native-oh-tpl/react-native-context-menu-view/ts';
+import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -17,6 +18,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new GestureHandlerPackage(ctx),
     new ReanimatedPackage(ctx),
     new ViewPagerPackage(ctx),
-    new ContextMenuPackage(ctx)
+    new ContextMenuPackage(ctx),
+    new ShakePackage(ctx)
   ];
 }

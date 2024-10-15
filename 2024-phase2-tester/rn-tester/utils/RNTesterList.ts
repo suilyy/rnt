@@ -164,7 +164,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'RNCommunityHooks',
     category: 'UI',
     module: require('../examples/react-native-community-hooks/HooksTest'),
-  }
+  },
+  {
+    key: 'RNShakeExampleDemo',
+    category: 'UI',
+    module: require('../examples/react-native-shake/ShakeExampleDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
