@@ -149,7 +149,22 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeContextMenuView',
     category: 'UI',
     module: require('../examples/react-native-context-menu-view/ContextMenuViewTest'),
-  },  
+  }, 
+  {
+    key: 'RNCountryPicker',
+    category: 'UI',
+    module: require('../examples/react-native-country-picker-modal/test/index'),
+  },
+  {
+    key: 'RNCountdownCircleTime',
+    category: 'UI',
+    module: require('../examples/react-countdown-circle-timer/test/countdownCircleTime'),
+  }, 
+  {
+    key: 'RNCommunityHooks',
+    category: 'UI',
+    module: require('../examples/react-native-community-hooks/HooksTest'),
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
