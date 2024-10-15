@@ -145,6 +145,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-hole-view/HoleViewDemo'),
   },
+  {
+    key: 'ReactNativeContextMenuView',
+    category: 'UI',
+    module: require('../examples/react-native-context-menu-view/ContextMenuViewTest'),
+  },  
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
