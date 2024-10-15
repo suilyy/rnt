@@ -193,7 +193,7 @@ export default {
     framework: 'React',
     category: 'UI',
     title: 'react-native-community/progress-view',
-    documentationURL: 'https://reactnative.dev/docs/text',
+    documentationURL: 'https://github.com/react-native-oh-library/progress-view',
     description: 'React Native text',
     examples: [
       {
