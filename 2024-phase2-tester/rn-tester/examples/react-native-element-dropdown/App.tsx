@@ -28,7 +28,7 @@ export default {
   framework: 'React',
   category: 'UI',
   title: 'react-native-element-dropdown',
-  documentationURL: 'https://reactnative.dev/docs/text',
+  documentationURL: 'https://github.com/hoaphantn7604/react-native-element-dropdown',
   description: 'React Native Element Dropdown',
   examples: [
     {

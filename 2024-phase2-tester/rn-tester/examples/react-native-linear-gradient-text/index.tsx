@@ -189,7 +189,7 @@ export default {
   framework: 'React',
   category: 'UI',
   title: 'react-native-linear-gradient-text',
-  documentationURL: 'https://reactnative.dev/docs/text',
+  documentationURL: 'https://github.com/HMDarkFir3/react-native-linear-gradient-text',
   description: 'React Native text',
   examples: [
     {
