@@ -25,6 +25,17 @@
     "@rneui/themed": "^4.0.0-rc.8",
     "@react-native-oh-tpl/react-native-linear-gradient": "file:rnoh_package/react-native-oh-tpl-react-native-linear-gradient-3.0.0-0.4.5.tgz",
     "@react-native-oh-tpl/react-native-safe-area-context": "file:rnoh_package/react-native-oh-tpl-react-native-safe-area-context-4.7.4-0.1.7-rc.1.tgz",
+    "@react-native-oh-tpl/drawer": "file:rnoh_package/react-native-oh-tpl-drawer-6.7.1-0.0.2.tgz",
+    "@react-native-oh-tpl/elements": "file:rnoh_package/react-native-oh-tpl-elements-1.3.21-0.1.4.tgz",
+    "@react-native-oh-tpl/react-native-gesture-handler": "file:rnoh_package/react-native-oh-tpl-react-native-gesture-handler-2.14.14-rc.1.tgz",
+    "@react-native-oh-tpl/react-native-oh-tpl-native-base": "file:rnoh_package/react-native-oh-tpl-native-base-3.4.28-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-pager-view": "file:rnoh_package/react-native-oh-tpl-react-native-pager-view-6.2.3-0.2.6.tgz",
+    "@react-native-oh-tpl/react-native-reanimated": "file:rnoh_package/react-native-oh-tpl-react-native-reanimated-3.6.3.tgz",
+    "@react-native-oh-tpl/react-native-swipe-list-view": "file:rnoh_package/react-native-oh-tpl-react-native-swipe-list-view-3.2.9-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-tab-view": "file:rnoh_package/react-native-oh-tpl-react-native-tab-view-3.5.2-0.1.4.tgz",
+    "@react-native-oh-tpl/react-native-audio-recorder-player": "file:rnoh_package/react-native-oh-tpl-react-native-audio-recorder-player-3.6.10-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-safe-modules": "file:rnoh_package/react-native-oh-tpl-react-native-safe-modules-1.0.3-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-context-menu-view": "file:rnoh_package/react-native-oh-tpl-react-native-context-menu-view-1.16.0-0.0.3.tgz",
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-button": "^3.1.0",
@@ -37,7 +48,9 @@
     "react-native-http-bridge": "^0.6.1",
     "react-native-url-polyfill": "^2.0.0",
     "nativewind": "2.0.11",
-    "react-native-ezswiper":"^1.3.0"
+    "react-native-ezswiper":"^1.3.0",
+    "react-native-gesture-handler": "^2.14.1",
+    "react-native-reanimated": "^3.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

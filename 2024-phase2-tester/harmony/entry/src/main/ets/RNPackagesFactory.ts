@@ -3,11 +3,20 @@ import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-documen
 import {RNPerformancePackage} from '@react-native-oh-tpl/react-native-performance/ts'
 import { RNRestartPackage } from '@react-native-oh-tpl/react-native-restart/ts';
 import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
+import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
+import {ContextMenuPackage} from '@react-native-oh-tpl/react-native-context-menu-view/ts';
+
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new DocumentPickerPackage(ctx),
     new RNPerformancePackage(ctx),
     new RNRestartPackage(ctx),
     new SafeAreaViewPackage(ctx),
+    new GestureHandlerPackage(ctx),
+    new ReanimatedPackage(ctx),
+    new ViewPagerPackage(ctx),
+    new ContextMenuPackage(ctx)
   ];
 }
