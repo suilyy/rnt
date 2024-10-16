@@ -279,6 +279,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
   },
+  {
+    key: 'react-native-cameraroll',
+    category: 'Basic',
+    module: require('../examples/react-native-cameraroll/CamerarollTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
