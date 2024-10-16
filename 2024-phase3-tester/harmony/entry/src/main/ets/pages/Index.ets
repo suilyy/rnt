@@ -13,12 +13,14 @@ import {
 import font from '@ohos.font';
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
+import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview";
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME
+  SVG_VIEW_TYPE_NAME,
+  WEB_VIEW
 ];
 
 @Builder
@@ -29,6 +31,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       SVGView({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
+      })
+    },
+    if (ctx.componentName === WEB_VIEW) {
+      WebView({
+          ctx: ctx.rnComponentContext,
+          tag: ctx.tag
       })
     }
   }

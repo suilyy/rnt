@@ -51,6 +51,51 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-securerandom/Securerandom'),
   },
+   {
+    key: 'ReactNativeFileAccess',
+    category: 'UI',
+    module: require('../examples/react-native-file-access/ReactNativeFileAccess').default,
+  },
+  {
+    key: 'ReactNativeAudioRecordPlayer',
+    category: 'UI',
+    module: require('../examples/react-native-audio-recorder-player/AudioRecordPlayerExample'),
+  },
+  {
+    key: 'ReactNativeSafeModules',
+    category: 'Basic',
+    module: require('../examples/react-native-safe-modules/SafeModuleExample'),
+  },  
+  {
+    key: 'react-native-signature-canvas',
+    category: 'Basic',
+    module: require('../examples/react-native-signature-canvas/index'),
+  },
+  {
+    key: 'ReactNativeUdp',
+    category: 'Basic',
+    module: require('../examples/react-native-udp/react-native-udp').default,
+  },
+  {
+    key: 'ReactNativeDismissKeyboard',
+    category: 'Basic',
+    module: require('../examples/react-native-dismiss-keyboard/ReactNativeDismissKeyboardDemo'),
+  },
+  {
+    key: 'ReactNativeParsedText',
+    category: 'Basic',
+    module: require('../examples/react-native-parsed-text/TestNativeParsedTextDemo'),
+  },
+  {
+    key: 'ReactNativeAutocompleteInput',
+    category: 'Basic',
+    module: require('../examples/react-native-autocomplete-input/AutoCompleteInputExample'),
+  },
+  {
+    key: 'ReactNativeNeomorphShadows',
+    category: 'Basic',
+    module: require('../examples/react-native-neomorph-shadows/ShadowsDemo'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

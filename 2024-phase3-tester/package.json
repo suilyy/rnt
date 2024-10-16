@@ -18,13 +18,21 @@
     "@react-native-oh-tpl/react-native-fast-image": "file:rnoh_package/react-native-oh-tpl-react-native-fast-image-8.6.3-0.4.14.tgz",
     "@react-native-oh-tpl/react-native-tts": "file:rnoh_package/react-native-oh-tpl-react-native-tts-4.1.1-0.0.3.tgz",
     "@react-native-oh-tpl/react-native-securerandom": "file:rnoh_package/react-native-oh-tpl-react-native-securerandom-1.0.1-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-webview": "file:rnoh_package/react-native-oh-tpl-react-native-webview-13.10.2-0.2.33.tgz",
+	  "@react-native-oh-tpl/react-native-neomorph-shadows": "file:rnoh_package/react-native-oh-tpl-react-native-neomorph-shadows-1.1.2-0.0.3.tgz",
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-button": "^3.1.0",
     "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.28.tgz",
     "react-native-mask-text": "^0.14.2",
-	"react-native-material-menu": "^2.0.0",
-    "react-native-qrcode-svg": "^6.2.0"
+	  "react-native-material-menu": "^2.0.0",
+    "react-native-qrcode-svg": "^6.2.0",
+    "react-native-signature-canvas": "^4.7.2",
+	  "react-native-autocomplete-input": "^5.4.0",
+	  "react-native-dismiss-keyboard": "^1.0.0",
+	  "react-native-parsed-text": "^0.0.22",
+    "@react-native-oh-tpl/react-native-audio-recorder-player": "file:rnoh_package/react-native-oh-tpl-react-native-audio-recorder-player-3.6.10-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-safe-modules": "file:rnoh_package/react-native-oh-tpl-react-native-safe-modules-1.0.3-0.0.1.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

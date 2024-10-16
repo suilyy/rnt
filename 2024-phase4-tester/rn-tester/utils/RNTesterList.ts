@@ -269,6 +269,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-community-netinfo/test/NetInfoTest'),
   },
+  {
+    key: 'ReactNativeProgressView',
+    category: 'Basic',
+    module: require('../examples/react-native-community/progress-view/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
