@@ -101,6 +101,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-default-preference/App'),
   },
+  {
+    key: 'PhoneNumberInput',
+    category: 'Basic',
+    module: require('../examples/react-native-phone-number-input/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
