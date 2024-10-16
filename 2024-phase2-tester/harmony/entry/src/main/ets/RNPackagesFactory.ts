@@ -8,6 +8,7 @@ import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/
 import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
 import {ContextMenuPackage} from '@react-native-oh-tpl/react-native-context-menu-view/ts';
 import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
+import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -19,6 +20,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new ReanimatedPackage(ctx),
     new ViewPagerPackage(ctx),
     new ContextMenuPackage(ctx),
-    new ShakePackage(ctx)
+    new ShakePackage(ctx),
+	new NetInfoPackage(ctx),
   ];
 }

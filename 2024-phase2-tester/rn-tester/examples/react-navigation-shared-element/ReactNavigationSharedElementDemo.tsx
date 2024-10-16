@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
 });
 
 // 或者使用 export default 导出
-export const displayName = 'Navigation';
+export const displayName = 'ReactNavigationSharedElementDemo';
 export const framework = 'React';
 export const category = 'UI';
-export const title = 'Navigation';
-export const documentationURL = 'https://reactnative.dev/docs/button';
-export const description = 'React Native Navigation';
+export const title = 'react-navigation-shared-element';
+export const documentationURL = 'https://github.com/IjzerenHein/react-navigation-shared-element';
+export const description = 'React Native Navigation shared element';
 
 export const examples = [
   {

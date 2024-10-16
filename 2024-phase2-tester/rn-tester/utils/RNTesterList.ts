@@ -57,6 +57,91 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-scrollable-tabview/App'),
   },
   {
+    key: 'ReactNativeRootToastExample',
+    category: 'UI',
+    module: require('../examples/react-native-root-toast/ReactNativeRootToastExample'),
+  },
+  {
+    key: 'ReactNativeGiftedChatExample',
+    category: 'UI',
+    module: require('../examples/react-native-action-sheet/ReactNativeGiftedChatDemo'),
+  },
+  {
+    key: 'ReactNativeCommunicationsExample',
+    category: 'Basic',
+    module: require('../examples/react-native-communications/Communication'),
+  },
+  {
+    key: 'ReactNativeTypingAnimationExample',
+    category: 'UI',
+    module: require('../examples/react-native-typing-animation/TypingAnimation'),
+  },
+  {
+    key: 'ReactNativeFeatherExample',
+    category: 'UI',
+    module: require('../examples/react-native-feather/FeatherExample'),
+  },
+  {
+    key: 'ReactNativeLightBoxExample',
+    category: 'UI',
+    module: require('../examples/react-native-lightbox-v2/ReactNativeLightBoxExample'),
+  },
+  {
+    key: 'RNMetariDesignColorExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-design-styles/MetarilDesignColor'),
+  },
+  {
+    key: 'ReactNativeFlipCardExample',
+    category: 'UI',
+    module: require('../examples/react-native-flip-card/FlipCardExample'),
+  },
+  {
+    key: 'ReactNativeRatingsExample',
+    category: 'UI',
+    module: require('../examples/react-native-ratings/RatingsDemo'),
+  },
+  {
+    key: 'ReactNativeHtmlViewExample',
+    category: 'UI',
+    module: require('../examples/react-native-htmlview/HtmlViewExample'),
+  },
+  {
+    key: 'ReactNativeSwitchSelectorExample',
+    category: 'UI',
+    module: require('../examples/react-native-switch-selector/SwitchSelector'),
+  },
+  {
+    key: 'RNThemeProviderExample',
+    category: 'UI',
+    module: require('../examples/react-theme-provider/ThemeProviderExample'),
+  },
+  {
+    key: 'ReactNativeCollapsibleExample',
+    category: 'UI',
+    module: require('../examples/react-native-collapsible/CollapsibleExample'),
+  },
+  {
+    key: 'ReactNativeSizeMattersExample',
+    category: 'UI',
+    module: require('../examples/react-native-size-matters/SizeMattersTest'),
+  },
+  {
+    key: 'ReactNativeShimmerPlaceholderExample',
+    category: 'UI',
+    module: require('../examples/react-native-shimmer-placeholder/App'),
+  },
+  {
+    key: 'ReactNativeOfflineExample',
+    category: 'UI',
+    module: require('../examples/react-native-offline/OfflineDemoTest'),
+  },
+  {
+    key: 'ReactNavigationSharedElementDemo',
+    category: 'UI',
+    module: require('../examples/react-navigation-shared-element/ReactNavigationSharedElementDemo'),
+  },
+  {
     key: 'ReactNativeNativeWaterfallFlow',
     category: 'Basic',
     module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
@@ -111,8 +196,8 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-reconnecting-websocket/Test')
   },
   {
-    key: 'react-native-shadow-2',
-    category: 'Basic',
+    key: 'ReactNativeShadow2Example',
+    category: 'UI',
     module: require('../examples/react-native-shadow-2/Shadow2Demo'),
   },
   {

@@ -248,16 +248,17 @@ const styles = StyleSheet.create({
 });
 
 
-export const displayName = 'react-native-shadow-2';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'react-native-shadow-2';
-export const documentationURL = 'https://reactnative.dev/docs/button';
-export const description = 'React Native shadow-2';
+// 使用 export 导出
+export const displayName = "Shadow2Example";
+export const framework = "React";
+export const category = "UI";
+export const title = "react-native-shadow-2";
+export const documentationURL = "https://github.com/SrBrahma/react-native-shadow-2";
+export const description = "Simple React Native shadow 2 component.";
 
 export const examples = [
   {
-    title: 'react-native-shadow-2',
+    title: "Shadow 2 with default styling",
     render: function (): any {
       return <Shadow2DemoTester />;
     },
