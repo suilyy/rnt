@@ -274,6 +274,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-community/progress-view/App'),
   },
+  {
+    key: 'KeyboardAwareScrollView',
+    category: 'Basic',
+    module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
