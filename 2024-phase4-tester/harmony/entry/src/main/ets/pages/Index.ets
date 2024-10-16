@@ -159,7 +159,10 @@ struct Index {
             enableBackgroundExecutor: false,
             enableCAPIArchitecture: true,
             arkTsComponentNames: arkTsComponentNames,
+
             fontResourceByFontFamily: {
+              // 'antoutline': $rawfile("fonts/antoutline.ttf"),
+              // "antfill": $rawfile('fonts/antfill.ttf'),
               'anticon': $rawfile('fonts/AntDesign.ttf'),
               'Entypo': $rawfile('fonts/Entypo.ttf'),
               'EvilIcons': $rawfile('fonts/EvilIcons.ttf'),

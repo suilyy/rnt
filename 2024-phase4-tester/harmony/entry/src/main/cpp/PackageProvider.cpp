@@ -21,7 +21,9 @@
 #include "SoundPackage.h"
 #include "RNTextSizePackage.h"
 #include "PushNotificationPackage.h"
+#include "ViewPagerPackage.h"
 // #include "BlobUtilPackage.h"
+ #include "RNCNetInfoPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -36,6 +38,8 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<ViewShotPackage>(ctx),
         std::make_shared<RNCVideoPackage>(ctx),
         std::make_shared<PermissionsPackage>(ctx),
+        std::make_shared<RNCNetInfoPackage>(ctx),
+        std::make_shared<ViewPagerPackage>(ctx),
         std::make_shared<BlurPackage>(ctx),
         std::make_shared<CookiesPackage>(ctx),
         std::make_shared<ToolbarAndroidPackage>(ctx),

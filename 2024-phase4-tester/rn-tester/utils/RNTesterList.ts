@@ -259,6 +259,16 @@ const Components: Array<RNTesterModuleInfo> = [
   //   category: 'Basic',
   //   module: require('../examples/react-native-blob-util/testCase/blobTest'),
   // },
+  {
+    key: 'react-native-tab-view',
+    category: 'Basic',
+    module: require('../examples/react-native-tab-view/test/tabView'),
+  },
+  {
+    key: 'react-native-community-netinfo',
+    category: 'Basic',
+    module: require('../examples/react-native-community-netinfo/test/NetInfoTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

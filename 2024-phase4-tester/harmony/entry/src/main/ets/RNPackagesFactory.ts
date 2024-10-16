@@ -16,7 +16,9 @@ import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
 import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
 import { PushNotificationPackage } from '@react-native-oh-tpl/push-notification-ios/ts';
 import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
+import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
 // import {BlobUtilPackage} from '@react-native-oh-tpl/react-native-blob-util/ts';
+import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
@@ -35,6 +37,8 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNTextSizePackage(ctx),
     new PushNotificationPackage(ctx),
     new RNCPickerPackage(ctx),
+    new ViewPagerPackage(ctx),
+    new NetInfoPackage(ctx)
     // new BlobUtilPackage(ctx)
   ];
 }
