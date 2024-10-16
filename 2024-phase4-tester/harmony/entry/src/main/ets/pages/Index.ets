@@ -24,6 +24,7 @@ import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-oh-tpl/checkbox"
 import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
 import { RTNPdfView, PDF_VIEW_TYPE } from '@react-native-oh-tpl/react-native-pdf';
 import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
+import { RNCProgressView, PROGRESS_VIEW_TYPE } from "@react-native-oh-tpl/progress-view"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -38,6 +39,7 @@ const arkTsComponentNames: Array<string> = [
   CHECKBOX_TYPE,
   PDF_VIEW_TYPE,
   PICKER_TYPE,
+  PROGRESS_VIEW_TYPE,
 ];
 
 @Builder
@@ -48,6 +50,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       BlurView({
         ctx: ctx.rnohContext,
         tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === PROGRESS_VIEW_TYPE) {
+      RNCProgressView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
       })
     }
     if (ctx.componentName === PICKER_TYPE) {
@@ -161,8 +169,8 @@ struct Index {
             arkTsComponentNames: arkTsComponentNames,
 
             fontResourceByFontFamily: {
-              // 'antoutline': $rawfile("fonts/antoutline.ttf"),
-              // "antfill": $rawfile('fonts/antfill.ttf'),
+              'antoutline': $rawfile("fonts/antoutline.ttf"),
+              "antfill": $rawfile('fonts/antfill.ttf'),
               'anticon': $rawfile('fonts/AntDesign.ttf'),
               'Entypo': $rawfile('fonts/Entypo.ttf'),
               'EvilIcons': $rawfile('fonts/EvilIcons.ttf'),

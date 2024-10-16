@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 
 import {
     StyleSheet,
@@ -6,7 +6,7 @@ import {
     ScrollView,
     Button
 } from 'react-native';
-import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import { ProgressView } from "@react-native-community/progress-view";
 
 const styles = StyleSheet.create({
@@ -51,156 +51,155 @@ const styles = StyleSheet.create({
     },
 });
 
-export const  ProgressViewDemo =()=> {
- const [getInitStatu_1progress,setGetInitStatu_1progressProgress]=useState(0)
-    const [getInitStatu_2progress,setGetInitStatu_2progressProgress]=useState(0.4)
-    const [progressTintColor,setProgressTintColor]=useState("purple")
-    const [trackTintColor,setTrackTintColor]=useState("purple")
-        return (
-            <Tester>
-                <ScrollView>
-                    <TestSuite name="react-native-community/progress-view">
-                        <TestCase
-                            key={"getInitStatus_1"}
-                            itShould={`animation progress change`}
-                            tags={['C_API']}
-                            initialState={false}
+export const ProgressViewDemo = () => {
+    const [getInitStatu_1progress, setGetInitStatu_1progressProgress] = useState(0)
+    const [getInitStatu_2progress, setGetInitStatu_2progressProgress] = useState(0.4)
+    const [progressTintColor, setProgressTintColor] = useState("purple")
+    const [trackTintColor, setTrackTintColor] = useState("purple")
+    return (
+        <Tester>
+            <ScrollView>
+                <TestSuite name="react-native-community/progress-view">
+                    <TestCase
+                        key={"getInitStatus_1"}
+                        itShould={`animation progress change`}
+                        tags={['C_API']}
+                        initialState={false}
 
-                            arrange={({setState}) => {
-                                return (
-                                    <View style={{flex:1}}>
-                                        <ProgressView
-                                            style={styles.progressView}
-                                            progress={getInitStatu_1progress}
-                                            testID={'p1'}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={getInitStatu_1progress}
+                                        testID={'p1'}
 
-                                        />
-                                        <Button title={"start"}  onPress={() => {
-                                            let i=0
-                                            const timer=  setInterval(()=>{
-                                                i+=0.1
-                                                setGetInitStatu_1progressProgress(i)
-                                                if(i===1){
-                                                    clearInterval(timer)
-                                                }
-                                            },100)
-                                            setState(true)
-                                        }}></Button>
-                                    </View>
-                                );
-                            }}
-                            assert={async ({expect, state}) => {
-                                expect(state).to.be.true;
-                            }}
-                        />
-                        <TestCase
-                            key={"progress number change"}
-                            itShould={`change progress`}
-                            tags={['C_API']}
-                            initialState={false}
-                            arrange={({setState}) => {
-                                return (
-                                    <View style={{flex:1}}>
-                                        <ProgressView
-                                            style={styles.progressView}
-                                            progress={getInitStatu_2progress}
-                                            testID={'p2'}
-
-                                        />
-                                        <Button title={"add 0.1"}  onPress={() => {
-                                            if(getInitStatu_2progress<1.1){
-                                                setGetInitStatu_2progressProgress(getInitStatu_2progress+0.1)
-                                                setState(true)
+                                    />
+                                    <Button title={"start"} onPress={() => {
+                                        let i = 0
+                                        const timer = setInterval(() => {
+                                            i += 0.1
+                                            setGetInitStatu_1progressProgress(i)
+                                            if (i === 1) {
+                                                clearInterval(timer)
                                             }
-                                        }}></Button>
-                                        <Button title={"sub 0.1"}  onPress={() => {
-                                            if(getInitStatu_2progress>0){
-                                                setGetInitStatu_2progressProgress(getInitStatu_2progress-0.1)
-                                                setState(true)
-                                            }
-                                        }}></Button>
-                                    </View>
-                                );
-                            }}
-                            assert={async ({expect, state}) => {
-                                expect(state).to.be.true;
-                            }}
-                        />
-                        <TestCase
-                            key={"getInitStatus_3"}
-                            itShould={`defalut progressTintColor purple color change color`}
-                            tags={['C_API']}
-                            initialState={false}
-                            arrange={({setState}) => {
-                                return (
-                                    <View style={{flex:1}}>
-                                        <ProgressView
-                                            style={styles.progressView}
-                                            progress={0.5}
-                                            progressTintColor={progressTintColor}
-                                            testID={'p3'}
+                                        }, 100)
+                                        setState(true)
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
+                        key={"progress number change"}
+                        itShould={`change progress`}
+                        tags={['C_API']}
+                        initialState={false}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={getInitStatu_2progress}
+                                        testID={'p2'}
 
-                                        />
-                                        <Button title={"setColor:#FF69B4"}  onPress={() => {
-                                            setProgressTintColor("#FF69B4")
+                                    />
+                                    <Button title={"add 0.1"} onPress={() => {
+                                        if (getInitStatu_2progress < 1.1) {
+                                            setGetInitStatu_2progressProgress(getInitStatu_2progress + 0.1)
                                             setState(true)
-                                        }}></Button>
-                                        <Button title={"setColor:(0,255,0)"}  onPress={() => {
-                                            setProgressTintColor("(0,255,0)")
+                                        }
+                                    }}></Button>
+                                    <Button title={"sub 0.1"} onPress={() => {
+                                        if (getInitStatu_2progress > 0) {
+                                            setGetInitStatu_2progressProgress(getInitStatu_2progress - 0.1)
                                             setState(true)
-                                        }}></Button>
-                                    </View>
-                                );
-                            }}
-                            assert={async ({expect, state}) => {
-                                expect(state).to.be.true;
-                            }}
-                        />
-                        <TestCase
-                            key={"getInitStatus_4"}
-                            itShould={`defalut trackTintColor purple color change color`}
-                            tags={['C_API']}
-                            initialState={false}
-                            arrange={({setState}) => {
-                                return (
-                                    <View style={{flex:1}}>
-                                        <ProgressView
-                                            style={styles.progressView}
-                                            progress={0.5}
-                                            trackTintColor={trackTintColor}
-                                            testID={'p4'}
-                                        />
-                                        <Button title={"setColor:#FF69B4"}  onPress={() => {
-                                            setTrackTintColor("#FF69B4")
-                                            setState(true)
-                                        }}></Button>
-                                    </View>
-                                );
-                            }}
-                            assert={async ({expect, state}) => {
-                                expect(state).to.be.true;
-                            }}
-                        />
+                                        }
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
+                        key={"getInitStatus_3"}
+                        itShould={`defalut progressTintColor purple color change color`}
+                        tags={['C_API']}
+                        initialState={false}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={0.5}
+                                        progressTintColor={progressTintColor}
+                                        testID={'p3'}
 
-                    </TestSuite>
-                </ScrollView>
-            </Tester>
-        );
+                                    />
+                                    <Button title={"setColor:#FF69B4"} onPress={() => {
+                                        setProgressTintColor("#FF69B4")
+                                        setState(true)
+                                    }}></Button>
+                                    <Button title={"setColor:(0,255,0)"} onPress={() => {
+                                        setProgressTintColor("(0,255,0)")
+                                        setState(true)
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
+                        key={"getInitStatus_4"}
+                        itShould={`defalut trackTintColor purple color change color`}
+                        tags={['C_API']}
+                        initialState={false}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={0.5}
+                                        trackTintColor={trackTintColor}
+                                        testID={'p4'}
+                                    />
+                                    <Button title={"setColor:#FF69B4"} onPress={() => {
+                                        setTrackTintColor("#FF69B4")
+                                        setState(true)
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+
+                </TestSuite>
+            </ScrollView>
+        </Tester>
+    );
 }
 
-export default {
-    displayName: 'react-native-community/progress-view',
-    framework: 'React',
-    category: 'UI',
-    title: 'react-native-community/progress-view',
-    documentationURL: 'https://github.com/react-native-oh-library/progress-view',
-    description: 'React Native text',
-    examples: [
-      {
+export const displayName = 'react-native-community/progress-view';
+export const framework = 'React';
+export const category = 'basic';
+export const title = 'react-native-community/progress-view';
+export const documentationURL = 'https://github.com/react-native-oh-library/progress-view';
+export const description = 'react-native-community/progress-view';
+
+export const examples = [
+    {
         title: 'react-native-community/progress-view',
         render: function (): any {
-          return <ProgressViewDemo />;
+            return <ProgressViewDemo />;
         },
-      },
-    ]
-  }
+    },
+];

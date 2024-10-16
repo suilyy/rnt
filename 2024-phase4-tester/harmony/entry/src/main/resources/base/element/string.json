@@ -13,6 +13,10 @@
       "value": "Tester"
     },
     {
+      "name": "Access_clipboard",
+      "value": "access clipboard"
+    },
+    {
       "name": "Access_location",
       "value": "access location"
     },
@@ -28,6 +32,5 @@
       "name": "fs_reason",
       "value": "读取数据"
     }
-    
   ]
 }

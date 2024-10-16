@@ -3,6 +3,8 @@ import { SvgPackage } from '@react-native-oh-tpl/react-native-svg/ts';
 import { AsyncStoragePackage } from '@react-native-oh-tpl/async-storage/ts';
 import { ImagePickerViewPackage } from '@react-native-oh-tpl/react-native-image-picker/ts';
 import { GeoLocationPackage } from '@react-native-oh-tpl/geolocation/ts';
+import {ClipboardPackage} from '@react-native-oh-tpl/clipboard/ts';
+
 import { ViewShotPackage } from '@react-native-oh-tpl/react-native-view-shot/ts';
 import { FsPackage } from '@react-native-oh-tpl/react-native-fs/ts';
 import { PermissionsPackage } from '@react-native-oh-tpl/react-native-permissions/ts';
@@ -32,6 +34,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNCVideoPackage(ctx),
     new DocumentPickerPackage(ctx),
     new GestureHandlerPackage(ctx),
+    new ClipboardPackage(ctx),
     new ReanimatedPackage(ctx),
     new SoundPackage(ctx),
     new RNTextSizePackage(ctx),

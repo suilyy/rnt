@@ -209,11 +209,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-modal-popover/index'),
   },
-  // {
-  //   key: 'react-native-tab-navigator',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-tab-navigator/TabNavigatorTest'),
-  // },
+  {
+    key: 'react-native-tab-navigator',
+    category: 'Basic',
+    module: require('../examples/react-native-tab-navigator/TabNavigatorTest'),
+  },
   {
     key: 'react-native-action-button',
     category: 'Basic',
@@ -273,6 +273,16 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeProgressView',
     category: 'Basic',
     module: require('../examples/react-native-community/progress-view/App'),
+  },
+  {
+    key: 'react-native-clipboard',
+    category: 'Basic',
+    module: require('../examples/react-native-clipboard/test/ClipboardExample'),
+  },
+  {
+    key: 'react-native-redash',
+    category: 'Basic',
+    module: require('../examples/react-native-redash/Test/RedashIndex'),
   },
 ];
 
