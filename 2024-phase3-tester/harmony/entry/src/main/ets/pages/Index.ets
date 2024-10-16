@@ -14,13 +14,15 @@ import font from '@ohos.font';
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview";
+import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
   SVG_VIEW_TYPE_NAME,
-  WEB_VIEW
+  WEB_VIEW,
+  VisionCameraView.NAME
 ];
 
 @Builder
@@ -39,6 +41,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
           tag: ctx.tag
       })
     }
+     if (ctx.componentName === VisionCameraView.NAME) {
+       VisionCameraView({
+       ctx: ctx.rnComponentContext,
+       tag: ctx.tag,
+   })
+ }
   }
   .position({ x: 0, y: 0 })
 

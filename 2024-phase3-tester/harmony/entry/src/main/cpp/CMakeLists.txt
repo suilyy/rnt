@@ -14,14 +14,16 @@ add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-fast-image/src/main/cpp" ./fast-image)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-audio-recorder-player/src/main/cpp" ./audio_recorder_player)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp" ./vision-camera)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
-
+file(GLOB VISION_CAMERA_CPP_FILES "${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp/*.cpp")
 add_library(rnoh_app SHARED
     ${GENERATED_CPP_FILES}
     "./PackageProvider.cpp"
-    "${RNOH_CPP_DIR}/RNOHAppNapiBridge.cpp"
+    "${RNOH_CPP_DIR}/RNOHAppNapiBridge.cpp",
+    ${VISION_CAMERA_CPP_FILES}
 )
 
 target_link_libraries(rnoh_app PUBLIC rnoh)
@@ -30,4 +32,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh)
 target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_fast_image)
 target_link_libraries(rnoh_app PUBLIC rnoh_audio_recorder_player)
+target_link_libraries(rnoh_app PUBLIC rnoh_vision_camera)
 # RNOH_END: link_packages

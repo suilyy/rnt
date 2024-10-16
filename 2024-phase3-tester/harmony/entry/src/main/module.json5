@@ -11,16 +11,48 @@
     "installationFree": false,
     "pages": "$profile:main_pages",
     "requestPermissions": [
-      {"name":  "ohos.permission.INTERNET"},
+      {
+        "name": "ohos.permission.INTERNET"
+      },
       {
         "name": "ohos.permission.MICROPHONE",
         "reason": "$string:Access_Create_Audio",
-          "usedScene": {
-            "abilities": [
-                "EntryAbility"
-              ],
-            "when": "always"
-          }
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.CAMERA",
+        "reason": "$string:camera_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.MICROPHONE",
+        "reason": "$string:microphone_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": "$string:location_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
       }
     ],
     "abilities": [

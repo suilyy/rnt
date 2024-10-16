@@ -33,7 +33,8 @@
 	  "react-native-dismiss-keyboard": "^1.0.0",
 	  "react-native-parsed-text": "^0.0.22",
     "@react-native-oh-tpl/react-native-audio-recorder-player": "file:rnoh_package/react-native-oh-tpl-react-native-audio-recorder-player-3.6.10-0.0.2.tgz",
-    "@react-native-oh-tpl/react-native-safe-modules": "file:rnoh_package/react-native-oh-tpl-react-native-safe-modules-1.0.3-0.0.1.tgz"
+    "@react-native-oh-tpl/react-native-safe-modules": "file:rnoh_package/react-native-oh-tpl-react-native-safe-modules-1.0.3-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-vision-camera": "file:rnoh_package/react-native-oh-tpl-react-native-vision-camera-4.0.1-0.0.15.tgz",
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
