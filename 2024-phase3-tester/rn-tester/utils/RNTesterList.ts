@@ -96,6 +96,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-neomorph-shadows/ShadowsDemo'),
   },
+  {
+    key: 'ReactNativeDefaultPreference',
+    category: 'Basic',
+    module: require('../examples/react-native-default-preference/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
