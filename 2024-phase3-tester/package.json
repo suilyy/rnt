@@ -26,6 +26,7 @@
     "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.28.tgz",
     "react-native-mask-text": "^0.14.2",
 	  "react-native-material-menu": "^2.0.0",
+    "react-native-phone-number-input": "^2.1.0",
     "react-native-qrcode-svg": "^6.2.0",
     "react-native-signature-canvas": "^4.7.2",
 	  "react-native-autocomplete-input": "^5.4.0",

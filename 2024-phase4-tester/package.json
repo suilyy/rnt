@@ -46,6 +46,7 @@
     "@react-native-oh-tpl/react-native-fs": "file:./libs/react-native-oh-tpl-react-native-fs-2.20.0-nc.0.1.13.tgz",
     "@react-native-oh-tpl/react-native-gesture-handler": "file:./libs/react-native-oh-tpl-react-native-gesture-handler-2.14.13.tgz",
     "@react-native-oh-tpl/react-native-image-picker": "file:./libs/react-native-oh-tpl-react-native-image-picker-7.0.3-0.1.6.tgz",
+    "@react-native-oh-tpl/react-native-keyboard-aware-scroll-view": "file:rnoh_package/react-native-oh-tpl-react-native-keyboard-aware-scroll-view-0.9.5-0.0.4.tgz",
     "@react-native-oh-tpl/react-native-modal-popover": "file:./libs/react-native-oh-tpl-react-native-modal-popover-2.1.3-0.0.1.tgz",
     "@react-native-oh-tpl/react-native-modalBox": "file:./libs/react-native-oh-tpl-react-native-modalbox-2.0.2-0.0.1.tgz",
     "@react-native-oh-tpl/react-native-pager-view": "file:./libs/react-native-oh-tpl-react-native-pager-view-6.2.3-0.2.6.tgz",
