@@ -260,6 +260,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-element-dropdown/App').default,
   },
+  {
+    key: 'ReactNativeCameraKit',
+    category: 'Basic',
+    module: require('../examples/react-native-camera-kit/App').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

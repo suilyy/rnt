@@ -43,6 +43,7 @@
     "@react-native-oh-tpl/react-native-shake": "file:rnoh_package/react-native-oh-tpl-react-native-shake-5.6.2-0.0.1.tgz",
     "@react-native-oh-tpl/stack": "file:rnoh_package/react-native-oh-tpl-native-stack-6.9.26-0.0.2.tgz",
     "@react-native-oh-tpl/masked-view": "file:rnoh_package/react-native-oh-tpl-masked-view-0.2.9-0.2.2.tgz",
+    "@react-native-oh-tpl/react-native-camera-kit": "file:rnoh_package/react-native-oh-tpl-react-native-camera-kit-14.0.0-beta15-0.0.3.tgz",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "react": "18.2.0",
