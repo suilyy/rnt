@@ -1,6 +1,6 @@
 const {mergeConfig, getDefaultConfig} = require('@react-native/metro-config');
 const {createHarmonyMetroConfig} = require('react-native-harmony/metro.config');
-
+const defaultConfig = getDefaultConfig(__dirname);
 /**
  * @type {import("metro-config").ConfigT}
  */
@@ -12,6 +12,9 @@ const config = {
         inlineRequires: true,
       },
     }),
+  },
+  resolver: {
+    assetExts: [...defaultConfig.resolver.assetExts, 'pem', 'p12'],
   },
 };
 

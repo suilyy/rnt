@@ -10,6 +10,7 @@
 #include "ViewPagerPackage.h"
 #include "ContextMenuPackage.h"
 #include "RNCNetInfoPackage.h"
+#include "MaskedPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -26,5 +27,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<ViewPagerPackage>(ctx),
     std::make_shared<ContextMenuPackage>(ctx),   
     std::make_shared<RNCNetInfoPackage>(ctx),		
+    std::make_shared<MaskedPackage>(ctx),
   };
 } 

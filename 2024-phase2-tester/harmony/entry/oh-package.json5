@@ -21,5 +21,6 @@
     "@react-native-oh-tpl/react-native-context-menu-view": "file:../../node_modules/@react-native-oh-tpl/react-native-context-menu-view/harmony/context_menu.har",
     "@react-native-oh-tpl/react-native-shake": "file:../../node_modules/@react-native-oh-tpl/react-native-shake/harmony/shake_package.har",
     "@react-native-oh-tpl/netinfo": "file:../../node_modules/@react-native-oh-tpl/netinfo/harmony/netinfo.har",
+    "@react-native-oh-tpl/react-native-camera-kit": "file:../../node_modules/@react-native-oh-tpl/react-native-camera-kit/harmony/camera_kit.har"
   }
 }

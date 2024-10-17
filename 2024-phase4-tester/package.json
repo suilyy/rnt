@@ -36,6 +36,7 @@
     "@react-native-oh-tpl/blur": "file:./libs/react-native-oh-tpl-blur-4.4.0-0.0.5.tgz",
     "@react-native-oh-tpl/camera-roll": "file:./libs/react-native-oh-tpl-camera-roll-7.8.3-0.1.1.tgz",
     "@react-native-oh-tpl/checkbox": "file:./libs/react-native-oh-tpl-checkbox-0.5.16-0.0.7.tgz",
+    "@react-native-oh-tpl/camera-roll": "file:rnoh_package/react-native-oh-tpl-camera-roll-7.8.3-0.1.1.tgz",
     "@react-native-oh-tpl/clipboard": "file:./libs/react-native-oh-tpl-clipboard-1.13.2-0.0.9.tgz",
     "@react-native-oh-tpl/cookies": "file:./libs/react-native-oh-tpl-cookies-6.2.1-0.0.7.tgz",
     "@react-native-oh-tpl/datetimepicker": "file:./libs/react-native-oh-tpl-datetimepicker-7.6.2-0.1.1.tgz",

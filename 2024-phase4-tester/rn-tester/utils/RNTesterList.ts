@@ -333,6 +333,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'react-native-cameraroll',
     category: 'basic',
     module: require('../examples/react-native-cameraroll/test/CamerarollTest'),
+
   },
 ];
 
