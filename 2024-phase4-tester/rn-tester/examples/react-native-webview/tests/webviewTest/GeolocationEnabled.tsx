@@ -14,7 +14,7 @@ export default function WebViewTestGeolocationEnabled() {
             initialState={false}
             arrange={({ setState }) => {
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView
                     source={{ uri: 'm.amap.com' }}
                     geolocationEnabled={true}

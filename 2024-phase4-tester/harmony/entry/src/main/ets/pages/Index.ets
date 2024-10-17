@@ -25,12 +25,15 @@ import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-vide
 import { RTNPdfView, PDF_VIEW_TYPE } from '@react-native-oh-tpl/react-native-pdf';
 import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
 import { RNCProgressView, PROGRESS_VIEW_TYPE } from "@react-native-oh-tpl/progress-view"
+import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker"
+import { LottieAnimationView, LOTTIE_TYPE } from "@react-native-oh-tpl/lottie-react-native"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
   PROGRESS_BAR_TYPE,
+  DATETIME_PICKER_VIEW_TYPE,
   RNC_TOOLBAR_ANDROID_TYPE,
   BLUR_TYPE,
   SLIDER_TYPE,
@@ -40,6 +43,7 @@ const arkTsComponentNames: Array<string> = [
   PDF_VIEW_TYPE,
   PICKER_TYPE,
   PROGRESS_VIEW_TYPE,
+  LOTTIE_TYPE
 ];
 
 @Builder
@@ -49,6 +53,18 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     if (ctx.componentName === BLUR_TYPE) {
       BlurView({
         ctx: ctx.rnohContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === LOTTIE_TYPE) {
+      LottieAnimationView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === DATETIME_PICKER_VIEW_TYPE) {
+      RNDateTimePicker({
+        ctx: ctx.rnComponentContext,
         tag: ctx.tag,
       })
     }

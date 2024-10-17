@@ -16,7 +16,7 @@ export default function WebViewTestJavaScriptEnabled() {
               const webView1 = useRef<any>();
               const webView2 = useRef<any>();
               return (
-                <View style={{ height: 600 }}>
+                <View style={{ height: 500 }}>
                   <WebView
                     ref={webView1}
                     source={{ uri: 'www.baidu.com' }}
@@ -27,7 +27,7 @@ export default function WebViewTestJavaScriptEnabled() {
                     source={{ uri: 'www.baidu.com' }}
                     javaScriptEnabled={true}
                   />
-                  <Button title='弹窗' onPress={() => {
+                  <Button style={{bottem:200}} title='弹窗' onPress={() => {
                     webView1.current.injectJavaScript(`
                       alert('JavaScript11111111 is enabled!');
                     `);

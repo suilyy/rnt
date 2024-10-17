@@ -33,7 +33,7 @@ export default function WebViewTestScalesPageToFit() {
                 `);
               };
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginVertical: 20 }}>
                     <Button title="Zoom Out" onPress={onZoomOutPress} />
                     <Button title="Zoom In" onPress={onZoomInPress} />

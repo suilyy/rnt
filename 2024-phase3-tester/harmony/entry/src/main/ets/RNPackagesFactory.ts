@@ -6,6 +6,10 @@ import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import {RNAudioRecorderPlayerPackage} from '@react-native-oh-tpl/react-native-audio-recorder-player/ts';
 import { RNDefaultPreferencePackage } from '@react-native-oh-tpl/react-native-default-preference/ts';
 import { VisionCameraModulePackage } from "@react-native-oh-tpl/react-native-vision-camera/ts";
+import { RNFileViewerPackage } from '@react-native-oh-tpl/react-native-file-viewer/ts';
+import { RNImageColorsPackage } from "@react-native-oh-tpl/react-native-image-colors/ts";
+import { TcpSocketPackage } from '@react-native-oh-tpl/react-native-tcp-socket/ts';
+import { BlePackage } from '@react-native-oh-tpl/react-native-ble-manager/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -16,5 +20,9 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNAudioRecorderPlayerPackage(ctx),
     new RNDefaultPreferencePackage(ctx),
     new VisionCameraModulePackage(ctx),
+    new RNFileViewerPackage(ctx),
+    new RNImageColorsPackage(ctx),
+    new TcpSocketPackage(ctx),
+    new BlePackage(ctx)
 	];
 }

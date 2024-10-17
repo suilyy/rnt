@@ -15,7 +15,7 @@ export default function WebViewTestOnError() {
             arrange={({ setState }) => {
               const [event, setEvent] = useState({});
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView
                     source={{ uri: 'xxxx.baidu.com' }}
                     onError={e => {

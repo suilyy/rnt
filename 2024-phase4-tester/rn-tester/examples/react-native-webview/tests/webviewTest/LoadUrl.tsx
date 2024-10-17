@@ -18,7 +18,7 @@ export default function WebViewTestLoadUrl() {
             initialState={false}
             arrange={({ setState }) => {
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView source={{ uri: 'www.baidu.com' }} ref={loadUrlRef} />
                   <Button title={'loadUrl'} onPress={loadUrl}></Button>
                 </View>
