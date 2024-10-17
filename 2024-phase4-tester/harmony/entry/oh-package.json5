@@ -29,8 +29,10 @@
     "@react-native-oh-tpl/picker": "file:../../node_modules/@react-native-oh-tpl/picker/harmony/picker.har",
     "@react-native-oh-tpl/push-notification-ios": "file:../../node_modules/@react-native-oh-tpl/push-notification-ios/harmony/push_notification.har",
 //    "@react-native-oh-tpl/react-native-blob-util": "file:../../node_modules/@react-native-oh-tpl/react-native-blob-util/harmony/blobUtil.har",
+    "@react-native-oh-tpl/progress-view": "file:../../node_modules/@react-native-oh-tpl/progress-view/harmony/progress_view.har",
     "@react-native-oh-tpl/progress-bar-android": "file:../../node_modules/@react-native-oh-tpl/progress-bar-android/harmony/progress_bar_android.har",
     "@react-native-oh-tpl/netinfo": "file:../../node_modules/@react-native-oh-tpl/netinfo/harmony/netinfo.har",
+    "@react-native-oh-tpl/clipboard": "file:../../node_modules/@react-native-oh-tpl/clipboard/harmony/clipboard.har",
     "@react-native-oh-tpl/react-native-pager-view": "file:../../node_modules/@react-native-oh-tpl/react-native-pager-view/harmony/pager_view.har",
   }
 }

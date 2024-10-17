@@ -106,6 +106,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-phone-number-input/index'),
   },
+  {
+    key: 'ReactNativeVisionCameraView',
+    category: 'Basic',
+    module: require('../examples/react-native-vision-camera/App').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

@@ -7,7 +7,7 @@ set(NODE_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../node_modules")
 set(RNOH_CPP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../oh_modules/@rnoh/react-native-openharmony/src/main/cpp")
 set(WITH_HITRACE_SYSTRACE 1)
 add_compile_definitions(WITH_HITRACE_SYSTRACE)
-
+#set(CMAKE_OBJECT_PATH_MAX 300)
 add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 
 # RNOH_BEGIN: manual_package_linking_1
@@ -33,8 +33,10 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-pdf/src/main/c
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-text-size/src/main/cpp" ./text-size)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-sound/src/main/cpp" ./sound)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-pager-view/src/main/cpp" ./pager_view)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/progress-view/src/main/cpp" ./progress-view)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/netinfo/src/main/cpp" ./netinfo)
- add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/push-notification-ios/src/main/cpp" ./push_notification)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/clipboard/src/main/cpp" ./clipboard)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/push-notification-ios/src/main/cpp" ./push_notification)
 # RNOH_END: manual_package_linking_1
 
 
@@ -53,10 +55,12 @@ target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 target_link_libraries(rnoh_app PUBLIC rnoh_push_notification)
 target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
+target_link_libraries(rnoh_app PUBLIC rnoh_progress_view)
 target_link_libraries(rnoh_app PUBLIC rnoh_image_picker)
 #target_link_libraries(rnoh_app PUBLIC rnoh_blob_util)
 target_link_libraries(rnoh_app PUBLIC rnoh_blur)
 target_link_libraries(rnoh_app PUBLIC rnoh_sound)
+target_link_libraries(rnoh_app PUBLIC rnoh_clipboard)
 target_link_libraries(rnoh_app PUBLIC rnoh_view_shot)
 target_link_libraries(rnoh_app PUBLIC rnoh_text_size)
 target_link_libraries(rnoh_app PUBLIC rnoh_video)

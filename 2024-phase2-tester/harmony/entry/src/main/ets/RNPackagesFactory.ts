@@ -9,6 +9,7 @@ import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/t
 import {ContextMenuPackage} from '@react-native-oh-tpl/react-native-context-menu-view/ts';
 import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
 import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
+import { RTNCameraKitPackage } from "@react-native-oh-tpl/react-native-camera-kit/ts";
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -21,6 +22,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new ViewPagerPackage(ctx),
     new ContextMenuPackage(ctx),
     new ShakePackage(ctx),
-	new NetInfoPackage(ctx),
+	  new NetInfoPackage(ctx),
+    new RTNCameraKitPackage(ctx),
   ];
 }

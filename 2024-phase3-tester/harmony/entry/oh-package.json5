@@ -12,5 +12,6 @@
     "@react-native-oh-tpl/react-native-webview": "file:../../node_modules/@react-native-oh-tpl/react-native-webview/harmony/rn_webview.har",
     "@react-native-oh-tpl/react-native-audio-recorder-player": "file:../../node_modules/@react-native-oh-tpl/react-native-audio-recorder-player/harmony/audio_recorder_player.har",
     "@react-native-oh-tpl/react-native-default-preference": "file:../../node_modules/@react-native-oh-tpl/react-native-default-preference/harmony/react_native_default_preference.har",
+    "@react-native-oh-tpl/react-native-vision-camera": "file:../../node_modules/@react-native-oh-tpl/react-native-vision-camera/harmony/vision_camera.har"
   }
 }

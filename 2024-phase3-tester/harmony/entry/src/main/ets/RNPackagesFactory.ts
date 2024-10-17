@@ -5,6 +5,7 @@ import { SecureRandomPackage } from '@react-native-oh-tpl/react-native-secureran
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import {RNAudioRecorderPlayerPackage} from '@react-native-oh-tpl/react-native-audio-recorder-player/ts';
 import { RNDefaultPreferencePackage } from '@react-native-oh-tpl/react-native-default-preference/ts';
+import { VisionCameraModulePackage } from "@react-native-oh-tpl/react-native-vision-camera/ts";
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -13,6 +14,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new SecureRandomPackage(ctx),
     new WebViewPackage(ctx),
     new RNAudioRecorderPlayerPackage(ctx),
-    new RNDefaultPreferencePackage(ctx)
+    new RNDefaultPreferencePackage(ctx),
+    new VisionCameraModulePackage(ctx),
 	];
 }
