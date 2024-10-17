@@ -15,7 +15,7 @@ export default function WebViewTestUserAgent() {
             arrange={({ setState }) => {
               const webView = useRef<any>();
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView
                     source={{ uri: 'www.baidu.com' }}
                     ref={webView}

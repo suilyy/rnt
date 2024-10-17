@@ -19,7 +19,9 @@ import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/t
 import { PushNotificationPackage } from '@react-native-oh-tpl/push-notification-ios/ts';
 import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
 import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
-// import {BlobUtilPackage} from '@react-native-oh-tpl/react-native-blob-util/ts';
+import { RNVideoCachePackage } from '@react-native-oh-tpl/rnoh-video-cache/ts';
+import { CameraRollPackage } from '@react-native-oh-tpl/camera-roll/ts';
+import {BlobUtilPackage} from '@react-native-oh-tpl/react-native-blob-util/ts';
 import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -30,6 +32,8 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new CookiesPackage(ctx),
     new AsyncStoragePackage(ctx),
     new PermissionsPackage(ctx),
+    new RNVideoCachePackage(ctx),
+    new CameraRollPackage(ctx),
     new WebViewPackage(ctx),
     new RNCVideoPackage(ctx),
     new DocumentPickerPackage(ctx),
@@ -41,7 +45,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new PushNotificationPackage(ctx),
     new RNCPickerPackage(ctx),
     new ViewPagerPackage(ctx),
-    new NetInfoPackage(ctx)
-    // new BlobUtilPackage(ctx)
+    new NetInfoPackage(ctx),
+    new BlobUtilPackage(ctx)
   ];
 }

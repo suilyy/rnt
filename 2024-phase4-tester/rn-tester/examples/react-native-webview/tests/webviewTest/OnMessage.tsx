@@ -60,7 +60,7 @@ export default function WebViewTestOnMessage() {
 
             const [event, setEvent] = useState({});
             return (
-              <View style={{ padding: 20, height: 600 }}>
+              <View style={{ padding: 20, height: 500 }}>
                 <Text>{JSON.stringify(event)}</Text>
                 <WebView
                   ref={webViewPostMessage}

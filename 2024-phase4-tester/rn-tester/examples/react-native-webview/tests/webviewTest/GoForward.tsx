@@ -18,7 +18,7 @@ export default function WebViewTestGoForward() {
             initialState={false}
             arrange={({ setState }) => {
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView source={{ uri: 'www.baidu.com' }} ref={goForwardRef} />
                   <Button title={'goForward'} onPress={goForward}></Button>
                   <Button title={'goBack'} onPress={()=>{

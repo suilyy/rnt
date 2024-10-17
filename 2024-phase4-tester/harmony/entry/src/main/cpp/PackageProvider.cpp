@@ -23,7 +23,8 @@
 #include "PushNotificationPackage.h"
 #include "ViewPagerPackage.h"
 #include "ClipboardPackage.h"   
-// #include "BlobUtilPackage.h"
+ #include "DateTimePickerPackage.h"
+ #include "LottieAnimationViewPackage.h"
  #include "ProgressViewPackage.h"
  #include "RNCNetInfoPackage.h"
 using namespace rnoh;
@@ -41,10 +42,12 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<RNCVideoPackage>(ctx),
         std::make_shared<PermissionsPackage>(ctx),
         std::make_shared<RNCNetInfoPackage>(ctx),
+        std::make_shared<LottieAnimationViewPackage>(ctx),
         std::make_shared<ViewPagerPackage>(ctx),
         std::make_shared<BlurPackage>(ctx),
+        std::make_shared<DateTimePickerPackage>(ctx),
         std::make_shared<CookiesPackage>(ctx),
-         std::make_shared<ClipboardPackage>(ctx),
+        std::make_shared<ClipboardPackage>(ctx),
         std::make_shared<ToolbarAndroidPackage>(ctx),
         std::make_shared<CheckboxPackage>(ctx),
         std::make_shared<WebViewPackage>(ctx),
@@ -52,10 +55,9 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<GestureHandlerPackage>(ctx),
         std::make_shared<ReanimatedPackage>(ctx),
         std::make_shared<PdfViewPackage>(ctx),
-         std::make_shared<ProgressViewPackage>(ctx),
+        std::make_shared<ProgressViewPackage>(ctx),
         std::make_shared<SoundPackage>(ctx),
         std::make_shared<RNTextSizePackage>(ctx),
-//         std::make_shared<BlobUtilPackage>(ctx),
         std::make_shared<PushNotificationPackage>(ctx)
     };
 }

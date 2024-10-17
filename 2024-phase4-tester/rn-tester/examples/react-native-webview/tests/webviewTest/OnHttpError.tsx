@@ -15,7 +15,7 @@ export default function WebViewTestOnHttpError() {
             arrange={({ setState }) => {
               const [event, setEvent] = useState({});
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView
                     source={{ uri: 'https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-webview-V6' }}
                     onHttpError={e => {

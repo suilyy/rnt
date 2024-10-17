@@ -24,7 +24,7 @@ export default function WebViewTestClearCacheRef() {
               let [end, setend] = useState<number>(0)
               let [cacheEnabled, setcacheEnabled] = useState<boolean>(true)
               return (
-                <View style={{ padding: 20, height: 600 }}>
+                <View style={{ padding: 20, height: 500 }}>
                   <WebView
                     source={{ uri: 'https://wallpapersite.com/' }}
                     ref={clearCacheRef}

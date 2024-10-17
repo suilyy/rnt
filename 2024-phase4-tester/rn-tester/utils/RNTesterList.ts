@@ -130,9 +130,9 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-transitiongroup/Index'),
   },
   {
-    key: 'react-native-checkbox',
+    key: 'react-native-community/checkbox',
     category: 'UI',
-    module: require('../examples/react-native-checkbox/Index'),
+    module: require('../examples/react-native-community/checkbox/Index'),
   },
   {
     key: 'react-native-slider',
@@ -254,11 +254,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-community-picker/App'),
   },
-  // {
-  //   key: 'react-native-blob-util',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-blob-util/testCase/blobTest'),
-  // },
+  {
+    key: 'react-native-blob-util',
+    category: 'Basic',
+    module: require('../examples/react-native-blob-util/testCase/blobTest/index'),
+  },
   {
     key: 'react-native-tab-view',
     category: 'Basic',
@@ -288,6 +288,51 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'KeyboardAwareScrollView',
     category: 'Basic',
     module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
+  },
+  // {
+  //   key: 'react-native-video-cache',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-video-cache/VideoCacheDemo'),
+  // },
+  {
+    key: 'react-native-checkbox',
+    category: 'UI',
+    module: require('../examples/react-native-check-box/Tester/CheckBoxJSTest'),
+  },
+  {
+    key: 'react-native-icon-cli',
+    category: 'UI',
+    module: require('../examples/react-native-iconfont-cli/demo/IconFont'),
+  },
+  {
+    key: 'react-native-pickers',
+    category: 'UI',
+    module: require('../examples/react-native-pickers/index'),
+  },
+  {
+    key: 'react-native-community/datetimepicker',
+    category: 'UI',
+    module: require('../examples/react-native-community/datetimepicker/demo/test/DateTimePickerTestDemo'),
+  },
+  {
+    key: 'lottie-react-native',
+    category: 'UI',
+    module: require('../examples/lottie-react-native/test/LottieTest'),
+  },
+  // {
+  //   key: 'react-native-dynamic',
+  //   category: 'UI',
+  //   module: require('../examples/react-native-dynamic/ReactNativeDynamicDemo'),
+  // },
+  {
+    key: 'recyclerlistview',
+    category: 'UI',
+    module: require('../examples/recyclerlistview/demo/test/recyclerListViewTestDemo/index'),
+  },
+  {
+    key: 'react-native-cameraroll',
+    category: 'basic',
+    module: require('../examples/react-native-cameraroll/test/CamerarollTest'),
   },
 ];
 
