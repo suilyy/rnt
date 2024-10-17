@@ -4,6 +4,7 @@ set(OH_MODULES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(OH_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(RNOH_APP_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(RNOH_CPP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../oh_modules/@rnoh/react-native-openharmony/src/main/cpp")
+set(RNOH_GENERATED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/generated")
 set(WITH_HITRACE_SYSTRACE 1)
 add_compile_definitions(WITH_HITRACE_SYSTRACE)
 

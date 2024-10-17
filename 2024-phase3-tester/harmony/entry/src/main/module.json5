@@ -53,6 +53,15 @@
           ],
           "when": "inuse"
         }
+      },
+      {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:app_name",
+        "usedScene": {
+          "abilities": [
+            "UIAbility"
+          ]
+        }
       }
     ],
     "abilities": [

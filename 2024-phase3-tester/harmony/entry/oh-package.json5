@@ -12,6 +12,10 @@
     "@react-native-oh-tpl/react-native-webview": "file:../../node_modules/@react-native-oh-tpl/react-native-webview/harmony/rn_webview.har",
     "@react-native-oh-tpl/react-native-audio-recorder-player": "file:../../node_modules/@react-native-oh-tpl/react-native-audio-recorder-player/harmony/audio_recorder_player.har",
     "@react-native-oh-tpl/react-native-default-preference": "file:../../node_modules/@react-native-oh-tpl/react-native-default-preference/harmony/react_native_default_preference.har",
-    "@react-native-oh-tpl/react-native-vision-camera": "file:../../node_modules/@react-native-oh-tpl/react-native-vision-camera/harmony/vision_camera.har"
+    "@react-native-oh-tpl/react-native-vision-camera": "file:../../node_modules/@react-native-oh-tpl/react-native-vision-camera/harmony/vision_camera.har",
+    "@react-native-oh-tpl/react-native-file-viewer": "file:../../node_modules/@react-native-oh-tpl/react-native-file-viewer/harmony/file_viewer.har",
+    "@react-native-oh-tpl/react-native-image-colors": "file:../../node_modules/@react-native-oh-tpl/react-native-image-colors/harmony/image_colors.har",
+    "@react-native-oh-tpl/react-native-tcp-socket": "file:../../node_modules/@react-native-oh-tpl/react-native-tcp-socket/harmony/tcp_socket.har",
+    "@react-native-oh-tpl/react-native-ble-manager": "file:../../node_modules/@react-native-oh-tpl/react-native-ble-manager/harmony/ble_managerServers.har"
   }
 }
