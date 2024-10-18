@@ -265,6 +265,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-camera-kit/App').default,
   },
+  {
+    key: 'ReactNativeVectorDrawable',
+    category: 'UI',
+    module: require('../examples/react-native-vector-drawable/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
