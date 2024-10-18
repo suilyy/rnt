@@ -334,6 +334,10 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'basic',
     module: require('../examples/react-native-cameraroll/test/CamerarollTest'),
 
+  {
+    key: 'ReactNativeExceptionHandler',
+    category: 'Basic',
+    module: require('../examples/react-native-exception-handler/App'),
   },
 ];
 

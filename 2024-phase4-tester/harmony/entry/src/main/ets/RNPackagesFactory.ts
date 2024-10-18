@@ -23,6 +23,7 @@ import { RNVideoCachePackage } from '@react-native-oh-tpl/rnoh-video-cache/ts';
 import { CameraRollPackage } from '@react-native-oh-tpl/camera-roll/ts';
 import {BlobUtilPackage} from '@react-native-oh-tpl/react-native-blob-util/ts';
 import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
+import {ExceptionHandlerPackage} from '@react-native-oh-tpl/react-native-exception-handler/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
@@ -46,6 +47,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNCPickerPackage(ctx),
     new ViewPagerPackage(ctx),
     new NetInfoPackage(ctx),
-    new BlobUtilPackage(ctx)
+    new BlobUtilPackage(ctx),
+    new ExceptionHandlerPackage(ctx)
   ];
 }

@@ -38,6 +38,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/netinfo/src/main/cpp" ./net
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/clipboard/src/main/cpp" ./clipboard)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/lottie-react-native/src/main/cpp" ./lottie)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/push-notification-ios/src/main/cpp" ./push_notification)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-exception-handler/src/main/cpp" ./exception-handler)
 # RNOH_END: manual_package_linking_1
 
 
@@ -79,4 +80,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_toolbar_android)
 target_link_libraries(rnoh_app PUBLIC rnoh_fs)
 target_link_libraries(rnoh_app PUBLIC rnoh_geolocation)
 target_link_libraries(rnoh_app PUBLIC rnoh_progress_bar_android)
+target_link_libraries(rnoh_app PUBLIC rnoh_exception_handler)
 # RNOH_END: link_packages
