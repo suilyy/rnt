@@ -16,6 +16,9 @@
     "@react-native-oh-tpl/react-native-file-viewer": "file:../../node_modules/@react-native-oh-tpl/react-native-file-viewer/harmony/file_viewer.har",
     "@react-native-oh-tpl/react-native-image-colors": "file:../../node_modules/@react-native-oh-tpl/react-native-image-colors/harmony/image_colors.har",
     "@react-native-oh-tpl/react-native-tcp-socket": "file:../../node_modules/@react-native-oh-tpl/react-native-tcp-socket/harmony/tcp_socket.har",
-    "@react-native-oh-tpl/react-native-ble-manager": "file:../../node_modules/@react-native-oh-tpl/react-native-ble-manager/harmony/ble_managerServers.har"
+    "@react-native-oh-tpl/react-native-ble-manager": "file:../../node_modules/@react-native-oh-tpl/react-native-ble-manager/harmony/ble_managerServers.har",
+     "@react-native-oh-tpl/react-native-screenshot-prevent": "file:../../node_modules/@react-native-oh-tpl/react-native-screenshot-prevent/harmony/react_native_screenshot_prevent.har",
+    "@react-native-oh-tpl/react-native-compass-heading": "file:../../node_modules/@react-native-oh-tpl/react-native-compass-heading/harmony/compass_heading.har",
+    "@react-native-oh-tpl/react-native-localization-settings": "file:../../node_modules/@react-native-oh-tpl/react-native-localization-settings/harmony/localization_settings.har"
   }
 }

@@ -10,6 +10,9 @@ import { RNFileViewerPackage } from '@react-native-oh-tpl/react-native-file-view
 import { RNImageColorsPackage } from "@react-native-oh-tpl/react-native-image-colors/ts";
 import { TcpSocketPackage } from '@react-native-oh-tpl/react-native-tcp-socket/ts';
 import { BlePackage } from '@react-native-oh-tpl/react-native-ble-manager/ts';
+import { RNScreenShotPreventPackage } from "@react-native-oh-tpl/react-native-screenshot-prevent/ts";
+import {RNCompassHeadingPackage} from '@react-native-oh-tpl/react-native-compass-heading/ts';
+import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-localization-settings/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -23,6 +26,9 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNFileViewerPackage(ctx),
     new RNImageColorsPackage(ctx),
     new TcpSocketPackage(ctx),
-    new BlePackage(ctx)
+    new BlePackage(ctx),
+    new RNScreenShotPreventPackage(ctx),
+    new RNCompassHeadingPackage(ctx),
+    new RNLocalizationSettingsPackage(ctx)
 	];
 }
