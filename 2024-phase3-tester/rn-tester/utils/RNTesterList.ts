@@ -12,6 +12,26 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-button/index'),
   },
   {
+    key: "ReactNativeLocalizationSettingsExample",
+    category: "UI",
+    module: require("../examples/react-native-localization-settings/index"),
+  },
+  {
+    key: "ReactNativeCompassHeadingExample",
+    category: "UI",
+    module: require("../examples/react-native-compass-heading/index"),
+  },
+  {
+    key: "ReactNativeMultipleSelectExample",
+    category: "UI",
+    module: require("../examples/react-native-multiple-select/index"),
+  },
+  {
+    key: "ReactNativeScreenshotPreventExample",
+    category: "UI",
+    module: require("../examples/react-native-screenshot-prevent/index"),
+  },
+  {
     key: 'ReactNativeSVG',
     category: 'Basic',
     module: require('../examples/react-native-svg/App'),

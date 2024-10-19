@@ -26,6 +26,7 @@ import { NetInfoPackage } from '@react-native-oh-tpl/netinfo/ts';
 import { PickerViewPackage } from "@react-native-oh-tpl/react-native-picker/ts"
 import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { MapsPackage } from '@react-native-oh-tpl/react-native-maps/ts';
+import {ExceptionHandlerPackage} from '@react-native-oh-tpl/react-native-exception-handler/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
@@ -49,8 +50,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNCPickerPackage(ctx),
     new ViewPagerPackage(ctx),
     new NetInfoPackage(ctx),
-    new BlobUtilPackage(ctx), new MapsPackage(ctx),
+    new MapsPackage(ctx),
     new SafeAreaViewPackage(ctx),
-  new PickerViewPackage(ctx),
+    new PickerViewPackage(ctx),
+    new BlobUtilPackage(ctx),
+    new ExceptionHandlerPackage(ctx),
   ];
 }

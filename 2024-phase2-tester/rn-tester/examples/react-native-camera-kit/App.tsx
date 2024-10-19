@@ -1,20 +1,30 @@
 import React from 'react';
-import { View } from 'react-native';
-import { ScanCodeTestApp } from './scanCode/App';
-import { CameraTestApp } from './camera/App';
-import { NavigationContainer, Page } from './components/Navigation';
+import {SafeAreaView, ScrollView, View} from 'react-native';
+import * as testSuiteByName from './index';
+import {Page, NavigationContainer} from './components/Navigation';
 
-export function CameraKitTestApp() {
+export function CameraKitTestExampleApp() {
   return (
-    <View>
-      <NavigationContainer>
-        <Page name={`ScanCodeTestApp`}>
-          <ScanCodeTestApp />
-        </Page>
-        <Page name={`CameraTestApp`}>
-          <CameraTestApp />
-        </Page>
-      </NavigationContainer>
+    <View style={{backgroundColor: 'black'}}>
+      <SafeAreaView>
+        <NavigationContainer>
+          {Object.keys(testSuiteByName).map(testSuiteName => {
+            const TestSuite =
+              testSuiteByName[testSuiteName as keyof typeof testSuiteByName];
+            return (
+              <Page
+                key={testSuiteName}
+                name={`${testSuiteName.replace('Test', '')}`}>
+                <View style={{flex: 1}}>
+                  <ScrollView style={{flex: 1}}>
+                    <TestSuite key={testSuiteName} />
+                  </ScrollView>
+                </View>
+              </Page>
+            );
+          })}
+        </NavigationContainer>
+      </SafeAreaView>
     </View>
   );
 }
@@ -24,13 +34,13 @@ export default {
   framework: 'React',
   category: 'UI',
   title: 'react-native-camera-kit',
-  documentationURL: 'https://reactnative.dev/docs/text',
+  documentationURL: 'https://github.com/react-native-oh-library/react-native-camera-kit',
   description: 'React Native Camera Kit',
   examples: [
     {
       title: 'react-native-camera-kit',
       render: function (): any {
-        return <CameraKitTestApp />;
+        return <CameraKitTestExampleApp />;
       },
     },
   ],

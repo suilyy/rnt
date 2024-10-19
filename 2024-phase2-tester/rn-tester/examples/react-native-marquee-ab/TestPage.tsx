@@ -1,10 +1,10 @@
 import React from 'react';
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
-import { View, Dimensions, Text, Image, StyleSheet, Button, ScrollView } from 'react-native';
+import { View, Dimensions, Text, Image, StyleSheet, Button, ScrollView, Alert } from 'react-native';
 import { MarqueeHorizontal, MarqueeVertical } from 'react-native-marquee-ab';
 
 //整个屏幕的宽度(由于宽度只能使用数值所以如果想要宽度满屏的话需要获取到宽度再赋值给width)
-const mWidth = Dimensions.get('window').width;
+const mWidth = Dimensions.get('window').width - 40;
 const MaequeeTest = () => {
     return (
         <ScrollView>
@@ -75,7 +75,7 @@ const HorizontalDurationRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -108,7 +108,7 @@ const HorizontalSpeedRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -147,7 +147,7 @@ const HorizontalTextList = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -180,7 +180,7 @@ const HorizontalWidthRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -213,7 +213,7 @@ const HorizontalHeightRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -246,7 +246,7 @@ const HorizontalDirectionRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -279,7 +279,7 @@ const HorizontalReverseRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -312,7 +312,7 @@ const HorizontalSeparatorRolling = () => {
                 bgContainerStyle={{ backgroundColor: 'pink' }}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -349,7 +349,7 @@ const HorizontalBgStyleRolling = () => {
                 bgContainerStyle={bgroundColor}
                 textStyle={{ fontSize: 16 }}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -386,7 +386,7 @@ const HorizontalTextStyleRolling = () => {
                 bgContainerStyle={{ backgroundColor: '#008ad3' }}
                 textStyle={textStyles}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>
@@ -516,7 +516,7 @@ const VerticalRolling = () => {
                 bgContainerStyle={bgColorChange}
                 textStyle={textStyleChange}
                 onTextClick={item => {
-                    alert('' + JSON.stringify(item));
+                    Alert.alert('' + JSON.stringify(item));
                 }}
             />
         </View>

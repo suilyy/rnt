@@ -30,6 +30,7 @@
 #include "PickerPackage.h"
 #include "SafeAreaViewPackage.h"
  #include "MapsPackage.h"
+ #include "ExceptionHandlerPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -64,6 +65,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<ProgressViewPackage>(ctx),
         std::make_shared<SoundPackage>(ctx),
         std::make_shared<RNTextSizePackage>(ctx),
-        std::make_shared<PushNotificationPackage>(ctx)
+        std::make_shared<PushNotificationPackage>(ctx),
+        std::make_shared<ExceptionHandlerPackage>(ctx)
     };
 }
