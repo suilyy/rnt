@@ -27,6 +27,20 @@ import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
 import { RNCProgressView, PROGRESS_VIEW_TYPE } from "@react-native-oh-tpl/progress-view"
 import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker"
 import { LottieAnimationView, LOTTIE_TYPE } from "@react-native-oh-tpl/lottie-react-native"
+import { NativeDatePickerView } from "@react-native-oh-tpl/react-native-date-picker"
+import { AIRMap, AIR_MAP_TYPE, AIRMapMarker, AIR_MAP_MARKER_TYPE, AIRMapPolyline, AIR_MAP_POLYLINE_TYPE, AIRMapPolygon,
+ AIR_MAP_POLYGON_TYPE, AIRMapCircle, AIR_MAP_CIRCLE_TYPE, AIR_MAP_CALLOUT_SUBVIEW_TYPE, AIR_MAP_CALLOUT_TYPE,
+ AIRMapCallout,
+ AIRMapCalloutSubview,
+ Geojson,
+ AIR_GEOJSON_TYPE,
+ AIRMapUrlTile,
+ AIR_URLTILE_TYPE,
+ AIRMapWMSTile,
+ AIR_WMSTILE_TYPE,
+ AIR_OVERLAY_TYPE,
+ AIRMapOverlay
+  } from "@react-native-oh-tpl/react-native-maps"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -43,7 +57,18 @@ const arkTsComponentNames: Array<string> = [
   PDF_VIEW_TYPE,
   PICKER_TYPE,
   PROGRESS_VIEW_TYPE,
-  LOTTIE_TYPE
+  LOTTIE_TYPE,
+  NativeDatePickerView.NAME,
+  AIR_MAP_TYPE,
+  AIR_MAP_MARKER_TYPE,
+  AIR_MAP_POLYLINE_TYPE,
+  AIR_MAP_POLYGON_TYPE,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIR_GEOJSON_TYPE,
+  AIR_URLTILE_TYPE,
+  AIR_WMSTILE_TYPE,
+  AIR_OVERLAY_TYPE
 ];
 
 @Builder
@@ -54,6 +79,73 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       BlurView({
         ctx: ctx.rnohContext,
         tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === AIR_MAP_TYPE) {
+        AIRMap({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
+        AIRMapMarker({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
+        AIRMapPolyline({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
+        AIRMapPolygon({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
+        AIRMapCircle({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
+        AIRMapCallout({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+        AIRMapCalloutSubview({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+        AIRMapCalloutSubview({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_GEOJSON_TYPE) {
+        Geojson({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_URLTILE_TYPE) {
+        AIRMapUrlTile({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_WMSTILE_TYPE) {
+        AIRMapWMSTile({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }else if (ctx.componentName === AIR_OVERLAY_TYPE) {
+        AIRMapOverlay({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag,
+          })
+        }
+    if (ctx.componentName === NativeDatePickerView.NAME) {
+      NativeDatePickerView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
       })
     }
     if (ctx.componentName === LOTTIE_TYPE) {

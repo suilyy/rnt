@@ -10,6 +10,12 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
+    "metadata": [ // 配置如下信息 测试地图功能
+      {
+        "name" :  "client_id",
+        "value":  "111746463"
+      }
+    ],
     "requestPermissions": [
       {
         "name": "ohos.permission.INTERNET"
@@ -74,6 +80,9 @@
           "when":"inuse"
         }
       },
+//      {
+//        "name": "ohos.permission.ACCESS_IDS"
+//      },
       {
         "name" : "ohos.permission.PERMISSION2",
         "reason": "$string:reason",
@@ -83,7 +92,8 @@
           ],
           "when":"always"
         }
-      }
+      },
+
     ],
     "abilities": [
       {

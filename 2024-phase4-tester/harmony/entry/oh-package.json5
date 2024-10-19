@@ -9,6 +9,8 @@
     "@react-native-oh-tpl/slider": "file:../../node_modules/@react-native-oh-tpl/slider/harmony/slider.har",
     "@react-native-oh-tpl/blur": "file:../../node_modules/@react-native-oh-tpl/blur/harmony/blur.har",
     "@react-native-oh-tpl/react-native-fs": "file:../../node_modules/@react-native-oh-tpl/react-native-fs/harmony/fs.har",
+    "@react-native-oh-tpl/react-native-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-picker/harmony/picker.har",
+    "@react-native-oh-tpl/react-native-date-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-date-picker/harmony/date_picker.har",
     "@react-native-oh-tpl/react-native-view-shot": "file:../../node_modules/@react-native-oh-tpl/react-native-view-shot/harmony/view_shot.har",
     "@react-native-oh-tpl/geolocation": "file:../../node_modules/@react-native-oh-tpl/geolocation/harmony/geolocation.har",
     "@react-native-oh-tpl/react-native-image-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-picker/harmony/image_picker.har",
@@ -30,6 +32,7 @@
     "@react-native-oh-tpl/datetimepicker": "file:../../node_modules/@react-native-oh-tpl/datetimepicker/harmony/datetimepicker.har",
     "@react-native-oh-tpl/push-notification-ios": "file:../../node_modules/@react-native-oh-tpl/push-notification-ios/harmony/push_notification.har",
     "@react-native-oh-tpl/react-native-blob-util": "file:../../node_modules/@react-native-oh-tpl/react-native-blob-util/harmony/blobUtil.har",
+    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har",
     "@react-native-oh-tpl/camera-roll": "file:../../node_modules/@react-native-oh-tpl/camera-roll/harmony/camera_roll.har",
     "@react-native-oh-tpl/progress-view": "file:../../node_modules/@react-native-oh-tpl/progress-view/harmony/progress_view.har",
     "@react-native-oh-tpl/progress-bar-android": "file:../../node_modules/@react-native-oh-tpl/progress-bar-android/harmony/progress_bar_android.har",
@@ -38,5 +41,6 @@
     "@react-native-oh-tpl/lottie-react-native": "file:../../node_modules/@react-native-oh-tpl/lottie-react-native/harmony/lottie.har",
     "@react-native-oh-tpl/rnoh-video-cache": "file:../../node_modules/@react-native-oh-tpl/react-native-video-cache/harmony/react_native_video_cache.har",
     "@react-native-oh-tpl/react-native-pager-view": "file:../../node_modules/@react-native-oh-tpl/react-native-pager-view/harmony/pager_view.har",
+    "@react-native-oh-tpl/react-native-safe-area-context": "file:../../node_modules/@react-native-oh-tpl/react-native-safe-area-context/harmony/safe_area.har",
   }
 }

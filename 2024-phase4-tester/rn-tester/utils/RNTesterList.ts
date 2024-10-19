@@ -289,11 +289,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
   },
-  // {
-  //   key: 'react-native-video-cache',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-video-cache/VideoCacheDemo'),
-  // },
+  {
+    key: 'react-native-video-cache',
+    category: 'Basic',
+    module: require('../examples/react-native-video-cache/VideoCacheDemo'),
+  },
   {
     key: 'react-native-checkbox',
     category: 'UI',
@@ -308,6 +308,11 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'react-native-pickers',
     category: 'UI',
     module: require('../examples/react-native-pickers/index'),
+  },
+  {
+    key: 'react-native-picker',
+    category: 'UI',
+    module: require('../examples/react-native-picker/Tester/PickerTester'),
   },
   {
     key: 'react-native-community/datetimepicker',
@@ -334,6 +339,32 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'basic',
     module: require('../examples/react-native-cameraroll/test/CamerarollTest'),
 
+  },
+  {
+    key: 'react-native-date-picker',
+    category: 'basic',
+    module: require('../examples/react-native-date-picker/tester/DatePickerExample'),
+  },
+  {
+    key: 'react-native-reanimated-carousel',
+    category: 'basic',
+    module: require('../examples/react-native-reanimated-carousel/Tester/ReanimatedCarousel'),
+  },
+
+  {
+    key: 'react-native-input-scroll-view',
+    category: 'basic',
+    module: require('../examples/react-native-input-scroll-view/index'),
+  },
+  {
+    key: 'react-native-maps',
+    category: 'basic',
+    module: require('../examples/react-native-maps/Test/App'),
+  },
+  {
+    key: 'react-native-screens',
+    category: 'basic',
+    module: require('../examples/react-native-screens/test/ScreensTest'),
   },
 ];
 

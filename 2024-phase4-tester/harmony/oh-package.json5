@@ -4,7 +4,7 @@
   "devDependencies": {
     "@ohos/hypium": "1.0.6"
   },
-  "name": "rnoh",
+  "name": "rnmapdemo",
   "description": "example description",
   "version": "1.0.0",
   "dependencies": {
