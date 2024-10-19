@@ -289,11 +289,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
   },
-  {
-    key: 'react-native-video-cache',
-    category: 'Basic',
-    module: require('../examples/react-native-video-cache/VideoCacheDemo'),
-  },
+  // {
+  //   key: 'react-native-video-cache',
+  //   category: 'Basic',
+  //   module: require('../examples/react-native-video-cache/VideoCacheDemo'),
+  // },
   {
     key: 'react-native-checkbox',
     category: 'UI',
@@ -338,7 +338,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'react-native-cameraroll',
     category: 'basic',
     module: require('../examples/react-native-cameraroll/test/CamerarollTest'),
-
+  },
   {
     key: 'ReactNativeExceptionHandler',
     category: 'Basic',
@@ -354,7 +354,6 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'basic',
     module: require('../examples/react-native-reanimated-carousel/Tester/ReanimatedCarousel'),
   },
-
   {
     key: 'react-native-input-scroll-view',
     category: 'basic',

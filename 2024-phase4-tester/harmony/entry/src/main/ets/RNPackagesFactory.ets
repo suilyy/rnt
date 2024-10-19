@@ -4,7 +4,6 @@ import { AsyncStoragePackage } from '@react-native-oh-tpl/async-storage/ts';
 import { ImagePickerViewPackage } from '@react-native-oh-tpl/react-native-image-picker/ts';
 import { GeoLocationPackage } from '@react-native-oh-tpl/geolocation/ts';
 import { ClipboardPackage } from '@react-native-oh-tpl/clipboard/ts';
-
 import { ViewShotPackage } from '@react-native-oh-tpl/react-native-view-shot/ts';
 import { FsPackage } from '@react-native-oh-tpl/react-native-fs/ts';
 import { PermissionsPackage } from '@react-native-oh-tpl/react-native-permissions/ts';
@@ -26,7 +25,8 @@ import { NetInfoPackage } from '@react-native-oh-tpl/netinfo/ts';
 import { PickerViewPackage } from "@react-native-oh-tpl/react-native-picker/ts"
 import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { MapsPackage } from '@react-native-oh-tpl/react-native-maps/ts';
-import {ExceptionHandlerPackage} from '@react-native-oh-tpl/react-native-exception-handler/ts';
+import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-exception-handler/ts';
+
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
     new ImagePickerViewPackage(ctx),
