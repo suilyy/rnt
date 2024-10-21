@@ -23,6 +23,14 @@
     {
       "name": "microphone_reason",
       "value": "使用麦克风"
+    },
+	{
+      "name": "read_contacts_reason",
+      "value": "读"
+    },
+    {
+      "name": "write_contacts_reason",
+      "value": "写"
     }
   ]
 }

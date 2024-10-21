@@ -46,7 +46,28 @@
           ],
           "when": "inuse"
         }
+      },
+	  {
+        "name": "ohos.permission.READ_CONTACTS",
+        "reason": "$string:read_contacts_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_CONTACTS",
+        "reason": "$string:write_contacts_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
       }
+	  
     ],
     "abilities": [
       {

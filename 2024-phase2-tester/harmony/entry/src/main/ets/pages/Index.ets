@@ -11,6 +11,7 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
+import { SpinKitView } from "@react-native-oh-tpl/react-native-spinkit";
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { RTNCameraKitView } from "@react-native-oh-tpl/react-native-camera-kit";
@@ -19,6 +20,7 @@ const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
+  SpinKitView.NAME,
   SVG_VIEW_TYPE_NAME,
   RTNCameraKitView.NAME
 ];
@@ -34,11 +36,17 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       })
     }
     if (ctx.componentName === RTNCameraKitView.NAME) {
-    RTNCameraKitView({
-     ctx: ctx.rnComponentContext,
-     tag: ctx.tag,
-   })
- }
+      RTNCameraKitView({
+       ctx: ctx.rnComponentContext,
+       tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === SpinKitView.NAME) {
+      SpinKitView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
   }
   .position({ x: 0, y: 0 })
 

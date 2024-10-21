@@ -6,7 +6,8 @@ import React, { useState } from 'react';
 import Contacts from 'react-native-contacts';
 
 
-function ContactsExample() {
+
+export const ContactsDemo = () => {
 
     const [testContactId, setTestContactId] = useState('1');
     let emailAddress: Contacts.EmailAddress = {
@@ -442,19 +443,19 @@ const styles = StyleSheet.create({
     }
 })
 
-export default {
-    displayName: 'react-native-contacts',
-    framework: 'React',
-    category: 'UI',
-    title: 'react-native-contacts',
-    documentationURL: 'https://github.com/react-native-oh-library/react-native-contacts',
-    description: 'React Native contacts',
-    examples: [
-      {
-        title: 'React Native contacts',
-        render: function (): any {
-          return <ContactsExample />;
-        },
-      },
-    ]
-  }
+// 使用 export 导出
+export const displayName = "ContactsExample";
+export const framework = "React";
+export const category = "Basic";
+export const title = "react-native-contacts";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-contacts";
+export const description = "Simple React Native contacts component.";
+
+export const examples = [
+  {
+    title: "Contacts with default styling",
+    render: function (): any {
+      return <ContactsDemo />;
+    },
+  },
+];

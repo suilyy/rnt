@@ -11,6 +11,8 @@
 #include "ContextMenuPackage.h"
 #include "RNCNetInfoPackage.h"
 #include "MaskedPackage.h"
+#include "UnistylesPackage.h"
+#include "BlurhashPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -28,5 +30,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<ContextMenuPackage>(ctx),   
     std::make_shared<RNCNetInfoPackage>(ctx),		
     std::make_shared<MaskedPackage>(ctx),
+	std::make_shared<UnistylesPackage>(ctx),
+	std::make_shared<BlurhashPackage>(ctx)
   };
 } 
