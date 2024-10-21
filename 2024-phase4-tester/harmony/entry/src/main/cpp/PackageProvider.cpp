@@ -14,7 +14,6 @@
 #include "WebViewPackage.h"
 #include "FsPackage.h"
 #include "RNCVideoPackage.h"
-#include "GestureHandlerPackage.h"
 #include "generated/RNOHGeneratedPackage.h"
 #include "ReanimatedPackage.h"
 #include "PdfViewPackage.h"
@@ -23,14 +22,16 @@
 #include "PushNotificationPackage.h"
 #include "ViewPagerPackage.h"
 #include "ClipboardPackage.h"   
- #include "DateTimePickerPackage.h"
- #include "LottieAnimationViewPackage.h"
- #include "ProgressViewPackage.h"
- #include "RNCNetInfoPackage.h"
+#include "DateTimePickerPackage.h"
+#include "LottieAnimationViewPackage.h"
+#include "ProgressViewPackage.h"
+#include "RNCNetInfoPackage.h"
 #include "PickerPackage.h"
 #include "SafeAreaViewPackage.h"
- #include "MapsPackage.h"
- #include "ExceptionHandlerPackage.h"
+#include "MapsPackage.h"
+#include "ExceptionHandlerPackage.h"
+#include "GestureHandlerPackage.h"
+
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -40,14 +41,14 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<ProgressBarAndroidPackage>(ctx),
         std::make_shared<SliderPackage>(ctx),
         std::make_shared<RNImagePickerPackage>(ctx),
-         std::make_shared<PickerPackage>(ctx),
+        std::make_shared<PickerPackage>(ctx),
         std::make_shared<GeoLocationPackage>(ctx),
         std::make_shared<AsyncStoragePackage>(ctx),
         std::make_shared<ViewShotPackage>(ctx),
         std::make_shared<RNCVideoPackage>(ctx),
         std::make_shared<PermissionsPackage>(ctx),
         std::make_shared<RNCNetInfoPackage>(ctx),
-         std::make_shared<MapsPackage>(ctx),
+        std::make_shared<MapsPackage>(ctx),
         std::make_shared<LottieAnimationViewPackage>(ctx),
         std::make_shared<ViewPagerPackage>(ctx),
         std::make_shared<BlurPackage>(ctx),
@@ -58,14 +59,15 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<CheckboxPackage>(ctx),
         std::make_shared<WebViewPackage>(ctx),
         std::make_shared<FsPackage>(ctx),
-        std::make_shared<GestureHandlerPackage>(ctx),
         std::make_shared<ReanimatedPackage>(ctx),
-           std::make_shared<SafeAreaViewPackage>(ctx),
+        std::make_shared<SafeAreaViewPackage>(ctx),
         std::make_shared<PdfViewPackage>(ctx),
         std::make_shared<ProgressViewPackage>(ctx),
         std::make_shared<SoundPackage>(ctx),
         std::make_shared<RNTextSizePackage>(ctx),
         std::make_shared<PushNotificationPackage>(ctx),
-        std::make_shared<ExceptionHandlerPackage>(ctx)
+        std::make_shared<ExceptionHandlerPackage>(ctx),
+        std::make_shared<GestureHandlerPackage>(ctx),
+        
     };
 }

@@ -369,6 +369,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'basic',
     module: require('../examples/react-native-screens/test/ScreensTest'),
   },
+  {
+    key: 'react-native-drax',
+    category: 'basic',
+    module: require('../examples/react-native-drax/test/tester/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

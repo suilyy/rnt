@@ -16,7 +16,6 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/slider/src/main/cpp" ./slid
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-view-shot/src/main/cpp" ./view-shot)
  add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/datetimepicker/src/main/cpp" ./datetimepicker)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-gesture-handler/src/main/cpp" ./gesture-handler)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-permissions/src/main/cpp" ./permissions)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-fs/src/main/cpp" ./fs)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src/main/cpp" ./reanimated)
@@ -42,6 +41,8 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/push-notification-ios/src/m
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-context/src/main/cpp" ./safe-area)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-exception-handler/src/main/cpp" ./exception-handler)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-gesture-handler/src/main/cpp" ./gesture-handler)
+
 # RNOH_END: manual_package_linking_1
 
 
@@ -61,7 +62,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh_datetime_picker)
  target_link_libraries(rnoh_app PUBLIC rnoh_lottie)
 target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 target_link_libraries(rnoh_app PUBLIC rnoh_push_notification)
-target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
 target_link_libraries(rnoh_app PUBLIC rnoh_progress_view)
  target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
 target_link_libraries(rnoh_app PUBLIC rnoh_maps)
@@ -87,4 +87,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh_fs)
 target_link_libraries(rnoh_app PUBLIC rnoh_geolocation)
 target_link_libraries(rnoh_app PUBLIC rnoh_progress_bar_android)
 target_link_libraries(rnoh_app PUBLIC rnoh_exception_handler)
+target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
+
 # RNOH_END: link_packages

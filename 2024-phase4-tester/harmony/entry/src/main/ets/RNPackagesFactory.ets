@@ -11,7 +11,6 @@ import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
 import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
-import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
 import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
@@ -26,6 +25,7 @@ import { PickerViewPackage } from "@react-native-oh-tpl/react-native-picker/ts"
 import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { MapsPackage } from '@react-native-oh-tpl/react-native-maps/ts';
 import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-exception-handler/ts';
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -41,7 +41,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new WebViewPackage(ctx),
     new RNCVideoPackage(ctx),
     new DocumentPickerPackage(ctx),
-    new GestureHandlerPackage(ctx),
     new ClipboardPackage(ctx),
     new ReanimatedPackage(ctx),
     new SoundPackage(ctx),
@@ -55,5 +54,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new PickerViewPackage(ctx),
     new BlobUtilPackage(ctx),
     new ExceptionHandlerPackage(ctx),
+    new GestureHandlerPackage(ctx),
+
   ];
 }
