@@ -47,11 +47,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-easy-toast/EasyToast'),
   },
   {
-    key: 'ReactNativeContacts',
-    category: 'Basic',
-    module: require('../examples/react-native-contacts/ContactsExample').default,
-  },
-  {
     key: 'ReactNativeScrollableTabview',
     category: 'Basic',
     module: require('../examples/react-native-scrollable-tabview/App'),
@@ -255,6 +250,88 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-shake/ShakeExampleDemo'),
   },
+  {
+    key: 'ReactNativeModalExample',
+    category: 'UI',
+    module: require('../examples/react-native-modal/ModalDemo'),
+  },
+  {
+    key: 'ReactNativeKeepAwakeExample',
+    category: 'Basic',
+    module: require('../examples/react-native-keep-awake/KeepAwakeExample'),
+  },
+  {
+    key: 'ReactNativeMultiSliderExample',
+    category: 'UI',
+    module: require('../examples/react-native-multi-slider/MultiSliderDemo'),
+  },
+  {
+    key: 'ReactNativeOrientationExample',
+    category: 'Basic',
+    module: require('../examples/react-native-orientation/orientationTestDemo'),
+  },
+  {
+    key: 'ReactNativeMaterialButtonsExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-buttons/MaterialButtons'),
+  },
+  {
+    key: 'ReactNativeTextfieldExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-textfield/TextFieldDemo'),
+  },
+  {
+    key: 'ReactNativeRandombytesExample',
+    category: 'Basic',
+    module: require('../examples/react-native-randombytes//RandomBytesDemo'),
+  },
+  {
+    key: 'ReactNativeBackgroundTimerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-background-timer/BackgroundTimerExample'),
+  },
+  {
+    key: 'ReactNativeContactsExample',
+    category: 'Basic',
+    module: require('../examples/react-native-contacts/ContactsDemo'),
+  },
+  {
+    key: 'RNTourguideExample',
+    category: 'UI',
+    module: require('../examples/rn-tourguide/App'),
+  },
+  {
+    key: 'RNViewOverflowExample',
+    category: 'UI',
+    module: require('../examples/react-native-view-overflow/ViewOverflowDemo'),
+  },
+  {
+    key: 'ReactNativeSpinKitExample',
+    category: 'UI',
+    module: require('../examples/react-native-spinkit/SpinKitDemo'),
+  },
+  {
+    key: 'ReactNativeGetRandomValuesExample',
+    category: 'Basic',
+    module: require('../examples/react-native-get-random-values/GetRandomValuesExample'),
+  },
+  {
+    key: 'ReactNativeUnistylesExample',
+    category: 'UI',
+    module: require('../examples/react-native-unistyles/UnistylesExample'),
+  },
+  {
+    key: 'ReactNativeScreenHelperExample',
+    category: 'Basic',
+    module: require('../examples/react-native-iphone-screen-helper/ScreenHelperDemo'),
+  },
+  {
+    key: 'ReactNativeBlurhashExample',
+    category: 'Basic',
+    module: require('../examples/react-native-blurhash/BlurhashDemo'),
+  },
+  
+  
   {
     key: 'ReactNativeElementDropdownView',
     category: 'Basic',

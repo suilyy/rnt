@@ -1,0 +1,41 @@
+import React from 'react';
+import {View} from 'react-native';
+import {Tester, TestCase} from '@rnoh/testerino';
+import ViewOverflow from 'react-native-view-overflow';
+
+export function ViewOverflowDemo() {
+  return (
+    <Tester style={{flex: 1}}>
+      <TestCase itShould="子组件溢出展示">
+
+        <View style={{backgroundColor: 'white', padding: 10}}>
+          <View style={{width: 200, height: 100, backgroundColor: 'red'}}>
+            <ViewOverflow style={{width: 100, height: 50, backgroundColor: 'blue'}}>
+                <ViewOverflow style={{width: 50, height: 25, backgroundColor: 'skyblue', left: 60, top: 30}}>
+                  <View style={{backgroundColor: 'yellow', height: '100%', left: 20, top: 10}} />
+                </ViewOverflow>
+            </ViewOverflow>
+          </View>
+        </View>
+
+      </TestCase>
+    </Tester>
+  );
+}
+
+// 使用 export 导出
+export const displayName = "ViewOverflowExample";
+export const framework = "React";
+export const category = "UI";
+export const title = "react-native-view-overflow";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-view-overflow";
+export const description = "Simple React Native view overflow component.";
+
+export const examples = [
+  {
+    title: "View overflow with default styling",
+    render: function (): any {
+      return <ViewOverflowDemo />;
+    },
+  },
+];

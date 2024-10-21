@@ -131,6 +131,66 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-vision-camera/App').default,
   },
+  {
+    key: 'ReactNativeFileViewer',
+    category: 'Basic',
+    module: require('../examples/react-native-file-viewer/FileViewerDemo'),
+  },
+  {
+    key: 'ReactNativeIndicators',
+    category: 'UI',
+    module: require('../examples/react-native-indicators/IndicatorsExample'),
+  },
+  {
+    key: 'ReactNativeHyperlink',
+    category: 'UI',
+    module: require('../examples/react-native-hyperlink/HyperlinkTest'),
+  },
+  {
+    key: 'ReactNativeAutolink',
+    category: 'UI',
+    module: require('../examples/react-native-autolink/AutoLinkExample'),
+  },
+  {
+    key: 'ReactNativeSwipeableList',
+    category: 'UI',
+    module: require('../examples/react-native-swipeable-list/index'),
+  },
+  {
+    key: 'ReactNativeImageColors',
+    category: 'UI',
+    module: require('../examples/react-native-image-colors/ImageColorsExample'),
+  },
+  {
+    key: 'RNSlidingUpPanel',
+    category: 'UI',
+    module: require('../examples/rn-sliding-up-panel/index'),
+  },
+  {
+    key: 'ReactNativeSwitch',
+    category: 'UI',
+    module: require('../examples/react-native-switch/SwitchDemo'),
+  },
+  {
+    key: 'ReactNativeSvgCharts',
+    category: 'UI',
+    module: require('../examples/react-native-svg-charts/App'),
+  },
+  {
+    key: 'ReactContentLoader',
+    category: 'UI',
+    module: require('../examples/react-content-loader/APP'),
+  },
+  {
+    key: 'ReactNativeTcpSocket',
+    category: 'UI',
+    module: require('../examples/react-native-tcp-socket/TcpSocketTest'),
+  },
+  {
+    key: 'ReactNativeBleManager',
+    category: 'UI',
+    module: require('../examples/react-native-ble-manager/bleManagerExample'),
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

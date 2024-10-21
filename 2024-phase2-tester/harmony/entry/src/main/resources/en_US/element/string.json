@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "read_contacts_reason",
+      "value": "读"
+    },
+    {
+      "name": "write_contacts_reason",
+      "value": "写"
     }
   ]
 }
