@@ -17,6 +17,9 @@
       {
         "name": "ohos.permission.ACCELEROMETER"
       },
+	  {
+        "name": "ohos.permission.ACCESS_BIOMETRIC"
+      },
       {
         "name": "ohos.permission.CAMERA",
         "reason": "$string:camera_reason",
