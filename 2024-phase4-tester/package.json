@@ -20,7 +20,6 @@
     "@ant-design/react-native": "^5.2.2",
     "@gorhom/portal": "^1.0.14",
     "@openspacelabs/react-native-zoomable-view": "^2.1.6",
-    "@react-native-aria/overlays": "^0.3.14",
     "@react-native-async-storage/async-storage": "^2.0.0",
     "@react-native-camera-roll/camera-roll": "^7.8.3",
     "@react-native-clipboard/clipboard": "^1.14.2",
@@ -110,7 +109,6 @@
     "react-native-drax": "^0.10.3",
     "react-native-exception-handler": "^2.10.10",
     "react-native-fs": "^2.20.0",
-    "react-native-gesture-handler": "^2.20.0",
     "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.28.tgz",
     "react-native-image-picker": "^7.1.2",
     "react-native-maps": "^1.18.2",
@@ -141,8 +139,6 @@
     "react-native-video-cache": "^2.7.4",
     "react-native-view-shot": "^3.8.0",
     "react-native-webview": "^13.12.2",
-    "react-router-dom": "^6.22.3",
-    "react-subscribe": "^1.3.2",
     "recyclerlistview": "^4.2.0"
   },
   "devDependencies": {
