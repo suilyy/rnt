@@ -31,6 +31,7 @@
 	"@react-native-oh-tpl/react-native-get-random-values": "file:../../node_modules/@react-native-oh-tpl/react-native-get-random-values/harmony/get_random_values.har",
 	"@react-native-oh-tpl/react-native-unistyles": "file:../../node_modules/@react-native-oh-tpl/react-native-unistyles/harmony/unistyles.har",
 	"@react-native-oh-tpl/react-native-blurhash": "file:../../node_modules/@react-native-oh-tpl/react-native-blurhash/harmony/blurhash.har",
-	"@react-native-oh-tpl/react-native-touch-id": "file:../../node_modules/@react-native-oh-tpl/react-native-touch-id/harmony/touch_id.har"
+	"@react-native-oh-tpl/react-native-touch-id": "file:../../node_modules/@react-native-oh-tpl/react-native-touch-id/harmony/touch_id.har",
+	"@react-native-oh-tpl/react-native-charts-wrapper": "file:../../node_modules/@react-native-oh-tpl/react-native-charts-wrapper/harmony/charts_wrapper.har"
   }
 }

@@ -17,6 +17,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-svg/App'),
   },
   {
+    key: 'ReactNativeChartsWrapper',
+    category: 'Basic',
+    module: require('../examples/react-native-charts-wrapper/index'),
+  },
+  {
     key: 'ReactNativeEzswiper',
     category: 'Basic',
     module: require('../examples/react-native-ezswiper/App'),

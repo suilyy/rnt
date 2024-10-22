@@ -15,6 +15,17 @@ import { SpinKitView } from "@react-native-oh-tpl/react-native-spinkit";
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { RTNCameraKitView } from "@react-native-oh-tpl/react-native-camera-kit";
+import {
+  BarCharts,
+  LineCharts,
+  HorizontalBarCharts,
+  BubbleCharts,
+  PieCharts,
+  RadarCharts,
+  ScatterCharts,
+  CandleStickCharts,
+  CombinedCharts
+} from "@react-native-oh-tpl/react-native-charts-wrapper"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -22,7 +33,16 @@ const arkTsComponentNames: Array<string> = [
   "PropsDisplayer",
   SpinKitView.NAME,
   SVG_VIEW_TYPE_NAME,
-  RTNCameraKitView.NAME
+  RTNCameraKitView.NAME,
+  BarCharts.NAME,
+  LineCharts.NAME,
+  HorizontalBarCharts.NAME,
+  BubbleCharts.NAME,
+  PieCharts.NAME,
+  RadarCharts.NAME,
+  ScatterCharts.NAME,
+  CandleStickCharts.NAME,
+  CombinedCharts.NAME
 ];
 
 @Builder
@@ -43,6 +63,60 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     }
     if (ctx.componentName === SpinKitView.NAME) {
       SpinKitView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === BarCharts.NAME) {
+      BarCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === LineCharts.NAME) {
+      LineCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === HorizontalBarCharts.NAME) {
+      HorizontalBarCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === BubbleCharts.NAME) {
+      BubbleCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === PieCharts.NAME) {
+      PieCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === RadarCharts.NAME) {
+      RadarCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === ScatterCharts.NAME) {
+      ScatterCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === CandleStickCharts.NAME) {
+      CandleStickCharts({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === CombinedCharts.NAME) {
+      CombinedCharts({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })
