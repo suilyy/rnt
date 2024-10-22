@@ -13,6 +13,9 @@ import { BlePackage } from '@react-native-oh-tpl/react-native-ble-manager/ts';
 import { RNScreenShotPreventPackage } from "@react-native-oh-tpl/react-native-screenshot-prevent/ts";
 import {RNCompassHeadingPackage} from '@react-native-oh-tpl/react-native-compass-heading/ts';
 import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-localization-settings/ts';
+import { RNVoicePackage } from '@react-native-oh-tpl/voice/ts'
+import { RNPlatformColorsPackage } from '@react-native-oh-tpl/platform-colors/ts';
+import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -29,6 +32,9 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new BlePackage(ctx),
     new RNScreenShotPreventPackage(ctx),
     new RNCompassHeadingPackage(ctx),
-    new RNLocalizationSettingsPackage(ctx)
+    new RNLocalizationSettingsPackage(ctx),
+    new RNVoicePackage(ctx),
+    new RNPlatformColorsPackage(ctx),
+    new RNBackgroundFetchPackage(ctx),
 	];
 }

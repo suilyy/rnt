@@ -190,7 +190,27 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeBleManager',
     category: 'UI',
     module: require('../examples/react-native-ble-manager/bleManagerExample'),
-  }
+  },
+  {
+    key: 'Voice',
+    category: 'UI',
+    module: require('../examples/voice/VoiceTest'),
+  },
+  {
+    key: 'PlatformColors',
+    category: 'UI',
+    module: require('../examples/klarna-platform-colors/PlatformColorsTest'),
+  },
+  {
+    key: 'ReactNativeBackgroundFetch',
+    category: 'UI',
+    module: require('../examples/react-native-background-fetch/BackroundFetchExample'),
+  },
+  {
+    key: 'ReactNativeBarcodeBuilder',
+    category: 'UI',
+    module: require('../examples/react-native-barcode-builder/BarcodeBuilderExample'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
