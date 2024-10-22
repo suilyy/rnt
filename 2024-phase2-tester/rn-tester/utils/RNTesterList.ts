@@ -236,9 +236,9 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-context-menu-view/ContextMenuViewTest'),
   }, 
   {
-    key: 'RNCountryPicker',
+    key: 'ReactNativeCountryPickerModalView',
     category: 'UI',
-    module: require('../examples/react-native-country-picker-modal/test/index'),
+    module: require('../examples/react-native-country-picker-modal/App').default,
   },
   {
     key: 'RNCountdownCircleTime',
@@ -359,7 +359,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeVectorDrawable',
     category: 'UI',
     module: require('../examples/react-native-vector-drawable/App'),
-  },
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

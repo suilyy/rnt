@@ -1,26 +1,17 @@
-import React, { ReactElement } from 'react';
-import { PhotoTest } from './Photo/PhotoTest';
-import { CodeScanTest } from './CodeScan/CodeScanTest';
-import { VideoTest } from './Video/VideoTest';
-import { NavigationContainer, Page } from './components/Navigation';
-import { View } from 'react-native';
+import React, {ReactElement} from 'react';
+import {PhotoTest} from './Photo/PhotoTest';
+import {CodeScanTest} from './CodeScan/CodeScanTest';
+import {VideoTest} from './Video/VideoTest';
+import {TabNavigator} from './components/TabNavigator';
+
+const tabs = [
+  {title: 'PhotoTest', content: <PhotoTest />},
+  {title: 'CodeScanTest', content: <CodeScanTest />},
+  {title: 'VideoTest', content: <VideoTest />},
+];
 
 export const VisionCameraExampleApp = (): ReactElement => {
-  return (
-    <View>
-      <NavigationContainer>
-        <Page name={`PhotoTest`}>
-          <PhotoTest />
-        </Page>
-        <Page name={`CodeScanTest`}>
-          <CodeScanTest />
-        </Page>
-        <Page name={`VideoTest`}>
-          <VideoTest />
-        </Page>
-      </NavigationContainer>
-    </View>
-  );
+  return <TabNavigator tabs={tabs} />;
 };
 
 export default {

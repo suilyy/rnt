@@ -1,34 +1,27 @@
-import React from 'react';
-import { View } from 'react-native';
-import { NavigationContainer, Page } from '../../components';
-import { DropdownTest } from './examples/DropdownTest';
-import { MultiSelectTest } from './examples/MultiSelectTest';
-import { SelectCountryTest } from './examples/SelectCountryTest';
+import React, {ReactElement} from 'react';
 
-export function ElementDropdownTestApp() {
-  return (
-    <View >
-      <NavigationContainer>
-        <Page name={`DropdownTest`}>
-          <DropdownTest />
-        </Page>
-        <Page name={`MultiSelectTest`}>
-          <MultiSelectTest />
-        </Page>
-        <Page name={`SelectCountryTest`}>
-          <SelectCountryTest />
-        </Page>
-      </NavigationContainer>
-    </View>
-  );
-}
+import {TabNavigator} from './components/TabNavigator';
+import { DropdownTestApp } from './Dropdown/App';
+import { MultiSelectTestApp } from './MultiSelect/App';
+import { SelectCountryTestApp } from './SelectCountry/App';
+
+const tabs = [
+  {title: 'DropdownTest', content: <DropdownTestApp />},
+  {title: 'MultiSelectTest', content: <MultiSelectTestApp />},
+  {title: 'SelectCountryTest', content: <SelectCountryTestApp />},
+
+];
+
+export const ElementDropdownTestApp = (): ReactElement => {
+  return <TabNavigator tabs={tabs} />;
+};
 
 export default {
   displayName: 'react-native-element-dropdown_test_app',
   framework: 'React',
   category: 'UI',
   title: 'react-native-element-dropdown',
-  documentationURL: 'https://github.com/hoaphantn7604/react-native-element-dropdown',
+  documentationURL: 'https://reactnative.dev/docs/text',
   description: 'React Native Element Dropdown',
   examples: [
     {
