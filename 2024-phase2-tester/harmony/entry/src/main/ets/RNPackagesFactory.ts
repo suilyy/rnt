@@ -19,6 +19,8 @@ import { RNSpinKitPackage } from '@react-native-oh-tpl/react-native-spinkit/ts';
 import { RNGetRandomValuesPackage } from "@react-native-oh-tpl/react-native-get-random-values/ts";
 import {RNUnistylesPackage} from '@react-native-oh-tpl/react-native-unistyles/ts';
 import {BlurhashPackage} from '@react-native-oh-tpl/react-native-blurhash/ts';
+import { TouchIdPackage } from "@react-native-oh-tpl/react-native-touch-id/ts";
+import {ChartsWrapperPackage} from '@react-native-oh-tpl/react-native-charts-wrapper/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -42,5 +44,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RNGetRandomValuesPackage(ctx),
 	new RNUnistylesPackage(ctx),
 	new BlurhashPackage(ctx),
+	new TouchIdPackage(ctx),
+	new ChartsWrapperPackage(ctx),
   ];
 }

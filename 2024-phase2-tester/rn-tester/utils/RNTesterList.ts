@@ -17,6 +17,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-svg/App'),
   },
   {
+    key: 'ReactNativeChartsWrapper',
+    category: 'Basic',
+    module: require('../examples/react-native-charts-wrapper/index'),
+  },
+  {
     key: 'ReactNativeEzswiper',
     category: 'Basic',
     module: require('../examples/react-native-ezswiper/App'),
@@ -330,8 +335,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-blurhash/BlurhashDemo'),
   },
-  
-  
+  {
+    key: 'ReactNativeAnimatableExample',
+    category: 'UI',
+    module: require('../examples/react-native-animatable/App'),
+  },
+  {
+    key: 'ReactNativeTouchIdExample',
+    category: 'Basic',
+    module: require('../examples/react-native-touch-id/HarmonyTouchId'),
+  },
   {
     key: 'ReactNativeElementDropdownView',
     category: 'Basic',
