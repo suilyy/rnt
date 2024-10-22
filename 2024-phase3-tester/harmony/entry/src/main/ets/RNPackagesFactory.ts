@@ -16,6 +16,7 @@ import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-l
 import { RNVoicePackage } from '@react-native-oh-tpl/voice/ts'
 import { RNPlatformColorsPackage } from '@react-native-oh-tpl/platform-colors/ts';
 import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
+import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -36,5 +37,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNVoicePackage(ctx),
     new RNPlatformColorsPackage(ctx),
     new RNBackgroundFetchPackage(ctx),
-	];
+    new RNEmailLinkPackage(ctx),
+    ];
 }

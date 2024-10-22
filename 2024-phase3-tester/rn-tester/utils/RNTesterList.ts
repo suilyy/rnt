@@ -12,6 +12,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-button/index'),
   },
   {
+    key: 'ReactNativeEmailLink',
+    category: 'Basic',
+    module: require('../examples/react-native-email-link/tester/EmailLinkExample'),
+  },
+  {
     key: "ReactNativeLocalizationSettingsExample",
     category: "UI",
     module: require("../examples/react-native-localization-settings/index"),
