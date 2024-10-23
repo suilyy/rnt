@@ -216,6 +216,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-barcode-builder/BarcodeBuilderExample'),
   },
+  {
+    key: 'react-native-step-indicator',
+    category: 'Basic',
+    module: require('../examples/react-native-step-indicator/ReactNativeStepIndicator'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

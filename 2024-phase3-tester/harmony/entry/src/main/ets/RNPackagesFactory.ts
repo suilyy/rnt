@@ -15,6 +15,8 @@ import {RNCompassHeadingPackage} from '@react-native-oh-tpl/react-native-compass
 import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-localization-settings/ts';
 import { RNVoicePackage } from '@react-native-oh-tpl/voice/ts'
 import { RNPlatformColorsPackage } from '@react-native-oh-tpl/platform-colors/ts';
+import { RNFileAccessPackage } from '@react-native-oh-tpl/react-native-file-access/ts';
+import {RNUdpPackage} from '@react-native-oh-tpl/react-native-udp/ts';
 import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
 import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
 
@@ -28,8 +30,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNDefaultPreferencePackage(ctx),
     new VisionCameraModulePackage(ctx),
     new RNFileViewerPackage(ctx),
+    new RNUdpPackage(ctx),
     new RNImageColorsPackage(ctx),
     new TcpSocketPackage(ctx),
+    new RNFileAccessPackage(ctx),
     new BlePackage(ctx),
     new RNScreenShotPreventPackage(ctx),
     new RNCompassHeadingPackage(ctx),

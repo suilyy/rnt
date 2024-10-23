@@ -16,6 +16,8 @@
     "@gorhom/portal": "^1.0.14",
     "@react-native-oh-tpl/react-native-svg": "file:rnoh_package/react-native-oh-tpl-react-native-svg-15.0.0-0.5.7.tgz",
     "@react-native-oh-tpl/react-native-fast-image": "file:rnoh_package/react-native-oh-tpl-react-native-fast-image-8.6.3-0.4.14.tgz",
+    "@react-native-oh-tpl/react-native-file-access": "file:rnoh_package/react-native-oh-tpl-react-native-file-access-3.1.0-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-udp": "file:rnoh_package/react-native-oh-tpl-react-native-udp-4.1.7-0.0.2.tgz",
     "@react-native-oh-tpl/react-native-tts": "file:rnoh_package/react-native-oh-tpl-react-native-tts-4.1.1-0.0.3.tgz",
     "@react-native-oh-tpl/react-native-securerandom": "file:rnoh_package/react-native-oh-tpl-react-native-securerandom-1.0.1-0.0.2.tgz",
     "@react-native-oh-tpl/react-native-webview": "file:rnoh_package/react-native-oh-tpl-react-native-webview-13.10.2-0.2.33.tgz",
@@ -52,6 +54,7 @@
     "react-native-indicators": "^0.17.0",
     "react-native-swipeable-list": "^0.1.2",
     "react-native-switch": "^1.5.1",
+    "react-native-step-indicator": "^1.0.3",
     "rn-sliding-up-panel": "^2.4.6"
   },
   "devDependencies": {
