@@ -221,6 +221,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-step-indicator/ReactNativeStepIndicator'),
   },
+  {
+    key: 'react-native-keys',
+    category: 'UI',
+    module: require('../examples/react-native-keys/ReactNativeKeys'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

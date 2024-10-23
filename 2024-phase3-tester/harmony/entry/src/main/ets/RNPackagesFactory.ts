@@ -19,6 +19,7 @@ import { RNFileAccessPackage } from '@react-native-oh-tpl/react-native-file-acce
 import {RNUdpPackage} from '@react-native-oh-tpl/react-native-udp/ts';
 import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
 import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
+import { RNKeysPackage } from '@react-native-oh-tpl/react-native-keys';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -42,5 +43,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNPlatformColorsPackage(ctx),
     new RNBackgroundFetchPackage(ctx),
     new RNEmailLinkPackage(ctx),
+    new RNKeysPackage(ctx),
     ];
 }

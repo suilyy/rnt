@@ -16,6 +16,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/c
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-fast-image/src/main/cpp" ./fast-image)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-audio-recorder-player/src/main/cpp" ./audio_recorder_player)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp" ./vision-camera)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-keys/src/main/cpp" ./rnohkeys)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -33,5 +34,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh)
 target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_fast_image)
 target_link_libraries(rnoh_app PUBLIC rnoh_audio_recorder_player)
+target_link_libraries(rnoh_app PUBLIC rnoh_keys)
 target_link_libraries(rnoh_app PUBLIC rnoh_vision_camera)
 # RNOH_END: link_packages

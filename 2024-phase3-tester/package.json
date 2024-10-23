@@ -16,6 +16,7 @@
     "@gorhom/portal": "^1.0.14",
     "@react-native-oh-tpl/react-native-svg": "file:rnoh_package/react-native-oh-tpl-react-native-svg-15.0.0-0.5.7.tgz",
     "@react-native-oh-tpl/react-native-fast-image": "file:rnoh_package/react-native-oh-tpl-react-native-fast-image-8.6.3-0.4.14.tgz",
+    "@react-native-oh-tpl/react-native-keys": "file:rnoh_package/react-native-oh-tpl-react-native-keys-0.7.10-0.0.2.tgz",
     "@react-native-oh-tpl/react-native-file-access": "file:rnoh_package/react-native-oh-tpl-react-native-file-access-3.1.0-0.0.1.tgz",
     "@react-native-oh-tpl/react-native-udp": "file:rnoh_package/react-native-oh-tpl-react-native-udp-4.1.7-0.0.2.tgz",
     "@react-native-oh-tpl/react-native-tts": "file:rnoh_package/react-native-oh-tpl-react-native-tts-4.1.1-0.0.3.tgz",
