@@ -226,6 +226,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-keys/ReactNativeKeys'),
   },
+  {
+    key: 'ReactNativeReanimatedBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-native-reanimated-bottom-sheet/index'),
+  },
+  {
+    key: 'ReactNativeScrollBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-native-scroll-bottom-sheet'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

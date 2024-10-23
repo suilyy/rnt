@@ -20,6 +20,8 @@ import {RNUdpPackage} from '@react-native-oh-tpl/react-native-udp/ts';
 import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
 import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
 import { RNKeysPackage } from '@react-native-oh-tpl/react-native-keys';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -44,5 +46,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNBackgroundFetchPackage(ctx),
     new RNEmailLinkPackage(ctx),
     new RNKeysPackage(ctx),
+    new GestureHandlerPackage(ctx),
+    new ReanimatedPackage(ctx)
     ];
 }

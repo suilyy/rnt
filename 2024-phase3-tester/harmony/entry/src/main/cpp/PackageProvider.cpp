@@ -5,6 +5,8 @@
 #include "VisionCameraPackage.h"
 #include "generated/RNOHGeneratedPackage.h"
 #include "RNKeysPackage.h"
+#include "GestureHandlerPackage.h"
+#include "ReanimatedPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -16,5 +18,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<RNAudioRecorderPlayerPackage>(ctx),
     std::make_shared<VisionCameraPackage>(ctx), 
     std::make_shared<RNOHKeysPackage>(ctx),
+    std::make_shared<GestureHandlerPackage>(ctx),
+    std::make_shared<ReanimatedPackage>(ctx)
   };
 } 
