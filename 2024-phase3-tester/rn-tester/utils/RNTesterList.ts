@@ -236,6 +236,61 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-scroll-bottom-sheet'),
   },
+  {
+    key: 'ReactNativeMaskedText',
+    category: 'UI',
+    module: require('../examples/react-native-masked-text/MaskedTextDemo'),
+  },
+  {
+    key: 'ReactNativeLoadingSpinnerOverlay',
+    category: 'UI',
+    module: require('../examples/react-native-loading-spinner-overlay/LoadingSpinnerOverlayExample'),
+  },
+  {
+    key: 'ReactNativeWalkthroughTooltip',
+    category: 'UI',
+    module: require('../examples/react-native-walkthrough-tooltip/Walkthrough'),
+  },
+  {
+    key: 'ReactNativeNotifier',
+    category: 'UI',
+    module: require('../examples/react-native-notifier/NotifierTest'),
+  },
+  {
+    key: 'ReactNativeConfettiCannon',
+    category: 'UI',
+    module: require('../examples/react-native-confetti-cannon/ConfettiCannonExample'),
+  },
+  {
+    key: 'ReactNativeMaterialRipple',
+    category: 'UI',
+    module: require('../examples/react-native-material-ripple/MaterialRippleExample'),
+  },
+  {
+    key: 'ReactNativeResponsiveFontSize',
+    category: 'UI',
+    module: require('../examples/react-native-responsive-fontSize/ResponsiveFontsizeExample'),
+  },
+  {
+    key: 'ReactNativeRecaptchaThatWorks',
+    category: 'UI',
+    module: require('../examples/react-native-recaptcha-that-works/ReCAPTCHAExample'),
+  },
+  {
+    key: 'ReactNativeCopilot',
+    category: 'UI',
+    module: require('../examples/react-native-copilot/CopilotExample'),
+  },
+  {
+    key: 'ReactNavigationBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-navigation-bottom-sheet/BottomExample'),
+  },
+  {
+    key: 'ReactNativeAwesomeGallery',
+    category: 'UI',
+    module: require('../examples/react-native-awesome-gallery/test/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
