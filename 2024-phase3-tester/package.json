@@ -73,7 +73,16 @@
     "react-native-recaptcha-that-works": "^2.0.0",
     "react-native-responsive-fontsize": "^0.5.1",
     "react-native-walkthrough-tooltip": "^1.6.0",
-    "@th3rdwave/react-navigation-bottom-sheet": "^0.3.2"
+    "@th3rdwave/react-navigation-bottom-sheet": "^0.3.2",
+    "@react-native-oh-tpl/platform-colors": "file:rnoh_package/react-native-oh-tpl-platform-colors-0.4.0-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-background-fetch": "file:rnoh_package/react-native-oh-tpl-react-native-background-fetch-4.2.5-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-barcode-builder": "file:rnoh_package/react-native-oh-tpl-react-native-barcode-builder-2.0.0-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-markdown-renderer": "file:rnoh_package/react-native-oh-tpl-react-native-markdown-renderer-3.2.8-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-network-info": "file:rnoh_package/react-native-oh-tpl-react-native-network-info-5.2.1-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-quick-base64": "file:rnoh_package/react-native-oh-tpl-react-native-quick-base64-2.1.2-1.0.1.tgz",
+    "@react-native-oh-tpl/react-native-snackbar": "file:rnoh_package/react-native-oh-tpl-react-native-snackbar-2.7.1-0.0.2.tgz",
+    "@react-native-oh-tpl/react-native-typography": "file:rnoh_package/react-native-oh-tpl-react-native-typography-1.4.1-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-version-number": "file:rnoh_package/react-native-oh-tpl-react-native-version-number-0.3.6-0.0.1.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -291,6 +291,36 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-awesome-gallery/test/index'),
   },
+  {
+    key: 'ReactNativeTypography',
+    category: 'UI',
+    module: require('../examples/react-native-typography/index'),
+  },
+  {
+    key: 'ReactNativeNetworkInfo',
+    category: 'UI',
+    module: require('../examples/react-native-network-info/NetworkInfoTest'),
+  },
+  {
+    key: 'ReactNativeMarkdownRenderer',
+    category: 'UI',
+    module: require('../examples/react-native-markdown-renderer/TestReactNativeMarkdownRendererDemo'),
+  },
+  {
+    key: 'ReactNativeSnackbar',
+    category: 'UI',
+    module: require('../examples/react-native-snackbar/SnackbarDemo'),
+  },
+  {
+    key: 'ReactNativeQuickBase64',
+    category: 'UI',
+    module: require('../examples/react-native-quick-base64/QuickBase64Test'),
+  },
+  {
+    key: 'ReactNativeVersionNumber',
+    category: 'UI',
+    module: require('../examples/react-native-version-number/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

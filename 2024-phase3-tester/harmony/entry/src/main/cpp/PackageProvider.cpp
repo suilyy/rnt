@@ -7,6 +7,7 @@
 #include "RNKeysPackage.h"
 #include "GestureHandlerPackage.h"
 #include "ReanimatedPackage.h"
+#include "RNQuickBase64Package.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -19,6 +20,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<VisionCameraPackage>(ctx), 
     std::make_shared<RNOHKeysPackage>(ctx),
     std::make_shared<GestureHandlerPackage>(ctx),
-    std::make_shared<ReanimatedPackage>(ctx)
+    std::make_shared<ReanimatedPackage>(ctx),
+    std::make_shared<RNQuickBase64Package>(ctx)
   };
 } 
