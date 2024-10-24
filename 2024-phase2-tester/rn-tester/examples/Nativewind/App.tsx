@@ -226,19 +226,20 @@ const NativewindDemo = () => {
     )
 }
 
-export default {
-    displayName: "NativewindExample",
-    framework: "React",
-    category: "UI",
-    title: "Nativewind",
-    documentationURL: "https://github.com/nativewind/nativewind",
-    description: "Nativewind",
-    examples: [
-      {
-        title: "Nativewind",
-        render: function (): any {
-          return <NativewindDemo />;
-        },
-      },
-    ],
-  };
+
+  // 使用 export 导出
+export const displayName = "NativewindExample";
+export const framework = "React";
+export const category = "UI";
+export const title = "Nativewind";
+export const documentationURL = "https://github.com/react-native-oh-library/nativewind";
+export const description = "Simple React Native button component.";
+
+export const examples = [
+  {
+    title: "Nativewind with default styling",
+    render: function (): any {
+      return <NativewindDemo />;
+    },
+  },
+];
