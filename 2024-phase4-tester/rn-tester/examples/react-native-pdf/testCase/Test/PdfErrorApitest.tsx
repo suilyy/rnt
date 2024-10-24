@@ -9,7 +9,7 @@ export default function PdfErrorApitest() {
   const [onErrorResult, setOnErrorResult] = useState(new Error());
   return (
     <View style={{ flex: 1 }}>
-      <Tester style={{ paddingBottom: 80 }}>
+      <Tester >
         <TestSuite name={'PDFTest'}>
           <TestCase itShould={'PDF show'}>
             <View style={{ width: 350, height: 250 }}>

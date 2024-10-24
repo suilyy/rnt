@@ -15,7 +15,7 @@ export default function PdfApitest() {
   const [onPressLinkResult, setOnPressLink] = React.useState('');
   return (
     <View style={{ flex: 1 }}>
-      <Tester style={{ paddingBottom: 80 }}>
+      <Tester>
         <TestSuite name={'PDFTest'}>
           <TestCase itShould={'PDF show'}>
             <View style={{ width: 350, height: 250 }}>
