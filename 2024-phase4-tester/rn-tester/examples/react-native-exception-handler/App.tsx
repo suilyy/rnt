@@ -27,7 +27,7 @@ let nativeErrCount = 0;
 const App = () => {
   return (
     <ScrollView>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestCase
           itShould='不使用setJSExceptionHandler：not use setJSExceptionHandler error'
           initialState={{}}

@@ -21,7 +21,7 @@ export default function SliderTest() {
   return (
       <ScrollView>
         <View>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestSuite name={'sliderTest'}>
               <TestCase itShould={'value(默认值): 0.3'}>
                 <Slider

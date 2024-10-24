@@ -14,7 +14,7 @@ const defaultData = generateDataSource(60, '标题');
 
 export const API_headerViewHeight = () => {
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="headerViewHeight">
         <TestCase
           itShould={`属性headerViewHeight：该属性用来支撑库内部拖拽排序算法，一般与renderHeaderView同时使用`}>

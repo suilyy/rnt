@@ -71,7 +71,7 @@ export function ClipboardTest() {
   return (
     <ScrollView>
       <View>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'clipboardTest'}>
             <TestCase
               key={"clipboard_setString"}

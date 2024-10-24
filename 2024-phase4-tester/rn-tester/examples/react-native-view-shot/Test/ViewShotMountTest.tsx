@@ -34,7 +34,7 @@ export default function ViewShotMountTest() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="captureMode为mount，onCapture接口返回截图成功的路径"
             initialState={''}

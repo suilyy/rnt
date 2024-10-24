@@ -61,7 +61,7 @@ export const API_renderBottomView = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="renderBottomView">
         <TestCase
           key={'renderBottomView'}

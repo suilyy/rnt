@@ -8,7 +8,7 @@ const PROFILE_IMAGE = [require('../../assets/tab-navigator/profile_unselected.sv
 export function TabNavigatorTest() {
     return (
         <View style={{ flex: 1, paddingVertical: 48 }}>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <ScrollView>
                     <TestSuite name="TabNavigator">
                         <TestCase itShould="Test sceneStyle and tabBarStyle prop of TabNavigator, set sceneStyle and tabBarStyle height 100">

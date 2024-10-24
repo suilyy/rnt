@@ -22,6 +22,16 @@
     "@react-native-oh-tpl/react-native-localization-settings": "file:../../node_modules/@react-native-oh-tpl/react-native-localization-settings/harmony/localization_settings.har",
     "@react-native-oh-tpl/voice": "file:../../node_modules/@react-native-oh-tpl/voice/harmony/voice.har",
     "@react-native-oh-tpl/platform-colors": "file:../../node_modules/@react-native-oh-tpl/platform-colors/harmony/platform_colors.har",
-    "@react-native-oh-tpl/react-native-background-fetch": "file:../../node_modules/@react-native-oh-tpl/react-native-background-fetch/harmony/background_fetch.har"
+    "@react-native-oh-tpl/react-native-udp": "file:../../node_modules/@react-native-oh-tpl/react-native-udp/harmony/react_native_udp.har",
+    "@react-native-oh-tpl/react-native-keys": "file:../../node_modules/@react-native-oh-tpl/react-native-keys/harmony/rnoh_keys.har",
+    "@react-native-oh-tpl/react-native-file-access": "file:../../node_modules/@react-native-oh-tpl/react-native-file-access/harmony/file_access.har",
+    "@react-native-oh-tpl/react-native-background-fetch": "file:../../node_modules/@react-native-oh-tpl/react-native-background-fetch/harmony/background_fetch.har",
+    "@react-native-oh-tpl/react-native-email-link": "file:../../node_modules/@react-native-oh-tpl/react-native-email-link/harmony/email_link.har",
+    "@react-native-oh-tpl/react-native-gesture-handler": "file:../../node_modules/@react-native-oh-tpl/react-native-gesture-handler/harmony/gesture_handler.har",
+    "@react-native-oh-tpl/react-native-reanimated": "file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har",
+    "@react-native-oh-tpl/react-native-network-info": "file:../../node_modules/@react-native-oh-tpl/react-native-network-info/harmony/rn_network_info.har",
+    "@react-native-oh-tpl/react-native-snackbar": "file:../../node_modules/@react-native-oh-tpl/react-native-snackbar/harmony/snackbar.har",
+    "@react-native-oh-tpl/react-native-quick-base64": "file:../../node_modules/@react-native-oh-tpl/react-native-quick-base64/harmony/rn_quick_base64.har",
+    "@react-native-oh-tpl/react-native-version-number": "file:../../node_modules/@react-native-oh-tpl/react-native-version-number/harmony/rnoh_version_number.har"
   }
 }

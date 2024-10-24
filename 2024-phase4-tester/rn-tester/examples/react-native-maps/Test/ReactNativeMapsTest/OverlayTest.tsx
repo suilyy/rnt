@@ -100,7 +100,7 @@ export class OverlayTest extends React.Component<any, any> {
         </View>
         {/* @ts-ignore */}
         <ScrollView style={{ flex: 1, height: "calc(100% - 200px)" }}>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             {propList}
           </Tester>
         </ScrollView>

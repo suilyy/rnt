@@ -60,7 +60,7 @@ export const API_bottomViewHeight = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="bottomViewHeight">
         <TestCase
           itShould={`属性bottomViewHeight：底部部组件高度，用来支撑库内部算法`}>

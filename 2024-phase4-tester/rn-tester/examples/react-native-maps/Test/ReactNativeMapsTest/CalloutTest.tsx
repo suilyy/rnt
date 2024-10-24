@@ -37,7 +37,7 @@ export class CalloutTest extends React.Component<any, any> {
     const {region, marker} = this.state;
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="Callout"
           >

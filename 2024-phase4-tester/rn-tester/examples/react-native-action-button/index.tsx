@@ -64,7 +64,7 @@ export const ActionBtnTest = () => {
 
     return (
         <View style={{ flex: 1 }}>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
 
                 <ScrollView >
                     <TestSuite name="react-native-action-button">

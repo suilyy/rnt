@@ -30,7 +30,7 @@ export function Button({ label, onPress }: { onPress: () => void; label: string 
 
 export function DotEnvTest() {
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="DotEnv">
         <TestCase itShould="current doc env:">
           <Text style={{ fontWeight: 'bold', fontSize: 18 }}>{process.env.APP_ENV}</Text>

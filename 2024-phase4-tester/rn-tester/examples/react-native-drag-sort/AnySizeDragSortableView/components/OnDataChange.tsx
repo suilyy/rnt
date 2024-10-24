@@ -60,7 +60,7 @@ export const API_onDataChange = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="onDataChange">
         <TestCase
           key={'onDataChange'}

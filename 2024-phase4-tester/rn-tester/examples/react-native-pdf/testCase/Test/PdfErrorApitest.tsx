@@ -9,7 +9,7 @@ export default function PdfErrorApitest() {
   const [onErrorResult, setOnErrorResult] = useState(new Error());
   return (
     <View style={{ flex: 1 }}>
-      <Tester>
+      <Tester >
         <TestSuite name={'PDFTest'}>
           <TestCase itShould={'PDF show'}>
             <View style={{ width: 350, height: 250 }}>
@@ -26,7 +26,7 @@ export default function PdfErrorApitest() {
         </TestSuite>
       </Tester>
       <ScrollView bounces={false}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase itShould={'PDF run by imperative setOnError invoke.'}>
             <View style={styles.testCaseBlock}>
               <Text style={styles.resultText}>error:{onErrorResult.message}</Text>

@@ -15,6 +15,8 @@ import { SpinKitView } from "@react-native-oh-tpl/react-native-spinkit";
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { RTNCameraKitView } from "@react-native-oh-tpl/react-native-camera-kit";
+import { SignatureCaptureArkView } from '@react-native-oh-tpl/react-native-signature-capture';
+import { RNPDFView } from '@react-native-oh-tpl/react-native-view-pdf'
 import {
   BarCharts,
   LineCharts,
@@ -42,7 +44,9 @@ const arkTsComponentNames: Array<string> = [
   RadarCharts.NAME,
   ScatterCharts.NAME,
   CandleStickCharts.NAME,
-  CombinedCharts.NAME
+  CombinedCharts.NAME,
+  SignatureCaptureArkView.NAME,
+  RNPDFView.NAME,
 ];
 
 @Builder
@@ -121,6 +125,18 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
         tag: ctx.tag
       })
     }
+	if (ctx.componentName === SignatureCaptureArkView.NAME) {
+      SignatureCaptureArkView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+	if (ctx.componentName === RNPDFView.NAME) {
+      RNPDFView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
   }
   .position({ x: 0, y: 0 })
 
@@ -156,7 +172,57 @@ const fonts: font.FontOptions[] = [
   {
     familyName: 'FontAwesome5_Solid',
     familySrc: '/assets/fonts/FontAwesome5_Solid.ttf'
+  },
+  {
+    familyName: 'Material Icons',
+    familySrc: $rawfile('assets/assets/fonts/MaterialIcons.ttf')
+  },
+  {
+    familyName: 'Entypo',
+    familySrc: $rawfile('assets/assets/fonts/Entypo.ttf')
+  },
+  {
+    familyName: 'EvilIcons',
+    familySrc: $rawfile('assets/assets/fonts/EvilIcons.ttf')
+  },
+  {
+    familyName: 'Feather',
+    familySrc: $rawfile('assets/assets/fonts/Feather.ttf')
+  },
+  {
+    familyName: 'Foundation',
+    familySrc: $rawfile('assets/assets/fonts/Foundation.ttf')
+  },
+  {
+    familyName: 'Ionicons',
+    familySrc: $rawfile('assets/assets/fonts/Ionicons.ttf')
+  },
+  {
+    familyName: 'Foundation',
+    familySrc: $rawfile('assets/assets/fonts/Foundation.ttf')
+  },
+  {
+    familyName: 'MaterialCommunityIcons',
+    familySrc: $rawfile('assets/assets/fonts/MaterialCommunityIcons.ttf')
+  },
+  {
+    familyName: 'Octicons',
+    familySrc: $rawfile('assets/assets/fonts/Octicons.ttf')
+  },
+  {
+    familyName: 'SimpleLineIcons',
+    familySrc: $rawfile('assets/assets/fonts/SimpleLineIcons.ttf')
+  },
+  {
+    familyName: 'Octicons',
+    familySrc: $rawfile('assets/assets/fonts/Octicons.ttf')
+  },
+  {
+    familyName: 'Zocial',
+    familySrc: $rawfile('assets/assets/fonts/Zocial.ttf')
   }
+  
+  
 ]
 
 @Entry

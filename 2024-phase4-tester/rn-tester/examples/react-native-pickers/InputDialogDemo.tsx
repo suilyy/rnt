@@ -26,7 +26,7 @@ export class InputDialogExample extends BaseComponent {
 
   render(){
    return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name=''>
       { tester_change("title 标题1",'title 标题1',()=>{ this.setState({...this.state,title:'标题1'});this.InputDialog.show() })}

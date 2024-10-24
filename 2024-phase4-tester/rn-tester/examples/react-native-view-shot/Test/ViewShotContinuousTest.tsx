@@ -37,7 +37,7 @@ export default function ViewShotContinuousTest() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="captureMode为continuous，onCapture属性返回截图成功的路径，onCaptureFailure属性返回截图失败信息"
             initialState={''}

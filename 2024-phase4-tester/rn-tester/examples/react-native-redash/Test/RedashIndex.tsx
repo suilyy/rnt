@@ -34,7 +34,7 @@ export default function RedashIndex() {
     return (
         <ScrollView >
             <View>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                     <MathTest />
                     <PathTest />
                     <RedashCoordinatesTest />

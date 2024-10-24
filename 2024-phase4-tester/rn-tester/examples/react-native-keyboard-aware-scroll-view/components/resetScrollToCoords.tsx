@@ -14,7 +14,7 @@ export const resetScrollToCoords: React.FC = (): JSX.Element => {
     const inputRef = useRef<TextInput | null>(null);
     let scroll: JSX.Element | null = null;
 
-    return <Tester>
+    return <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name='react-native-autoheight-webview'>
             <TestCase
                 key={'getInitStatus_1'}

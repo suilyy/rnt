@@ -37,7 +37,7 @@ const DraxListDemo11 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
         <View style={styles.container}>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:viewPropsExtractor(根据每一个Item项的数据返回对应的Props,当item为task2的时候,边框为绿色)"
               tags={['C_API']}>
               <DraxList

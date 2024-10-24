@@ -41,7 +41,7 @@ export default function ViewShotUpdateTest() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="captureMode为update，onCapture接口返回截图成功的路径"
             initialState={''}

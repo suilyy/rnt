@@ -11,7 +11,7 @@ export default function WebViewTestGoBack() {
   };
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref goBack'}
             itShould={`webview api ref goBack`}

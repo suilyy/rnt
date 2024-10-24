@@ -27,7 +27,7 @@ const DraxListDemo4 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
           <View style={styles.container}>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:renderItemContent(设置内部FlatList组件内部Item项的渲染函数),边框为蓝色"
               tags={['C_API']}>
               <DraxList

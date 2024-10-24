@@ -15,8 +15,17 @@ import {RNCompassHeadingPackage} from '@react-native-oh-tpl/react-native-compass
 import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-localization-settings/ts';
 import { RNVoicePackage } from '@react-native-oh-tpl/voice/ts'
 import { RNPlatformColorsPackage } from '@react-native-oh-tpl/platform-colors/ts';
+import { RNFileAccessPackage } from '@react-native-oh-tpl/react-native-file-access/ts';
+import {RNUdpPackage} from '@react-native-oh-tpl/react-native-udp/ts';
 import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
-
+import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
+import { RNKeysPackage } from '@react-native-oh-tpl/react-native-keys';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
+import { RNNetworkInfoPackage } from '@react-native-oh-tpl/react-native-network-info/ts';
+import { RNSnackbarPackage } from '@react-native-oh-tpl/react-native-snackbar/ts';
+import { RNQuickBase64Package } from '@react-native-oh-tpl/react-native-quick-base64/ts';
+import { RNVersionNumberPackage } from '@react-native-oh-tpl/react-native-version-number/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new FastImagePackage(ctx),
@@ -27,8 +36,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNDefaultPreferencePackage(ctx),
     new VisionCameraModulePackage(ctx),
     new RNFileViewerPackage(ctx),
+    new RNUdpPackage(ctx),
     new RNImageColorsPackage(ctx),
     new TcpSocketPackage(ctx),
+    new RNFileAccessPackage(ctx),
     new BlePackage(ctx),
     new RNScreenShotPreventPackage(ctx),
     new RNCompassHeadingPackage(ctx),
@@ -36,5 +47,13 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNVoicePackage(ctx),
     new RNPlatformColorsPackage(ctx),
     new RNBackgroundFetchPackage(ctx),
-	];
+    new RNEmailLinkPackage(ctx),
+    new RNKeysPackage(ctx),
+    new GestureHandlerPackage(ctx),
+    new ReanimatedPackage(ctx),
+    new RNNetworkInfoPackage(ctx),
+    new RNSnackbarPackage(ctx),
+    new RNQuickBase64Package(ctx),
+    new RNVersionNumberPackage(ctx)
+    ];
 }

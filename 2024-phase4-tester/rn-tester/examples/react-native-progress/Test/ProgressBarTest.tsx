@@ -56,7 +56,7 @@ export default function ProgressBarTest() {
 
   return (
     <ScrollView style={{ flex: 1, height: "100%" }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name="ProgressBar">
           <TestCase
             itShould="animationConfig = { bounciness: 0 }"

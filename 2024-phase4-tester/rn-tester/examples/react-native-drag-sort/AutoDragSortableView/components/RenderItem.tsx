@@ -16,7 +16,7 @@ export const API_renderItem = () => {
   const [renderItem, setRenderItem] = useState('');
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="renderItem">
         <TestCase
           key={'renderItem'}

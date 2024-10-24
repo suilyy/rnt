@@ -95,7 +95,7 @@ export function PopoverCenterExample() {
   } = usePopover();
   const title = <Text ref={touchableRef} >Press me!222</Text>
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name='popoverTesteCenterDemo'>
         <TestCase itShould='popover' tags={['C_API']}>
           <View style={styles.app} >

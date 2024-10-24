@@ -34,7 +34,7 @@ const DraxListDemo1 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
           <View style={styles.container}>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:data是每一个数据"
               tags={['C_API']}>
               <DraxList

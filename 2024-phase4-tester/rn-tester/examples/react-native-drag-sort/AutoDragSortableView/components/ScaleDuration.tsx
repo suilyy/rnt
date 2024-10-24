@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_scaleDuration = () => {
   const [scaleDuration, setScaleDuration] = useState(100);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="scaleDuration">
         <TestCase
           key={'scaleDuration'}

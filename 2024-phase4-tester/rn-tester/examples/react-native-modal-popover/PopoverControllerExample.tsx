@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 export function PopoverControllerExample() {
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name='popoverTesteCenterDemo'>
         <TestCase itShould='popover' tags={['C_API']}>
           <View style={styles.app} >

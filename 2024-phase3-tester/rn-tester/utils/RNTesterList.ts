@@ -12,6 +12,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-button/index'),
   },
   {
+    key: 'ReactNativeEmailLink',
+    category: 'Basic',
+    module: require('../examples/react-native-email-link/tester/EmailLinkExample'),
+  },
+  {
     key: "ReactNativeLocalizationSettingsExample",
     category: "UI",
     module: require("../examples/react-native-localization-settings/index"),
@@ -210,6 +215,111 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeBarcodeBuilder',
     category: 'UI',
     module: require('../examples/react-native-barcode-builder/BarcodeBuilderExample'),
+  },
+  {
+    key: 'react-native-step-indicator',
+    category: 'Basic',
+    module: require('../examples/react-native-step-indicator/ReactNativeStepIndicator'),
+  },
+  {
+    key: 'react-native-keys',
+    category: 'UI',
+    module: require('../examples/react-native-keys/ReactNativeKeys'),
+  },
+  {
+    key: 'ReactNativeReanimatedBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-native-reanimated-bottom-sheet/index'),
+  },
+  {
+    key: 'ReactNativeScrollBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-native-scroll-bottom-sheet'),
+  },
+  {
+    key: 'ReactNativeMaskedText',
+    category: 'UI',
+    module: require('../examples/react-native-masked-text/MaskedTextDemo'),
+  },
+  {
+    key: 'ReactNativeLoadingSpinnerOverlay',
+    category: 'UI',
+    module: require('../examples/react-native-loading-spinner-overlay/LoadingSpinnerOverlayExample'),
+  },
+  {
+    key: 'ReactNativeWalkthroughTooltip',
+    category: 'UI',
+    module: require('../examples/react-native-walkthrough-tooltip/Walkthrough'),
+  },
+  {
+    key: 'ReactNativeNotifier',
+    category: 'UI',
+    module: require('../examples/react-native-notifier/NotifierTest'),
+  },
+  {
+    key: 'ReactNativeConfettiCannon',
+    category: 'UI',
+    module: require('../examples/react-native-confetti-cannon/ConfettiCannonExample'),
+  },
+  {
+    key: 'ReactNativeMaterialRipple',
+    category: 'UI',
+    module: require('../examples/react-native-material-ripple/MaterialRippleExample'),
+  },
+  {
+    key: 'ReactNativeResponsiveFontSize',
+    category: 'UI',
+    module: require('../examples/react-native-responsive-fontSize/ResponsiveFontsizeExample'),
+  },
+  {
+    key: 'ReactNativeRecaptchaThatWorks',
+    category: 'UI',
+    module: require('../examples/react-native-recaptcha-that-works/ReCAPTCHAExample'),
+  },
+  {
+    key: 'ReactNativeCopilot',
+    category: 'UI',
+    module: require('../examples/react-native-copilot/CopilotExample'),
+  },
+  {
+    key: 'ReactNavigationBottomSheet',
+    category: 'UI',
+    module: require('../examples/react-navigation-bottom-sheet/BottomExample'),
+  },
+  {
+    key: 'ReactNativeAwesomeGallery',
+    category: 'UI',
+    module: require('../examples/react-native-awesome-gallery/test/index'),
+  },
+  {
+    key: 'ReactNativeTypography',
+    category: 'UI',
+    module: require('../examples/react-native-typography/index'),
+  },
+  {
+    key: 'ReactNativeNetworkInfo',
+    category: 'UI',
+    module: require('../examples/react-native-network-info/NetworkInfoTest'),
+  },
+  {
+    key: 'ReactNativeMarkdownRenderer',
+    category: 'UI',
+    module: require('../examples/react-native-markdown-renderer/TestReactNativeMarkdownRendererDemo'),
+  },
+  {
+    key: 'ReactNativeSnackbar',
+    category: 'UI',
+    module: require('../examples/react-native-snackbar/SnackbarDemo'),
+  },
+  {
+    key: 'ReactNativeQuickBase64',
+    category: 'UI',
+    module: require('../examples/react-native-quick-base64/QuickBase64Test'),
+  },
+  {
+    key: 'ReactNativeVersionNumber',
+    category: 'UI',
+    module: require('../examples/react-native-version-number/index'),
   },
 ];
 

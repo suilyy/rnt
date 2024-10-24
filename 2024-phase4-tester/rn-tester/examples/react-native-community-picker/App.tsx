@@ -7,7 +7,7 @@ export const PickerExample = () => {
 
   return (
     <ScrollView>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name="Button">
           <TestCase itShould="render a Picker to test selectedValue">
             <SelectedValueTest />

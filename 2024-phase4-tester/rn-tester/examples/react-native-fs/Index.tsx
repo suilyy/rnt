@@ -259,7 +259,7 @@ function FsTest(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             key={'getInitStatus_5'}
             itShould={`api path list`}

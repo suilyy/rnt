@@ -60,7 +60,7 @@ export const API_headerViewHeight = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="headerViewHeight">
         <TestCase
           itShould={`属性headerViewHeight：头部组件高度，用来支撑库内部算法`}>

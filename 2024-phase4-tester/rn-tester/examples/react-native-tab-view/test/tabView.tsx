@@ -209,7 +209,7 @@ export function NewTabViewExample() {
   const [indicator, setIndicator] = React.useState(false);
   return (
     <View style={{ flex: 1 }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name={'TabViewTest'}>
           <TestCase itShould={'TabView show'}>
             <View style={{
@@ -248,7 +248,7 @@ export function NewTabViewExample() {
       </Tester>
 
       <ScrollView bounces={false}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'TabViewTest'}>
             <TestCase itShould={'TabView renderTabBar'}>
               <View style={styles.flex_row} >

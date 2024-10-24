@@ -39,7 +39,7 @@ export function DatePickerExample() {
   const [dateTimeText4, setDateTimeText4] = useState('')
   const [timeText, setTimeText] = useState('')
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView style={styles.container}>
         <TestSuite name='DatePickerDemo'>
           <TestCase itShould='{modal:false,mode:date}'>

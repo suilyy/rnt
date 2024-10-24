@@ -12,7 +12,7 @@ export default function SliderExample() {
 
     return (
         <ScrollView>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <TestCase
                     itShould="style: Used to style and layout the Slider"
                     initialState={200}

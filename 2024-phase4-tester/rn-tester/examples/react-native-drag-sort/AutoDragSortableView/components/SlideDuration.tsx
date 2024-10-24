@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_slideDuration = () => {
   const [slideDuration, setSlideDuration] = useState(300);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="slideDuration">
         <TestCase
           key={'slideDuration'}

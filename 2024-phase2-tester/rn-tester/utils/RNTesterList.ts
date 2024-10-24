@@ -201,11 +201,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-shadow-2/Shadow2Demo'),
   },
   {
-    key: 'ReactNativeNativewind',
-    category: 'Basic',
-    module: require('../examples/Nativewind/App').default,
-  },
-  {
     key: 'ReactNativeImageHeaderScrollView',
     category: 'Basic',
     module: require('../examples/react-native-image-header-scroll-view/App'),
@@ -344,6 +339,46 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeTouchIdExample',
     category: 'Basic',
     module: require('../examples/react-native-touch-id/HarmonyTouchId'),
+  },
+  {
+    key: 'ReactNativeCreateThumbnailExample',
+    category: 'Basic',
+    module: require('../examples/react-native-create-thumbnail/CreateThumbnailDemo'),
+  },
+  {
+    key: 'ReactNativeSignatureCaputureExample',
+    category: 'UI',
+    module: require('../examples/react-native-signature-capture/signatureCapture'),
+  },
+  {
+    key: 'ReactNativeFingerprintScannerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-fingerprint-scanner/FingerprintScannerDemo'),
+  },
+  {
+    key: 'ReactNativeBrowserExample',
+    category: 'Basic',
+    module: require('../examples/react-native-inappbrowser/BrowserDemo1'),
+  },
+  {
+    key: 'ReactNativeMaterialUiExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-ui/index'),
+  },
+  {
+    key: 'ReactNativeCryptoExample',
+    category: 'Basic',
+    module: require('../examples/react-native-crypto/CryptoExample'),
+  },
+  {
+    key: 'ReactNativeNativewindExample',
+    category: 'UI',
+    module: require('../examples/Nativewind/App'),
+  },
+  {
+    key: 'ReactNativePDFViewExample',
+    category: 'UI',
+    module: require('../examples/react-native-PDFView/AppPDF'),
   },
   {
     key: 'ReactNativeElementDropdownView',

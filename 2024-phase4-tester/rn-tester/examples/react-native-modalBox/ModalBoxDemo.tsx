@@ -58,7 +58,7 @@ export const ModalBoxDemo = () => {
     btnRef1.current?.close();
   };
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView style={{margin: 10, height: '90%'}}>
         <TestSuite name="属性">
           <TestCase itShould="点击按钮后打开弹框，点击‘close ModalBox’关闭弹框">

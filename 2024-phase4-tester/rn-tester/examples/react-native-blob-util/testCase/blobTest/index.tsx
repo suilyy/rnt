@@ -28,7 +28,6 @@ function AppTest() {
 
 export default AppTest;
 
-
 export const displayName = 'react-native-blob-util';
 export const framework = 'React';
 export const category = 'UI';

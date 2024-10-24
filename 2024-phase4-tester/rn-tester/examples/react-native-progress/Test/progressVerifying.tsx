@@ -40,7 +40,7 @@ export default function ProgressVerifying() {
 
   return (
     <ScrollView style={{ flex: 1, height: '100%' }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name="ProgressCircle">
           <View>
             <Text style={{ fontSize: 30 }}>遗留问题验证:</Text>

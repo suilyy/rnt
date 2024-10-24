@@ -18,7 +18,7 @@ export const enableAutomaticScroll: React.FC = (): JSX.Element => {
     let scroll: JSX.Element | null = null;
 
     const setEnableAutomaticScrollValue = () => setEnableAutomaticScroll(previousState => !previousState);
-    return <Tester>
+    return <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name='react-native-autoheight-webview'>
             <TestCase
                 key={'getInitStatus_1'}

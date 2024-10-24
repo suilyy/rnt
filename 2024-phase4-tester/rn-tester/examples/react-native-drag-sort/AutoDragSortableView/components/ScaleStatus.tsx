@@ -16,7 +16,7 @@ export const API_scaleStatus = () => {
   const [scaleStatusX, setScaleStatusX] = useState('scale');
   const [scaleStatusY, setScaleStatusY] = useState('scale');
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="scaleStatus">
         <TestCase
           key={'scaleStatusX'}

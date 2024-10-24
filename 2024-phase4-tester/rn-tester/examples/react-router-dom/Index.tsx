@@ -487,7 +487,7 @@ const AsyncPage = () => {
 export default function ReactRouterDomTest() {
     return (
         <ScrollView>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <TestSuite name='ReactRouterDomTest'>
                     <TestCase
                         itShould='useRoutes and useNavigate and  useOutletContext '

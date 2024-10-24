@@ -9,7 +9,7 @@ export default function App() {
     const [asyncData, setAsyncData] = useState<string>('')
 
     return (
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
             <TestSuite name="VideoCache">
                 <TestCase
                     tags={['C_API']}

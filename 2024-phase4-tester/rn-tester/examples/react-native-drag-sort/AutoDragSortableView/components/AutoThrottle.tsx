@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_autoThrottle = () => {
   const [autoThrottle, setAutoThrottle] = useState(2);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="autoThrottle">
         <TestCase
           key={'autoThrottle'}

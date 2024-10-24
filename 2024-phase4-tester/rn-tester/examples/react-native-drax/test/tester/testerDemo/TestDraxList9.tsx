@@ -43,7 +43,7 @@ const DraxListDemo9 = () => {
               title="重置"
               onPress={resetBtn}></Button>
           </View>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:onItemReorder(item移动索引位置的回调)"
               tags={['C_API']}>
               <DraxList

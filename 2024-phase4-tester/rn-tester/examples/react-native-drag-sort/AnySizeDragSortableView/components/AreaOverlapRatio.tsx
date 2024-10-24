@@ -61,7 +61,7 @@ export const API_areaOverlapRatio = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="areaOverlapRatio">
         <TestCase
           key={'areaOverlapRatio'}

@@ -214,7 +214,7 @@ export function PushNotificationIos() {
     return (
         <View style={{ flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
             <ScrollView>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                     <TestCase itShould="addNotificationRequest">
                         <Button title="添加通知请求title1"
                             onPress={addNotificationRequest}

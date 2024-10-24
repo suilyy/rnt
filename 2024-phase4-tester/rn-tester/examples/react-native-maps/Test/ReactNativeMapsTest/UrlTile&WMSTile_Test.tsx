@@ -32,7 +32,7 @@ export class UrlWMSTileTest extends React.Component<any, any> {
     const Tile = true ? UrlTile : WMSTile; // 切换瓦片组件
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="UrlTile & WMSTile"
           >

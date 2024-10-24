@@ -16,7 +16,7 @@ export class CustomPickerExample extends BaseComponent {
 
   render(){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name=''>
       { tester_change('list ["item0", "item1", "item2", "item3"]','list ["item0", "item1", "item2", "item3"]',()=>{ this.setState({...this.state,list:['item0', 'item1', 'item2', 'item3']});this.CustomPicker.show() })}
       { tester_change('list ["item0z", "item1z", "item2z", "item3z"]','list ["item0z", "item1z", "item2z", "item3z"]',()=>{ this.setState({...this.state,list:['item0z', 'item1z', 'item2z', 'item3z']});this.CustomPicker.show() })}

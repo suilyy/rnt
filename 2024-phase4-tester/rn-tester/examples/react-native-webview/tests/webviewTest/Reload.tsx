@@ -11,7 +11,7 @@ export default function WebViewTestReload() {
 
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref reload'}
             itShould={`webview api ref reload`}

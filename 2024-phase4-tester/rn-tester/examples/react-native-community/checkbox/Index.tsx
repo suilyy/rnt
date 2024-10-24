@@ -9,7 +9,7 @@ export function CheckboxTest() {
   return (
     <ScrollView>
       <View>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'checkboxTest'}>
             <TestCase itShould={'default checkbox'}>
               <CheckBox value={true} />;

@@ -59,7 +59,7 @@ export const ScreensTest = () => {
   return (
     <ScrollView>
       <View>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'Screens'}>
             <TestCase itShould={'enableScreens(false):由于harmonyOS侧未实现原生化适配，所以需要设置为false禁用原生屏幕'}>
               <View style={styles.container}>

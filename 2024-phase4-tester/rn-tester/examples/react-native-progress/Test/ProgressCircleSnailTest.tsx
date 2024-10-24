@@ -58,7 +58,7 @@ export default function ProgressCircleSnailTest() {
 
   return (
     <ScrollView style={{ flex: 1, height: "100%" }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name="ProgressCircleSnail">
           <TestCase
             itShould='direction = clockwise'

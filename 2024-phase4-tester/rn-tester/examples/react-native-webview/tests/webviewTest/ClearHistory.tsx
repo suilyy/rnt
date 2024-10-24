@@ -12,7 +12,7 @@ export default function WebViewTestClearHistory() {
   };
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref clearHistory'}
             itShould={`webview api ref clearHistory`}

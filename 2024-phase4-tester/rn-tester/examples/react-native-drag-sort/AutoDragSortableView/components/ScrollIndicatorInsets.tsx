@@ -21,7 +21,7 @@ export const API_scrollIndicatorInsets = () => {
   });
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="scrollIndicatorInsets">
         <TestCase
           key={'scrollIndicatorInsets'}

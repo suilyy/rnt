@@ -10,7 +10,7 @@ export default function WebViewTestLoadUrl() {
   };
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref loadUrl'}
             itShould={`webview api ref loadUrl`}

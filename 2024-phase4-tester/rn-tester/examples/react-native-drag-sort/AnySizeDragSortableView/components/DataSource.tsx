@@ -60,7 +60,7 @@ export const API_dataSource = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="dataSource">
         <TestCase
           key={'dataSource'}

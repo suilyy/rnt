@@ -17,7 +17,7 @@ export const API_parentWidth = () => {
   const [childrenWidth, setChildrenWidth] = useState(88);
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="parentWidth">
         <TestCase
           key={'parentWidth'}

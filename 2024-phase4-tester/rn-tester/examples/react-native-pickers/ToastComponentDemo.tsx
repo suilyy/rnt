@@ -22,7 +22,7 @@ export class ToastComponentExample extends BaseComponent {
 
   render(){
     return <View >
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='ToastComponent'> 
       { tester_change("text 测试字符1111",'text 测试字符1111',()=>{ this.setState({...this.state,duration:3000});this.ToastComponent.show('测试字符1111') })}

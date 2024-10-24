@@ -46,7 +46,7 @@ export default function PdfApitest() {
       </Tester>
 
       <ScrollView bounces={false}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase itShould={'PDF run by imperative onLoadProgress invoke.'}>
             <View style={styles.testCaseBlock}>
               <Text style={styles.resultText}>percent:{onLoadProgressResult}</Text>

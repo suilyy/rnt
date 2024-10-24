@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestDomStorageEnabled() {
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api domStorageEnabled'}
             itShould={`webview api domStorageEnabled`}

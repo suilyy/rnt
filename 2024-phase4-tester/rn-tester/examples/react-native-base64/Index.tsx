@@ -75,7 +75,7 @@ export function Base64Test() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="Test encoding word."
             initialState={''}

@@ -11,7 +11,7 @@ import TriggerWrapper from './Components/TriggerWrapper'
 export const T_ReactNativeAira = () => {
 
     return (
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
             <ScrollView>
                 <TestSuite name="react-native-aria">
                     <TestCase

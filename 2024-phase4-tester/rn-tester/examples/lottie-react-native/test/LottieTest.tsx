@@ -227,7 +227,7 @@ export default function LottieTest() {
     return (
         <ScrollView>
             <View>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                     <TestSuite name={'lottieTest'}>
                         {/*属性 prop*/}
                         <TestCase itShould={'LottieView source prop type is string.'}>

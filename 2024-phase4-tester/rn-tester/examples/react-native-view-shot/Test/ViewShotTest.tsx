@@ -491,7 +491,7 @@ export default function ViewShotTest() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="全屏截图captureScreen"
             initialState={''}
