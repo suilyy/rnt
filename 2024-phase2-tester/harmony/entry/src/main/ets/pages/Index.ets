@@ -264,6 +264,9 @@ struct Index {
             enableBackgroundExecutor: false,
             enableCAPIArchitecture: true,
             arkTsComponentNames: arkTsComponentNames,
+            fontResourceByFontFamily: {
+              'FontAwesome': $rawfile('fonts/Pacifico-Regular.ttf'),
+            },            
           },
           initialProps: { "foo": "bar" } as Record<string, string>,
           appKey: "app_name",
