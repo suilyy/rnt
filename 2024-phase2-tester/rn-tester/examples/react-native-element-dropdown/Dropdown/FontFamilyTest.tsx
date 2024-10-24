@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
@@ -28,7 +28,6 @@ const Demo = (props: any) => {
       onChange={(item: any) => {
         setValue(item.value);
       }}
-      fontFamily
       {...props}
     />
   );
@@ -43,8 +42,8 @@ export const FontFamilyTest = () => {
         </TestCase>
       </TestSuite>
       <TestSuite name="FontFamily">
-        <TestCase itShould={`fontFamily:Helvetica Neue`}>
-          <Demo fontFamily="Helvetica Neue" />
+        <TestCase itShould={`fontFamily:FontAwesome`}>
+          <Demo fontFamily="FontAwesome" />
         </TestCase>
       </TestSuite>
     </Tester>
