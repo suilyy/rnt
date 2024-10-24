@@ -78,11 +78,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-permission/Index'),
   },
-  // {
-  //   key: 'react-router-dom',
-  //   category: 'Basic',
-  //   module: require('../examples/react-router-dom/Index'),
-  // },
+  {
+    key: 'react-router-dom',
+    category: 'Basic',
+    module: require('../examples/react-router-dom/Index'),
+  },
   {
     key: 'react-native-base64',
     category: 'Basic',
@@ -99,11 +99,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/htmlparser2-without-node-native/Index'),
   },
-  // {
-  //   key: 'react-subscribe',
-  //   category: 'Basic',
-  //   module: require('../examples/react-subscribe/TesterDemo/ReactSubscribeTest'),
-  // },
+  {
+    key: 'react-subscribe',
+    category: 'Basic',
+    module: require('../examples/react-subscribe/TesterDemo/ReactSubscribeTest'),
+  },
   {
     key: 'react-native-drag-sort',
     category: 'Basic',
