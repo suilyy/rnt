@@ -13,6 +13,15 @@ import { BlePackage } from '@react-native-oh-tpl/react-native-ble-manager/ts';
 import { RNScreenShotPreventPackage } from "@react-native-oh-tpl/react-native-screenshot-prevent/ts";
 import {RNCompassHeadingPackage} from '@react-native-oh-tpl/react-native-compass-heading/ts';
 import {RNLocalizationSettingsPackage} from '@react-native-oh-tpl/react-native-localization-settings/ts';
+import { RNVoicePackage } from '@react-native-oh-tpl/voice/ts'
+import { RNPlatformColorsPackage } from '@react-native-oh-tpl/platform-colors/ts';
+import { RNFileAccessPackage } from '@react-native-oh-tpl/react-native-file-access/ts';
+import {RNUdpPackage} from '@react-native-oh-tpl/react-native-udp/ts';
+import { RNBackgroundFetchPackage } from "@react-native-oh-tpl/react-native-background-fetch/ts";
+import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/ts';
+import { RNKeysPackage } from '@react-native-oh-tpl/react-native-keys';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
+import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -24,11 +33,20 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNDefaultPreferencePackage(ctx),
     new VisionCameraModulePackage(ctx),
     new RNFileViewerPackage(ctx),
+    new RNUdpPackage(ctx),
     new RNImageColorsPackage(ctx),
     new TcpSocketPackage(ctx),
+    new RNFileAccessPackage(ctx),
     new BlePackage(ctx),
     new RNScreenShotPreventPackage(ctx),
     new RNCompassHeadingPackage(ctx),
-    new RNLocalizationSettingsPackage(ctx)
-	];
+    new RNLocalizationSettingsPackage(ctx),
+    new RNVoicePackage(ctx),
+    new RNPlatformColorsPackage(ctx),
+    new RNBackgroundFetchPackage(ctx),
+    new RNEmailLinkPackage(ctx),
+    new RNKeysPackage(ctx),
+    new GestureHandlerPackage(ctx),
+    new ReanimatedPackage(ctx)
+    ];
 }
