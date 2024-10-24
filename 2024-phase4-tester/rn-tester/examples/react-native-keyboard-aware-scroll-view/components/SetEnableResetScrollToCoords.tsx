@@ -15,7 +15,7 @@ export const SetEnableResetScrollToCoords: React.FC = (): JSX.Element => {
     let scroll: JSX.Element | null = null;
     const setEnableResetScrollToCoordsValue = () => setEnableResetScrollToCoords(previousState => !previousState);
 
-    return <Tester>
+    return <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name='react-native-autoheight-webview'>
             <TestCase
                 key={'getInitStatus_1'}

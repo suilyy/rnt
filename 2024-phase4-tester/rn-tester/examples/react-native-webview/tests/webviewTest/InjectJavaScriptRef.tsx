@@ -10,7 +10,7 @@ export default function WebViewTestinjectJavaScriptRef() {
   };
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref injectJavaScriptRef'}
             itShould={`webview api ref injectJavaScriptRef`}

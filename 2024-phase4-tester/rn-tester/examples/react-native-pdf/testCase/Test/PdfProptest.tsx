@@ -15,7 +15,7 @@ export default function PdfProptest() {
   const [fitPolicy, setFitPolicy] = React.useState(3);
   return (
     <View style={{ flex: 1 }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name={'PDFTest'}>
           <TestCase itShould={'webPDF show'}>
             <View style={{ width: 350, height: 250 ,zIndex: -30,}}>
@@ -36,7 +36,7 @@ export default function PdfProptest() {
       </Tester>
 
       <ScrollView bounces={false}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase itShould={'Pdf minScale prop.'}>
             <View style={styles.testCaseBlock}>
               <Button title='0.1'

@@ -28,7 +28,7 @@ export default function CheckBoxTest() {
     return (
         <View>
             <ScrollView>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                     <TestCase itShould="test checkbox click function" initialState={false} arrange={
                         ({ setState }) => {
                             return (

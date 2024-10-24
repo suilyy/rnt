@@ -14,7 +14,7 @@ const defaultData = generateDataSource(60, '标题');
 
 export const API_bottomViewHeight = () => {
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="bottomViewHeight">
         <TestCase
           itShould={`属性bottomViewHeight：该属性用来支撑库内部拖拽排序算法，一般与renderBottomView同时使用`}>

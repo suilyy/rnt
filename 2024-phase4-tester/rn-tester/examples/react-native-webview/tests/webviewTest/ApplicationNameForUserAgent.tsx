@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestApplicationNameForUserAgent() {
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref applicationNameForUserAgent'}
             itShould={`webview api ref applicationNameForUserAgent`}

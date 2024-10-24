@@ -85,7 +85,7 @@ export default function SectionListGetItemLayoutDemo(){
                 <Button title={'还原'} onPress={clickUpdate}></Button>
                 <Text style={styles.headerTitle}>单词本</Text>
             </View>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <TestCase itShould="react-native-section-list-get-item-layout ----- getItemLayout">
                     <SectionList
                         showsVerticalScrollIndicator={false}

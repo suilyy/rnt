@@ -61,7 +61,7 @@ export const API_autoThrottle = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="autoThrottle">
         <TestCase
           key={'autoThrottle'}

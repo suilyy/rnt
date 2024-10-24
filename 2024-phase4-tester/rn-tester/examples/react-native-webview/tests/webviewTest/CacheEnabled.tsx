@@ -12,7 +12,7 @@ export default function WebViewTestClearCacheRef() {
   };
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
        
         <TestCase
             key={'webview api ref clearCache cacheEnabled'}

@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_minOpacity = () => {
   const [minOpacity, setMinOpacity] = useState(1);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="minOpacity">
         <TestCase
           key={'minOpacity'}

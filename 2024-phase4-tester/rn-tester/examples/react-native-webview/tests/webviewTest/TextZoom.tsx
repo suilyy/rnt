@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestTextZoom() {
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api textZoom'}
             itShould={`webview api textZoom`}

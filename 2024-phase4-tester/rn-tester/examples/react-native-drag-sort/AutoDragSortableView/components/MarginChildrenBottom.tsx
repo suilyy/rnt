@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_marginChildrenBottom = () => {
   const [marginChildrenBottom, setMarginChildrenBottom] = useState(0);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="marginChildrenBottom">
         <TestCase
           key={'marginChildrenBottom'}

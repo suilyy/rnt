@@ -248,7 +248,7 @@ export const AsyncStorageTest = () => {
     });
   }, [key]);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView>
         <>
         <TestSuite name="@react-native-async-storage/async-storage">

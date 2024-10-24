@@ -16,7 +16,7 @@ export const API_onScrollRef = () => {
   const [hasMark, setHasMark] = useState(false);
   let count = 0;
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="onScrollRef">
         <TestCase
           key={'onScrollRef'}

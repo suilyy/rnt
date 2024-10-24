@@ -32,7 +32,7 @@ export class DatePickerExample extends BaseComponent {
 
   render(){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='DatePicker'>
         

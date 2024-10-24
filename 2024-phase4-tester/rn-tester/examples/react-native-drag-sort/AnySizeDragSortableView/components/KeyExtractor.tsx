@@ -60,7 +60,7 @@ export const API_keyExtractor = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="keyExtractor">
         <TestCase
           itShould={`必填方法keyExtractor：指定子项的key值，用来支撑内部拖拽算法`}>

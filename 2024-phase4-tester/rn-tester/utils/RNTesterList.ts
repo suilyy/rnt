@@ -76,7 +76,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativePermission',
     category: 'Basic',
-    module: require('../examples/react-native-permission/Index'),
+    module: require('../examples/react-native-permissions/Index'),
   },
   {
     key: 'react-router-dom',

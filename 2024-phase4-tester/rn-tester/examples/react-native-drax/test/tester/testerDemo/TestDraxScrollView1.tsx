@@ -9,7 +9,7 @@ import DraxScrollViewBaseComponent from './components/DraxScrollViewBaseComponen
 const DraxScrollViewDemo1 = () => {
   return (
     <>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestCase
           itShould="DraxScrollView组件:children(基准组件包含1、2、3、4四个子组件)"
           tags={['C_API']}>

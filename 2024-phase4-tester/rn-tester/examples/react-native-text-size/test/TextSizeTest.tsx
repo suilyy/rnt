@@ -25,7 +25,7 @@ let specsForTextList = [];
 export default function TextSize() {
     return (
         <ScrollView>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <TestCase
                     itShould="measure 文本测量  I rnTextSize"
                     initialState={false}

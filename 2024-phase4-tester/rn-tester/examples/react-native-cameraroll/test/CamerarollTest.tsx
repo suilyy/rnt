@@ -102,7 +102,7 @@ const [saveUri, setSaveUri] = useState('');
           <Text style={styles.baseText}>{saveUri}</Text>
       </View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="saveAsset接口，保存网络图片到相册"
             initialState={''}

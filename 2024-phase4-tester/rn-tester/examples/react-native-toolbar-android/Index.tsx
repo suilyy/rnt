@@ -15,7 +15,7 @@ function App({}): JSX.Element {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'toolbarAndroidTest'}>
             <TestCase itShould={'set nav image'}>
               <ToolbarAndroid

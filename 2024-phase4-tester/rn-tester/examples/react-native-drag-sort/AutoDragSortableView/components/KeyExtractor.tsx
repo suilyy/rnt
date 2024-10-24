@@ -14,7 +14,7 @@ const defaultData = generateDataSource(60, '标题');
 
 export const API_keyExtractor = () => {
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="keyExtractor">
         <TestCase
           itShould={`方法keyExtractor,该方法返回一个key值，用来支持库内部算法，只能纯展示`}>

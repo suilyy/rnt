@@ -61,7 +61,7 @@ export function CryptoJSTest() {
   return (
     <View>
       <ScrollView>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="Test using the AES algorithm to encrypt string or object."
             initialState={''}

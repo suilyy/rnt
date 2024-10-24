@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_fixedItems = () => {
   const [fixedItems, setFixedItems] = useState<number[]>([]);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="fixedItems">
         <TestCase
           key={'fixedItems'}

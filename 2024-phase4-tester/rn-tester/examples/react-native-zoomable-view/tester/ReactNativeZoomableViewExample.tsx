@@ -112,7 +112,7 @@ export function ReactNativeZoomableViewExample() {
 
           </ReactNativeZoomableView>
         </View>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <ScrollView>
             <TestSuite name='react-native-zoomable-view'>
               {tester_change("移动 moveBy(-30, 0)",'←',()=>{ ;zoomableViewRef.current!.moveBy(-30, 0) })}

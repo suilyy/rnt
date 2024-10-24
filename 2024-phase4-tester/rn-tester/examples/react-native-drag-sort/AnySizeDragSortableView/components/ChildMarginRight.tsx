@@ -60,7 +60,7 @@ export const API_childMarginRight = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="childMarginRight">
         <TestCase
           itShould={`属性childMarginRight，该属性是子组件有边距，用来计算areaOverlapRatio属性，如果renderItem函数中返回的布局外容器有marginBottom，请务必填入marginBottom的值，否则areaOverlapRatio的值会不精确`}>

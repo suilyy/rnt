@@ -50,7 +50,7 @@ export default function WebViewTestOnMessage() {
   `;
   return (
     <View style={{ flex: 1 }}>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestCase
           key={'webview api postMessage and onMessage'}
           itShould={`webview api postMessage and onMessage`}

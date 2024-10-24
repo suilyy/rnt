@@ -12,7 +12,7 @@ export class BaseComponentExample extends BaseComponent {
 
   render(){
     return <View  >
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name='BaseComponent'>
           {tester_back_string("getSize(100):",this.getSize(100))}
         </TestSuite>

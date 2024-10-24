@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestOnScroll() {
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref onScroll'}
             itShould={`webview api ref onScroll`}

@@ -135,7 +135,7 @@ export function ReanimatedCarouselExample() {
         }}
       />
       <ScrollView style={{ flex: 1 }}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name='reanimated-carousel'>
             <TestCase itShould="BasicProps-Data, Change the data length">
               <View style={styles.optView}>

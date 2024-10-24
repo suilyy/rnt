@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestOnHttpError() {
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref onHttpError'}
             itShould={`webview api ref onHttpError`}

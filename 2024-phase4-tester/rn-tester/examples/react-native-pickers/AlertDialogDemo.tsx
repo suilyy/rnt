@@ -26,7 +26,7 @@ export class AlertDialogExample extends BaseComponent {
 
   render(){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='AlertDialog'>
       { tester_change('弹窗消息文本 messageText 测试弹框','messageText 测试弹框',()=>{ this.setState({...this.state,messageText:'测试弹框'});this.AlertDialog.show() })}

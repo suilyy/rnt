@@ -61,7 +61,7 @@ export const API_renderItem = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="renderItem">
         <TestCase
           key={'renderItem'}

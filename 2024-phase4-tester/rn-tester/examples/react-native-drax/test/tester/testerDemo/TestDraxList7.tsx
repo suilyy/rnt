@@ -43,7 +43,7 @@ const DraxListDemo7 = () => {
               title="重置"
               onPress={resetBtn}></Button>
           </View>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:onItemDragPositionChange(位置发生改变时触发回调)"
               tags={['C_API']}>
               <DraxList

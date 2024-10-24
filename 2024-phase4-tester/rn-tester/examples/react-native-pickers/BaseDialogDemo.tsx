@@ -19,7 +19,7 @@ export class BaseDialogExample extends BaseComponent {
 
   render(){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='BaseDialog'>
       { tester_change("是否回收前景控件 removeSubviews true",'removeSubviews true',()=>{ this.setState({...this.state,removeSubviews:true});this.BaseDialog.show() })}

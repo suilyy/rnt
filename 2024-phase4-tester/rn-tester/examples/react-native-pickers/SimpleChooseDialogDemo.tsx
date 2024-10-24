@@ -25,7 +25,7 @@ export class SimpleChooseDialogExample extends BaseComponent {
 
   render(){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='SimpleChooseDialogExample'>
       { tester_change('items ["a", "b", "c"]','items ["a", "b", "c"]',()=>{ this.setState({...this.state,items:['a', 'b', 'c']});this.SimpleChooseDialog.show() })}

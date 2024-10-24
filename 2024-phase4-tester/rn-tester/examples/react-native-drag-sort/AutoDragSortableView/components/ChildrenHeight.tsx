@@ -16,7 +16,7 @@ export const API_childrenHeight = () => {
   const [childrenHeight, setChildrenHeight] = useState(92);
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="childrenHeight">
         <TestCase
           key={'childrenHeight'}

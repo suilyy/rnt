@@ -23,7 +23,7 @@ import React from 'react';
 
 export const RnPlaceholderTest = () => {
     return (
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
             <ScrollView>
                 <TestSuite name="RnPlaceholder">
                     <TestCase

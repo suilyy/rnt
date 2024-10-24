@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_renderBottomView = () => {
   const [renderBottomView, setRenderBottomView] = useState<any>();
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="renderBottomView">
         <TestCase
           key={'renderBottomView'}

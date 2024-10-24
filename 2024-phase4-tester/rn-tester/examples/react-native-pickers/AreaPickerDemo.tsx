@@ -31,7 +31,7 @@ export class AreaPickerExample extends BaseComponent {
 
   render (){
     return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView>
       <TestSuite name=''>
       { tester_change('确认文字 confirmText 确认','confirmText 确认',()=>{ this.setState({...this.state,confirmText:"确认"});this.AreaPicker.show() })}

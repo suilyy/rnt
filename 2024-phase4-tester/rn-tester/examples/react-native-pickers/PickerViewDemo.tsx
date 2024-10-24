@@ -20,7 +20,7 @@ export class PickerViewExample extends BaseComponent {
 
   render(){
    return <>
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView>
       <TestSuite name='PickerView '>
       { tester_change("itemTextColor 0x333333ff",'itemTextColor 0x333333ff',()=>{ this.setState({...this.state,itemTextColor:0x333333ff}); })}

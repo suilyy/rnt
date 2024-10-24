@@ -71,7 +71,7 @@ export function ReactNativeDynamicDemo() {
 	return (
 		<View style={styles.container}>
             <ScrollView>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                     <TestSuite name="useDarkMode" key={'useDarkMode'}>
                         <TestCase itShould='useDarkMode返回布尔值,为true时代表深色模式开启' tags={['C_API']} >
                             <Text  style={styles.inints}>useDarkMode={isDarkMode + ''}   此时主题为:{isDarkMode ? '深色' : '浅色'}</Text>

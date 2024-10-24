@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_maxScale = () => {
   const [maxScale, setMaxScale] = useState(1.2);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="maxScale">
         <TestCase
           key={'maxScale'}

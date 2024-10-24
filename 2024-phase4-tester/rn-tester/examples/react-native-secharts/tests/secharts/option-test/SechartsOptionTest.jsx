@@ -604,7 +604,7 @@ export default class SechartsOptionTest extends Component {
           return (
             <Page name={item.pageName} key={index}>
               <ScrollView>
-                <Tester>
+                <Tester style={{ paddingBottom: 80 }}>
                   <TestSuite>
                     <TestCase itShould={"option:" + JSON.stringify(item.option)} >
                       <ScrollView horizontal={true} >

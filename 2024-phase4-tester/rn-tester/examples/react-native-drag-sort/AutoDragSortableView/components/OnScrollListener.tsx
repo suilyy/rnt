@@ -17,7 +17,7 @@ export const API_onScrollListener = () => {
   let count = 0;
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="onScrollListener">
         <TestCase
           key={'onScrollListener'}

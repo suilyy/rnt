@@ -9,7 +9,7 @@ import SechartsBar from './SechartsBarDemo';
 export function SechartsTest() {
   return (
     <ScrollView>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name="SechartsDemo">
           <TestCase
             itShould={`Test:height:400,width:350 

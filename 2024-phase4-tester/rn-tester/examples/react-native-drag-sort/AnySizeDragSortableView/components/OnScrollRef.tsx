@@ -62,7 +62,7 @@ export const API_onScrollRef = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="onScrollRef">
         <TestCase
           key={'onScrollRef'}

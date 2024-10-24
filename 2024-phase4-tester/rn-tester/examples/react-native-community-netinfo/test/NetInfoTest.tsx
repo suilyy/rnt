@@ -42,7 +42,7 @@ export const NetInfoTest = () => {
   return (
     <ScrollView>
       <View>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestSuite name={'NetInfo'}>
             <View>
               <Button title="addEventListener" onPress={() => toListen()} />

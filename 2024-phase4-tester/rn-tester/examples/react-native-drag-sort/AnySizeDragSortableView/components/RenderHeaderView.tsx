@@ -61,7 +61,7 @@ export const API_renderHeaderView = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="renderHeaderView">
         <TestCase
           key={'renderHeaderView'}

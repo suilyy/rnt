@@ -11,7 +11,7 @@ export default function WebViewTestRequestFocusRef() {
 
   return (
     <View style={{ flex:1}}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
         <TestCase
             key={'webview api ref requestFocus'}
             itShould={`webview api ref requestFocus`}

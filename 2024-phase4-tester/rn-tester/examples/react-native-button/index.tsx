@@ -5,7 +5,7 @@ import { Tester, TestCase, TestSuite } from '@rnoh/testerino';
 
 const ReactNativeButtonTest = () => {
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <ScrollView>
         <TestSuite name="Button">
           <TestCase itShould="render a button that should be disabled">

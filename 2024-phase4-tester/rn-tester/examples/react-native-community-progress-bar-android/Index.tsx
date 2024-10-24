@@ -6,7 +6,7 @@ function ProgressBarExample() {
 
     return (
         <ScrollView>
-            <Tester>
+            <Tester style={{ paddingBottom: 80 }}>
                 <TestCase
                     itShould="animating: Whether to show the ProgressBar (true, the default) or hide it (false)."
                     initialState={true}

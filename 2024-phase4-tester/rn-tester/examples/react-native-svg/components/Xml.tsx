@@ -35,7 +35,7 @@ export default function () {
     }, [])
     
     return (
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
             <ScrollView>
                 <Item
                     text="test SvgUri"

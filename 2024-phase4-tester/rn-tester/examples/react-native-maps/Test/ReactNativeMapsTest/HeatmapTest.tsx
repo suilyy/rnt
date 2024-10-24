@@ -20,7 +20,7 @@ export class HeatmapTest extends React.Component<any, any> {
   render() {
     return (
       <ScrollView style={{ flex: 1, height: "100%" }}>
-        <Tester>
+        <Tester style={{ paddingBottom: 80 }}>
           <TestCase
             itShould="Heatmap: points"
           >

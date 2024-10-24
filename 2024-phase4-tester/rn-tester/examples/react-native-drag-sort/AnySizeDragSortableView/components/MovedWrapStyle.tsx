@@ -61,7 +61,7 @@ export const API_movedWrapStyle = () => {
   };
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="movedWrapStyle">
         <TestCase
           key={'movedWrapStyle'}

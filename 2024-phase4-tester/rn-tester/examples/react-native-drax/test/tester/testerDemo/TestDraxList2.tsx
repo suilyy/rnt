@@ -34,7 +34,7 @@ const DraxListDemo2 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
           <View style={styles.container}>
-          <Tester>
+          <Tester style={{ paddingBottom: 80 }}>
             <TestCase itShould="DraxList组件:flatListStyle(设置内部FlatList组件的样式-设置背景色为绿色)"
               tags={['C_API']}>
               <DraxList

@@ -15,7 +15,7 @@ const defaultData = generateDataSource(60, '标题');
 export const API_dataSource = () => {
   const [dataSource, setDataSource] = useState(defaultData);
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="dataSource">
         <TestCase
           key={'dataSource'}

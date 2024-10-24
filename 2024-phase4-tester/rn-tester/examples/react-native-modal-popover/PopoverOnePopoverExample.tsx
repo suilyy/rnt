@@ -230,7 +230,7 @@ export function PopoverOnePopoverExample() {
 
   return (
     <ScrollView>
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <TestSuite name='PopoverController'>
           <TestCase
             itShould="openPopover"

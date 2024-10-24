@@ -16,7 +16,7 @@ export const API_onDragging = () => {
   let count = 0;
 
   return (
-    <Tester>
+    <Tester style={{ paddingBottom: 80 }}>
       <TestSuite name="onDragging">
         <TestCase
           key={'onDragging'}

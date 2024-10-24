@@ -39,7 +39,7 @@ export function Md5TestExample() {
     }
     
     return(
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <ScrollView>
         <TestSuite name = "md5">
         <TestCase

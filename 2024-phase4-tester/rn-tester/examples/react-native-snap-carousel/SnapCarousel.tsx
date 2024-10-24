@@ -151,7 +151,7 @@ export default function SnapCarousel(): JSX.Element {
   return (
     <View style={styles.bootstrop}>
 
-      <Tester>
+      <Tester style={{ paddingBottom: 80 }}>
         <ScrollView>
           <TestCase itShould="基础属性 data renderItem sliderWidth：300 sliderHeight：200 itemWidth：100 itemHeight：100">
             <Carousel
