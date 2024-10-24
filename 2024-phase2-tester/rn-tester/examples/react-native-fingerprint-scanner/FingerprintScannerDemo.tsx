@@ -1,0 +1,103 @@
+import React from 'react';
+import { Text, TouchableOpacity } from 'react-native';
+import FingerprintScanner from 'react-native-fingerprint-scanner';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino'
+
+export function FingerprintScannerDemo() {
+
+  return (
+    <Tester style={{ flex: 1 }}>
+      <TestSuite name='指纹认证'>
+        <TestCase
+          tags={['C_API']}
+          itShould='调用指纹验证器'
+        >
+          <TouchableOpacity
+            onPress={() => {
+              FingerprintScanner.authenticate({ title: '指纹认证' })
+            }}
+          >
+            <Text style={{ lineHeight: 35, fontSize: 22 }}>调用指纹验证器</Text>
+          </TouchableOpacity>
+        </TestCase>
+        <TestCase
+          tags={['C_API']}
+          itShould='检查指纹扫描是否可用'
+          initialState={undefined as any}
+          arrange={({ setState }) => {
+            return (
+              <TouchableOpacity
+                onPress={async () => {
+                  const enabled = await FingerprintScanner.isSensorAvailable()
+                  setState(enabled)
+                }}
+              >
+                <Text style={{ lineHeight: 35, fontSize: 22 }}>检查指纹扫描是否可用</Text>
+              </TouchableOpacity>
+            )
+          }}
+          assert={async ({ expect, state }) => {
+            expect(state).to.be.string
+          }}
+        />
+        <TestCase
+          tags={['C_API']}
+          itShould='获取指纹验证失败message'
+          initialState={undefined as any}
+          arrange={({ setState }) => {
+            return (
+              <TouchableOpacity
+                onPress={async () => {
+                  const enabled = FingerprintScanner.onAttempt()
+                  setState(Object.prototype.toString.call(enabled) === '[object Object]')
+                }}
+              >
+                <Text style={{ lineHeight: 35, fontSize: 22 }}>指纹验证失败方法</Text>
+              </TouchableOpacity>
+            )
+          }}
+          assert={async ({ expect, state }) => {
+            expect(state).to.be.true
+          }}
+        />
+        <TestCase
+          tags={['C_API']}
+          itShould='取消监听指纹监听'
+          initialState={undefined as any}
+          arrange={({ setState }) => {
+            return (
+              <TouchableOpacity
+                onPress={async () => {
+                  FingerprintScanner.release()
+                  setState(true)
+                }}
+              >
+                <Text style={{ lineHeight: 35, fontSize: 22 }}>取消监听指纹监听</Text>
+              </TouchableOpacity>
+            )
+          }}
+          assert={async ({ expect, state }) => {
+            expect(state).to.be.true
+          }}
+        />
+      </TestSuite>
+    </Tester>
+  );
+}
+
+// 使用 export 导出
+export const displayName = "FingerprintScannerExample";
+export const framework = "React";
+export const category = "Basic";
+export const title = "react-native-fingerprint-scanner";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-fingerprint-scanner";
+export const description = "Simple React Native fingerprint scanner component.";
+
+export const examples = [
+  {
+    title: " Fingerprint scanner with default styling",
+    render: function (): any {
+      return <FingerprintScannerDemo />;
+    },
+  },
+];

@@ -69,8 +69,17 @@
           ],
           "when": "always"
         }
+      },
+	  {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING",
+        "reason": "$string:app_name",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when": "always"
+        }
       }
-	  
     ],
     "abilities": [
       {
@@ -92,6 +101,15 @@
           }
         ],
         "srcEntry": "./ets/entryability/EntryAbility.ets"
+      },
+      {
+        "name": "BrowserManagerAbility",
+        "srcEntry": "./ets/entryability/BrowserManagerAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "visible": true
       }
     ]
   }

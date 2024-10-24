@@ -32,6 +32,12 @@
 	"@react-native-oh-tpl/react-native-unistyles": "file:../../node_modules/@react-native-oh-tpl/react-native-unistyles/harmony/unistyles.har",
 	"@react-native-oh-tpl/react-native-blurhash": "file:../../node_modules/@react-native-oh-tpl/react-native-blurhash/harmony/blurhash.har",
 	"@react-native-oh-tpl/react-native-touch-id": "file:../../node_modules/@react-native-oh-tpl/react-native-touch-id/harmony/touch_id.har",
-	"@react-native-oh-tpl/react-native-charts-wrapper": "file:../../node_modules/@react-native-oh-tpl/react-native-charts-wrapper/harmony/charts_wrapper.har"
+	"@react-native-oh-tpl/react-native-charts-wrapper": "file:../../node_modules/@react-native-oh-tpl/react-native-charts-wrapper/harmony/charts_wrapper.har",
+	"@react-native-oh-tpl/react-native-create-thumbnail": "file:../../node_modules/@react-native-oh-tpl/react-native-create-thumbnail/harmony/createThumbnail.har",
+	"@react-native-oh-tpl/react-native-signature-capture": "file:../../node_modules/@react-native-oh-tpl/react-native-signature-capture/harmony/rnoh_signature_capture.har",
+	"@react-native-oh-tpl/react-native-fingerprint-scanner": "file:../../node_modules/@react-native-oh-tpl/react-native-fingerprint-scanner/harmony/fingerprint_scanner.har",
+	"@react-native-oh-tpl/react-native-http-bridge": "file:../../node_modules/@react-native-oh-tpl/react-native-http-bridge/harmony/http_bridge.har",
+	"@react-native-oh-tpl/react-native-inappbrowser-reborn": "file:../../node_modules/@react-native-oh-tpl/react-native-inappbrowser-reborn/harmony/inappbrowser.har",
+	"@react-native-oh-tpl/react-native-view-pdf": "file:../../node_modules/@react-native-oh-tpl/react-native-view-pdf/harmony/pdf_view.har",
   }
 }

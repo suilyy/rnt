@@ -22,7 +22,10 @@ import {RNEmailLinkPackage} from '@react-native-oh-tpl/react-native-email-link/t
 import { RNKeysPackage } from '@react-native-oh-tpl/react-native-keys';
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
-
+import { RNNetworkInfoPackage } from '@react-native-oh-tpl/react-native-network-info/ts';
+import { RNSnackbarPackage } from '@react-native-oh-tpl/react-native-snackbar/ts';
+import { RNQuickBase64Package } from '@react-native-oh-tpl/react-native-quick-base64/ts';
+import { RNVersionNumberPackage } from '@react-native-oh-tpl/react-native-version-number/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new FastImagePackage(ctx),
@@ -47,6 +50,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNEmailLinkPackage(ctx),
     new RNKeysPackage(ctx),
     new GestureHandlerPackage(ctx),
-    new ReanimatedPackage(ctx)
+    new ReanimatedPackage(ctx),
+    new RNNetworkInfoPackage(ctx),
+    new RNSnackbarPackage(ctx),
+    new RNQuickBase64Package(ctx),
+    new RNVersionNumberPackage(ctx)
     ];
 }

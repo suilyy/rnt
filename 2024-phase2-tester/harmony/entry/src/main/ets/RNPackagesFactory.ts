@@ -21,6 +21,13 @@ import {RNUnistylesPackage} from '@react-native-oh-tpl/react-native-unistyles/ts
 import {BlurhashPackage} from '@react-native-oh-tpl/react-native-blurhash/ts';
 import { TouchIdPackage } from "@react-native-oh-tpl/react-native-touch-id/ts";
 import {ChartsWrapperPackage} from '@react-native-oh-tpl/react-native-charts-wrapper/ts';
+import { CreateThumbnailPackage } from '@react-native-oh-tpl/react-native-create-thumbnail/ts';
+import { SignatureCapturePackage } from '@react-native-oh-tpl/react-native-signature-capture/ts';
+import { RNFingerprintScannerPackage } from '@react-native-oh-tpl/react-native-fingerprint-scanner/ts';
+import { RNHttpBridgePackage } from "@react-native-oh-tpl/react-native-http-bridge/ts";
+import { RNInAppBrowserPackage } from '@react-native-oh-tpl/react-native-inappbrowser-reborn/ts';
+import { PDFViewPackage } from '@react-native-oh-tpl/react-native-view-pdf/ts'
+
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -46,5 +53,11 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new BlurhashPackage(ctx),
 	new TouchIdPackage(ctx),
 	new ChartsWrapperPackage(ctx),
+	new CreateThumbnailPackage(ctx),
+	new SignatureCapturePackage(ctx),
+	new RNFingerprintScannerPackage(ctx),
+	new RNHttpBridgePackage(ctx),
+	new RNInAppBrowserPackage(ctx),
+	new PDFViewPackage(ctx),
   ];
 }
