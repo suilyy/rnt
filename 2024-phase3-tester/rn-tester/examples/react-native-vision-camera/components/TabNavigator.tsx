@@ -10,7 +10,7 @@ interface InProps {
   tabs: TabsProps[];
 }
 
-export const TabNavigator = ({tabs}: InProps) => {
+export const  TabNavigator = ({tabs}: InProps) => {
   const [selectedTab, setSelectedTab] = useState(0); // 默认选中第一个Tab
   const renderTabs = () => {
     return tabs.map((tab, index) => (
@@ -52,11 +52,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   tabText: {
-    color: '#fff',
+    color: '#000',
   },
   content: {
     // flex: 1,
     padding: 20,
-    marginTop:10
+    marginTop:20
   },
 });
