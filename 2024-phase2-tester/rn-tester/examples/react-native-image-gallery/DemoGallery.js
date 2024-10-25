@@ -164,7 +164,7 @@ const TestscrollViewStyle = () => {
 };
 
 
-class DemoGallery extends Component {
+export default class DemoGallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -347,21 +347,6 @@ const MyGallery = () => {
     );
 };
 
-export const displayName = 'GalleryExample';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'react-native-image-gallery';
-export const documentationURL = 'https://github.com/easyui/react-native-ezswiper';
-export const description = 'React Native image gallery';
-
-export const examples = [
-  {
-    title: 'react-native-image-gallery',
-    render: function () {
-      return <DemoGallery />;
-    },
-  },
-];
 
 const styles = StyleSheet.create({
     imageContainer: {
@@ -386,3 +371,20 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
 });  
+
+// 使用 export 导出
+export const displayName = "GalleryExample";
+export const framework = "React";
+export const category = "UI";
+export const title = "Butreact-native-image-gallery";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-image-gallery";
+export const description = "Simple React Native image gallery component.";
+
+export const examples = [
+  {
+    title: "Image-gallery with default styling",
+    render: function (): any {
+      return <DemoGallery />;
+    },
+  },
+];

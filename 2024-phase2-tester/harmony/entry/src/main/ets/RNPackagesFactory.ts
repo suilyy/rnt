@@ -26,7 +26,10 @@ import { SignatureCapturePackage } from '@react-native-oh-tpl/react-native-signa
 import { RNFingerprintScannerPackage } from '@react-native-oh-tpl/react-native-fingerprint-scanner/ts';
 import { RNHttpBridgePackage } from "@react-native-oh-tpl/react-native-http-bridge/ts";
 import { RNInAppBrowserPackage } from '@react-native-oh-tpl/react-native-inappbrowser-reborn/ts';
-import { PDFViewPackage } from '@react-native-oh-tpl/react-native-view-pdf/ts'
+import { PDFViewPackage } from '@react-native-oh-tpl/react-native-view-pdf/ts';
+import { RNSystemSettingPackage } from '@react-native-oh-tpl/react-native-system-setting/ts';
+import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
+import { RNHapticFeedbackPackage } from '@react-native-oh-tpl/react-native-haptic-feedback/ts'；
 
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
@@ -47,7 +50,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RandomBytesPackage(ctx),
 	new BackgroundTimerTurboModulePackage(ctx),
 	new ContactsPackage(ctx),
-	new RNSpinKitPackage(ctx
+	new RNSpinKitPackage(ctx),
 	new RNGetRandomValuesPackage(ctx),
 	new RNUnistylesPackage(ctx),
 	new BlurhashPackage(ctx),
@@ -59,5 +62,8 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RNHttpBridgePackage(ctx),
 	new RNInAppBrowserPackage(ctx),
 	new PDFViewPackage(ctx),
+	new RNSystemSettingPackage(ctx),
+	new RNCPickerPackage(ctx),
+	new RNHapticFeedbackPackage(ctx),
   ];
 }

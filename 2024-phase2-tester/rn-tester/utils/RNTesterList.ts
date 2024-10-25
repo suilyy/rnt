@@ -376,9 +376,44 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/Nativewind/App'),
   },
   {
+    key: 'ReactNativeSystemSettingExample',
+    category: 'Basic',
+    module: require('../examples/react-native-system-setting/ReactNativeSystemSettingDemo'),
+  },
+  {
+    key: 'ReactNativePaperExample',
+    category: 'UI',
+    module: require('../examples/react-native-paper/PaperExample'),
+  },
+  {
+    key: 'ReactNativePickerSelectExample',
+    category: 'UI',
+    module: require('../examples/react-native-picker-select/PickerSelectDemo'),
+  },
+  {
+    key: 'ReactNativeHapticFeedbackExample',
+    category: 'Basic',
+    module: require('../examples/react-native-haptic-feedback/Tester/HapticFeedbackExample'),
+  },
+  {
+    key: 'ReactNativeGridExample',
+    category: 'UI',
+    module: require('../examples/react-native-easy-grid/GridExample'),
+  },
+  {
+    key: 'ReactNativeDropDownExample',
+    category: 'UI',
+    module: require('../examples/react-native-autocomplete-dropdown/index'),
+  },
+  {
     key: 'ReactNativePDFViewExample',
     category: 'UI',
     module: require('../examples/react-native-PDFView/AppPDF'),
+  },
+  {
+    key: 'ReactNativeReconnectingWebSocketDemo',
+    category: 'Basic',
+    module: require('../examples/react-native-gifted-chat/App')
   },
   {
     key: 'ReactNativeElementDropdownView',

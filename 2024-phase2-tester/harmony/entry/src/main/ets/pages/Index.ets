@@ -28,6 +28,63 @@ import {
   CandleStickCharts,
   CombinedCharts
 } from "@react-native-oh-tpl/react-native-charts-wrapper"
+import { abilityAccessCtrl, bundleManager, common, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
+
+const permissions: Array<Permissions> = [
+  'ohos.permission.ACCESS_BLUETOOTH',
+  'ohos.permission.APPROXIMATELY_LOCATION',
+  'ohos.permission.LOCATION'
+];
+
+// 使用UIExtensionAbility：将common.UIAbilityContext 替换为common.UIExtensionContext
+function reqPermissionsFromUser(permissions: Array<Permissions>, context: common.UIAbilityContext): void {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // requestPermissionsFromUser会判断权限的授权状态来决定是否唤起弹窗
+  atManager.requestPermissionsFromUser(context, permissions).then((data) => {
+    let grantStatus: Array<number> = data.authResults;
+    let length: number = grantStatus.length;
+    for (let i = 0; i < length; i++) {
+      if (grantStatus[i] === 0) {
+        // 用户授权，可以继续访问目标操作
+      } else {
+        // 用户拒绝授权，提示用户必须授权才能访问当前页面的功能，并引导用户到系统设置中打开相应的权限
+        return;
+      }
+    }
+    // 授权成功
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request permissions from user. Code is ${err.code}, message is ${err.message}`);
+  })
+}
+
+async function checkAccessToken(permission: Permissions): Promise<abilityAccessCtrl.GrantStatus> {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let grantStatus: abilityAccessCtrl.GrantStatus = abilityAccessCtrl.GrantStatus.PERMISSION_DENIED;
+
+  // 获取应用程序的accessTokenID
+  let tokenId: number = 0;
+  try {
+    let bundleInfo: bundleManager.BundleInfo =
+      await bundleManager.getBundleInfoForSelf(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+    let appInfo: bundleManager.ApplicationInfo = bundleInfo.appInfo;
+    tokenId = appInfo.accessTokenId;
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to get bundle info for self. Code is ${err.code}, message is ${err.message}`);
+  }
+
+  // 校验应用是否被授予权限
+  try {
+    grantStatus = await atManager.checkAccessToken(tokenId, permission);
+  } catch (error) {
+    const err: BusinessError = error as BusinessError;
+    console.error(`Failed to check access token. Code is ${err.code}, message is ${err.message}`);
+  }
+
+  return grantStatus;
+}
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -47,6 +104,7 @@ const arkTsComponentNames: Array<string> = [
   CombinedCharts.NAME,
   SignatureCaptureArkView.NAME,
   RNPDFView.NAME,
+  PICKER_TYPE,
 ];
 
 @Builder
@@ -133,6 +191,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     }
 	if (ctx.componentName === RNPDFView.NAME) {
       RNPDFView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+	if (ctx.componentName === PICKER_TYPE) {
+      RNCPicker({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })
@@ -232,7 +296,7 @@ struct Index {
   @State shouldShow: boolean = false
   private logger!: RNOHLogger
 
-  aboutToAppear() {
+  async aboutToAppear() {
     this.logger = this.rnohCoreContext!.logger.clone("Index")
     const stopTracing = this.logger.clone("aboutToAppear").startTracing()
     for (const customFont of fonts) {
@@ -241,6 +305,20 @@ struct Index {
 
     this.shouldShow = true
     stopTracing()
+	
+	const context: common.UIAbilityContext = getContext(this) as common.UIAbilityContext;
+    let grantStatus1: abilityAccessCtrl.GrantStatus = await checkAccessToken(permissions[0]);
+    let grantStatus2: abilityAccessCtrl.GrantStatus = await checkAccessToken(permissions[1]);
+    let grantStatus3: abilityAccessCtrl.GrantStatus = await checkAccessToken(permissions[2]);
+    if (grantStatus1 === abilityAccessCtrl.GrantStatus.PERMISSION_GRANTED &&
+      grantStatus2 === abilityAccessCtrl.GrantStatus.PERMISSION_GRANTED &&
+      grantStatus3 === abilityAccessCtrl.GrantStatus.PERMISSION_GRANTED
+    ) {
+      // 已经授权，可以继续访问目标操作
+    } else {
+      // 申请权限
+      reqPermissionsFromUser(permissions, context);
+    }
   }
 
   onBackPress(): boolean | undefined {

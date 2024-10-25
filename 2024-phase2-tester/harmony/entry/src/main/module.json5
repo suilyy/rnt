@@ -79,6 +79,18 @@
           ],
           "when": "always"
         }
+      },
+	  {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:app_name",
+        "usedScene": {
+          "abilities": [
+            "UIAbility"
+          ]
+        }
+      },
+      {
+        "name": "ohos.permission.GET_WIFI_INFO"
       }
     ],
     "abilities": [
