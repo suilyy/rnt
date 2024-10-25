@@ -16,16 +16,6 @@
       },
       {
         "name": "ohos.permission.PRIVACY_WINDOW"
-      }，
-      {
-        "name": "ohos.permission.MICROPHONE",
-        "reason": "$string:Access_Create_Audio",
-        "usedScene": {
-          "abilities": [
-            "EntryAbility"
-          ],
-          "when": "always"
-        }
       },
       {
         "name": "ohos.permission.CAMERA",
@@ -67,21 +57,12 @@
         }
       },
       {
-        "name": "ohos.permission.MICROPHONE",
-        "reason": "$string:reason",
-        "usedScene": {
-          "abilities": [
-            "EntryAbility"
-          ],
-          "when": "inuse"
-        }
-      },
-      {
         "name" : "ohos.permission.GET_WIFI_INFO"
       },
       {
         "name": "ohos.permission.GET_NETWORK_INFO"
-      }
+      },
+      { "name": "ohos.permission.ACCESS_BIOMETRIC" }
     ],
     "abilities": [
       {

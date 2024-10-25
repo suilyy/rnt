@@ -26,6 +26,9 @@ import { RNNetworkInfoPackage } from '@react-native-oh-tpl/react-native-network-
 import { RNSnackbarPackage } from '@react-native-oh-tpl/react-native-snackbar/ts';
 import { RNQuickBase64Package } from '@react-native-oh-tpl/react-native-quick-base64/ts';
 import { RNVersionNumberPackage } from '@react-native-oh-tpl/react-native-version-number/ts';
+import { RNSensitiveInfoPackage } from '@react-native-oh-tpl/react-native-sensitive-info/ts';
+import { RNTTSPackage } from '@react-native-oh-tpl/react-native-tts/ts';
+import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new FastImagePackage(ctx),
@@ -54,6 +57,9 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNNetworkInfoPackage(ctx),
     new RNSnackbarPackage(ctx),
     new RNQuickBase64Package(ctx),
-    new RNVersionNumberPackage(ctx)
+    new RNVersionNumberPackage(ctx),
+    new RNSensitiveInfoPackage(ctx),
+    new RNTTSPackage(ctx),
+    new SafeAreaViewPackage(ctx)
     ];
 }

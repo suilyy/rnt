@@ -11,7 +11,7 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
+// import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview";
 import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
@@ -21,7 +21,7 @@ const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME,
+  // SVG_VIEW_TYPE_NAME,
   WEB_VIEW,
   VisionCameraView.NAME
 ];
@@ -85,12 +85,12 @@ const permissions: Array<Permissions> = [
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
-      SVGView({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag
-      })
-    },
+    // if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
+    //   SVGView({
+    //     ctx: ctx.rnComponentContext,
+    //     tag: ctx.tag
+    //   })
+    // },
     if (ctx.componentName === WEB_VIEW) {
       WebView({
           ctx: ctx.rnComponentContext,
@@ -132,7 +132,7 @@ struct Index {
   @State shouldShow: boolean = false
   private logger!: RNOHLogger
 
-  aboutToAppear() {
+  async aboutToAppear() {
     this.logger = this.rnohCoreContext!.logger.clone("Index")
     const stopTracing = this.logger.clone("aboutToAppear").startTracing()
     for (const customFont of fonts) {

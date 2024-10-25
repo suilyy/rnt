@@ -1,6 +1,7 @@
 project(rnapp)
 cmake_minimum_required(VERSION 3.4.1)
 set(OH_MODULES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
+set(NODE_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../node_modules")
 set(OH_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(RNOH_APP_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(RNOH_CPP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../oh_modules/@rnoh/react-native-openharmony/src/main/cpp")
@@ -20,6 +21,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-keys/src/main/
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-gesture-handler/src/main/cpp" ./gesture-handler)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src/main/cpp" ./reanimated)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-quick-base64/src/main/cpp" ./rn_quick_base64)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-context/src/main/cpp" ./safe-area)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -42,4 +44,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_vision_camera)
 target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
 target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 target_link_libraries(rnoh_app PUBLIC rnoh_quick_base64)
+target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
 # RNOH_END: link_packages

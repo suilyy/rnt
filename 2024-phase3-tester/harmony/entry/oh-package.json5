@@ -32,6 +32,9 @@
     "@react-native-oh-tpl/react-native-network-info": "file:../../node_modules/@react-native-oh-tpl/react-native-network-info/harmony/rn_network_info.har",
     "@react-native-oh-tpl/react-native-snackbar": "file:../../node_modules/@react-native-oh-tpl/react-native-snackbar/harmony/snackbar.har",
     "@react-native-oh-tpl/react-native-quick-base64": "file:../../node_modules/@react-native-oh-tpl/react-native-quick-base64/harmony/rn_quick_base64.har",
-    "@react-native-oh-tpl/react-native-version-number": "file:../../node_modules/@react-native-oh-tpl/react-native-version-number/harmony/rnoh_version_number.har"
+    "@react-native-oh-tpl/react-native-version-number": "file:../../node_modules/@react-native-oh-tpl/react-native-version-number/harmony/rnoh_version_number.har",
+    "@react-native-oh-tpl/react-native-sensitive-info": "file:../../node_modules/@react-native-oh-tpl/react-native-sensitive-info/harmony/react_native_sensitive_info.har",
+    "@react-native-oh-tpl/react-native-tts": "file:../../node_modules/@react-native-oh-tpl/react-native-tts/harmony/rn_tts.har",
+    "@react-native-oh-tpl/react-native-safe-area-context": "file:../../node_modules/@react-native-oh-tpl/react-native-safe-area-context/harmony/safe_area.har"
   }
 }

@@ -48,3 +48,19 @@ function App() {
     );
   }
   export default App
+
+export const displayName = "ReactNativeSvg";
+export const framework = "React";
+export const category = "UI";
+export const title = "react-native-svg";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-harmony-svg";
+export const description = "React Native Svg";
+
+export const examples = [
+  {
+    title: "react-native-svg",
+    render: function (): any {
+      return <App />;
+    },
+  },
+];
