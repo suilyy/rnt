@@ -27,6 +27,7 @@
     "@react-native-oh-tpl/react-native-localization-settings": "file:rnoh_package/react-native-oh-tpl-react-native-localization-settings-1.0.2-0.0.1.tgz",
     "@react-native-oh-tpl/react-native-screenshot-prevent": "file:rnoh_package/react-native-oh-tpl-react-native-screenshot-prevent-1.2.1-0.0.2.tgz",
     "@react-native-oh-tpl/react-native-email-link": "file:rnoh_package/react-native-oh-tpl-react-native-email-link-1.15.0-0.0.2.tgz",
+    "@react-native-oh-tpl/camera-roll": "file:rnoh_package/react-native-oh-tpl-camera-roll-7.8.3-0.1.1.tgz",
     "react-native-multiple-select": "0.5.12",
     "react": "18.2.0",
     "react-native": "0.72.5",

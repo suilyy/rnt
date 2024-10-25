@@ -134,7 +134,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeVisionCameraView',
     category: 'Basic',
-    module: require('../examples/react-native-vision-camera/App').default,
+    module: require('../examples/react-native-vision-camera/test/App').default,
   },
   {
     key: 'ReactNativeFileViewer',
