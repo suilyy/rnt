@@ -56,6 +56,16 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-sensitive-info/SensitiveInfoDemo'),
   },
+   {
+    key: 'RNCountdownCircleTime',
+    category: 'UI',
+    module: require('../examples/react-countdown-circle-timer/test/countdownCircleTime'),
+  },
+   {
+    key: 'RNShakeExampleDemo',
+    category: 'UI',
+    module: require('../examples/react-native-shake/ShakeExampleDemo'),
+  },
   // {
   //   key: '@react-navigation',
   //   category: 'Basic',

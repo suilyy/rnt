@@ -30,6 +30,8 @@ import { RNSensitiveInfoPackage } from '@react-native-oh-tpl/react-native-sensit
 import { RNTTSPackage } from '@react-native-oh-tpl/react-native-tts/ts';
 import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { CameraRollPackage } from '@react-native-oh-tpl/camera-roll/ts';
+import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
+
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new FastImagePackage(ctx),
@@ -63,5 +65,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNTTSPackage(ctx),
     new SafeAreaViewPackage(ctx),
     new CameraRollPackage(ctx),
+	new ShakePackage(ctx),
     ];
 }
