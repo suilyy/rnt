@@ -22,6 +22,9 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-gesture-handle
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src/main/cpp" ./reanimated)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-quick-base64/src/main/cpp" ./rn_quick_base64)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-context/src/main/cpp" ./safe-area)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-incall-manager/src/main/cpp" ./in_call_manager)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mlkit-ocr/src/main/cpp" ./rn_mlkit_ocr)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-linear-gradient/src/main/cpp" ./linear-gradient)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -45,4 +48,7 @@ target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
 target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 target_link_libraries(rnoh_app PUBLIC rnoh_quick_base64)
 target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
+target_link_libraries(rnoh_app PUBLIC rnoh_in_call_manager)
+target_link_libraries(rnoh_app PUBLIC rnoh_mlkit_ocr)
+target_link_libraries(rnoh_app PUBLIC rnoh_linear_gradient)
 # RNOH_END: link_packages

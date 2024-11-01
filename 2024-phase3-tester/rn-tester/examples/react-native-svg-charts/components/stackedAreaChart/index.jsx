@@ -26,7 +26,7 @@ export default function () {
     basicProps={basicProps}
     comName='StackedAreaChart'
   >
-    <TestItem itShould="AreaStackWithAxisExample">
+    <TestItem itShould="AreaStackWithAxisExample" desc={"{showGrid:true},YAxis:{contentInset:{ top: 10, bottom: 10} ,numberOfTicks:8}"}>
       <AreaStackWithAxisExample showGrid={true}></AreaStackWithAxisExample>
     </TestItem>
 
@@ -47,7 +47,7 @@ export default function () {
     }
     {
       offsetsProp.map((item) => {
-        return <TestItem key={item.lable} desc={item.label}>
+        return <TestItem key={item.lable} desc={item.lable}>
           <AreaStackWithAxisExample offset={d3[item.value]} showGrid={false}></AreaStackWithAxisExample>
         </TestItem>
       })
@@ -64,7 +64,6 @@ export default function () {
           value: 2000,
         },
       ].map((item) => {
-        console.log(item)
         return <TestItem key={item.lable} desc={item.label}>
           <AreaStackWithAxisExample min={item.value} showGrid={true}></AreaStackWithAxisExample>
         </TestItem>
@@ -81,7 +80,6 @@ export default function () {
           value: 9000,
         },
       ].map((item) => {
-        console.log(item)
         return <TestItem key={item.lable} desc={item.label}>
           <AreaStackWithAxisExample max={item.value} showGrid={true}></AreaStackWithAxisExample>
         </TestItem>

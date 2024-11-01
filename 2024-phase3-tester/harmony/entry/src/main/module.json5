@@ -1,6 +1,7 @@
 {
   "module": {
     "name": "entry",
+    "srcEntry": "./ets/abilityStage/MyAbilityStage.ets",
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
@@ -14,7 +15,7 @@
       {
         "name": "ohos.permission.INTERNET"
       },
-	  {
+	    {
         "name": "ohos.permission.ACCELEROMETER"
       },
       {
@@ -65,7 +66,18 @@
       {
         "name": "ohos.permission.GET_NETWORK_INFO"
       },
-      { "name": "ohos.permission.ACCESS_BIOMETRIC" }
+      { 
+        "name": "ohos.permission.ACCESS_BIOMETRIC" 
+      },
+         {
+        "name": "ohos.permission.RUNNING_LOCK"
+      },
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING",
+        "usedScene": {
+          "when": "always"
+        }
+      }
     ],
     "abilities": [
       {
@@ -86,7 +98,8 @@
             ]
           }
         ],
-        "srcEntry": "./ets/entryability/EntryAbility.ets"
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "recoverable": true
       }
     ]
   }

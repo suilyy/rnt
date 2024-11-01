@@ -9,6 +9,9 @@
 #include "ReanimatedPackage.h"
 #include "RNQuickBase64Package.h"
 #include "SafeAreaViewPackage.h"
+#include "RNInCallManagerPackage.h"
+#include "RNMlkitOcrPackage.h"
+#include "LinearGradientPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -24,5 +27,8 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<ReanimatedPackage>(ctx),
     std::make_shared<RNQuickBase64Package>(ctx),
     std::make_shared<SafeAreaViewPackage>(ctx),
+    std::make_shared<RNInCallManagerPackage>(ctx),
+    std::make_shared<RNMlkitOcrPackage>(ctx),
+    std::make_shared<LinearGradientPackage>(ctx)
   };
 } 

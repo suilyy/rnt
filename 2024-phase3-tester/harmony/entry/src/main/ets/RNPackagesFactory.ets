@@ -31,6 +31,10 @@ import { RNTTSPackage } from '@react-native-oh-tpl/react-native-tts/ts';
 import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { CameraRollPackage } from '@react-native-oh-tpl/camera-roll/ts';
 import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
+import { RNImageMarkerPackage } from '@react-native-oh-tpl/react-native-image-marker/ts';
+import { RNInCallManagerPackage } from '@react-native-oh-tpl/react-native-incall-manager/ts';
+import { RNMlkitOcrPackage } from '@react-native-oh-tpl/react-native-mlkit-ocr/ts';
+import { RNThemeControlPackage } from '@react-native-oh-tpl/react-native-theme-control/ts'
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -65,6 +69,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNTTSPackage(ctx),
     new SafeAreaViewPackage(ctx),
     new CameraRollPackage(ctx),
-	new ShakePackage(ctx),
+	  new ShakePackage(ctx),
+    new RNImageMarkerPackage(ctx),
+    new RNInCallManagerPackage(ctx),
+    new RNMlkitOcrPackage(ctx),
+    new RNThemeControlPackage(ctx)
     ];
 }
