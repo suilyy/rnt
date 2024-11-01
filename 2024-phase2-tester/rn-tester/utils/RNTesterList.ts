@@ -43,7 +43,7 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'ReactNativeBetterBanner',
-    category: 'Basic',
+    category: 'UI',
     module: require('../examples/react-native-better-banner/App'),
   },
   {
@@ -143,7 +143,7 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'ReactNativeNativeWaterfallFlow',
-    category: 'Basic',
+    category: 'UI',
     module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
   },
   {
@@ -401,6 +401,51 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-easy-grid/GridExample'),
   },
   {
+    key: 'ReactNativeCreditCardExample',
+    category: 'UI',
+    module: require('../examples/react-native-credit-card-input/test/DemoEntry')
+  },
+  {
+    key: 'ReactNativeDropDownExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-dropdown/DropDownTest')
+  },
+  {
+    key: 'ReactNativeDropdownalertExample',
+    category: 'UI',
+    module: require('../examples/react-native-dropdownalert/App')
+  },
+  {
+    key: 'ReactNativeNfcManagerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-nfc-manager/NfcManagerDemo')
+  },
+  {
+    key: 'ReactNativeTrackPlayerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-track-player/TrackPlayerTest')
+  },
+  {
+    key: 'ReactNativeAppleAuthenticationExample',
+    category: 'UI',
+    module: require('../examples/react-native-apple-authentication/Test'),
+  },
+  {
+    key: 'ReactNativeLocalizationExample',
+    category: 'Basic',
+    module: require('../examples/react-native-localization/ReactNativeLocalizationTestCase')
+  },
+  {
+    key: 'ReactNativeMMKVStorageExample',
+    category: 'Basic',
+    module: require('../examples/react-native-mmkv-storage/MMKVStorageTest')
+  },
+  {
+    key: 'ReactNativeTextInputExample',
+    category: 'UI',
+    module: require('../examples/react-native-text-input-mask/TextInputDemo'),
+  },
+  {
     key: 'ReactNativeDropDownExample',
     category: 'UI',
     module: require('../examples/react-native-autocomplete-dropdown/index'),
@@ -417,7 +462,7 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'ReactNativeElementDropdownView',
-    category: 'Basic',
+    category: 'UI',
     module: require('../examples/react-native-element-dropdown/App').default,
   },
   {

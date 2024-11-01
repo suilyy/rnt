@@ -13,6 +13,8 @@
 #include "UnistylesPackage.h"
 #include "BlurhashPackage.h"
 #include "PickerPackage.h"
+#include "MMKVNativePackage.h"
+#include "RNTextInputMaskPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -32,5 +34,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
 	std::make_shared<UnistylesPackage>(ctx),
 	std::make_shared<BlurhashPackage>(ctx),
 	std::make_shared<PickerPackage>(ctx),
+	std::make_shared<RNOHMMKVStoragePackage>(ctx),
+	std::make_shared<RNTextInputMaskPackage>(ctx),
   };
 } 

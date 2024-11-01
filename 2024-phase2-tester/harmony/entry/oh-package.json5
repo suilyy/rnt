@@ -41,5 +41,11 @@
 	"@react-native-oh-tpl/react-native-system-setting": "../../node_modules/@react-native-oh-tpl/react-native-system-setting/harmony/react_native_system_setting.har",
 	"@react-native-oh-tpl/picker": "file:../../node_modules/@react-native-oh-tpl/picker/harmony/picker.har",
     "@react-native-oh-tpl/react-native-haptic-feedback": "file:../../node_modules/@react-native-oh-tpl/react-native-haptic-feedback/harmony/haptic_feedback.har",
+	"@react-native-oh-tpl/react-native-nfc-manager": "file:../../node_modules/@react-native-oh-tpl/react-native-nfc-manager/harmony/nfc_manager.har",
+	"@react-native-oh-tpl/react-native-track-player": "file:../../node_modules/@react-native-oh-tpl/react-native-track-player/harmony/track_player.har",
+	"@react-native-oh-tpl/react-native-apple-authentication": "file:../../node_modules/@react-native-oh-tpl/react-native-apple-authentication/harmony/react-native-apple-authentication.har",
+	"@react-native-oh-tpl/react-native-localization": "file:../../node_modules/@react-native-oh-tpl/react-native-localization/harmony/react_localization.har",
+	"@react-native-oh-tpl/react-native-mmkv-storage": "file:../../node_modules/@react-native-oh-tpl/react-native-mmkv-storage/harmony/mmkv_storage.har",
+	"@react-native-oh-tpl/react-native-text-input-mask": "file:../../node_modules/@react-native-oh-tpl/react-native-text-input-mask/harmony/text_input_mask.har"
   }
 }

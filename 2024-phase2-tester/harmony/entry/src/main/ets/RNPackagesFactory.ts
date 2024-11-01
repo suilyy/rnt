@@ -29,7 +29,13 @@ import { RNInAppBrowserPackage } from '@react-native-oh-tpl/react-native-inappbr
 import { PDFViewPackage } from '@react-native-oh-tpl/react-native-view-pdf/ts';
 import { RNSystemSettingPackage } from '@react-native-oh-tpl/react-native-system-setting/ts';
 import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
-import { RNHapticFeedbackPackage } from '@react-native-oh-tpl/react-native-haptic-feedback/ts'；
+import { RNHapticFeedbackPackage } from '@react-native-oh-tpl/react-native-haptic-feedback/ts';
+import { RNNfcManagerPackage } from '@react-native-oh-tpl/react-native-nfc-manager/ts';
+import { RNTrackPlayerPackage } from "@react-native-oh-tpl/react-native-track-player/ts";
+import { RNAppleAuthPackage } from '@react-native-oh-tpl/react-native-apple-authentication';
+import { RNReactLocalizationPackage } from '@react-native-oh-tpl/react-native-localization';
+import {RNMMKVStoragePackage} from '@react-native-oh-tpl/react-native-mmkv-storage';
+import { RNTextInputMaskPackage } from '@react-native-oh-tpl/react-native-text-input-mask/ts'
 
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
@@ -65,5 +71,11 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RNSystemSettingPackage(ctx),
 	new RNCPickerPackage(ctx),
 	new RNHapticFeedbackPackage(ctx),
+	new RNNfcManagerPackage(ctx),
+	new RNTrackPlayerPackage(ctx),
+	new RNAppleAuthPackage(ctx),
+	new RNReactLocalizationPackage(ctx),
+	new RNMMKVStoragePackage(ctx),
+	new RNTextInputMaskPackage(ctx),
   ];
 }

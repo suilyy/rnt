@@ -1,6 +1,7 @@
 project(rnapp)
 cmake_minimum_required(VERSION 3.4.1)
 set(OH_MODULES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
+set(NODE_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../node_modules")
 set(OH_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(RNOH_APP_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 set(RNOH_CPP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../../oh_modules/@rnoh/react-native-openharmony/src/main/cpp")
@@ -25,6 +26,8 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/masked-view/src/main/cpp" .
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-unistyles/src/main/cpp" ./unistyles)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-blurhash/src/main/cpp" ./blurhash)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/picker/src/main/cpp" ./picker)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mmkv-storage/src/main/cpp" ./mmkv-storage
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-text-input-mask/src/main/cpp" ./RNTextInputMask)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -52,4 +55,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh_masked_view)
 target_link_libraries(rnoh_app PUBLIC rnoh_unistyles)
 target_link_libraries(rnoh_app PUBLIC rnoh_blurhash)
 target_link_libraries(rnoh_app PUBLIC rnoh_picker)
+target_link_libraries(rnoh_app PUBLIC rnoh_mmkv_storage)
+target_link_libraries(rnoh_app PUBLIC text_input_mask)
 # RNOH_END: link_packages
