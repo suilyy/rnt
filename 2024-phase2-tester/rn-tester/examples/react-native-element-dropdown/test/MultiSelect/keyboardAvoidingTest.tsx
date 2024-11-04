@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {StyleSheet} from 'react-native';
-import {Dropdown} from 'react-native-element-dropdown';
+import {MultiSelect} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
 const imageSource = require('../assets/react-native-logo.png');
@@ -13,12 +13,12 @@ const data = [
 ];
 
 const Demo = (props: any) => {
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string[]>([]);
 
   return (
     <>
-      <Dropdown
-        style={styles.dropdown}
+      <MultiSelect
+        style={styles.MultiSelect}
         mode="default"
         labelField="label"
         valueField="value"
@@ -28,26 +28,26 @@ const Demo = (props: any) => {
         placeholder="请选择....."
         value={value}
         onChange={(item: any) => {
-          setValue(item.value);
+          setValue(item);
         }}
-        searchField="label"
+        activeColor="#FF8A2D2D"
         {...props}
       />
     </>
   );
 };
 
-export const SearchFieldTest = () => {
+export const keyboardAvoidingTest = () => {
   return (
     <Tester>
-      <TestSuite name="searchField">
-        <TestCase itShould="label">
-          <Demo searchField="label" />
+      <TestSuite name="keyboardAvoiding">
+        <TestCase itShould="true">
+          <Demo keyboardAvoiding />
         </TestCase>
       </TestSuite>
-      <TestSuite name="searchField">
-        <TestCase itShould="value">
-          <Demo searchField="value" />
+      <TestSuite name="keyboardAvoiding">
+        <TestCase itShould="false">
+          <Demo keyboardAvoiding={false} />
         </TestCase>
       </TestSuite>
     </Tester>
@@ -55,7 +55,7 @@ export const SearchFieldTest = () => {
 };
 
 const styles = StyleSheet.create({
-  dropdown: {
+  MultiSelect: {
     height: 50,
     borderColor: 'gray',
     borderWidth: 0.5,

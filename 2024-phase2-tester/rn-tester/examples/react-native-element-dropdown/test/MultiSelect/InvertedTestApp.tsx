@@ -1,6 +1,6 @@
-import React, {useRef, useState} from 'react';
-import {Alert, StyleSheet,Text} from 'react-native';
-import {MultiSelect, IMultiSelectRef} from 'react-native-element-dropdown';
+import React, {useState} from 'react';
+import {Button, StyleSheet, View, Text} from 'react-native';
+import {MultiSelect} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
 const imageSource = require('../assets/react-native-logo.png');
@@ -14,59 +14,43 @@ const data = [
 
 const Demo = (props: any) => {
   const [value, setValue] = useState<string[]>([]);
-  const ref = useRef<IMultiSelectRef>(null);
 
   return (
     <>
+      <Text>
+        <Text>在顶部位置模式下反转滚动方向。默认值为true</Text>
+      </Text>
       <MultiSelect
-        ref={ref}
         style={styles.MultiSelect}
+        mode="default"
         labelField="label"
         valueField="value"
         data={data}
         search
+        placeholder="请选择....."
         value={value}
         onChange={(item: any) => {
           setValue(item);
         }}
-        accessibilityLabel="select!!!"
-        closeModalWhenSelectedItem
-        confirmSelectItem
-        onConfirmSelectItem={(item: any) => {
-          Alert.alert('Confirm', 'Message confirm', [
-            {
-              text: 'Cancel',
-              onPress: () => {
-                ref.current?.close();
-              },
-            },
-            {
-              text: 'Confirm',
-              onPress: () => {
-                setValue(item);
-                ref.current?.close();
-              },
-            },
-          ]);
-        }}
+        activeColor="#FF8A2D2D"
+        dropdownPosition='top'
         {...props}
       />
     </>
   );
 };
 
-export const ConfirmSelectItemTest = () => {
+export const InvertedTestApp = () => {
   return (
     <Tester>
-      <TestSuite name="confirmSelectItem,onConfirmSelectItem">
-        <TestCase itShould={`启用自定义confirmSelectItem`}>
-            <Text>confirmSelectItem属性需要和onConfirmSelectItem一起使用</Text>
-          <Demo />
+      <TestSuite name="inverted">
+        <TestCase itShould={`inverted:${true}`}>
+          <Demo inverted />
         </TestCase>
       </TestSuite>
-      <TestSuite name="confirmSelectItem,onConfirmSelectItem">
-        <TestCase itShould={`不启用`}>
-          <Demo confirmSelectItem={false} />
+      <TestSuite name="inverted">
+        <TestCase itShould={`inverted:${false}`}>
+          <Demo inverted={false} />
         </TestCase>
       </TestSuite>
     </Tester>

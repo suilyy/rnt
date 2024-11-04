@@ -13,13 +13,13 @@ const data = [
 ];
 
 
-export const MinHeighTest = () => {
+export const MinHeightTest = () => {
   const [value, setValue] = useState<string[]>([]);
 
   const [minHeight, setMinHeight] = useState(400);
   return (
     <Tester>
-      <TestSuite name="MinHeigh">
+      <TestSuite name="MinHeight">
         <TestCase itShould={`minHeight:${minHeight}`}>
           <MultiSelect
             style={styles.MultiSelect}

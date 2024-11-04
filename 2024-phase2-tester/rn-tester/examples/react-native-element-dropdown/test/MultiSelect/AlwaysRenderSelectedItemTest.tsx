@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {StyleSheet} from 'react-native';
-import {Dropdown} from 'react-native-element-dropdown';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import {MultiSelect} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
 const imageSource = require('../assets/react-native-logo.png');
@@ -13,11 +13,11 @@ const data = [
 ];
 
 const Demo = (props: any) => {
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string[]>([]);
 
   return (
-    <Dropdown
-      style={styles.dropdown}
+    <MultiSelect
+      style={styles.MultiSelect}
       mode="default"
       labelField="label"
       valueField="value"
@@ -26,24 +26,26 @@ const Demo = (props: any) => {
       placeholder="请选择....."
       value={value}
       onChange={(item: any) => {
-        setValue(item.value);
+        setValue(item);
       }}
+      visibleSelectedItem
+      activeColor='pink'
       {...props}
     />
   );
 };
 
-export const AutoScrollTest = () => {
+export const AlwaysRenderSelectedItemTest = () => {
   return (
     <Tester>
-      <TestSuite name="autoScroll">
-        <TestCase itShould={`true`}>
-          <Demo autoScroll />
+      <TestSuite name="alwaysRenderSelectedItem">
+        <TestCase itShould={`始终展示选中的item`}>
+          <Demo alwaysRenderSelectedItem />
         </TestCase>
       </TestSuite>
-      <TestSuite name="autoScroll">
-        <TestCase itShould={`false`}>
-          <Demo autoScroll={false} />
+      <TestSuite name="alwaysRenderSelectedItem">
+        <TestCase itShould={`默认值：不展示`}>
+          <Demo alwaysRenderSelectedItem={false} />
         </TestCase>
       </TestSuite>
     </Tester>
@@ -51,7 +53,7 @@ export const AutoScrollTest = () => {
 };
 
 const styles = StyleSheet.create({
-  dropdown: {
+  MultiSelect: {
     height: 50,
     borderColor: 'gray',
     borderWidth: 0.5,

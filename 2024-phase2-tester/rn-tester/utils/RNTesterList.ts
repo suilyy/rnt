@@ -463,7 +463,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeElementDropdownView',
     category: 'UI',
-    module: require('../examples/react-native-element-dropdown/App').default,
+    module: require('../examples/react-native-element-dropdown/test/App').default,
   },
   {
     key: 'ReactNativeCameraKit',

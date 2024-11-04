@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, TextInput, View} from 'react-native';
-import {Dropdown} from 'react-native-element-dropdown';
+import {Button, StyleSheet, View} from 'react-native';
+import {MultiSelect} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
 const imageSource = require('../assets/react-native-logo.png');
@@ -12,43 +12,39 @@ const data = [
   {label: 'Item 5', value: '5', image: imageSource},
 ];
 
-export const RenderInputSearchTest = () => {
-  const [value, setValue] = useState<string>('');
+
+export const MaxSelectTest = () => {
+  const [value, setValue] = useState<string[]>([]);
+  const [maxSelect, setMaxSelect] = useState<number>(2);
 
   return (
     <Tester>
-      <TestSuite name="renderInputSearch">
-        <TestCase itShould={`自定义搜索`}>
-          <Dropdown
-            renderInputSearch={() => <TextInput placeholder="我是自定义搜索" />}
-            style={styles.dropdown}
+      <TestSuite name="maxSelect">
+        <TestCase itShould={`maxSelect:${maxSelect}`}>
+          <MultiSelect
+            style={styles.MultiSelect}
             mode="default"
             labelField="label"
             valueField="value"
             data={data}
-            search
+            maxHeight={400}
+            placeholder="请选择....."
             value={value}
             onChange={(item: any) => {
-              setValue(item.value);
+              setValue(item);
             }}
+            activeColor="#FF8A2D2D"
+            maxSelect={maxSelect}
           />
-        </TestCase>
-      </TestSuite>
-      <TestSuite name="renderInputSearch">
-        <TestCase itShould={`默认搜索`}>
-          <Dropdown
-            searchPlaceholder="我是默认的搜索"
-            style={styles.dropdown}
-            mode="default"
-            labelField="label"
-            valueField="value"
-            data={data}
-            search
-            value={value}
-            onChange={(item: any) => {
-              setValue(item.value);
-            }}
-          />
+          <View style={styles.actionBtn}>
+            <Button
+              title="changeMaxSelect"
+              onPress={() => {
+                setMaxSelect(v => (v === 2 ? 4 : 2));
+                setValue([])
+              }}
+            />
+          </View>
         </TestCase>
       </TestSuite>
     </Tester>
@@ -56,7 +52,7 @@ export const RenderInputSearchTest = () => {
 };
 
 const styles = StyleSheet.create({
-  dropdown: {
+  MultiSelect: {
     height: 50,
     borderColor: 'gray',
     borderWidth: 0.5,

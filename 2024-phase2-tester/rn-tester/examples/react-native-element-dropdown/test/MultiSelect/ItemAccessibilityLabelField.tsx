@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {MultiSelect} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
@@ -17,9 +17,6 @@ const Demo = (props: any) => {
 
   return (
     <>
-      <Text>
-        <Text>在顶部位置模式下反转滚动方向。默认值为true</Text>
-      </Text>
       <MultiSelect
         style={styles.MultiSelect}
         mode="default"
@@ -27,30 +24,37 @@ const Demo = (props: any) => {
         valueField="value"
         data={data}
         search
+        maxHeight={300}
         placeholder="请选择....."
         value={value}
         onChange={(item: any) => {
           setValue(item);
         }}
+        searchField="label"
         activeColor="#FF8A2D2D"
-        dropdownPosition="top"
         {...props}
       />
+      <Text>itemAccessibilityLabelField:{JSON.stringify(value)}</Text>
     </>
   );
 };
 
-export const InvertedTestApp = () => {
+export const ItemAccessibilityLabelFieldTest = () => {
   return (
     <Tester>
-      <TestSuite name="inverted">
-        <TestCase itShould={`inverted:${true}`}>
-          <Demo inverted />
+      <TestSuite name="itemAccessibilityLabelField">
+        <View>
+          <Text style={{color: '#fff'}}>
+            itemAccessibilityLabelField是辅助标签功能字段：必须是唯一值，且不能重复，设置成label或者value效果是一样的
+          </Text>
+        </View>
+        <TestCase itShould="label">
+          <Demo itemAccessibilityLabelField="label" />
         </TestCase>
       </TestSuite>
-      <TestSuite name="inverted">
-        <TestCase itShould={`inverted:${false}`}>
-          <Demo inverted={false} />
+      <TestSuite name="itemAccessibilityLabelField">
+        <TestCase itShould="value">
+          <Demo itemAccessibilityLabelField="value" />
         </TestCase>
       </TestSuite>
     </Tester>
@@ -64,13 +68,5 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderRadius: 8,
     paddingHorizontal: 8,
-  },
-  actionBtn: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    backgroundColor: '#000',
-    padding: 10,
-    gap: 10,
   },
 });

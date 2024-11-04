@@ -3,7 +3,7 @@ import {SafeAreaView, ScrollView, View} from 'react-native';
 
 import * as testSuiteByName from './index';
 
-import {NavigationContainer, Page} from '../components/Navigation';
+import {NavigationContainer, Page} from '../../components/Navigation';
 
 export function SelectCountryTestApp() {
   return (

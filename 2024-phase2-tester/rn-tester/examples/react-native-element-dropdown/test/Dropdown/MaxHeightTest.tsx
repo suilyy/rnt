@@ -7,20 +7,19 @@ const imageSource = require('../assets/react-native-logo.png');
 const data = [
   {label: 'Item 1', value: '1', image: imageSource},
   {label: 'Item 2', value: '2', image: imageSource},
-  // {label: 'Item 3', value: '3', image: imageSource},
-  // {label: 'Item 4', value: '4', image: imageSource},
-  // {label: 'Item 5', value: '5', image: imageSource},
+  {label: 'Item 3', value: '3', image: imageSource},
+  {label: 'Item 4', value: '4', image: imageSource},
+  {label: 'Item 5', value: '5', image: imageSource},
 ];
 
-
-export const MinHeighTest = () => {
+export const MaxHeightTest = () => {
   const [value, setValue] = useState<string>('');
 
-  const [minHeight, setMinHeight] = useState(400);
+  const [maxHeigh, setMaxHeigh] = useState(400);
   return (
     <Tester>
-      <TestSuite name="MinHeigh">
-        <TestCase itShould={`minHeight:${minHeight}`}>
+      <TestSuite name="MaxHeight">
+        <TestCase itShould={`maxHeight:${maxHeigh}`}>
           <Dropdown
             style={styles.dropdown}
             mode="default"
@@ -28,7 +27,7 @@ export const MinHeighTest = () => {
             valueField="value"
             data={data}
             search
-            minHeight={minHeight}
+            maxHeight={maxHeigh}
             placeholder="请选择....."
             value={value}
             onChange={(item: any) => {
@@ -37,9 +36,9 @@ export const MinHeighTest = () => {
           />
           <View style={styles.actionBtn}>
             <Button
-              title="changeMaxHeigh"
+              title="changeMaxHeight"
               onPress={() => {
-                setMinHeight(v => (v === 400 ? 200 : 400));
+                setMaxHeigh(v => (v === 400 ? 200 : 400));
               }}
             />
           </View>

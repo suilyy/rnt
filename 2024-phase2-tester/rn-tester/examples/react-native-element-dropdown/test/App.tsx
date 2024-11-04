@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 
-import {TabNavigator} from './components/TabNavigator';
+import {TabNavigator} from '../components/TabNavigator';
 import { DropdownTestApp } from './Dropdown/App';
 import { MultiSelectTestApp } from './MultiSelect/App';
 import { SelectCountryTestApp } from './SelectCountry/App';
@@ -12,7 +12,7 @@ const tabs = [
 
 ];
 
-export const ElementDropdownTestApp = (): ReactElement => {
+export const DropdownTestExample = (): ReactElement => {
   return <TabNavigator tabs={tabs} />;
 };
 
@@ -21,13 +21,13 @@ export default {
   framework: 'React',
   category: 'UI',
   title: 'react-native-element-dropdown',
-  documentationURL: 'https://reactnative.dev/docs/text',
+  documentationURL: 'react-native-element-dropdown',
   description: 'React Native Element Dropdown',
   examples: [
     {
       title: 'react-native-element-dropdown',
       render: function (): any {
-        return <ElementDropdownTestApp />;
+        return <DropdownTestExample />;
       },
     },
   ],

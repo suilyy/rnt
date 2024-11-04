@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
@@ -16,34 +16,38 @@ const Demo = (props: any) => {
   const [value, setValue] = useState<string>('');
 
   return (
-    <Dropdown
-      style={styles.dropdown}
-      mode="default"
-      labelField="label"
-      valueField="value"
-      data={data}
-      search
-      placeholder="请选择....."
-      value={value}
-      onChange={(item: any) => {
-        setValue(item.value);
-      }}
-      {...props}
-    />
+    <>
+      <Dropdown
+        style={styles.MultiSelect}
+        mode="default"
+        labelField="label"
+        valueField="value"
+        data={data}
+        search
+        maxHeight={300}
+        placeholder="请选择....."
+        value={value}
+        onChange={(item: any) => {
+          setValue(item.value);
+        }}
+        activeColor="#FF8A2D2D"
+        {...props}
+      />
+    </>
   );
 };
 
-export const FontFamilyTest = () => {
+export const keyboardAvoidingTest = () => {
   return (
     <Tester>
-      <TestSuite name="FontFamily">
-        <TestCase itShould={`fontFamily:Arial`}>
-          <Demo fontFamily="Arial" />
+      <TestSuite name="keyboardAvoiding">
+        <TestCase itShould="true">
+          <Demo keyboardAvoiding />
         </TestCase>
       </TestSuite>
-      <TestSuite name="FontFamily">
-        <TestCase itShould={`fontFamily:FontAwesome`}>
-          <Demo fontFamily="FontAwesome" />
+      <TestSuite name="keyboardAvoiding">
+        <TestCase itShould="false">
+          <Demo keyboardAvoiding={false} />
         </TestCase>
       </TestSuite>
     </Tester>
@@ -51,19 +55,11 @@ export const FontFamilyTest = () => {
 };
 
 const styles = StyleSheet.create({
-  dropdown: {
+  MultiSelect: {
     height: 50,
     borderColor: 'gray',
     borderWidth: 0.5,
     borderRadius: 8,
     paddingHorizontal: 8,
-  },
-  actionBtn: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    backgroundColor: '#000',
-    padding: 10,
-    gap: 10,
   },
 });
