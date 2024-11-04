@@ -331,6 +331,31 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-version-number/index'),
   },
+  {
+    key: 'ReactNativeImageMarker',
+    category: 'UI',
+    module: require('../examples/react-native-image-marker/ImageMarkerNomal'),
+  },
+  {
+    key: 'ReactNativeIncallManager',
+    category: 'UI',
+    module: require('../examples/react-native-incall-manager/test/InCallManagerTest'),
+  },
+  {
+    key: 'ReactNativeMlkitOcr',
+    category: 'UI',
+    module: require('../examples/react-native-mlkit-ocr/Test/OcrTest'),
+  },
+  {
+    key: 'ReactNativeThemeControl',
+    category: 'UI',
+    module: require('../examples/react-native-theme-control/ThemeControlTest'),
+  },
+  {
+    key: 'ReactNativeGiftedCharts',
+    category: 'UI',
+    module: require('../examples/react-native-gifted-charts/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
