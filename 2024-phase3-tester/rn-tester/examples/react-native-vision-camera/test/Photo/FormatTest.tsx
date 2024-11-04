@@ -8,11 +8,11 @@ import {
 } from 'react-native-vision-camera';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
 
-export function useCameraPermissionTest() {
+export function FormatTest() {
   const device = useCameraDevice('back');
   const format = useCameraFormat(device, [
-    {videoResolution: {width: 3048, height: 2160}},
-    {fps: 60},
+    {videoResolution: {width: 1920, height: 1080}},
+    {fps: 30},
   ]);
   const {hasPermission, requestPermission} = useCameraPermission();
   const camera = useRef<Camera>(null);
@@ -21,16 +21,17 @@ export function useCameraPermissionTest() {
     return <Text>No Devices</Text>;
   }
 
-  // if (!hasPermission) {
-  //   requestPermission();
-  // }
+  if (!hasPermission) {
+    requestPermission();
+  }
 
   return (
     <Tester>
-      <TestSuite name="useCameraPermission">
-        <TestCase itShould={`result：${hasPermission ? '有相机权限' : '没有相机权限'}`}>
-          <Text>有相机权限：正常显示相机预览画面</Text>
-          <Text>没有相机权限：不显示相机预览画面</Text>
+      <TestSuite name="format">
+        <TestCase itShould={``}>
+          <View>
+            <Text style={style.text}>format:{JSON.stringify(format)}</Text>
+          </View>
           <Camera
             style={style.cameraPreview}
             ref={camera}
@@ -40,11 +41,6 @@ export function useCameraPermissionTest() {
             photo
             format={format}
           />
-          <View>
-            {!hasPermission && (
-              <Button title="requestPermission" onPress={requestPermission} />
-            )}
-          </View>
         </TestCase>
       </TestSuite>
     </Tester>
@@ -63,8 +59,8 @@ const style = StyleSheet.create({
     top: 300,
   },
   text: {
-    fontSize: 20,
-    textAlign: 'center',
-    color: '#fff',
+    // fontSize: 20,
+    // textAlign: 'center',
+    // color: '#fff',
   },
 });

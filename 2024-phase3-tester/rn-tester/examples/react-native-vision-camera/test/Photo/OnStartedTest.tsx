@@ -65,6 +65,7 @@ export function OnStartedTest() {
           />
           <View style={style.actionBtn}>
             <Button title="changeIsActive" onPress={changeIsActive}></Button>
+            <Button title="rest" onPress={()=>{setStatus('')}}></Button>
           </View>
         </TestCase>
       </TestSuite>
@@ -73,7 +74,7 @@ export function OnStartedTest() {
 }
 
 const style = StyleSheet.create({
-  cameraPreview: {width: 300, height: 600},
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   actionBtn: {
     flexDirection: 'row',
     flexWrap: 'wrap',

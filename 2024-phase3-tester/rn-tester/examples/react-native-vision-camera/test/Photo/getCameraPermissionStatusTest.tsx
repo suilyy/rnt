@@ -38,7 +38,7 @@ export function getCameraPermissionStatusTest() {
       <TestSuite name="getCameraPermissionStatus">
         <TestCase itShould={`获取相机授权情况`}>
           <View>
-            <Text>getCameraPermissionStatus{status}</Text>
+            <Text>result：{status}</Text>
             <Button
               title="getCameraPermissionStatus"
               onPress={getCameraPermissionStatus}
@@ -61,7 +61,7 @@ export function getCameraPermissionStatusTest() {
 }
 
 const style = StyleSheet.create({
-  cameraPreview: {width: 300, height: 400},
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   actionBtn: {
     flexDirection: 'row',
     flexWrap: 'wrap',

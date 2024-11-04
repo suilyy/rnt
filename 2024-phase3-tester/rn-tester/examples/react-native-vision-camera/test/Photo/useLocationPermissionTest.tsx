@@ -35,7 +35,11 @@ export function useLocationPermissionTest() {
     <Tester>
       <TestSuite name="useLocationPermission">
         <TestCase
-          itShould={`${_hasPermission ? '有位置权限' : '没有位置权限'}`}>
+          itShould={`result：${
+            _hasPermission ? '有位置权限' : '没有位置权限'
+          }`}>
+          <Text>有位置权限：图片有位置信息</Text>
+          <Text>没有位置权限：图片没有位置信息</Text>
           <Camera
             style={style.cameraPreview}
             ref={camera}
@@ -55,7 +59,7 @@ export function useLocationPermissionTest() {
 }
 
 const style = StyleSheet.create({
-  cameraPreview: {width: 300, height: 600},
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   actionBtn: {
     flexDirection: 'row',
     flexWrap: 'wrap',

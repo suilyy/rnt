@@ -33,7 +33,7 @@ export function useMicrophonePermissionTest() {
 
   return (
     <Tester>
-      <TestSuite name="useCameraPermission">
+      <TestSuite name="useMicrophonePermission">
         <TestCase
           itShould={`${_hasPermission ? '有麦克风权限' : '没有麦克风权限'}`}>
           <Camera
@@ -55,7 +55,7 @@ export function useMicrophonePermissionTest() {
 }
 
 const style = StyleSheet.create({
-  cameraPreview: {width: 300, height: 600},
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   actionBtn: {
     flexDirection: 'row',
     flexWrap: 'wrap',

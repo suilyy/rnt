@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   tabText: {
-    color: '#000',
+    color: '#fff',
   },
   content: {
     // flex: 1,

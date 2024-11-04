@@ -38,7 +38,7 @@ export function getAvailableCameraDevicesTest() {
       <TestSuite name="getAvailableCameraDevices">
         <TestCase itShould={`获取手机上可用相机设备`}>
           <View>
-            <Text>availableCameraDevices{availableCameraDevices}</Text>
+            <Text>result：{availableCameraDevices}</Text>
             <Button
               title="getAvailableCameraDevices"
               onPress={getAvailableCameraDevices}
@@ -60,7 +60,7 @@ export function getAvailableCameraDevicesTest() {
 }
 
 const style = StyleSheet.create({
-  cameraPreview: {width: 300, height: 400},
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   actionBtn: {
     flexDirection: 'row',
     flexWrap: 'wrap',

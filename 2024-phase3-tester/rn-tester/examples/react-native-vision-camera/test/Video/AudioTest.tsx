@@ -94,10 +94,12 @@ export function AudioTest() {
               <Button
                 title="SaveAsset"
                 onPress={() => {
-                  setTimeout(() => {
-                    setVideoPath('');
-                    setVideoFile('');
-                  }, 500);
+                  CameraRoll.saveAsset(videoPath).then(res => {
+                    setTimeout(() => {
+                      setVideoPath('');
+                      setVideoFile('');
+                    }, 500);
+                  });
                 }}
               />
             </View>
@@ -166,10 +168,7 @@ const style = StyleSheet.create({
     position: 'absolute',
     top: 300,
   },
-  cameraPreview: {
-    width: 300,
-    height: 400,
-  },
+  cameraPreview: {width: '100%', aspectRatio: 56 / 100},
   text: {
     fontSize: 20,
     textAlign: 'center',
