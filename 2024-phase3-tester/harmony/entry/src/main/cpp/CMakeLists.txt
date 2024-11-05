@@ -25,6 +25,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-cont
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-incall-manager/src/main/cpp" ./in_call_manager)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mlkit-ocr/src/main/cpp" ./rn_mlkit_ocr)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-linear-gradient/src/main/cpp" ./linear-gradient)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -51,4 +52,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
 target_link_libraries(rnoh_app PUBLIC rnoh_in_call_manager)
 target_link_libraries(rnoh_app PUBLIC rnoh_mlkit_ocr)
 target_link_libraries(rnoh_app PUBLIC rnoh_linear_gradient)
+target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
 # RNOH_END: link_packages

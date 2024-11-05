@@ -376,6 +376,26 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-send-intent/SendIntent'),
   },
+  {
+    key: 'ReactNativeErrorBoundary',
+    category: 'Basic',
+    module: require('../examples/react-native-error-boundary/ErrorBoundaryTest'),
+  },
+  {
+    key: 'ReactNativeMail',
+    category: 'Basic',
+    module: require('../examples/react-native-mail/App'),
+  },
+  {
+    key: 'GalioFramework',
+    category: 'Basic',
+    module: require('../examples/galio-framework/APP'),
+  },
+  {
+    key: 'EmojiKeyboard',
+    category: 'Basic',
+    module: require('../examples/rn-emoji-keyboard/EmojiKeyboardExample'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

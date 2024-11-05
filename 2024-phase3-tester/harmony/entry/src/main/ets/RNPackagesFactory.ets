@@ -37,6 +37,8 @@ import { RNMlkitOcrPackage } from '@react-native-oh-tpl/react-native-mlkit-ocr/t
 import { RNThemeControlPackage } from '@react-native-oh-tpl/react-native-theme-control/ts'
 import { RNBarsPackage } from '@react-native-oh-tpl/react-native-bars/ts';
 import { RNSendIntentPackage } from '@react-native-oh-tpl/react-native-send-intent/ts';
+import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
+import {RNMailPackage} from '@react-native-oh-tpl/react-native-mail/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -77,6 +79,8 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNMlkitOcrPackage(ctx),
     new RNThemeControlPackage(ctx),
     new RNBarsPackage(ctx),
-    new RNSendIntentPackage(ctx)
-    ];
+    new RNSendIntentPackage(ctx),
+    new AsyncStoragePackage(ctx),
+    new RNMailPackage(ctx)
+  ];
 }
