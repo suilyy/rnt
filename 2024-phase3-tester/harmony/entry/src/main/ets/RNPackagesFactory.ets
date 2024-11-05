@@ -35,6 +35,8 @@ import { RNImageMarkerPackage } from '@react-native-oh-tpl/react-native-image-ma
 import { RNInCallManagerPackage } from '@react-native-oh-tpl/react-native-incall-manager/ts';
 import { RNMlkitOcrPackage } from '@react-native-oh-tpl/react-native-mlkit-ocr/ts';
 import { RNThemeControlPackage } from '@react-native-oh-tpl/react-native-theme-control/ts'
+import { RNBarsPackage } from '@react-native-oh-tpl/react-native-bars/ts';
+import { RNSendIntentPackage } from '@react-native-oh-tpl/react-native-send-intent/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -73,6 +75,8 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNImageMarkerPackage(ctx),
     new RNInCallManagerPackage(ctx),
     new RNMlkitOcrPackage(ctx),
-    new RNThemeControlPackage(ctx)
+    new RNThemeControlPackage(ctx),
+    new RNBarsPackage(ctx),
+    new RNSendIntentPackage(ctx)
     ];
 }

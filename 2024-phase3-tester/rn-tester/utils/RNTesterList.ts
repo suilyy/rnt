@@ -356,6 +356,26 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-gifted-charts/App'),
   },
+  {
+    key: 'ReactNavigationHeaderButtons',
+    category: 'UI',
+    module: require('../examples/react-navigation-header-buttons/test/index'),
+  },
+  {
+    key: 'ReactNativeBars',
+    category: 'UI',
+    module: require('../examples/react-native-bars/BarExample'),
+  },
+  {
+    key: 'ReactNativeKeyboardAccessory',
+    category: 'UI',
+    module: require('../examples/react-native-keyboard-accessory/BusKeyBoardIndex'),
+  },
+  {
+    key: 'ReactNativeSendIntent',
+    category: 'UI',
+    module: require('../examples/react-native-send-intent/SendIntent'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

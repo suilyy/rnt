@@ -42,6 +42,8 @@
     "@react-native-oh-tpl/react-native-incall-manager": "file:../../node_modules/@react-native-oh-tpl/react-native-incall-manager/harmony/in_call_manager.har",
     "@react-native-oh-tpl/react-native-mlkit-ocr": "file:../../node_modules/@react-native-oh-tpl/react-native-mlkit-ocr/harmony/rn_mlkit_ocr.har",
     "@react-native-oh-tpl/react-native-theme-control": "file:../../node_modules/@react-native-oh-tpl/react-native-theme-control/harmony/themecontrol.har",
-    "@react-native-oh-tpl/react-native-linear-gradient": "file:../../node_modules/@react-native-oh-tpl/react-native-linear-gradient/harmony/linear_gradient.har"
+    "@react-native-oh-tpl/react-native-linear-gradient": "file:../../node_modules/@react-native-oh-tpl/react-native-linear-gradient/harmony/linear_gradient.har",
+    "@react-native-oh-tpl/react-native-bars": "file:../../node_modules/@react-native-oh-tpl/react-native-bars/harmony/bars.har",
+    "@react-native-oh-tpl/react-native-send-intent": "file:../../node_modules/@react-native-oh-tpl/react-native-send-intent/harmony/send_intent.har"
   }
 }
