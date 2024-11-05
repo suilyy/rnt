@@ -11,6 +11,14 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
+      "metadata": [
+      // 配置如下信息 测试地图功能
+      {
+        "name": "client_id",
+        "value": "110168601"
+        //配置为从华为开发者平台获取的Client ID，自建项目请与开发者平台上的client id一致
+      }
+    ],
     "requestPermissions": [
       {
         "name": "ohos.permission.INTERNET"
@@ -49,6 +57,16 @@
             "EntryAbility"
           ],
           "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:Access_maps",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
         }
       },
       {

@@ -46,6 +46,8 @@
     "@react-native-oh-tpl/react-native-bars": "file:../../node_modules/@react-native-oh-tpl/react-native-bars/harmony/bars.har",
     "@react-native-oh-tpl/react-native-send-intent": "file:../../node_modules/@react-native-oh-tpl/react-native-send-intent/harmony/send_intent.har",
     "@react-native-oh-tpl/async-storage": "file:../../node_modules/@react-native-oh-tpl/async-storage/harmony/async_storage.har",
-    "@react-native-oh-tpl/react-native-mail": "file:../../node_modules/@react-native-oh-tpl/react-native-mail/harmony/mail.har"
+    "@react-native-oh-tpl/react-native-mail": "file:../../node_modules/@react-native-oh-tpl/react-native-mail/harmony/mail.har",
+    "@react-native-oh-tpl/ting": "file:../../node_modules/@react-native-oh-tpl/ting/harmony/ting.har",
+    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har"
   }
 }

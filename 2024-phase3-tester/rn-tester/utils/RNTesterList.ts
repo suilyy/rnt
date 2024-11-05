@@ -396,6 +396,21 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/rn-emoji-keyboard/EmojiKeyboardExample'),
   },
+  {
+    key: 'Ting',
+    category: 'UI',
+    module: require('../examples/ting/Test/TingDemo'),
+  },
+  {
+    key: 'ReactNativeStickyHeader',
+    category: 'UI',
+    module: require('../examples/react-native-sticky-header/tester/index'),
+  },
+  {
+    key: 'ReactNativeMapsDirections',
+    category: 'UI',
+    module: require('../examples/react-native-maps-directions/MapsDirectionsTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

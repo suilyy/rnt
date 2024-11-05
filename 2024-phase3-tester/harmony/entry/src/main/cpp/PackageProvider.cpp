@@ -13,6 +13,7 @@
 #include "RNMlkitOcrPackage.h"
 #include "LinearGradientPackage.h"
 #include "AsyncStoragePackage.h"
+#include "MapsPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -31,6 +32,7 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<RNInCallManagerPackage>(ctx),
     std::make_shared<RNMlkitOcrPackage>(ctx),
     std::make_shared<LinearGradientPackage>(ctx),
-    std::make_shared<AsyncStoragePackage>(ctx)
+    std::make_shared<AsyncStoragePackage>(ctx),
+    std::make_shared<MapsPackage>(ctx)
   };
 } 
