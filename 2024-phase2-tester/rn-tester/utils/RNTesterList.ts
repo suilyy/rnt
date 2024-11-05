@@ -474,7 +474,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeVectorDrawable',
     category: 'UI',
     module: require('../examples/react-native-vector-drawable/App'),
-  }
+  },
+  {
+    key: 'ReactNativeFlashMessage',
+    category: 'UI',
+    module: require('../examples/react-native-flash-message/FlashMessageTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
