@@ -47,5 +47,12 @@
 	"@react-native-oh-tpl/react-native-localization": "file:../../node_modules/@react-native-oh-tpl/react-native-localization/harmony/react_localization.har",
 	"@react-native-oh-tpl/react-native-mmkv-storage": "file:../../node_modules/@react-native-oh-tpl/react-native-mmkv-storage/harmony/mmkv_storage.har",
 	"@react-native-oh-tpl/react-native-text-input-mask": "file:../../node_modules/@react-native-oh-tpl/react-native-text-input-mask/harmony/text_input_mask.har"
+	"@react-native-oh-tpl/react-native-bootsplash": "file:../../node_modules/@react-native-oh-tpl/react-native-bootsplash/harmony/boot_splash.har",
+	"@react-native-oh-tpl/react-native-print": "file:../../node_modules/@react-native-oh-tpl/react-native-print/harmony/print.har",
+	"@react-native-oh-tpl/react-native-keyboard-controller": "file:../../node_modules/@react-native-oh-tpl/react-native-keyboard-controller/harmony/keyboard_controller.har",
+	"@react-native-oh-tpl/react-native-skia": "file:../../node_modules/@react-native-oh-tpl/react-native-skia/harmony/skia.har",
+	"@react-native-oh-tpl/blur": "file:../../node_modules/@react-native-oh-tpl/blur/harmony/blur.har",
+    "@react-native-oh-tpl/datetimepicker": "file:../../node_modules/@react-native-oh-tpl/datetimepicker/harmony/datetimepicker.har",
+	"@react-native-oh-tpl/react-native-ui-lib": "file:../../node_modules/@react-native-oh-tpl/react-native-ui-lib/harmony/ui_lib.har",
   }
 }

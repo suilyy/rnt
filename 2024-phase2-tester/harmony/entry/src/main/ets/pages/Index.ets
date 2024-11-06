@@ -31,6 +31,10 @@ import {
 import { abilityAccessCtrl, bundleManager, common, Permissions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
+import { RNCSkiaDomView, SKIA_DOM_VIEW_TYPE } from '@react-native-oh-tpl/react-native-skia';
+import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker";
+import {  BlurView, BLUR_TYPE } from "@react-native-oh-tpl/blur";
+import { HighlighterView } from "@react-native-oh-tpl/react-native-ui-lib";
 
 const permissions: Array<Permissions> = [
   'ohos.permission.ACCESS_BLUETOOTH',
@@ -105,6 +109,10 @@ const arkTsComponentNames: Array<string> = [
   SignatureCaptureArkView.NAME,
   RNPDFView.NAME,
   PICKER_TYPE,
+  SKIA_DOM_VIEW_TYPE,
+  DATETIME_PICKER_VIEW_TYPE,
+  BLUR_TYPE,
+  HighlighterView.NAME,
 ];
 
 @Builder
@@ -197,6 +205,30 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     }
 	if (ctx.componentName === PICKER_TYPE) {
       RNCPicker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+	if (ctx.componentName === SKIA_DOM_VIEW_TYPE) {
+      RNCSkiaDomView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+	if (ctx.componentName === DATETIME_PICKER_VIEW_TYPE) {
+      RNDateTimePicker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+	if (ctx.componentName === BLUR_TYPE) {
+      BlurView({
+        ctx: ctx.rnohContext,
+        tag: ctx.tag,
+      })
+    }
+	if (ctx.componentName === HighlighterView.NAME) {
+      HighlighterView({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })

@@ -28,6 +28,11 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-blurhash/src/m
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/picker/src/main/cpp" ./picker)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mmkv-storage/src/main/cpp" ./mmkv-storage
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-text-input-mask/src/main/cpp" ./RNTextInputMask)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-keyboard-controller/src/main/cpp" ./keyboard-controller)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/datetimepicker/src/main/cpp" ./datetimepicker)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/blur/src/main/cpp" ./blur)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-ui-lib/src/main/cpp" ./ui-lib)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -57,4 +62,9 @@ target_link_libraries(rnoh_app PUBLIC rnoh_blurhash)
 target_link_libraries(rnoh_app PUBLIC rnoh_picker)
 target_link_libraries(rnoh_app PUBLIC rnoh_mmkv_storage)
 target_link_libraries(rnoh_app PUBLIC text_input_mask)
+target_link_libraries(rnoh_app PUBLIC rnoh_keyboard_controller)
+target_link_libraries(rnoh_app PUBLIC rnoh_skia)
+target_link_libraries(rnoh_app PUBLIC rnoh_datetime_picker)
+target_link_libraries(rnoh_app PUBLIC rnoh_blur)
+target_link_libraries(rnoh_app PUBLIC rnoh_ui_lib)
 # RNOH_END: link_packages

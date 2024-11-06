@@ -466,6 +466,41 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-element-dropdown/test/App').default,
   },
   {
+    key: 'ReactNativeBootSplashExample',
+    category: 'UI',
+    module: require('../examples/react-native-bootsplash/test/BootSplashExample'),
+  },
+  {
+    key: 'ReactNativePrintExample',
+    category: 'Basic',
+    module: require('../examples/react-native-print/PrintTest')
+  },
+  {
+    key: 'KeyboardControllerExample',
+    category: 'UI',
+    module: require('../examples/react-native-keyboard-controller/index'),
+  },
+  {
+    key: 'DeckSwiperExample',
+    category: 'UI',
+    module: require('../examples/react-native-deck-swiper/App'),
+  },
+  {
+    key: 'ReactNativeBottomSheetExample',
+    category: 'UI',
+    module: require('../examples/react-native-bottom-sheet/App'),
+  },
+  {
+    key: 'ReactNativeSkiaExample',
+    category: 'UI',
+    module: require('../examples/react-native-skia/skiaDemoCases/App'),
+  },
+  {
+    key: 'ReactNativeUILibExample',
+    category: 'UI',
+    module: require('../examples/react-native-ui-lib/App'),
+  },
+  {
     key: 'ReactNativeCameraKit',
     category: 'Basic',
     module: require('../examples/react-native-camera-kit/App').default,

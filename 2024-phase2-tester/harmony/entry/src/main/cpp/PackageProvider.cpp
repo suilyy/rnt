@@ -15,6 +15,11 @@
 #include "PickerPackage.h"
 #include "MMKVNativePackage.h"
 #include "RNTextInputMaskPackage.h"
+#include "keyboardControllerPackage.h"
+#include "SkiaPackage.h"
+#include "DateTimePickerPackage.h"
+#include "BlurPackage.h"
+#include "UiLibPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -36,5 +41,10 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
 	std::make_shared<PickerPackage>(ctx),
 	std::make_shared<RNOHMMKVStoragePackage>(ctx),
 	std::make_shared<RNTextInputMaskPackage>(ctx),
+	std::make_shared<KeyboardControllerPackage>(ctx),
+	std::make_shared<SkiaPackage>(ctx),
+	std::make_shared<DateTimePickerPackage>(ctx),
+	std::make_shared<BlurPackage>(ctx),
+	std::make_shared<UiLibPackage>(ctx),
   };
 } 
