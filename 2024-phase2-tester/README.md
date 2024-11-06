@@ -2,4 +2,4 @@
 文档地址：https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-crypto.md
 2.如遇react-native-bootsplash相关报错，需根据其指导文档运行相关命令生产配置文件。
 文档地址：https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-bootsplash.md
-3.如遇react-native-ui-lib相关报错，需将node_modules\@react-native-oh-tpl\react-native-ui-lib\lib\components\DynamicFonts\PermissionsAcquirer.harmony.d.js，PermissionsAcquirer.harmony.d.ts，PermissionsAcquirer.harmony.js。三个文件复制一份放入该库原库依赖对于目录下。
+3.如遇react-native-ui-lib相关报错，需将node_modules\@react-native-oh-tpl\react-native-ui-lib\lib\components\DynamicFonts\PermissionsAcquirer.harmony.d.js，PermissionsAcquirer.harmony.d.ts，PermissionsAcquirer.harmony.js。三个文件复制一份放入该库原库依赖对应目录下。
