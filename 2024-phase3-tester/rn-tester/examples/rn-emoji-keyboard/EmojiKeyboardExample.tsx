@@ -107,3 +107,19 @@ export const EmojiKeyboardExample = () => {
     </ScrollView>
   )
 }
+
+export const displayName = 'RN Emoji Keyboard';
+export const framework = 'React';
+export const category = 'UI';
+export const title = 'RNEmojiKeyboard';
+export const documentationURL = 'https://reactnative.dev/docs/button';
+export const description = 'RN Emoji Keyboard';
+
+export const examples = [
+  {
+    title: 'RN Emoji Keyboard',
+    render: function (): any {
+      return <EmojiKeyboardExample />;
+    },
+  },
+];
