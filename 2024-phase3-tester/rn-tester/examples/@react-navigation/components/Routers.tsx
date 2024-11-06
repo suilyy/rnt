@@ -37,6 +37,7 @@ import { interpolate } from 'react-native-reanimated';
 
 
 export const RoutersExamples = () => {
+  let i = 100;
   const MyTabRouter = (options: TabRouterOptions) => {
     const router = TabRouter(options);
     return {
@@ -453,7 +454,7 @@ export const RoutersExamples = () => {
                       <Text>params: {JSON.stringify(route.params || {})} </Text>
                       <Button title='set new Params' onPress={() => {
                         navigation.dispatch({
-                          ...CommonActions.setParams({ newParams: Math.floor(Math.random() * 100) }),
+                          ...CommonActions.setParams({ newParams: i++ }),
 
                         });
                       }} />
