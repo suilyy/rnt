@@ -26,7 +26,9 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-incall-manager
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mlkit-ocr/src/main/cpp" ./rn_mlkit_ocr)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-linear-gradient/src/main/cpp" ./linear-gradient)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps),
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-worklets-core/src/main/cpp" ./worklets)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -55,4 +57,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh_mlkit_ocr)
 target_link_libraries(rnoh_app PUBLIC rnoh_linear_gradient)
 target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
 target_link_libraries(rnoh_app PUBLIC rnoh_maps)
+target_link_libraries(rnoh_app PUBLIC rnoh_worklets)
+target_link_libraries(rnoh_app PUBLIC rnoh_video)
 # RNOH_END: link_packages

@@ -41,6 +41,10 @@ import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
 import {RNMailPackage} from '@react-native-oh-tpl/react-native-mail/ts';
 import {RNTingPackage} from '@react-native-oh-tpl/ting';
 import {MapsPackage} from '@react-native-oh-tpl/react-native-maps/ts';
+import { RNCImageCapInsetsPackage } from '@react-native-oh-tpl/react-native-image-capinsets-next/ts';
+import { WorkletsPackage } from "@react-native-oh-tpl/react-native-worklets-core/ts";
+import { ImageCropPickerPackage } from '@react-native-oh-tpl/react-native-image-crop-picker/ts';
+import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -85,6 +89,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new AsyncStoragePackage(ctx),
     new RNMailPackage(ctx),
     new RNTingPackage(ctx),
-    new MapsPackage(ctx)
+    new MapsPackage(ctx),
+    new RNCImageCapInsetsPackage(ctx),
+    new WorkletsPackage(ctx),
+    new ImageCropPickerPackage(ctx),
+    new RNCVideoPackage(ctx)
   ];
 }

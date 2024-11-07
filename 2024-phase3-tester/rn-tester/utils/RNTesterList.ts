@@ -411,6 +411,31 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-maps-directions/MapsDirectionsTest'),
   },
+  {
+    key: 'ReactNativeWorkletsCore',
+    category: 'UI',
+    module: require('../examples/react-native-worklets-core/WorkletsCoreTest'),
+  },
+  {
+    key: 'ReactNativeImageCapinsetsNext',
+    category: 'UI',
+    module: require('../examples/react-native-image-capinsets-next/ImageCapInsetsTest'),
+  },
+  {
+    key: 'ReactNativeImageCropPicker',
+    category: 'UI',
+    module: require('../examples/react-native-image-crop-picker/ImageCropPickerDemo'),
+  },
+  {
+    key: 'ReactNativeImagePanZoom',
+    category: 'UI',
+    module: require('../examples/react-native-image-pan-zoom/Tester/ImageZoomExample'),
+  },
+  {
+    key: 'ReactNativeImageViewing',
+    category: 'UI',
+    module: require('../examples/react-native-image-viewing/Tester/index'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

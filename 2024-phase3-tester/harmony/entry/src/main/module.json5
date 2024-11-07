@@ -118,6 +118,15 @@
         ],
         "srcEntry": "./ets/entryability/EntryAbility.ets",
         "recoverable": true
+      },
+       {
+        "name": "ImageEditAbility",
+        "srcEntry": "./ets/entryability/ImageEditAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "removeMissionAfterTerminate": true,
       }
     ]
   }

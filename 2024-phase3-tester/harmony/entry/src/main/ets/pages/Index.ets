@@ -17,13 +17,55 @@ import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview";
 import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
 import { abilityAccessCtrl, Permissions ,bundleManager, common} from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import {
+  AIRMap,
+  AIR_MAP_TYPE,
+  AIRMapMarker,
+  AIR_MAP_MARKER_TYPE,
+  AIRMapPolyline,
+  AIR_MAP_POLYLINE_TYPE,
+  AIRMapPolygon,
+  AIR_MAP_POLYGON_TYPE,
+  AIRMapCircle,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_CALLOUT_SUBVIEW_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIRMapCallout,
+  AIRMapCalloutSubview,
+  Geojson,
+  AIR_GEOJSON_TYPE,
+  AIRMapUrlTile,
+  AIR_URLTILE_TYPE,
+  AIRMapWMSTile,
+  AIR_WMSTILE_TYPE,
+  AIR_OVERLAY_TYPE,
+  AIRMapOverlay,
+  AIR_MAP_CLUSTER_TYPE,
+  AIRMapCluster,
+} from "@react-native-oh-tpl/react-native-maps"
+import { IMAGE_CAP_INSETS, RNCImageCapInsets } from "@react-native-oh-tpl/react-native-image-capinsets-next"
+import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
+
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
   // SVG_VIEW_TYPE_NAME,
   WEB_VIEW,
-  VisionCameraView.NAME
+  VisionCameraView.NAME,
+  AIR_MAP_TYPE,
+  AIR_MAP_MARKER_TYPE,
+  AIR_MAP_POLYLINE_TYPE,
+  AIR_MAP_POLYGON_TYPE,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIR_GEOJSON_TYPE,
+  AIR_URLTILE_TYPE,
+  AIR_WMSTILE_TYPE,
+  AIR_OVERLAY_TYPE,
+  AIR_MAP_CLUSTER_TYPE,
+  IMAGE_CAP_INSETS,
+  RNC_VIDEO_TYPE
 ];
 
 // 使用UIExtensionAbility：将common.UIAbilityContext 替换为common.UIExtensionContext
@@ -97,13 +139,91 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
           tag: ctx.tag
       })
     }
-     if (ctx.componentName === VisionCameraView.NAME) {
+    if (ctx.componentName === VisionCameraView.NAME) {
        VisionCameraView({
        ctx: ctx.rnComponentContext,
        tag: ctx.tag,
    })
+    if (ctx.componentName === AIR_MAP_TYPE) {
+      AIRMap({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
+      AIRMapMarker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
+      AIRMapPolyline({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
+      AIRMapPolygon({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
+      AIRMapCircle({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
+      AIRMapCallout({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_GEOJSON_TYPE) {
+      Geojson({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_URLTILE_TYPE) {
+      AIRMapUrlTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_WMSTILE_TYPE) {
+      AIRMapWMSTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_OVERLAY_TYPE) {
+      AIRMapOverlay({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CLUSTER_TYPE) {
+      AIRMapCluster({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === IMAGE_CAP_INSETS) {
+      RNCImageCapInsets({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === RNC_VIDEO_TYPE) {
+      RNCVideo({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
  }
-  }
+}
   .position({ x: 0, y: 0 })
 
 }

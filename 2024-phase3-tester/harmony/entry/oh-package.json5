@@ -48,6 +48,10 @@
     "@react-native-oh-tpl/async-storage": "file:../../node_modules/@react-native-oh-tpl/async-storage/harmony/async_storage.har",
     "@react-native-oh-tpl/react-native-mail": "file:../../node_modules/@react-native-oh-tpl/react-native-mail/harmony/mail.har",
     "@react-native-oh-tpl/ting": "file:../../node_modules/@react-native-oh-tpl/ting/harmony/ting.har",
-    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har"
+    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har",
+    "@react-native-oh-tpl/react-native-image-capinsets-next": "file:../../node_modules/@react-native-oh-tpl/react-native-image-capinsets-next/harmony/rn_image_capinsets.har",
+    "@react-native-oh-tpl/react-native-worklets-core": "file:../../node_modules/@react-native-oh-tpl/react-native-worklets-core/harmony/rn_worklets.har",
+    "@react-native-oh-tpl/react-native-image-crop-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-crop-picker/harmony/image_crop_picker.har",
+    "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har"
   }
 }
