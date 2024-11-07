@@ -23,6 +23,7 @@
 #include "RNImagePickerPackage.h"
 #include "VisionCameraPackage.h"
 #include "AsyncStoragePackage.h"
+#include "SharedElementPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -52,5 +53,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
 	std::make_shared<RNImagePickerPackage>(ctx),
     std::make_shared<VisionCameraPackage>(ctx),
 	std::make_shared<AsyncStoragePackage>(ctx),
+	std::make_shared<SharedElementPackage>(ctx),
   };
 } 

@@ -516,6 +516,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/jpush-react-native/JPushExample')
   },
   {
+    key: 'ReactNativeSharedElmentExample',
+    category: 'Basic',
+    module: require('../examples/react-native-shared-element/DemoEntry')
+  },
+  {
     key: 'ReactNativeCameraKit',
     category: 'Basic',
     module: require('../examples/react-native-camera-kit/App').default,

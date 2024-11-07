@@ -36,6 +36,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-ui-lib/src/mai
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-image-picker/src/main/cpp" ./image_picker)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp" ./vision-camera)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-shared-element/src/main/cpp" ./shared-element)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -74,4 +75,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_ui_lib)
 target_link_libraries(rnoh_app PUBLIC rnoh_image_picker)
 target_link_libraries(rnoh_app PUBLIC rnoh_vision_camera)
 target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
+target_link_libraries(rnoh_app PUBLIC rnoh_shared_element)
 # RNOH_END: link_packages
