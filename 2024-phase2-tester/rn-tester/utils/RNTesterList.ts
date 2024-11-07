@@ -147,6 +147,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
   },
   {
+    key: 'ReactNativeDropdownPicker',
+    category: 'UI',
+    module: require('../examples/react-native-dropdown-picker/DropDownPickerTest'),
+  },
+  {
     key: 'ReactNativeMarquee',
     category: 'Basic',
     module: require('../examples/react-native-marquee-ab/TestPage'),
