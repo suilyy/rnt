@@ -16,7 +16,7 @@ import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { RTNCameraKitView } from "@react-native-oh-tpl/react-native-camera-kit";
 import { SignatureCaptureArkView } from '@react-native-oh-tpl/react-native-signature-capture';
-import { RNPDFView } from '@react-native-oh-tpl/react-native-view-pdf'
+import { RNPDFView } from '@react-native-oh-tpl/react-native-view-pdf'；
 import {
   BarCharts,
   LineCharts,
@@ -35,6 +35,8 @@ import { RNCSkiaDomView, SKIA_DOM_VIEW_TYPE } from '@react-native-oh-tpl/react-n
 import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker";
 import {  BlurView, BLUR_TYPE } from "@react-native-oh-tpl/blur";
 import { HighlighterView } from "@react-native-oh-tpl/react-native-ui-lib";
+import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
+import { NativeScan } from "@react-native-oh-tpl/react-native-qr-decode-image-camera";
 
 const permissions: Array<Permissions> = [
   'ohos.permission.ACCESS_BLUETOOTH',
@@ -113,6 +115,7 @@ const arkTsComponentNames: Array<string> = [
   DATETIME_PICKER_VIEW_TYPE,
   BLUR_TYPE,
   HighlighterView.NAME,
+  VisionCameraView.NAME,
 ];
 
 @Builder
@@ -229,6 +232,18 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     }
 	if (ctx.componentName === HighlighterView.NAME) {
       HighlighterView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+	if (ctx.componentName === VisionCameraView.NAME) {
+      VisionCameraView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+	if (ctx.componentName === NativeScan.NAME) {
+      NativeScan({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })

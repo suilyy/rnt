@@ -1,7 +1,24 @@
 {
   "module": {
+    "metadata": [
+      {
+        "name": "client_id",
+        "value": "112133485"
+      }
+    ],
+    "proxyData": [
+      {
+        "uri": "datashareproxy://com.lihonggang.test/PushMessage",
+        "requiredWritePermission": "ohos.permission.WRITE_PRIVACY_PUSH_DATA",
+        "metadata": {
+          "name": "dataProperties",
+          "resource": "$profile:PushMessage"
+        }
+      }
+    ],
     "name": "entry",
     "type": "entry",
+	"srcEntry": "./ets/entryability/MyAbilityStage.ets",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
@@ -36,6 +53,16 @@
       },
 	  {
         "name": "ohos.permission.ACCESS_BIOMETRIC"
+      },
+	  {
+        "name": "ohos.permission.APP_TRACKING_CONSENT",
+        "reason": "$string:reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility" //一般要用首页
+          ],
+          "when": "always"
+        }
       },
       {
         "name": "ohos.permission.CAMERA",
@@ -155,6 +182,20 @@
           "audioPlayback"
         ]
       },
+	  {
+        "name": "PushMessageAbility",
+        "srcEntry": "./ets/entryability/PushMessageAbility.ets",
+        "launchType": "singleton",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "skills": [
+          {
+            "actions": [
+              "action.ohos.push.listener"
+            ]
+          }
+        ]
+      } ,
       {
         "name": "BrowserManagerAbility",
         "srcEntry": "./ets/entryability/BrowserManagerAbility.ets",
@@ -163,6 +204,20 @@
         "startWindowIcon": "$media:startIcon",
         "startWindowBackground": "$color:start_window_background",
         "visible": true
+      }
+    ],
+	"extensionAbilities": [
+      {
+        "name": "RemoteNotificationExtAbility",
+        "type": "remoteNotification",
+        "srcEntry": "./ets/entryability/RemoteNotificationExtAbility.ets",
+        "description": "RemoteNotificationExtAbility test",
+        "exported": false,
+        "skills": [
+          {
+            "actions": ["action.hms.push.extension.remotenotification"]
+          }
+        ]
       }
     ]
   }

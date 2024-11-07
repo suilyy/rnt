@@ -41,7 +41,11 @@ import {RNPrintPackage} from '@react-native-oh-tpl/react-native-print/ts';
 import {RNKeyboardControllerPackage,RNStatusBarManagerCompatPackage} from  "@react-native-oh-tpl/react-native-keyboard-controller/ts";
 import {RNSkiaPackage} from '@react-native-oh-tpl/react-native-skia/ts';
 import { UiLibPackage } from '@react-native-oh-tpl/react-native-ui-lib/ts';
-
+import { ImagePickerViewPackage } from '@react-native-oh-tpl/react-native-image-picker/ts';
+import { VisionCameraModulePackage } from "@react-native-oh-tpl/react-native-vision-camera/ts";
+import {RNQrDecodeImageCameraPackage} from '@react-native-oh-tpl/react-native-qr-decode-image-camera/ts';
+import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
+import {RNJPushPackage} from  "@react-native-oh-tpl/jpush-react-native/ts";
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -88,5 +92,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNStatusBarManagerCompatPackage(ctx),
 	new RNSkiaPackage(ctx),
 	new UiLibPackage(ctx),
+	new ImagePickerViewPackage(ctx),
+    new VisionCameraModulePackage(ctx),
+	new RNQrDecodeImageCameraPackage(ctx),
+	new AsyncStoragePackage(ctx),
+	new RNJPushPackage(ctx)
   ];
 }

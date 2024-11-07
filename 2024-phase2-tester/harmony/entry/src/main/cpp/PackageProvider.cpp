@@ -20,6 +20,9 @@
 #include "DateTimePickerPackage.h"
 #include "BlurPackage.h"
 #include "UiLibPackage.h"
+#include "RNImagePickerPackage.h"
+#include "VisionCameraPackage.h"
+#include "AsyncStoragePackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -46,5 +49,8 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
 	std::make_shared<DateTimePickerPackage>(ctx),
 	std::make_shared<BlurPackage>(ctx),
 	std::make_shared<UiLibPackage>(ctx),
+	std::make_shared<RNImagePickerPackage>(ctx),
+    std::make_shared<VisionCameraPackage>(ctx),
+	std::make_shared<AsyncStoragePackage>(ctx),
   };
 } 

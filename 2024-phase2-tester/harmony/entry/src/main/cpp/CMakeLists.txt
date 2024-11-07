@@ -33,9 +33,13 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/datetimepicker/src/main/cpp" ./datetimepicker)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/blur/src/main/cpp" ./blur)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-ui-lib/src/main/cpp" ./ui-lib)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-image-picker/src/main/cpp" ./image_picker)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp" ./vision-camera)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
+file(GLOB VISION_CAMERA_CPP_FILES "${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp/*.cpp")
 
 add_library(rnoh_app SHARED
     ${GENERATED_CPP_FILES}
@@ -67,4 +71,7 @@ target_link_libraries(rnoh_app PUBLIC rnoh_skia)
 target_link_libraries(rnoh_app PUBLIC rnoh_datetime_picker)
 target_link_libraries(rnoh_app PUBLIC rnoh_blur)
 target_link_libraries(rnoh_app PUBLIC rnoh_ui_lib)
+target_link_libraries(rnoh_app PUBLIC rnoh_image_picker)
+target_link_libraries(rnoh_app PUBLIC rnoh_vision_camera)
+target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
 # RNOH_END: link_packages

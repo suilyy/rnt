@@ -501,6 +501,21 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-ui-lib/App'),
   },
   {
+    key: 'ReactNativeQrDecodeImageCameraExample',
+    category: 'Basic',
+    module: require('../examples/react-native-qr-decode-image-camera/QrDecodeImageCamera')
+  },
+  {
+    key: 'ReactNativeParseExample',
+    category: 'Basic',
+    module: require('../examples/Parse-SDK-JS/App')
+  },
+  {
+    key: 'ReactNativeJPushExample',
+    category: 'Basic',
+    module: require('../examples/jpush-react-native/JPushExample')
+  },
+  {
     key: 'ReactNativeCameraKit',
     category: 'Basic',
     module: require('../examples/react-native-camera-kit/App').default,

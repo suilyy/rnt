@@ -1,10 +1,6 @@
-import { RNAbility } from "@rnoh/react-native-openharmony";
-import Want from '@ohos.app.ability.Want';
-import { RNNfcManagerModule } from '@react-native-oh-tpl/react-native-nfc-manager';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { window } from '@kit.ArkUI';
-import { RNBootSplashScreen } from '@react-native-oh-tpl/react-native-bootsplash/src/main/ets/RNBootSplashScreen';
+import { RNAbility, RNOHContext } from "@rnoh/react-native-openharmony";
 import { JPushInterface } from "@react-native-oh-tpl/jpush-react-native";
+import Want from "@ohos.app.ability.Want";
 import { abilityAccessCtrl, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 import { notificationManager } from '@kit.NotificationKit';
 import hilog from '@ohos.hilog';
@@ -14,13 +10,8 @@ const TAG: string = 'JPUSH-JLog-RemoteNotificationExtAbility';
 const permissions: Array<Permissions> = ['ohos.permission.APP_TRACKING_CONSENT'];
 
 export default class EntryAbility extends RNAbility {
-  getPagePath() {
-    return "pages/Index"
-  }
-  
   onCreate(want: Want): void {
     super.onCreate(want);
-    RNNfcManagerModule.registerAbilityEvents(this.context,'onCreate',want);
     JPushInterface.setClickWant(want)
     let context: Context = this.context;
     let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
@@ -51,27 +42,7 @@ export default class EntryAbility extends RNAbility {
     });
   }
 
-  onForeground(): void {
-    super.onForeground();
-  }
-
-  onBackground(): void {
-    super.onBackground();
-  }
-
-  onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    super.onNewWant(want,launchParam);
-    RNNfcManagerModule.registerAbilityEvents(this.context,'onNewWant',want);
-  }
-
-  onDestroy(): void {
-    super.onDestroy();
-    RNNfcManagerModule.unRegisterAbilityEvents(this.context);
-  }
-  
-   onWindowStageCreate(windowStage: window.WindowStage) {
-    RNBootSplashScreen.init(this.context, windowStage).then(() => {
-      super.onWindowStageCreate(windowStage);
-    })
+  getPagePath() {
+    return "pages/Index"
   }
 };
