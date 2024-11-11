@@ -18,6 +18,7 @@ import DropdownAlert, {
 } from 'react-native-dropdownalert';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
 
+
 type ListItem = {
   name: string;
   itshould: string;
@@ -174,4 +175,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ZIndexDemo;
+// 或者使用 export default 导出
+export default {
+  displayName: "react-native-dropdownalert",
+  framework: "React",
+  category: "UI",
+  title: "react-native-dropdownalert-ZIndexDemo",
+  description: "react-native-dropdownalert",
+  examples: [
+      {
+          title: "react-native-dropdownalert",
+          render: function (): any {
+              return <ZIndexDemo />;
+          },
+      },
+  ],
+};
