@@ -972,4 +972,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CustAlertporpsDemo;
+// 或者使用 export default 导出
+export default {
+  displayName: "react-native-dropdownalert",
+  framework: "React",
+  category: "UI",
+  title: "react-native-dropdownalert-CustAlertporpsDemo",
+  description: "react-native-dropdownalert",
+  examples: [
+      {
+          title: "react-native-dropdownalert",
+          render: function (): any {
+              return <CustAlertporpsDemo />;
+          },
+      },
+  ],
+};
