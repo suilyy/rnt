@@ -11,26 +11,140 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
+import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/react-native-svg";
+import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video";
 import { createRNPackages } from '../RNPackagesFactory';
+import { LottieAnimationView, LOTTIE_TYPE } from "@react-native-oh-tpl/lottie-react-native"
+import {
+  A_MAP_CIRCLE_VIEW_TYPE,
+  A_MAP_MARKER_TYPE,
+  A_MAP_POLYGON_TYPE,
+  A_MAP_POLYLINE_TYPE,
+  AMapCircle,
+  AMapMarker,
+  AMapPolygon,
+  AMapPolyline,
+  AMapView,
+  GOADE_MAP_VIEW_TYPE
+  } from '@react-native-oh-tpl/react-native-amap3d';
+import {
+  BAIDU_MAP_OVERLAY_CIRCLE_TYPE,
+  BAIDU_MAP_OVERLAY_MARKER_TYPE,
+  BAIDU_MAP_OVERLAY_POLYGON_TYPE,
+  BAIDU_MAP_OVERLAY_POLYLINE_TYPE,
+  BAIDU_MAP_OVERLAY_TEXT_TYPE,
+  BAIDU_MAP_VIEW_TYPE,
+  BaiduMapOverlayCircle,
+  BaiduMapOverlayPolygon,
+  BaiduMapOverlayPolyline,
+  BaiduMapOverlayText,
+  BaiduMapOverlayMarker,
+  BaiduMapView
+  } from '@react-native-oh-tpl/react-native-baidu-map';
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME
+  "LottieAnimationView",
+  SVG_VIEW_TYPE_NAME,
+  RNC_VIDEO_TYPE,
+  LOTTIE_TYPE,
+  A_MAP_CIRCLE_VIEW_TYPE,
+  A_MAP_MARKER_TYPE,
+  A_MAP_POLYGON_TYPE,
+  A_MAP_POLYLINE_TYPE,
+  GOADE_MAP_VIEW_TYPE,
+  BAIDU_MAP_VIEW_TYPE,
+  BAIDU_MAP_OVERLAY_CIRCLE_TYPE,
+  BAIDU_MAP_OVERLAY_MARKER_TYPE,
+  BAIDU_MAP_OVERLAY_POLYGON_TYPE,
+  BAIDU_MAP_OVERLAY_POLYLINE_TYPE,
+  BAIDU_MAP_OVERLAY_TEXT_TYPE
 ];
 
 @Builder
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
-      SVGView({
+    if (ctx.componentName === RNC_VIDEO_TYPE) {
+      RNCVideo({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })
     }
+    if (ctx.componentName === LOTTIE_TYPE) {
+      LottieAnimationView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === GOADE_MAP_VIEW_TYPE) {
+      AMapView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === A_MAP_CIRCLE_VIEW_TYPE) {
+      AMapCircle({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === A_MAP_MARKER_TYPE) {
+      AMapMarker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === A_MAP_POLYGON_TYPE) {
+      AMapPolygon({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === A_MAP_POLYLINE_TYPE) {
+      AMapPolyline({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+    if (ctx.componentName === BAIDU_MAP_VIEW_TYPE) {
+            BaiduMapView({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
+        if (ctx.componentName === BAIDU_MAP_OVERLAY_CIRCLE_TYPE) {
+            BaiduMapOverlayCircle({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
+        if (ctx.componentName === BAIDU_MAP_OVERLAY_MARKER_TYPE) {
+            BaiduMapOverlayMarker({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
+        if (ctx.componentName === BAIDU_MAP_OVERLAY_POLYGON_TYPE) {
+            BaiduMapOverlayPolygon({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
+        if (ctx.componentName === BAIDU_MAP_OVERLAY_POLYLINE_TYPE) {
+            BaiduMapOverlayPolyline({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
+        if (ctx.componentName === BAIDU_MAP_OVERLAY_TEXT_TYPE) {
+            BaiduMapOverlayText({
+                ctx: ctx.rnComponentContext,
+                tag: ctx.tag
+                })
+            }
   }
   .position({ x: 0, y: 0 })
 

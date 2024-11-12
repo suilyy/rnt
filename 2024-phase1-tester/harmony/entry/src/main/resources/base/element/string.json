@@ -11,6 +11,22 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "Access_calendar",
+      "value": "access calendar"
+    },
+    {
+      "name": "Access_Location",
+      "value": "access Location"
+    },
+    {
+      "name": "Access_AppRoximatelyLocation",
+      "value": "access AppRoximatelyLocation"
+    },
+    {
+      "name": "Access_Bluetooth",
+      "value": "access Bluetooth"
     }
   ]
 }
