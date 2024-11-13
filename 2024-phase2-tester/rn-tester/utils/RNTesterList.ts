@@ -223,7 +223,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'NativeBase',
     category: 'UI',
-    module: require('../examples/NativeBase/App'),
+    module: require('../examples/NativeBase/SamplenNativeBaseExample'),
   },
   {
     key: 'HoleViewDemo',
