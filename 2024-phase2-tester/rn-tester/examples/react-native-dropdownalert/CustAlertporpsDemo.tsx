@@ -56,7 +56,7 @@ const custAlertporps: DropdownAlertProps = {
   successColor: '#FF7F50',
 };
 
-function CustAlertporpsDemo(): React.JSX.Element {
+export function CustAlertporpsDemo(): React.JSX.Element {
   const defaultSelected: ListItem = {
     name: 'Default',
     itshould: '',
@@ -971,20 +971,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#6441A4',
   },
 });
-
-// 或者使用 export default 导出
-export default {
-  displayName: "react-native-dropdownalert",
-  framework: "React",
-  category: "UI",
-  title: "react-native-dropdownalert-CustAlertporpsDemo",
-  description: "react-native-dropdownalert",
-  examples: [
-      {
-          title: "react-native-dropdownalert",
-          render: function (): any {
-              return <CustAlertporpsDemo />;
-          },
-      },
-  ],
-};

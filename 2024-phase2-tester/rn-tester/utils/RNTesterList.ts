@@ -540,21 +540,6 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-flash-message/FlashMessageTest'),
   },
-  {
-    key: 'react-native-dropdownalert-zIndexDemo',
-    category: 'Basic',
-    module: require('../examples/react-native-dropdownalert/zIndexDemo').default,
-  },
-  {
-    key: 'react-native-dropdownalert-dropdownalertDemo',
-    category: 'Basic',
-    module: require('../examples/react-native-dropdownalert/dropdownalertDemo').default,
-  },
-  {
-    key: 'react-native-dropdownalert-CustAlertporpsDemo',
-    category: 'Basic',
-    module: require('../examples/react-native-dropdownalert/CustAlertporpsDemo').default,
-  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

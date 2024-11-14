@@ -32,7 +32,7 @@ type ListItemIndex = {
   index: number;
 };
 
-function ZIndexDemo(): React.JSX.Element {
+export function ZIndexDemo(): React.JSX.Element {
   const defaultSelected: ListItem = {
     name: 'Default',
     itshould: '',
@@ -174,20 +174,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#6441A4',
   },
 });
-
-// 或者使用 export default 导出
-export default {
-  displayName: "react-native-dropdownalert",
-  framework: "React",
-  category: "UI",
-  title: "react-native-dropdownalert-ZIndexDemo",
-  description: "react-native-dropdownalert",
-  examples: [
-      {
-          title: "react-native-dropdownalert",
-          render: function (): any {
-              return <ZIndexDemo />;
-          },
-      },
-  ],
-};
