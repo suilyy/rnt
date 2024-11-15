@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     placeholder: {
-        height: 400,
         justifyContent: 'center',
         alignItems: 'center',
       },

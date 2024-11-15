@@ -143,6 +143,14 @@ export function TextVideo(): JSX.Element {
                         }}
                     />
                     <TestCase
+                        itShould="controls={false}"
+                        initialState={false}
+                        arrange={({ setState }) => <AdddControlsTest setState={setState} disableFocus={disableFocus} setDisableFocus={setDisableFocus} />}
+                        assert={({ state, expect }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
                         itShould="volume={0.2}"
                         initialState={false}
                         arrange={({ setState }) => <AddVolumeTest setState={setState} disableFocus={disableFocus} setDisableFocus={setDisableFocus} />}
@@ -240,7 +248,7 @@ const AddonPlaybackResumeTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={false}
                         disableFocus={disableFocus}
@@ -291,7 +299,7 @@ const AddonPlaybackStalledTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        // controls={true}
+                        //
                         repeat={false}
                         paused={false}
                         disableFocus={disableFocus}
@@ -349,7 +357,7 @@ const AddonErrorTest = (props: {
                     show ? <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={false}
                         muted={false}
@@ -408,7 +416,7 @@ const AddMenuOnEndTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         disableFocus={disableFocus}
@@ -473,7 +481,7 @@ const AddpausedTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={require("./asstes/34.mp4")}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         muted={false}
@@ -507,7 +515,7 @@ const AdddisableFocusTrueTest = (props: {
     const addRepeat = () => {
         setPaused(!paused)
     }
-   
+
 
     const [show, setShow] = useState(false)
     const addshow = () => {
@@ -535,7 +543,6 @@ const AdddisableFocusTrueTest = (props: {
                         ref={videoref}
                         disableFocus={true}
                         source={require("./asstes/34.mp4")}
-                        controls={true}
                         repeat={false}
                         paused={paused}
                         muted={false}
@@ -593,7 +600,7 @@ const AdddisableFocusTest = (props: {
                         ref={videoref}
                         disableFocus={false}
                         source={require("./asstes/34.mp4")}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         muted={false}
@@ -612,6 +619,63 @@ const AdddisableFocusTest = (props: {
     );
 
 }
+const AdddControlsTest = (props: {
+    setState: React.Dispatch<React.SetStateAction<boolean>>;
+    setDisableFocus: React.Dispatch<React.SetStateAction<boolean>>;
+    disableFocus: boolean;
+}) => {
+    const videoref = useRef<React.ElementRef<VideoComponentType>>(null);
+    const [controls, setControls] = useState(false)
+
+    const addControls = () => {
+        setControls(!controls)
+    }
+    const [show, setShow] = useState(false)
+    const addshow = () => {
+        setShow(!show)
+    }
+
+    return (
+
+        <View style={{
+            height: 220,
+            width: "100%",
+            overflow: 'hidden',
+            alignItems: "center"
+
+        }}>
+            <View style={{
+                height: 150,
+                width: 200,
+                overflow: 'hidden',
+                justifyContent: 'center',
+
+            }}>
+                {show ?
+                    <RNCVideo
+                        ref={videoref}
+                        disableFocus={false}
+                        source={require("./asstes/34.mp4")}
+                        controls={controls}
+                        repeat={false}
+                        paused={false}
+                        muted={false}
+                        resizeMode={"stretch"}
+                        style={{ flex: 1 }}
+                    />
+                    : null}
+
+            </View>
+            <View style={{ marginTop: 20, flexDirection: "row" }}>
+                <Button title={"展示video"} onPress={addshow} />
+                <Button title={controls ? "隐藏" : "显示"} onPress={addControls} />
+            </View>
+        </View>
+
+    );
+
+}
+
 
 
 
@@ -656,7 +720,7 @@ const AddVolumeTest = (props: {
                 {show ? <RNCVideo
                     ref={videoref}
                     source={require("./asstes/34.mp4")}
-                    controls={true}
+
                     repeat={false}
                     disableFocus={disableFocus}
                     paused={paused}
@@ -717,7 +781,7 @@ const AddMenuonMutedTest = (props: {
                 {show ? <RNCVideo
                     ref={videoref}
                     source={require("./asstes/34.mp4")}
-                    controls={true}
+
                     repeat={true}
                     paused={paused}
                     disableFocus={disableFocus}
@@ -773,7 +837,7 @@ const AddMenuonReadyForDisplayTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         disableFocus={disableFocus}
@@ -826,7 +890,7 @@ const AddMenuOnLoadTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         disableFocus={disableFocus}
@@ -885,7 +949,7 @@ const AddMenuOnBufferTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={false}
                         paused={paused}
                         disableFocus={disableFocus}
@@ -962,7 +1026,7 @@ const AddMenuSeekTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={true}
                         disableFocus={disableFocus}
                         resizeMode={"contain"}
@@ -1020,7 +1084,7 @@ const AddMenuOnProgressTest = (props: {
                 {show ?
                     <RNCVideo
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={true}
                         resizeMode={"contain"}
                         disableFocus={disableFocus}
@@ -1073,7 +1137,7 @@ const AddMenuOnLoadStartTest = (props: {
             }}>
                 {show ? <RNCVideo
                     source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                    controls={true}
+
                     repeat={true}
                     disableFocus={disableFocus}
                     resizeMode={"contain"}
@@ -1124,7 +1188,7 @@ const AddposterResizeModeTest = (props: {
                 {
                     show ? <RNCVideo
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+
                         repeat={true}
                         resizeMode={"contain"}
                         style={{ flex: 1 }}
@@ -1172,7 +1236,7 @@ const AddMenuPosterTest = (props: {
                     show ?
                         <RNCVideo
                             source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                            controls={true}
+
                             repeat={true}
                             disableFocus={disableFocus}
                             resizeMode={"contain"}
@@ -1222,7 +1286,7 @@ const AddMenuResizeModeStretchTest = (props: {
                     show ?
                         <RNCVideo
                             source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                            controls={true}
+
                             repeat={true}
                             disableFocus={disableFocus}
                             resizeMode={"stretch"}
@@ -1270,7 +1334,7 @@ const AddMenuResizeModecoverTest = (props: {
                     show ?
                         <RNCVideo
                             source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                            controls={true}
+
                             repeat={true}
                             disableFocus={disableFocus}
                             resizeMode={"cover"}
@@ -1320,7 +1384,7 @@ const AddMenuResizeModeTest = (props: {
                         <RNCVideo
                             disableFocus={disableFocus}
                             source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                            controls={true}
+
                             repeat={true}
                             resizeMode={"contain"}
                             style={{ flex: 1 }}
@@ -1371,7 +1435,7 @@ const AddMenuRepeatFalseTest = (props: {
                 {show ? <RNCVideo
                     disableFocus={disableFocus}
                     source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                    controls={true}
+
                     repeat={repeat}
                     resizeMode={'contain'}
                     style={{ flex: 1 }}
@@ -1430,7 +1494,7 @@ const AddMenuMeasureTest = (props: {
 
                 {show ? <RNCVideo
                     source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                    controls={true}
+
                     disableFocus={disableFocus}
                     repeat={false}
                     resizeMode={'contain'}

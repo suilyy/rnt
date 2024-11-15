@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
     },
     placeholder: {
-        height: 400,
         justifyContent: 'center',
         alignItems: 'center',
     },

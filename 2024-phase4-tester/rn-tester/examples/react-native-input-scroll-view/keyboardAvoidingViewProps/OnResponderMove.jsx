@@ -5,15 +5,26 @@ import {
   View,
   TouchableOpacity,
   Text,
+  ScrollView,
 } from 'react-native';
 import InputScrollView from 'react-native-input-scroll-view';
 
-const supportHardwareKeyboardInput = () => {
+const keyboardAvoidingViewPropsInput = () => {
   const [text, setText] = useState('');
+  const [text1, setText1] = useState('');
   return (
     <View style={styles.container}>
-      <InputScrollView keyboardOffset={100} supportHardwareKeyboard>
+      <InputScrollView
+        keyboardOffset={100}
+        keyboardAvoidingViewProps={{
+          onStartShouldSetResponder: () => true,
+          onResponderMove: () => {
+            setText1('pass');
+          },
+        }}>
         <View style={styles.placeholder} />
+        <Text>onResponderMove</Text>
+        <Text>{text1}</Text>
         <TextInput
           style={styles.input}
           value={text}
@@ -44,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default supportHardwareKeyboardInput;
+export default keyboardAvoidingViewPropsInput;

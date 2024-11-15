@@ -1,19 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   StyleSheet,
   TextInput,
   View,
   TouchableOpacity,
   Text,
+  Button
 } from 'react-native';
 import InputScrollView from 'react-native-input-scroll-view';
 
-const supportHardwareKeyboardInput = () => {
+const ScrollViewPropsInput = () => {
   const [text, setText] = useState('');
+  const [text1, setText1] = useState('');
   return (
     <View style={styles.container}>
-      <InputScrollView keyboardOffset={100} supportHardwareKeyboard>
+      <InputScrollView
+        keyboardOffset={100}
+        useAnimatedScrollView
+        onScrollBeginDrag={() => setText1('pass')}
+      >
         <View style={styles.placeholder} />
+        <Text>onScrollBeginDrag</Text>
+        <Text>{text1}</Text>
         <TextInput
           style={styles.input}
           value={text}
@@ -44,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default supportHardwareKeyboardInput;
+export default ScrollViewPropsInput;

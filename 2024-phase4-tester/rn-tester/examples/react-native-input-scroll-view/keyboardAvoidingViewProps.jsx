@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#EEE',
     },
     placeholder: {
-        height: 400,
         justifyContent: 'center',
         alignItems: 'center',
     },

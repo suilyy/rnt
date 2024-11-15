@@ -1,19 +1,29 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   StyleSheet,
   TextInput,
   View,
   TouchableOpacity,
   Text,
+  Button
 } from 'react-native';
 import InputScrollView from 'react-native-input-scroll-view';
 
-const supportHardwareKeyboardInput = () => {
+const ScrollViewPropsInput = () => {
   const [text, setText] = useState('');
+  const myRef = useRef(null);
   return (
     <View style={styles.container}>
-      <InputScrollView keyboardOffset={100} supportHardwareKeyboard>
+      
+      <InputScrollView
+        ref={myRef}
+        keyboardOffset={100}
+        useAnimatedScrollView
+      >
         <View style={styles.placeholder} />
+        <Button title='scrollTo' onPress={() => {
+          myRef.current.scrollTo({x: 0, y: 0, animated: true})
+        }} />
         <TextInput
           style={styles.input}
           value={text}
@@ -44,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default supportHardwareKeyboardInput;
+export default ScrollViewPropsInput;

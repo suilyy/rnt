@@ -1,19 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   StyleSheet,
   TextInput,
   View,
   TouchableOpacity,
   Text,
+  Button
 } from 'react-native';
 import InputScrollView from 'react-native-input-scroll-view';
 
-const supportHardwareKeyboardInput = () => {
+// showsVerticalScrollIndicator 默认值: true 决定是否显示垂直滚动条
+const ScrollViewPropsInput = () => {
   const [text, setText] = useState('');
   return (
     <View style={styles.container}>
-      <InputScrollView keyboardOffset={100} supportHardwareKeyboard>
+      <InputScrollView
+        keyboardOffset={100}
+        showsVerticalScrollIndicator={false}
+        useAnimatedScrollView
+      >
         <View style={styles.placeholder} />
+        <Text>showsVerticalScrollIndicator</Text>
         <TextInput
           style={styles.input}
           value={text}
@@ -44,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default supportHardwareKeyboardInput;
+export default ScrollViewPropsInput;

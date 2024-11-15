@@ -8,12 +8,17 @@ import {
 } from 'react-native';
 import InputScrollView from 'react-native-input-scroll-view';
 
-const supportHardwareKeyboardInput = () => {
+const keyboardAvoidingViewPropsInput = () => {
   const [text, setText] = useState('');
   return (
     <View style={styles.container}>
-      <InputScrollView keyboardOffset={100} supportHardwareKeyboard>
+      <InputScrollView
+        keyboardOffset={100}
+        keyboardAvoidingViewProps={{
+          keyboardVerticalOffset: 200,
+        }}>
         <View style={styles.placeholder} />
+        <Text>keyboardVerticalOffset</Text>
         <TextInput
           style={styles.input}
           value={text}
@@ -44,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default supportHardwareKeyboardInput;
+export default keyboardAvoidingViewPropsInput;
