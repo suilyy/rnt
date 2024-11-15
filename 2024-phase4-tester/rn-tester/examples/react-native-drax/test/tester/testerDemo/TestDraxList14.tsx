@@ -27,7 +27,7 @@ const DraxListDemo14 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
         <View style={styles.container}>
-          <Tester style={{ paddingBottom: 80 }}>
+          <Tester>
             <TestCase itShould="DraxList组件:lockItemDragsToMainAxis(是否锁定FlatList组件内部Item项拖拽方向为主轴方向-设置为true)"
               tags={['C_API']}>
               <DraxList

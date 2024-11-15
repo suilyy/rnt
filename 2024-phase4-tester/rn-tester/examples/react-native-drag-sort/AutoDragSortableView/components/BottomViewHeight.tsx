@@ -18,11 +18,11 @@ export const API_bottomViewHeight = () => {
       <TestSuite name="bottomViewHeight">
         <TestCase
           itShould={`属性bottomViewHeight：该属性用来支撑库内部拖拽排序算法，一般与renderBottomView同时使用`}>
-          <View style={{height: 485}}>
+          <View style={{height: 480,paddingBottom:80}}>
             <AutoDragSortableView
               parentWidth={356}
               dataSource={defaultData}
-              childrenHeight={92}
+              childrenHeight={72}
               childrenWidth={89}
               renderBottomView={
                 <View

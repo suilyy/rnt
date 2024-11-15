@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {
   StyleSheet,
-  Text,
   View,
-  ScrollView,
-  FlatList,
-  Button,
 } from 'react-native';
 import {Tester, TestCase} from '@rnoh/testerino';
 import DraxViewBaseComponent from './components/DraxViewBaseComponent';
@@ -19,10 +15,6 @@ const DraxViewDemo18 = () => {
     );
   };
 
-  const resetBtn = () => {
-    setResult('');
-  };
-
   return (
     <>
       <Tester children={undefined}>
@@ -34,19 +26,6 @@ const DraxViewDemo18 = () => {
               dragInactiveStyle={styles.dragInactiveStyle}
               hoverDraggingWithReceiverStyle={
                 styles.hoverDraggingWithReceiverStyle
-              }
-              receiverPayload={'receiverPayload'}
-              onDragEnter={onDragEnterHandler}></DraxViewBaseComponent>
-          </View>
-        </TestCase>
-        <TestCase
-          itShould="DraxView组件:hoverDraggingWithoutReceiverStyle(拖动蓝色正方形未进入绿色正方形正上方时应用于复制蓝色正方形的样式-黄色边框)"
-          tags={['C_API']}>
-          <View style={{height: 260}}>
-            <DraxViewBaseComponent
-              dragInactiveStyle={styles.dragInactiveStyle}
-              hoverDraggingWithoutReceiverStyle={
-                styles.hoverDraggingWithoutReceiverStyle
               }
               receiverPayload={'receiverPayload'}
               onDragEnter={onDragEnterHandler}></DraxViewBaseComponent>

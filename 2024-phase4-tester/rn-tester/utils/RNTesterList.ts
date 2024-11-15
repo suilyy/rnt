@@ -324,11 +324,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/lottie-react-native/test/LottieTest'),
   },
-  // {
-  //   key: 'react-native-dynamic',
-  //   category: 'UI',
-  //   module: require('../examples/react-native-dynamic/ReactNativeDynamicDemo'),
-  // },
+  {
+    key: 'react-native-dynamic',
+    category: 'UI',
+    module: require('../examples/react-native-dynamic/ReactNativeDynamicDemo'),
+  },
   {
     key: 'recyclerlistview',
     category: 'UI',

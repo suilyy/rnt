@@ -209,7 +209,7 @@ export function NewTabViewExample() {
   const [indicator, setIndicator] = React.useState(false);
   return (
     <View style={{ flex: 1 }}>
-      <Tester style={{ paddingBottom: 80 }}>
+      <Tester>
         <TestSuite name={'TabViewTest'}>
           <TestCase itShould={'TabView show'}>
             <View style={{

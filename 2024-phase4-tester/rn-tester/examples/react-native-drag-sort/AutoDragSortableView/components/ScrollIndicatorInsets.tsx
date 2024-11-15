@@ -32,11 +32,11 @@ export const API_scrollIndicatorInsets = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 480}}>
+              <View style={{height: 480,paddingBottom:80}}>
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   scrollIndicatorInsets={scrollIndicatorInsets}
                   renderItem={item => {

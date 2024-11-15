@@ -27,7 +27,7 @@ const DraxListDemo13 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
         <View style={styles.container}>
-          <Tester style={{ paddingBottom: 80 }}>
+          <Tester>
             <TestCase itShould="DraxList组件:itemsDraggable(是否允许FlatList组件内部Item项可以拖拽,默认值为true)"
               tags={['C_API']}>
               <DraxList

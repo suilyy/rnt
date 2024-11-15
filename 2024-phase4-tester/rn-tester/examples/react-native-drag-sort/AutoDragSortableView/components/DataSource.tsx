@@ -24,11 +24,11 @@ export const API_dataSource = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 510}}>
+              <View style={{height: 510,paddingBottom:80}}>
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={dataSource}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   renderItem={item => {
                     return (

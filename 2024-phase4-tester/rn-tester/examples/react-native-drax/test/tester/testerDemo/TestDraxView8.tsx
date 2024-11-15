@@ -3,8 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
-  FlatList,
   Button,
 } from 'react-native';
 import {Tester, TestCase} from '@rnoh/testerino';
@@ -13,12 +11,9 @@ import DraxViewBaseComponent from './components/DraxViewBaseComponent';
 const DraxViewDemo8 = () => {
   const [result, setResult] = useState('');
   const onMonitorDragOverHandler = eventData => {
-    setResult('onMonitorDragOver回调已执行,参数eventData:' + eventData);
+    setResult('onMonitorDragOver回调已执行,参数eventData:' + JSON.stringify(eventData));
   };
 
-  const onMonitorDragExitHandler = eventData => {
-    setResult('onMonitorDragExit回调已执行,参数eventData:' + eventData);
-  };
   const resetBtn = () => {
     setResult('');
   };
@@ -36,22 +31,11 @@ const DraxViewDemo8 = () => {
         <TestCase
           itShould="DraxView组件:onMonitorDragOver(手指拖动蓝色正方形到绿色正方形上方，检测到悬浮时，执行回调)"
           tags={['C_API']}>
-          <View style={{height: 260}}>
+          <View style={{height: 230}}>
             <DraxViewBaseComponent
               payload={'hello'}
               onMonitorDragOver={
                 onMonitorDragOverHandler
-              }></DraxViewBaseComponent>
-          </View>
-        </TestCase>
-        <TestCase
-          itShould="DraxView组件:onMonitorDragExit(手指拖动蓝色正方形进入绿色正方形然后离开，检测到离开，执行回调)"
-          tags={['C_API']}>
-          <View style={{height: 260}}>
-            <DraxViewBaseComponent
-              payload={'hello'}
-              onMonitorDragExit={
-                onMonitorDragExitHandler
               }></DraxViewBaseComponent>
           </View>
         </TestCase>
@@ -95,7 +79,7 @@ const styles = StyleSheet.create({
   },
   inputArea: {
     width: '100%',
-    height: 80,
+    height: 100,
     marginTop: 8,
     justifyContent: 'center',
     alignItems: 'center',

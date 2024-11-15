@@ -193,7 +193,7 @@ export const examples = [
     {
         title: 'react-native-dynamic',
         render: function (): any {
-            return <Extra />;
+            return <ReactNativeDynamicDemo />;
         },
     },
 ];

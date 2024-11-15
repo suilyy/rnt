@@ -64,7 +64,7 @@ export const API_headerViewHeight = () => {
       <TestSuite name="headerViewHeight">
         <TestCase
           itShould={`属性headerViewHeight：头部组件高度，用来支撑库内部算法`}>
-          <View style={{height: 480}}>
+          <View style={{height: 480,paddingBottom:80}}>
             <AnySizeDragSortableView
               ref={ref}
               dataSource={dataSource}

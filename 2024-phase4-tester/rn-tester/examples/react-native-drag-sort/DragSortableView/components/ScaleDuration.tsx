@@ -28,7 +28,7 @@ export const API_scaleDuration = () => {
                 <DragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   scaleDuration={scaleDuration}
                   renderItem={item => {

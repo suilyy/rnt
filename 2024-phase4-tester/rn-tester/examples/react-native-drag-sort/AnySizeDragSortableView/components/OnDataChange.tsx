@@ -69,7 +69,7 @@ export const API_onDataChange = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 500}}>
+              <View style={{height: 500,paddingBottom:80}}>
                 <AnySizeDragSortableView
                   ref={ref}
                   dataSource={dataSource}

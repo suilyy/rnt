@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {
   StyleSheet,
-  Text,
   View,
-  ScrollView,
-  FlatList,
-  Button,
 } from 'react-native';
 import {Tester, TestCase} from '@rnoh/testerino';
 import DraxViewBaseComponent from './components/DraxViewBaseComponent';
@@ -19,17 +15,13 @@ const DraxViewDemo22 = () => {
     );
   };
 
-  const resetBtn = () => {
-    setResult('');
-  };
-
   return (
     <>
       <Tester children={undefined}>
         <TestCase
           itShould="DraxView组件:otherDraggingWithReceiverStyle(拖拽蓝色正方形位于绿色正方形上时应用于红色正方形的样式-增加圆角)"
           tags={['C_API']}>
-          <View style={{height: 500}}>
+          <View style={{height: 500,paddingBottom:80}}>
             <DraxViewBaseComponent
               draggingStyle={styles.draggingStyle}
               otherDraxEmabled={true}

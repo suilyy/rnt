@@ -17,9 +17,6 @@ const DraxViewDemo4 = () => {
     setResult('onDragDrop回调已执行');
   };
 
-  const onSnapbackEndHandler = () => {
-    setResult('onSnapbackEnd回调已执行');
-  };
   const resetBtn = () => {
     setResult('');
   };
@@ -40,14 +37,6 @@ const DraxViewDemo4 = () => {
           <View style={{height: 260}}>
             <DraxViewComponents
               onDragDrop={onDragDropHandler}></DraxViewComponents>
-          </View>
-        </TestCase>
-        <TestCase
-          itShould="DraxView组件:onSnapbackEnd(手指拖动蓝色正方形然后释放，回弹动画结束时调用)"
-          tags={['C_API']}>
-          <View style={{height: 260}}>
-            <DraxViewComponents
-              onSnapbackEnd={onSnapbackEndHandler}></DraxViewComponents>
           </View>
         </TestCase>
       </Tester>

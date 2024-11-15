@@ -64,7 +64,7 @@ export const API_keyExtractor = () => {
       <TestSuite name="keyExtractor">
         <TestCase
           itShould={`必填方法keyExtractor：指定子项的key值，用来支撑内部拖拽算法`}>
-          <View style={{height: 490}}>
+          <View style={{height: 490,paddingBottom: 80}}>
             <AnySizeDragSortableView
               ref={ref}
               dataSource={dataSource}

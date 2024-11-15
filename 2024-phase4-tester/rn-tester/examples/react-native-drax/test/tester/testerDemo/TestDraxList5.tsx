@@ -32,7 +32,7 @@ const DraxListDemo5 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
           <View style={styles.container}>
-          <Tester style={{ paddingBottom: 80 }}>
+          <Tester>
             <TestCase itShould="DraxList组件:renderItemHoverContent(设置Item项长按时背景色是绿色,边框是红色)"
               tags={['C_API']}>
               <DraxList

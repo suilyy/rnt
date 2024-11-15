@@ -24,11 +24,11 @@ export const API_renderBottomView = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 510}}>
+                  <View style={{height: 510,paddingBottom:80}}>
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   renderBottomView={renderBottomView}
                   bottomViewHeight={renderBottomView ? 40 : 0}

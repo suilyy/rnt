@@ -70,7 +70,7 @@ export const API_movedWrapStyle = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 480}}>
+              <View style={{height: 480,paddingBottom:80}}>
                 <AnySizeDragSortableView
                   ref={ref}
                   dataSource={dataSource}

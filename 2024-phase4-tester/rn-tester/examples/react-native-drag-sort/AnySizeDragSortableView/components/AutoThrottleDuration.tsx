@@ -70,7 +70,7 @@ export const API_autoThrottleDuration = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 510}}>
+                  <View style={{height: 510,paddingBottom:80}}>
                 <AnySizeDragSortableView
                   ref={ref}
                   dataSource={dataSource}

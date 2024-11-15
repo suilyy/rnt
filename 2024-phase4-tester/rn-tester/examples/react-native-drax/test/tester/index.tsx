@@ -43,6 +43,8 @@ function DraxDemo() {
 }
 export default DraxDemo;
 
+
+
 export const displayName = 'react-native-drax';
 export const framework = 'React';
 export const category = 'basic';
@@ -58,4 +60,3 @@ export const examples = [
         },
     },
 ];
-

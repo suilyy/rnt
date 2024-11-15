@@ -69,7 +69,7 @@ export const API_onDragEnd = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 490}}>
+              <View style={{height: 490,paddingBottom: 80}}>
                 <AnySizeDragSortableView
                   ref={ref}
                   dataSource={dataSource}

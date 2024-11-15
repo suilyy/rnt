@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import {
   StyleSheet,
-  Text,
   View,
-  ScrollView,
-  FlatList,
-  Button,
 } from 'react-native';
 import {Tester, TestCase} from '@rnoh/testerino';
 import DraxViewBaseComponent from './components/DraxViewBaseComponent';
@@ -19,9 +15,6 @@ const DraxViewDemo14 = () => {
     );
   };
 
-  const resetBtn = () => {
-    setResult('');
-  };
 
   return (
     <>
@@ -32,16 +25,6 @@ const DraxViewDemo14 = () => {
           <View style={{height: 260}}>
             <DraxViewBaseComponent
               dragInactiveStyle={styles.dragInactiveStyle}
-              receiverPayload={'receiverPayload'}
-              onDragEnter={onDragEnterHandler}></DraxViewBaseComponent>
-          </View>
-        </TestCase>
-        <TestCase
-          itShould="DraxView组件:draggingStyle(拖拽过程中应用于蓝色正方形的样式,拖拽停止后消失)"
-          tags={['C_API']}>
-          <View style={{height: 260}}>
-            <DraxViewBaseComponent
-              draggingStyle={styles.draggingStyle}
               receiverPayload={'receiverPayload'}
               onDragEnter={onDragEnterHandler}></DraxViewBaseComponent>
           </View>

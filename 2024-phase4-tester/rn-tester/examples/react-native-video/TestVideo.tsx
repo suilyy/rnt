@@ -291,7 +291,7 @@ const AddonPlaybackStalledTest = (props: {
                     <RNCVideo
                         ref={videoref}
                         source={{ uri: "https://971-cn-north-4.cdn-vod.huaweicloud.com/asset/c726f001f9b6c33483dc694002fd5759/09dff810b88651acd29c49cbcec21079.mp4" }}
-                        controls={true}
+                        // controls={true}
                         repeat={false}
                         paused={false}
                         disableFocus={disableFocus}

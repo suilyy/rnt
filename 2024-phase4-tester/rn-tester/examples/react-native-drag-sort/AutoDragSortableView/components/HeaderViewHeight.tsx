@@ -18,11 +18,11 @@ export const API_headerViewHeight = () => {
       <TestSuite name="headerViewHeight">
         <TestCase
           itShould={`属性headerViewHeight：该属性用来支撑库内部拖拽排序算法，一般与renderHeaderView同时使用`}>
-          <View style={{height: 485}}>
+          <View style={{height: 480,paddingBottom:80}}>
             <AutoDragSortableView
               parentWidth={356}
               dataSource={defaultData}
-              childrenHeight={92}
+              childrenHeight={72}
               childrenWidth={89}
               renderHeaderView={
                 <View

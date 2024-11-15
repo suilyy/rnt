@@ -43,11 +43,9 @@ export class ToastComponentExample extends BaseComponent {
       { tester_change("borderRadius 10",'borderRadius 10',()=>{ this.setState({...this.state,borderRadius:10});this.ToastComponent.show('测试字符1111') })}
       { tester_change("backgroundColor 0x00000099",'backgroundColor 0x00000099',()=>{ this.setState({...this.state,backgroundColor:0x00000099});this.ToastComponent.show('测试字符1111') })}
       { tester_change("backgroundColor 0x33fff3ff",'backgroundColor 0x33fff3ff',()=>{ this.setState({...this.state,backgroundColor:0x33fff3ff});this.ToastComponent.show('测试字符1111') })}
-      </TestSuite>
-      <View style={{height:100}}></View>
+      </TestSuite> 
+      <View style={{height:200}}></View>
     </ScrollView>
-    </Tester>
-    
     <ToastComponent
         duration= {this.state.duration}
         textColor={this.state.textColor}
@@ -58,6 +56,7 @@ export class ToastComponentExample extends BaseComponent {
         borderRadius= {this.state.borderRadius}
         backgroundColor= {this.state.backgroundColor}
         ref={ref => this.ToastComponent = ref} />
+    </Tester>
     </View>
   };
 };

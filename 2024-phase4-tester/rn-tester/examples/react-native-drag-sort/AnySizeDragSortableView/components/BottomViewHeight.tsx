@@ -64,7 +64,7 @@ export const API_bottomViewHeight = () => {
       <TestSuite name="bottomViewHeight">
         <TestCase
           itShould={`属性bottomViewHeight：底部部组件高度，用来支撑库内部算法`}>
-          <View style={{height: 450}}>
+              <View style={{height: 450,paddingBottom:80}}>
             <AnySizeDragSortableView
               ref={ref}
               dataSource={dataSource}

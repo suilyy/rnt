@@ -18,11 +18,11 @@ export const API_keyExtractor = () => {
       <TestSuite name="keyExtractor">
         <TestCase
           itShould={`方法keyExtractor,该方法返回一个key值，用来支持库内部算法，只能纯展示`}>
-          <View style={{height: 490}}>
+          <View style={{height: 490,paddingBottom: 80}}>
             <AutoDragSortableView
               parentWidth={356}
               dataSource={defaultData}
-              childrenHeight={92}
+              childrenHeight={72}
               childrenWidth={89}
               keyExtractor={(item, index) => {
                 return item.key;

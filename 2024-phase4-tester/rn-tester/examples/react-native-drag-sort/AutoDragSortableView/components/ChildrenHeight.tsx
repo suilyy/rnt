@@ -13,7 +13,7 @@ import {generateDataSource} from '../../libs';
 const defaultData = generateDataSource(60, '标题');
 
 export const API_childrenHeight = () => {
-  const [childrenHeight, setChildrenHeight] = useState(92);
+  const [childrenHeight, setChildrenHeight] = useState(72);
 
   return (
     <Tester style={{ paddingBottom: 80 }}>
@@ -25,7 +25,7 @@ export const API_childrenHeight = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 510}}>
+                  <View style={{height: 510,paddingBottom:80}}>
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}

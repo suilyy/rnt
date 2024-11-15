@@ -28,7 +28,7 @@ export const API_marginChildrenBottom = () => {
                 <DragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   marginChildrenBottom={marginChildrenBottom}
                   renderItem={item => {

@@ -64,7 +64,7 @@ export const API_childMarginRight = () => {
       <TestSuite name="childMarginRight">
         <TestCase
           itShould={`属性childMarginRight，该属性是子组件有边距，用来计算areaOverlapRatio属性，如果renderItem函数中返回的布局外容器有marginBottom，请务必填入marginBottom的值，否则areaOverlapRatio的值会不精确`}>
-          <View style={{height: 450}}>
+              <View style={{height: 450,paddingBottom:80}}>
             <AnySizeDragSortableView
               ref={ref}
               dataSource={dataSource}

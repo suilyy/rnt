@@ -26,7 +26,7 @@ export const API_parentWidth = () => {
           initialState={false}
           arrange={({setState}) => {
             return (
-              <View style={{height: 510}}>
+                  <View style={{height: 510,paddingBottom:80}}>
                 <AutoDragSortableView
                   parentWidth={parentWidth}
                   dataSource={defaultData}

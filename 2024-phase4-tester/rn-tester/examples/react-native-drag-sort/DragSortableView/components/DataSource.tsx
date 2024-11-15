@@ -28,7 +28,7 @@ export const API_dataSource = () => {
                 <DragSortableView
                   parentWidth={356}
                   dataSource={dataSource}
-                  childrenHeight={92}
+                  childrenHeight={72}
                   childrenWidth={89}
                   renderItem={item => {
                     return (

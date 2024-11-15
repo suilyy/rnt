@@ -16,7 +16,7 @@ comList.sort((a, b) => {
 
 export function DragSortTestDemo() {
   return (
-    <View style={{backgroundColor: 'black'}}>
+   <View style={{backgroundColor: 'black',paddingBottom:40}}>
       <NavigationContainer>
         {Object.entries(testSuiteByName).map(([Name, Comp]) => {
           return (

@@ -70,7 +70,7 @@ export const API_renderItem = () => {
           initialState={false}
           arrange={({setState, state}) => {
             return (
-              <View style={{height: 510}}>
+                  <View style={{height: 510,paddingBottom:80}}>
                 <AnySizeDragSortableView
                   ref={ref}
                   dataSource={dataSource}

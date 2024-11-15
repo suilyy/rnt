@@ -27,7 +27,7 @@ const DraxListDemo10 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
         <View style={styles.container}>
-          <Tester style={{ paddingBottom: 80 }}>
+          <Tester>
             <TestCase itShould="DraxList组件:reorderable(是否开启自动排序，默认是true)"
               tags={['C_API']}>
               <DraxList

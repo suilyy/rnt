@@ -9,7 +9,6 @@ import { DraxProvider, DraxView, DraxList } from 'react-native-drax';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const DraxListDemo4 = () => {
-  const [result, setResult] = useState('');
   const [data, setData] = useState([
     { id: '1', text: 'Task 1' },
     { id: '2', text: 'Task 2' },
@@ -27,7 +26,7 @@ const DraxListDemo4 = () => {
     <DraxProvider>
       <GestureHandlerRootView>
           <View style={styles.container}>
-          <Tester style={{ paddingBottom: 80 }}>
+          <Tester>
             <TestCase itShould="DraxList组件:renderItemContent(设置内部FlatList组件内部Item项的渲染函数),边框为蓝色"
               tags={['C_API']}>
               <DraxList
