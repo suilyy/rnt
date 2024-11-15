@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: '100%',
-    height: 600,
+    height: 500,
     marginTop:20
   },
   section: {

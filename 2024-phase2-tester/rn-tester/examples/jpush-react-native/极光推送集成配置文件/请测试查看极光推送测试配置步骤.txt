@@ -26,6 +26,7 @@ jpush-react-native三方库测试需要配置的文件
 Store password:   arc123456
 Key alias:	test_rn
 Key password:  arc123456
+另外需要在证书中添加配置测试手机设备的udid，请联系lwx1342413 李宏刚
 
 4.在harmony工程目录entry下，按照路径src/main/ets/entryability添加上面src-main-ets-entryability文件夹下的4个文件：EntryAbility.ets（原目录下的EntryAbility.ets直接替换），MyAbilityStage.ets，PushMessageAbility.ets，RemoteNotificationExtAbility.ets
 

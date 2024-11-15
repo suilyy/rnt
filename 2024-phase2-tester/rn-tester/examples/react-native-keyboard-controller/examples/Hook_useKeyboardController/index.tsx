@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
   content:{
     display:'flex',
     flexDirection:'column',
-    height: height-160
+    height: height-280
   }
 })

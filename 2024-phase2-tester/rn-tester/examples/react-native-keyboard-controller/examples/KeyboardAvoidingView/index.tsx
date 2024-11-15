@@ -56,6 +56,7 @@ export function KeyboardAvoidingViewExample() {
             </TestCase>
             <TestCase itShould="KeyboardAvodingView组件功能是否可用：enabled" >
               <Button testID='enabledtrue' title="enabled:true" onPress={() => {
+                setBehavior('position')
                 setEnabled(true)
               }}></Button>
               <Button testID="enabledfasle" title="enabled:false" onPress={() => {
@@ -73,8 +74,9 @@ export function KeyboardAvoidingViewExample() {
 
             <TestCase itShould="设置键盘与React Native视图之间的距离：keyboardVerticalOffset" >
               <Text>设置keyboardVerticalOffset距离值：200</Text>
-               <Button title="设置keyboardVerticalOffset距离值：200" testID="keyboardVerticalOffset" onPress={() => {
+               <Button title="设置keyboardVerticalOffset" testID="keyboardVerticalOffset" onPress={() => {
                   setEnabled(true); 
+                  setBehavior('position');
                  setOffset(200);
               }}></Button>
             </TestCase>
@@ -154,7 +156,8 @@ const styles = StyleSheet.create({
   },
   container_sty: {
     height:250,
-    padding:20
+    padding:20,
+    marginBottom:120
   },
   container_B: {
     backgroundColor: 'grey',
@@ -188,7 +191,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   scrollView: {
-    height: 500
+    height: 400
 
   },
   textInput: {

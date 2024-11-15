@@ -7,7 +7,7 @@ export function Hook_useKeyboardAnimation() {
   return <View style={{ flex: 1 }}>
     <Tester>
       <TestSuite name="验证Hook：useKeyboardAnimation">
-        <View style={{ height: height-160 }}>
+        <View style={{ height: height-280 }}>
           <KeyboardAnimationTemplate />
         </View>
 

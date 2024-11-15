@@ -72,7 +72,7 @@ export function Hook_useReanimatedKeyboardAnimation() {
 
 const styles = StyleSheet.create({
   container: {
-    height:height-175
+    height:height-305
   },
   header: {
     color: "black",
