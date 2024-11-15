@@ -31,6 +31,18 @@
     {
       "name": "write_contacts_reason",
       "value": "写"
+    },
+	{
+      "name": "print_reason",
+      "value": "使用打印机"
+    },
+    {
+      "name": "internet_reason",
+      "value": "网络请求数据"
+    },
+    {
+      "name": "reason",
+      "value": "reason"
     }
   ]
 }

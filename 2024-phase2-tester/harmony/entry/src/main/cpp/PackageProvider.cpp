@@ -6,13 +6,24 @@
 #include "HoleViewPackage.h"
 #include "GestureHandlerPackage.h"
 #include "ReanimatedPackage.h"
-#include "SafeAreaViewPackage.h"
 #include "ViewPagerPackage.h"
 #include "ContextMenuPackage.h"
 #include "RNCNetInfoPackage.h"
 #include "MaskedPackage.h"
 #include "UnistylesPackage.h"
 #include "BlurhashPackage.h"
+#include "PickerPackage.h"
+#include "MMKVNativePackage.h"
+#include "RNTextInputMaskPackage.h"
+#include "keyboardControllerPackage.h"
+#include "SkiaPackage.h"
+#include "DateTimePickerPackage.h"
+#include "BlurPackage.h"
+#include "UiLibPackage.h"
+#include "RNImagePickerPackage.h"
+#include "VisionCameraPackage.h"
+#include "AsyncStoragePackage.h"
+#include "SharedElementPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -25,12 +36,23 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<RNOHHoleViewPackage>(ctx),
     std::make_shared<GestureHandlerPackage>(ctx),
     std::make_shared<ReanimatedPackage>(ctx),
-    std::make_shared<SafeAreaViewPackage>(ctx),
     std::make_shared<ViewPagerPackage>(ctx),
     std::make_shared<ContextMenuPackage>(ctx),   
     std::make_shared<RNCNetInfoPackage>(ctx),		
     std::make_shared<MaskedPackage>(ctx),
 	std::make_shared<UnistylesPackage>(ctx),
-	std::make_shared<BlurhashPackage>(ctx)
+	std::make_shared<BlurhashPackage>(ctx),
+	std::make_shared<PickerPackage>(ctx),
+	std::make_shared<RNOHMMKVStoragePackage>(ctx),
+	std::make_shared<RNTextInputMaskPackage>(ctx),
+	std::make_shared<KeyboardControllerPackage>(ctx),
+	std::make_shared<SkiaPackage>(ctx),
+	std::make_shared<DateTimePickerPackage>(ctx),
+	std::make_shared<BlurPackage>(ctx),
+	std::make_shared<UiLibPackage>(ctx),
+	std::make_shared<RNImagePickerPackage>(ctx),
+    std::make_shared<VisionCameraPackage>(ctx),
+	std::make_shared<AsyncStoragePackage>(ctx),
+	std::make_shared<SharedElementPackage>(ctx),
   };
 } 

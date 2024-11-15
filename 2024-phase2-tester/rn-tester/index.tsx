@@ -16,6 +16,7 @@ import {
 } from './utils/testerStateUtils';
 import * as React from 'react';
 import { BackHandler, StyleSheet, View } from 'react-native';
+import BootSplash from 'react-native-bootsplash';
 
 const RNTesterApp = () => {
   const [state, dispatch] = React.useReducer(RNTesterNavigationReducer, initialNavigationState);
@@ -42,6 +43,7 @@ const RNTesterApp = () => {
 
   // Setup hardware back button press listener
   React.useEffect(() => {
+    BootSplash.hide();
     const handleHardwareBackPress = () => {
       if (activeModuleKey) {
         handleBackPress();

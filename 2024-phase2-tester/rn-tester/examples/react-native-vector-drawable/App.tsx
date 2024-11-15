@@ -61,7 +61,7 @@ export const displayName = 'App';
 export const framework = 'React';
 export const category = 'UI';
 export const title = 'react-native-vector-drawable';
-export const documentationURL = 'https://reactnative.dev/docs/button';
+export const documentationURL = 'https://github.com/react-native-oh-library/react-native-vector-drawable';
 export const description = 'React Native Vector Drawable.';
 
 export const examples = [

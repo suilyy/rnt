@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import {Button, Overlay, Icon} from '@rneui/themed';
-import {View, Text, StyleSheet, ScrollView, Modal} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Modal, TouchableOpacity} from 'react-native';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+
 
 type OverlayComponentProps = {};
 class ViewComponent extends React.Component<{}, {}> {
   render() {
     return (
+      <Modal visible={true}>
       <View
         style={{
-          paddingTop: 20,
-          paddingBottom: 20,
+          margin:5,
+          padding:8,
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'pink',
@@ -20,6 +22,7 @@ class ViewComponent extends React.Component<{}, {}> {
           ViewComponent
         </Text>
       </View>
+      </Modal>
     );
   }
 }
@@ -64,6 +67,52 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
   const toggleOverlay7 = () => {
     setVisible7(!visible7);
   };
+
+  const [visible8, setVisible8] = useState(false);
+
+  const toggleOverlay8 = () => {
+    setVisible8(!visible8);
+  };
+
+  const [visible9, setVisible9] = useState(false);
+
+  const toggleOverlay9 = () => {
+    setVisible9(!visible9);
+  };
+
+  const [visible10, setVisible10] = useState(false);
+
+  const toggleOverlay10 = () => {
+    setVisible10(!visible10);
+  };
+
+  // 已解决
+const ModalComponent = ({ visible,onPress }) => {
+  return (
+    <Modal  visible={visible} style={{}}>
+      <TouchableOpacity activeOpacity={1} onPress={()=>{
+        onPress()
+      }}>
+      <View
+        style={{
+          padding:8,
+          display:'flex',
+          width:'100%',
+          height:'100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'pink',
+          borderRadius: 20,
+        }}>
+        <Text style={{fontSize: 28, backgroundColor: 'yellow', color: 'pink'}}>
+          ViewComponent
+        </Text>
+      </View>
+      </TouchableOpacity>
+      </Modal>
+      
+  );
+};
   return (
     <Tester>
       <ScrollView>
@@ -71,13 +120,15 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
           <TestCase itShould="测试ModalComponent" tags={['C_API']}>
             <Button
               title="Open Overlay"
-              onPress={toggleOverlay}
+              onPress={toggleOverlay10}
               buttonStyle={styles.button}
             />
             <Overlay
-              ModalComponent={ViewComponent}
-              isVisible={visible}
-              onBackdropPress={toggleOverlay}>
+               ModalComponent={() => <ModalComponent visible={visible10} onPress={()=>{
+                toggleOverlay10()
+               }}/>}
+              isVisible={visible10}
+              onBackdropPress={toggleOverlay10}>
               <Text style={styles.textPrimary}>Hello!</Text>
               <Text style={styles.textSecondary}>
                 Welcome to React Native Elements
@@ -93,7 +144,7 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
                   />
                 }
                 title="Start Building"
-                onPress={toggleOverlay}
+                onPress={toggleOverlay10}
               />
             </Overlay>
           </TestCase>
@@ -166,7 +217,7 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
           </TestCase>
         </TestSuite>
         <TestSuite name="Overlay属性isVisible 控制模态框的显示和隐藏">
-          <TestCase itShould="测试isVisible" tags={['C_API']}>
+          <TestCase itShould="测试isVisible 为true" tags={['C_API']}>
             <Button
               title="Open Overlay"
               onPress={toggleOverlay2}
@@ -192,6 +243,34 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
                 }
                 title="Start Building"
                 onPress={toggleOverlay2}
+              />
+            </Overlay>
+          </TestCase>
+          <TestCase itShould="测试isVisible 为false" tags={['C_API']}>
+            <Button
+              title="Open Overlay"
+              buttonStyle={styles.button}
+            />
+            <Overlay
+              overlayStyle={{backgroundColor: 'yellow'}}
+              isVisible={false}
+           >
+              <Text style={styles.textPrimary}>Hello!</Text>
+              <Text style={styles.textSecondary}>
+                Welcome to React Native Elements
+              </Text>
+              <Button
+                icon={
+                  <Icon
+                    name="wrench"
+                    type="font-awesome"
+                    color="white"
+                    size={25}
+                    iconStyle={{marginRight: 10}}
+                  />
+                }
+                title="Start Building"
+               
               />
             </Overlay>
           </TestCase>
@@ -310,11 +389,13 @@ const OverlayComponent: React.FunctionComponent<OverlayComponentProps> = () => {
         </TestSuite>
         <TestSuite name="Overlay属性overlayStyle	 设置模态框样式">
           <TestCase itShould="测试overlayStyle" tags={['C_API']}>
+            <View style={{height: 150}}> 
             <Button
               title="Open Overlay1111111"
               onPress={toggleOverlay7}
               buttonStyle={styles.button}
             />
+            </View>
             <Overlay
               isVisible={visible7}
               overlayStyle={{backgroundColor: 'green', borderRadius: 20}}

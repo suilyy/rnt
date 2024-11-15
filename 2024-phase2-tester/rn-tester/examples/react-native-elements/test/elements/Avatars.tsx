@@ -6,7 +6,7 @@ import {
   Image,
   PressableProps,
 } from 'react-native';
-import {Avatar, Icon} from '@rneui/themed';
+import {Avatar, Icon, Button} from '@rneui/themed';
 import {Text} from '@rneui/base';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
 
@@ -41,6 +41,9 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
   const [onPress1, setOnPress1] = useState(false);
   const [onPressIn1, setOnPressIn1] = useState(false);
   const [onPressOut1, setonPressOut1] = useState(false);
+  const [value, setValue] = useState('');
+  const [changeSize, setChangeSize] = useState(130);
+
   return (
     <Tester style={{flex: 1, backgroundColor: '#000'}}>
       <ScrollView>
@@ -319,8 +322,9 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
               }}></View>
           </TestCase>
         </TestSuite>
+        {/*warning: 设置了透明度 */}
         <TestSuite name="Avatars属性overlayContainerStyle的验证 超出Avatar的部分的样式">
-          <TestCase tags={['C_API']} itShould="overlayContainerStyle">
+          <TestCase tags={['C_API']} itShould="overlayContainerStyle">  
             <Avatar
               containerStyle={{
                 width: '100%',
@@ -329,7 +333,7 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
                 alignItems: 'center',
               }}
               avatarStyle={{resizeMode: 'cover', width: 80, height: 80}}
-              overlayContainerStyle={{backgroundColor: 'yellow',borderRadius:20,opacity:0.7}}
+              overlayContainerStyle={{backgroundColor: 'yellow',borderRadius:20}}
               source={{
                 uri: 'https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg',
               }}
@@ -506,6 +510,14 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
         </TestSuite>
         <TestSuite name="Avatar.Accessory属性onPress的验证 点击触发修改下面小方块的背景色">
           <TestCase tags={['C_API']} itShould="onPress">
+          <View
+              style={{
+                alignSelf: 'center',
+                marginTop: 20,
+                width: 100,
+                height: 100,
+                backgroundColor: onPress1 ? 'yellow' : 'gray',
+              }}>
             <Avatar.Accessory
              size={100}
               onPress={() => {
@@ -515,14 +527,7 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
                 uri: 'https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg',
               }}
             />
-            <View
-              style={{
-                alignSelf: 'center',
-                marginTop: 20,
-                width: 100,
-                height: 100,
-                backgroundColor: onPress1 ? 'yellow' : 'gray',
-              }}></View>
+            </View>
           </TestCase>
         </TestSuite>
         <TestSuite name="Avatar.Accessory属性onPressIn的验证 手指按下触发下方小方块背景色变化">
@@ -566,6 +571,145 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
                 height: 100,
                 backgroundColor: onPressOut1 ? 'yellow' : 'gray',
               }}></View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性type  接收Icon组件的type属性">
+          <TestCase tags={['C_API']} itShould="icon的type">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:100,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+            <Avatar.Accessory
+              name="home"
+              type="font-awesome"
+              color="red"
+              size={100}
+               
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性size 接收Icon组件的size属性">
+          <TestCase tags={['C_API']} itShould="icon的size">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:100,
+  
+              }}>
+            <Avatar.Accessory
+              name="remove"
+              type="font-awesome"
+              color="green"
+              size={50}
+               
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性source 接收Image组件的source属性">
+          <TestCase tags={['C_API']} itShould="Image的source">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:100,
+  
+              }}>
+            <Avatar.Accessory
+               size={100}
+               source={{
+                 uri: 'https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg',
+               }}
+               
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性transitionDuration 接收Image组件的transitionDuration属性">
+          <TestCase tags={['C_API']} itShould="设置Image的transitionDuration动画显示时间">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:100,
+  
+              }}>
+            <Avatar.Accessory
+               transitionDuration={20000}
+               transition={true}
+               size={100}
+               source={{
+                 uri: 'https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg',
+               }}
+               
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性Style 接收Text组件的Style属性 设置旋转效果">
+          <TestCase tags={['C_API']} itShould="Text组件的Style属性">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:100,
+  
+              }}>     
+            <Avatar.Accessory
+               name='save'
+               type='font-awesome'
+               color= 'blue'
+               size={100}
+               style={{ transform: [{ rotate: '45deg' }], backgroundColor: 'red' }}
+               
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Avatar.Accessory属性Style 接收Text组件的onLayout属性">
+          <TestCase tags={['C_API']} itShould="Text组件的onLayout属性 显示Text的宽高">
+          <View
+              style={{
+                paddingTop: 20,
+                paddingBottom: 20,
+                width:'100%',
+                height:130,
+              }}> 
+            <Avatar.Accessory
+               size={changeSize}
+               onLayout={(event)=>{
+                const { width, height } = event.nativeEvent.layout;
+                const layoutString = `width: ${width}, height: ${height}`;
+                setValue(layoutString);
+                console.log('Layout:', layoutString);
+               }}
+            />
+            <View style={{width:200}}>
+            <Text>onLayout回调方法显示组件的宽高</Text>
+            <Text>
+              {value}
+            </Text>
+            <Button onPress={()=>{
+               if (changeSize == 100) {
+                setChangeSize(130)
+               }else{
+                setChangeSize(100)
+               }
+              }}>修改组件的size</Button>
+            </View>
+            
+           </View>
           </TestCase>
         </TestSuite>
       </ScrollView>

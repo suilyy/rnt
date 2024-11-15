@@ -28,12 +28,14 @@ export default function ButtonGroups(): JSX.Element {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [selectedIndex1, setSelectedIndex1] = useState<number>(0);
   const [selectedIndexes, setSelectedIndexes] = useState<number[]>([0, 2, 3]);
-  const [selectedIndexes1, setSelectedIndexes1] = useState<number[]>([]);
+  const [selectedIndex2, setSelectedIndex2] = React.useState([]);
 
   const [onlongPress, setOnlongPress] = useState(false)
   const [onPress, setOnPress] = useState(false)
   const [onPressIn, setOnPressIn] = useState(false)
   const [onPressOut, setonPressOut] = useState(false)
+  const [onPress1, setOnPress1] = useState(false)
+  const [onPress2, setOnPress2] = useState(false)
   return (
     <Tester>
       <ScrollView>
@@ -97,7 +99,7 @@ export default function ButtonGroups(): JSX.Element {
           <TestCase itShould='buttons' tags={['C_API']}>
             <ButtonGroup
             
-            buttonStyle={{backgroundColor:'pink'}}
+              buttonStyle={{backgroundColor:'pink'}}
               buttons={['button1', 'button2','button2']}
               activeOpacity={2}
            
@@ -115,14 +117,29 @@ export default function ButtonGroups(): JSX.Element {
           </TestCase>
         </TestSuite>
         <TestSuite name="ButtonGroup属性disabled的验证  设置disabled 设置后点击无响应">
-          <TestCase itShould='disabled' tags={['C_API']}>
+          <TestCase itShould='disabled 设置为true 点击无法切换背景颜色' tags={['C_API']}>
             <ButtonGroup
+            onPress={()=>{setOnPress1(!onPress1)}}
             containerStyle={{backgroundColor:'black'}}
             buttonStyle={{backgroundColor:'pink'}}
-            buttonContainerStyle ={{backgroundColor:'yellow',paddingLeft:10,paddingRight:10}}
-              buttons={['button1', 'button2']}
-              activeOpacity={2}
+            // buttonContainerStyle ={{backgroundColor:'yellow',paddingLeft:10,paddingRight:10}}
+            buttons={['button1', 'button2']}
+            activeOpacity={2}
             disabled={true}
+            buttonContainerStyle ={{backgroundColor: onPress1 ? 'blue' : 'yellow',paddingLeft:10,paddingRight:10}}
+            />
+          </TestCase>
+          <TestCase itShould='disabled 设置为false 点击切换背景颜色' tags={['C_API']}>
+            <ButtonGroup
+            onPress={()=>{setOnPress2(!onPress2)}}
+            containerStyle={{backgroundColor:'black'}}
+            buttonStyle={{backgroundColor:'pink'}}
+            // buttonContainerStyle ={{backgroundColor:'yellow',paddingLeft:10,paddingRight:10}}
+            buttons={['button1', 'button2']}
+            activeOpacity={0.1}
+            disabled={false}
+            buttonContainerStyle ={{backgroundColor: onPress2 ? 'yellow' : 'blue',paddingLeft:10,paddingRight:10}}
+
             />
           </TestCase>
         </TestSuite>
@@ -305,17 +322,14 @@ export default function ButtonGroups(): JSX.Element {
         </TestSuite> */}
         <TestSuite name="ButtonGroup属性selectMultiple的验证  设置selectMultiple 设置选中多个">
           <TestCase itShould='selectMultiple' tags={['C_API']}>
-            <ButtonGroup
-            onPress={setSelectedIndexes1}
-            selectMultiple={true}
-            selectedButtonStyle={{backgroundColor:'#222222'}}
-            selectedIndexes={selectedIndexes1}
-            buttonStyle={{backgroundColor:'pink'}}
-            buttonContainerStyle ={{backgroundColor:'yellow',paddingLeft:10,paddingRight:10}}
-              buttons={[<Icon type='font-awesome' color='red' size={20} name='home'/>,<Icon type='font-awesome' color='red' size={50} name='remove'/>]}
-              activeOpacity={0.1}
-            disabledSelectedStyle={{backgroundColor:'green'}}
-            />
+          <ButtonGroup
+          selectMultiple={true}
+          buttons={['Multiple', 'Select', 'Button', 'Group']}
+          selectedIndexes={selectedIndex2}
+          onPress={(value) => {
+          setSelectedIndex2(value);
+         }}
+       />
           </TestCase>
         </TestSuite>
         <TestSuite name="ButtonGroup属性selectedButtonStyle的验证  设置selectedButtonStyle 选中button的样式 选中第一个元素 ">
@@ -323,7 +337,6 @@ export default function ButtonGroups(): JSX.Element {
             <ButtonGroup
             selectedIndex={0}
             selectedButtonStyle={{backgroundColor:"green",borderWidth:2,borderColor:'black'}}
-            selectMultiple={true}
             underlayColor='orange'
               buttonContainerStyle ={{backgroundColor:'yellow',paddingLeft:10,paddingRight:10}}
               buttons={['button1', 'button2']}
@@ -337,7 +350,6 @@ export default function ButtonGroups(): JSX.Element {
             <ButtonGroup
             selectedIndex={1}
             selectedButtonStyle={{backgroundColor:"green",borderWidth:2,borderColor:'black'}}
-            selectMultiple={true}
             onShowUnderlay={()=>{}}
             underlayColor='orange'
             containerStyle={{backgroundColor:'black'}}
@@ -353,7 +365,6 @@ export default function ButtonGroups(): JSX.Element {
             <ButtonGroup
             selectedIndexes={[0,1,2]}
             selectedButtonStyle={{backgroundColor:"green"}}
-            selectMultiple={true}
             onShowUnderlay={()=>{}}
             underlayColor='orange'
             onHideUnderlay={()=>{}}
@@ -372,7 +383,6 @@ export default function ButtonGroups(): JSX.Element {
             selectedTextStyle={{color:'red',fontSize:20,fontWeight:'bold'}}
             selectedIndexes={[0,1]}
             selectedButtonStyle={{backgroundColor:"green"}}
-            selectMultiple={true}
             onShowUnderlay={()=>{}}
             underlayColor='orange'
             onHideUnderlay={()=>{}}
@@ -419,7 +429,6 @@ export default function ButtonGroups(): JSX.Element {
           <TestCase itShould='textStyle' tags={['C_API']}>
             <ButtonGroup
             textStyle={{color:'orange',fontSize:20,fontWeight:'bold'}}
-            selectMultiple={true}
             onShowUnderlay={()=>{}}
             underlayColor='orange'
             onHideUnderlay={()=>{}}
@@ -443,7 +452,7 @@ export default function ButtonGroups(): JSX.Element {
             setOpacityTo={(value)=>{
 
             }}
-         
+           
             selectMultiple={true}
             onShowUnderlay={()=>{}}
             underlayColor='orange'
@@ -463,6 +472,7 @@ export default function ButtonGroups(): JSX.Element {
         </TestSuite> */}
         <TestSuite name="ButtonGroup属性vertical的验证  设置vertical 按钮垂直方向显示">
           <TestCase itShould='vertical' tags={['C_API']}>
+            <View style={{height: 300}}>
             <ButtonGroup
             textStyle={{color:'orange',fontSize:20}}
             vertical={true}
@@ -471,11 +481,10 @@ export default function ButtonGroups(): JSX.Element {
               activeOpacity={0.1}
             disabledSelectedStyle={{backgroundColor:'green'}}
             />
+            </View>
           </TestCase>
         </TestSuite>
       </ScrollView>
     </Tester >
   );
 }
-
-

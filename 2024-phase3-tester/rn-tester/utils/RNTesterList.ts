@@ -56,11 +56,21 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-sensitive-info/SensitiveInfoDemo'),
   },
-  {
-    key: '@react-navigation',
-    category: 'Basic',
-    module: require('../examples/@react-navigation/App'),
+   {
+    key: 'RNCountdownCircleTime',
+    category: 'UI',
+    module: require('../examples/react-countdown-circle-timer/test/countdownCircleTime'),
   },
+   {
+    key: 'RNShakeExampleDemo',
+    category: 'UI',
+    module: require('../examples/react-native-shake/ShakeExampleDemo'),
+  },
+  // {
+  //   key: '@react-navigation',
+  //   category: 'Basic',
+  //   module: require('../examples/@react-navigation/App'),
+  // },
   {
     key: 'ReactNativeTts',
     category: 'Basic',
@@ -134,7 +144,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeVisionCameraView',
     category: 'Basic',
-    module: require('../examples/react-native-vision-camera/App').default,
+    module: require('../examples/react-native-vision-camera/test/App').default,
   },
   {
     key: 'ReactNativeFileViewer',
@@ -320,6 +330,111 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeVersionNumber',
     category: 'UI',
     module: require('../examples/react-native-version-number/index'),
+  },
+  {
+    key: 'ReactNativeImageMarker',
+    category: 'UI',
+    module: require('../examples/react-native-image-marker/ImageMarkerNomal'),
+  },
+  {
+    key: 'ReactNativeIncallManager',
+    category: 'UI',
+    module: require('../examples/react-native-incall-manager/test/InCallManagerTest'),
+  },
+  {
+    key: 'ReactNativeMlkitOcr',
+    category: 'UI',
+    module: require('../examples/react-native-mlkit-ocr/Test/OcrTest'),
+  },
+  {
+    key: 'ReactNativeThemeControl',
+    category: 'UI',
+    module: require('../examples/react-native-theme-control/ThemeControlTest'),
+  },
+  {
+    key: 'ReactNativeGiftedCharts',
+    category: 'UI',
+    module: require('../examples/react-native-gifted-charts/App'),
+  },
+  {
+    key: 'ReactNavigationHeaderButtons',
+    category: 'UI',
+    module: require('../examples/react-navigation-header-buttons/test/index'),
+  },
+  {
+    key: 'ReactNativeBars',
+    category: 'UI',
+    module: require('../examples/react-native-bars/BarExample'),
+  },
+  {
+    key: 'ReactNativeKeyboardAccessory',
+    category: 'UI',
+    module: require('../examples/react-native-keyboard-accessory/BusKeyBoardIndex'),
+  },
+  {
+    key: 'ReactNativeSendIntent',
+    category: 'UI',
+    module: require('../examples/react-native-send-intent/SendIntent'),
+  },
+  {
+    key: 'ReactNativeErrorBoundary',
+    category: 'Basic',
+    module: require('../examples/react-native-error-boundary/ErrorBoundaryTest'),
+  },
+  {
+    key: 'ReactNativeMail',
+    category: 'Basic',
+    module: require('../examples/react-native-mail/App'),
+  },
+  {
+    key: 'GalioFramework',
+    category: 'Basic',
+    module: require('../examples/galio-framework/APP'),
+  },
+  {
+    key: 'EmojiKeyboard',
+    category: 'Basic',
+    module: require('../examples/rn-emoji-keyboard/EmojiKeyboardExample'),
+  },
+  {
+    key: 'Ting',
+    category: 'UI',
+    module: require('../examples/ting/Test/TingDemo'),
+  },
+  {
+    key: 'ReactNativeStickyHeader',
+    category: 'UI',
+    module: require('../examples/react-native-sticky-header/tester/index'),
+  },
+  {
+    key: 'ReactNativeMapsDirections',
+    category: 'UI',
+    module: require('../examples/react-native-maps-directions/MapsDirectionsTest'),
+  },
+  {
+    key: 'ReactNativeWorkletsCore',
+    category: 'UI',
+    module: require('../examples/react-native-worklets-core/WorkletsCoreTest'),
+  },
+  {
+    key: 'ReactNativeImageCapinsetsNext',
+    category: 'UI',
+    module: require('../examples/react-native-image-capinsets-next/ImageCapInsetsTest'),
+  },
+  {
+    key: 'ReactNativeImageCropPicker',
+    category: 'UI',
+    module: require('../examples/react-native-image-crop-picker/ImageCropPickerDemo'),
+  },
+  {
+    key: 'ReactNativeImagePanZoom',
+    category: 'UI',
+    module: require('../examples/react-native-image-pan-zoom/Tester/ImageZoomExample'),
+  },
+  {
+    key: 'ReactNativeImageViewing',
+    category: 'UI',
+    module: require('../examples/react-native-image-viewing/Tester/index'),
   },
 ];
 

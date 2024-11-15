@@ -11,7 +11,67 @@
     "installationFree": false,
     "pages": "$profile:main_pages",
     "requestPermissions": [
-      {"name":  "ohos.permission.INTERNET"}
+      {"name":  "ohos.permission.INTERNET"},
+      {
+        "name": "ohos.permission.READ_CALENDAR",
+        "reason": "$string:Access_calendar",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.WRITE_CALENDAR",
+        "reason": "$string:Access_calendar",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:Access_Location",
+        "usedScene": {
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": "$string:Access_AppRoximatelyLocation",
+        "usedScene": {
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.GET_WIFI_INFO"
+      },
+      {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:Access_Bluetooth",
+        "usedScene": {
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      },
+      {
+        "name": "ohos.permission.LOCATION_IN_BACKGROUND",
+        "reason": "$string:EntryAbility_desc",
+        "usedScene": {
+          "abilities": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
+      }
     ],
     "abilities": [
       {

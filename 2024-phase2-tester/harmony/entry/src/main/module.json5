@@ -1,7 +1,24 @@
 {
   "module": {
+    "metadata": [
+      {
+        "name": "client_id",
+        "value": "112133485"
+      }
+    ],
+    "proxyData": [
+      {
+        "uri": "datashareproxy://com.lihonggang.test/PushMessage",
+        "requiredWritePermission": "ohos.permission.WRITE_PRIVACY_PUSH_DATA",
+        "metadata": {
+          "name": "dataProperties",
+          "resource": "$profile:PushMessage"
+        }
+      }
+    ],
     "name": "entry",
     "type": "entry",
+	"srcEntry": "./ets/entryability/MyAbilityStage.ets",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
     "deviceTypes": [
@@ -12,13 +29,40 @@
     "pages": "$profile:main_pages",
     "requestPermissions": [
       {
-        "name": "ohos.permission.INTERNET"
+         "name": "ohos.permission.PRINT",
+         "reason": "$string:print_reason",
+         "usedScene": {
+           "abilities": [
+              "EntryAbility"
+           ],
+           "when":"always"
+        }
+      },
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:internet_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when":"always"
+        }
       },
       {
         "name": "ohos.permission.ACCELEROMETER"
       },
 	  {
         "name": "ohos.permission.ACCESS_BIOMETRIC"
+      },
+	  {
+        "name": "ohos.permission.APP_TRACKING_CONSENT",
+        "reason": "$string:reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility" //一般要用首页
+          ],
+          "when": "always"
+        }
       },
       {
         "name": "ohos.permission.CAMERA",
@@ -79,6 +123,25 @@
           ],
           "when": "always"
         }
+      },
+	  {
+        "name": "ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:app_name",
+        "usedScene": {
+          "abilities": [
+            "UIAbility"
+          ]
+        }
+      },
+      {
+        "name": "ohos.permission.GET_WIFI_INFO"
+      },
+	  {
+        "name": "ohos.permission.NFC_TAG",
+        "reason": "$string:app_name"
+      },
+	  {
+        "name": "ohos.permission.STORE_PERSISTENT_DATA",
       }
     ],
     "abilities": [
@@ -96,12 +159,43 @@
               "entity.system.home"
             ],
             "actions": [
-              "action.system.home"
+              "action.system.home",
+              // other declared actions,
+
+              // add the nfc tag action
+              "ohos.nfc.tag.action.TAG_FOUND"
+            ],
+            "uris": [
+              {
+                "type": "tag-tech/NfcA"
+              },
+              {
+                "type": "tag-tech/IsoDep"
+              }
+              // Add other technology if neccessary,
+              // such as: NfcB/NfcF/NfcV/Ndef/MifareClassic/MifareUL/NdefFormatable
             ]
           }
         ],
-        "srcEntry": "./ets/entryability/EntryAbility.ets"
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+		"backgroundModes": [
+          "audioPlayback"
+        ]
       },
+	  {
+        "name": "PushMessageAbility",
+        "srcEntry": "./ets/entryability/PushMessageAbility.ets",
+        "launchType": "singleton",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "skills": [
+          {
+            "actions": [
+              "action.ohos.push.listener"
+            ]
+          }
+        ]
+      } ,
       {
         "name": "BrowserManagerAbility",
         "srcEntry": "./ets/entryability/BrowserManagerAbility.ets",
@@ -110,6 +204,20 @@
         "startWindowIcon": "$media:startIcon",
         "startWindowBackground": "$color:start_window_background",
         "visible": true
+      }
+    ],
+	"extensionAbilities": [
+      {
+        "name": "RemoteNotificationExtAbility",
+        "type": "remoteNotification",
+        "srcEntry": "./ets/entryability/RemoteNotificationExtAbility.ets",
+        "description": "RemoteNotificationExtAbility test",
+        "exported": false,
+        "skills": [
+          {
+            "actions": ["action.hms.push.extension.remotenotification"]
+          }
+        ]
       }
     ]
   }

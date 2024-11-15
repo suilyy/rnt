@@ -5,7 +5,7 @@ import {Page, NavigationContainer} from './components/Navigation';
 
 export function CameraKitTestExampleApp() {
   return (
-    <View style={{backgroundColor: 'black'}}>
+    <View style={{backgroundColor: 'black',marginBottom:30}}>
       <SafeAreaView>
         <NavigationContainer>
           {Object.keys(testSuiteByName).map(testSuiteName => {

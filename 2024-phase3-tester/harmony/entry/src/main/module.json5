@@ -1,6 +1,7 @@
 {
   "module": {
     "name": "entry",
+    "srcEntry": "./ets/abilityStage/MyAbilityStage.ets",
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
@@ -10,22 +11,23 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
+      "metadata": [
+      // 配置如下信息 测试地图功能
+      {
+        "name": "client_id",
+        "value": "110168601"
+        //配置为从华为开发者平台获取的Client ID，自建项目请与开发者平台上的client id一致
+      }
+    ],
     "requestPermissions": [
       {
         "name": "ohos.permission.INTERNET"
       },
+	    {
+        "name": "ohos.permission.ACCELEROMETER"
+      },
       {
         "name": "ohos.permission.PRIVACY_WINDOW"
-      }，
-      {
-        "name": "ohos.permission.MICROPHONE",
-        "reason": "$string:Access_Create_Audio",
-        "usedScene": {
-          "abilities": [
-            "EntryAbility"
-          ],
-          "when": "always"
-        }
       },
       {
         "name": "ohos.permission.CAMERA",
@@ -58,6 +60,16 @@
         }
       },
       {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:Access_maps",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
         "name": "ohos.permission.ACCESS_BLUETOOTH",
         "reason": "$string:app_name",
         "usedScene": {
@@ -67,20 +79,22 @@
         }
       },
       {
-        "name": "ohos.permission.MICROPHONE",
-        "reason": "$string:reason",
-        "usedScene": {
-          "abilities": [
-            "EntryAbility"
-          ],
-          "when": "inuse"
-        }
-      },
-      {
         "name" : "ohos.permission.GET_WIFI_INFO"
       },
       {
         "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      { 
+        "name": "ohos.permission.ACCESS_BIOMETRIC" 
+      },
+         {
+        "name": "ohos.permission.RUNNING_LOCK"
+      },
+      {
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING",
+        "usedScene": {
+          "when": "always"
+        }
       }
     ],
     "abilities": [
@@ -102,7 +116,17 @@
             ]
           }
         ],
-        "srcEntry": "./ets/entryability/EntryAbility.ets"
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "recoverable": true
+      },
+       {
+        "name": "ImageEditAbility",
+        "srcEntry": "./ets/entryability/ImageEditAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "removeMissionAfterTerminate": true,
       }
     ]
   }

@@ -43,7 +43,7 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'ReactNativeBetterBanner',
-    category: 'Basic',
+    category: 'UI',
     module: require('../examples/react-native-better-banner/App'),
   },
   {
@@ -143,8 +143,13 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'ReactNativeNativeWaterfallFlow',
-    category: 'Basic',
+    category: 'UI',
     module: require('../examples/react-native-waterfall-flow/WaterfallFlowTestCase'),
+  },
+  {
+    key: 'ReactNativeDropdownPicker',
+    category: 'UI',
+    module: require('../examples/react-native-dropdown-picker/DropDownPickerTest'),
   },
   {
     key: 'ReactNativeMarquee',
@@ -218,7 +223,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'NativeBase',
     category: 'UI',
-    module: require('../examples/NativeBase/App'),
+    module: require('../examples/NativeBase/SamplenNativeBaseExample'),
   },
   {
     key: 'HoleViewDemo',
@@ -376,14 +381,149 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/Nativewind/App'),
   },
   {
+    key: 'ReactNativeSystemSettingExample',
+    category: 'Basic',
+    module: require('../examples/react-native-system-setting/ReactNativeSystemSettingDemo'),
+  },
+  {
+    key: 'ReactNativePaperExample',
+    category: 'UI',
+    module: require('../examples/react-native-paper/PaperExample'),
+  },
+  {
+    key: 'ReactNativePickerSelectExample',
+    category: 'UI',
+    module: require('../examples/react-native-picker-select/PickerSelectDemo'),
+  },
+  {
+    key: 'ReactNativeHapticFeedbackExample',
+    category: 'Basic',
+    module: require('../examples/react-native-haptic-feedback/Tester/HapticFeedbackExample'),
+  },
+  {
+    key: 'ReactNativeGridExample',
+    category: 'UI',
+    module: require('../examples/react-native-easy-grid/GridExample'),
+  },
+  {
+    key: 'ReactNativeCreditCardExample',
+    category: 'UI',
+    module: require('../examples/react-native-credit-card-input/test/DemoEntry')
+  },
+  {
+    key: 'ReactNativeDropDownExample',
+    category: 'UI',
+    module: require('../examples/react-native-material-dropdown/DropDownTest')
+  },
+  {
+    key: 'ReactNativeDropdownalertExample',
+    category: 'UI',
+    module: require('../examples/react-native-dropdownalert/App')
+  },
+  {
+    key: 'ReactNativeNfcManagerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-nfc-manager/NfcManagerDemo')
+  },
+  {
+    key: 'ReactNativeTrackPlayerExample',
+    category: 'Basic',
+    module: require('../examples/react-native-track-player/TrackPlayerTest')
+  },
+  {
+    key: 'ReactNativeAppleAuthenticationExample',
+    category: 'UI',
+    module: require('../examples/react-native-apple-authentication/Test'),
+  },
+  {
+    key: 'ReactNativeLocalizationExample',
+    category: 'Basic',
+    module: require('../examples/react-native-localization/ReactNativeLocalizationTestCase')
+  },
+  {
+    key: 'ReactNativeMMKVStorageExample',
+    category: 'Basic',
+    module: require('../examples/react-native-mmkv-storage/MMKVStorageTest')
+  },
+  {
+    key: 'ReactNativeTextInputExample',
+    category: 'UI',
+    module: require('../examples/react-native-text-input-mask/TextInputDemo'),
+  },
+  {
+    key: 'ReactNativeDropDownExample',
+    category: 'UI',
+    module: require('../examples/react-native-autocomplete-dropdown/index'),
+  },
+  {
     key: 'ReactNativePDFViewExample',
     category: 'UI',
     module: require('../examples/react-native-PDFView/AppPDF'),
   },
   {
-    key: 'ReactNativeElementDropdownView',
+    key: 'ReactNativeReconnectingWebSocketDemo',
     category: 'Basic',
-    module: require('../examples/react-native-element-dropdown/App').default,
+    module: require('../examples/react-native-gifted-chat/App')
+  },
+  {
+    key: 'ReactNativeElementDropdownView',
+    category: 'UI',
+    module: require('../examples/react-native-element-dropdown/test/App').default,
+  },
+  {
+    key: 'ReactNativeBootSplashExample',
+    category: 'UI',
+    module: require('../examples/react-native-bootsplash/test/BootSplashExample'),
+  },
+  {
+    key: 'ReactNativePrintExample',
+    category: 'Basic',
+    module: require('../examples/react-native-print/PrintTest')
+  },
+  {
+    key: 'KeyboardControllerExample',
+    category: 'UI',
+    module: require('../examples/react-native-keyboard-controller/index'),
+  },
+  {
+    key: 'DeckSwiperExample',
+    category: 'UI',
+    module: require('../examples/react-native-deck-swiper/App'),
+  },
+  {
+    key: 'ReactNativeBottomSheetExample',
+    category: 'UI',
+    module: require('../examples/react-native-bottom-sheet/App'),
+  },
+  {
+    key: 'ReactNativeSkiaExample',
+    category: 'UI',
+    module: require('../examples/react-native-skia/skiaDemoCases/App'),
+  },
+  {
+    key: 'ReactNativeUILibExample',
+    category: 'UI',
+    module: require('../examples/react-native-ui-lib/App'),
+  },
+  {
+    key: 'ReactNativeQrDecodeImageCameraExample',
+    category: 'Basic',
+    module: require('../examples/react-native-qr-decode-image-camera/QrDecodeImageCamera')
+  },
+  {
+    key: 'ReactNativeParseExample',
+    category: 'Basic',
+    module: require('../examples/Parse-SDK-JS/App')
+  },
+  {
+    key: 'ReactNativeJPushExample',
+    category: 'Basic',
+    module: require('../examples/jpush-react-native/JPushExample')
+  },
+  {
+    key: 'ReactNativeSharedElmentExample',
+    category: 'Basic',
+    module: require('../examples/react-native-shared-element/DemoEntry')
   },
   {
     key: 'ReactNativeCameraKit',
@@ -394,7 +534,12 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeVectorDrawable',
     category: 'UI',
     module: require('../examples/react-native-vector-drawable/App'),
-  }
+  },
+  {
+    key: 'ReactNativeFlashMessage',
+    category: 'UI',
+    module: require('../examples/react-native-flash-message/FlashMessageTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

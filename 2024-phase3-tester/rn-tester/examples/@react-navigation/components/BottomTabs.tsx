@@ -909,7 +909,7 @@ export const BottomTabsExamples = () => {
 
                                 if (title === 'tabLongPress') {
                                     return <TestSuite name='tabLongPress' key={'tabLongPress'}>
-                                        <TestCase itShould='长按Notifications的tab时触发'
+                                        <TestCase itShould='长按111111的tab时触发'
                                             tags={['C_API']}
                                             initialState={false}
                                             assert={({ expect, state }) => {
@@ -933,7 +933,7 @@ export const BottomTabsExamples = () => {
                                                         <NavigationContainer>
                                                             <Tab.Navigator>
                                                                 <Tab.Screen name="Home" component={HomeScreen} />
-                                                                <Tab.Screen name="Notifications" component={EventNotifications} />
+                                                                <Tab.Screen name="Notifications" options={{tabBarLabel:'111111'}} component={EventNotifications} />
                                                                 <Tab.Screen name="Settings" component={SettingsScreen} />
                                                             </Tab.Navigator >
                                                         </NavigationContainer>

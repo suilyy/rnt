@@ -3,8 +3,8 @@ import { View, Text, StyleSheet, Button, RefreshControl, Alert, Image, ScrollVie
 import { Tester, TestCase, TestSuite } from '@rnoh/testerino'
 import WaterfallFlow from 'react-native-waterfall-flow';
 
-const WaterfallFlowTestCase = () => {
-  const item = ['Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'Item', 'Item', 'Item', 'ItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItemItem', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'].map((l, i) => ({ id: l, text: i + ` ${l}` }))
+const App = () => {
+  const item = ['Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item', 'Item'].map((l, i) => ({ id: l, text: i + ` ${l}` }))
   const [data, setData] = useState(item);
   const [refreshing, setRefreshing] = useState(false);
   const waterfallRef = useRef(null);
@@ -37,6 +37,48 @@ const WaterfallFlowTestCase = () => {
     <ScrollView>
       <Tester style={{ flex: 1 }}>
         <TestSuite name='WaterfallFlow'>
+          <TestCase itShould='WaterfallFlow'>
+            <View style={styles.container}>
+              <View style={{ height: 300 }}>
+                <WaterfallFlow
+                  ref={waterfallRef}
+                  renderItem={renderItem}
+                  data={data}
+                  numColumns={2}
+                  ListHeaderComponent={<Text style={styles.header}>Header Component</Text>}
+                  ListFooterComponent={<Text style={styles.footer}>Footer Component</Text>}
+                  ListEmptyComponent={<Text style={styles.empty}>No Data Available</Text>}
+                  onEndReached={onEndReached}
+                  onRefresh={onRefresh}
+                  refreshing={refreshing}
+                  style={styles.waterfall}
+                  contentContainerStyle={styles.contentContainer}
+                  refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+                />
+              </View>
+              <View style={styles.buttonsContainer}>
+                <Button
+                  title="ScrollEnd"
+                  onPress={() => waterfallRef.current.scrollToEnd({ animated: true })}
+                />
+                <Button
+                  title="ScrollIndex"
+                  onPress={() => { data.length >= 20 ? waterfallRef.current.scrollToIndex({ animated: true, index: 20, viewPosition: 0 }) : false }}
+                />
+                <Button
+                  title="Offset"
+                  onPress={() => waterfallRef.current.scrollToOffset({ offset: 0 })}
+                />
+              </View>
+              <View style={styles.buttonDelete}>
+                <Button
+                  title="Delete Data"
+                  onPress={() => { setData([]) }}
+                />
+              </View>
+            </View>
+          </TestCase>
+
           <TestCase itShould='renderItem & data'>
             <View style={{ height: 200 }}>
               <WaterfallFlow
@@ -96,23 +138,13 @@ const WaterfallFlowTestCase = () => {
             </View>
           </TestCase>
 
-          <TestCase itShould='refreshing：true & onRefresh'>
+          <TestCase itShould='refreshing & refreshing'>
             <View style={{ height: 200 }}>
               <WaterfallFlow
                 renderItem={renderItem}
                 data={data}
                 onRefresh={onRefresh}
                 refreshing={refreshing}
-              />
-            </View>
-          </TestCase>
-
-          <TestCase itShould='refreshing：false'>
-            <View style={{ height: 200 }}>
-              <WaterfallFlow
-                renderItem={renderItem}
-                data={data}
-                refreshing={false}
               />
             </View>
           </TestCase>
@@ -177,7 +209,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    backgroundColor: '#FFF'
+    padding: 10,
   },
   item: {
     backgroundColor: '#ccc',
@@ -210,18 +242,18 @@ const styles = StyleSheet.create({
   }
 });
 
-export const displayName = 'WaterfallFlowTestCase';
+export const displayName = 'WaterfallFlowExample';
 export const framework = 'React';
 export const category = 'UI';
 export const title = 'react-native-waterfall-flow';
-export const documentationURL = 'https://reactnative.dev/docs/button';
-export const description = 'React Native Waterfall Flow.';
+export const documentationURL = 'https://github.com/axerjs/react-native-waterfall-flow';
+export const description = 'React Native waterfall flow';
 
 export const examples = [
   {
-    title: 'React Native waterfall Flow',
-    render: function (){
-      return <WaterfallFlowTestCase />;
+    title: 'React Native waterfall flow',
+    render: function () {
+      return <App />;
     },
   },
 ];
