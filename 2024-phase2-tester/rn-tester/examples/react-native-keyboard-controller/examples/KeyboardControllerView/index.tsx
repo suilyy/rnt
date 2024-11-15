@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   scrollView: {
-    height: 500
+    height: 400
 
   },
   textInput: {

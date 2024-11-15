@@ -52,13 +52,13 @@ const haptic = () => {
             <Button title="theme:randomColor" testID="red" onPress={()=> {
                setTheme( {
                 light: {
-                  primary: randomColor(),
+                  primary: 'red',
                   disabled: "#B0BEC5",
                   background: "#f3f3f4",
                   ripple: "#bcbcbcbc",
                 },
                 dark: {
-                  primary: randomColor(),
+                  primary: 'green',
                   disabled: "#707070",
                   background: "#2C2C2E",
                   ripple: "#F8F8F888",
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   scorllView: {
-    height:600
+    height:480
   },
   footer: {
     backgroundColor: "green",
