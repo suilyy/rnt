@@ -289,11 +289,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-keyboard-aware-scroll-view/index'),
   },
-  // {
-  //   key: 'react-native-video-cache',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-video-cache/VideoCacheDemo'),
-  // },
+  {
+    key: 'react-native-video-cache',
+    category: 'Basic',
+    module: require('../examples/react-native-video-cache/VideoCacheDemo'),
+  },
   {
     key: 'react-native-checkbox',
     category: 'UI',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import convertToCache, { convertAsync } from "react-native-video-cahce";
+import convertToCache, { convertAsync } from "@react-native-oh-tpl/react-native-video-cache";
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino'
 
 const url = "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4";
