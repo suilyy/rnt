@@ -21,7 +21,7 @@ const DraxViewDemo22 = () => {
         <TestCase
           itShould="DraxView组件:otherDraggingWithReceiverStyle(拖拽蓝色正方形位于绿色正方形上时应用于红色正方形的样式-增加圆角)"
           tags={['C_API']}>
-          <View style={{height: 500,paddingBottom:80}}>
+          <View style={{height: 500}}>
             <DraxViewBaseComponent
               draggingStyle={styles.draggingStyle}
               otherDraxEmabled={true}
