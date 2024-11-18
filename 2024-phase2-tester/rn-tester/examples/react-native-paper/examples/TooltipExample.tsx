@@ -80,7 +80,7 @@ function TooltipDemo() {
 
   return (
     <Tester>
-      <ScrollView>
+      <ScrollView style={{marginBottom:50}}>
       <TestSuite name='Tooltip' >
       {TooltippProps.map((item) => {
           return (
