@@ -45,6 +45,10 @@ import { RNCImageCapInsetsPackage } from '@react-native-oh-tpl/react-native-imag
 import { WorkletsPackage } from "@react-native-oh-tpl/react-native-worklets-core/ts";
 import { ImageCropPickerPackage } from '@react-native-oh-tpl/react-native-image-crop-picker/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
+import { RNThemeSwitchPackage } from "@react-native-oh-tpl/react-native-theme-switch-animation/ts";
+import {ZipArchivePackage} from '@react-native-oh-tpl/react-native-zip-archive/ts';
+import {RNSkiaPackage} from '@react-native-oh-tpl/react-native-skia/ts';
+import { MixpanelPackage } from '@react-native-oh-tpl/mixpanel-react-native/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -93,6 +97,10 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNCImageCapInsetsPackage(ctx),
     new WorkletsPackage(ctx),
     new ImageCropPickerPackage(ctx),
-    new RNCVideoPackage(ctx)
+    new RNCVideoPackage(ctx),
+    new RNThemeSwitchPackage(ctx),
+    new ZipArchivePackage(ctx),
+    new RNSkiaPackage(ctx),
+    new MixpanelPackage(ctx)
   ];
 }

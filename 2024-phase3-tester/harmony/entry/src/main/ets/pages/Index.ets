@@ -45,6 +45,7 @@ import {
 } from "@react-native-oh-tpl/react-native-maps"
 import { IMAGE_CAP_INSETS, RNCImageCapInsets } from "@react-native-oh-tpl/react-native-image-capinsets-next"
 import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
+import { RNCSkiaDomView, SKIA_DOM_VIEW_TYPE } from '@react-native-oh-tpl/react-native-skia';
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -65,7 +66,8 @@ const arkTsComponentNames: Array<string> = [
   AIR_OVERLAY_TYPE,
   AIR_MAP_CLUSTER_TYPE,
   IMAGE_CAP_INSETS,
-  RNC_VIDEO_TYPE
+  RNC_VIDEO_TYPE,
+  SKIA_DOM_VIEW_TYPE
 ];
 
 // 使用UIExtensionAbility：将common.UIAbilityContext 替换为common.UIExtensionContext
@@ -297,6 +299,27 @@ struct Index {
             enableBackgroundExecutor: false,
             enableCAPIArchitecture: true,
             arkTsComponentNames: arkTsComponentNames,
+            fontResourceByFontFamily: {
+              'Pacifico-Regular': $rawfile("fonts/Pacifico-Regular.ttf"),
+              'anticon': $rawfile('fonts/AntDesign.ttf'),
+              'Entypo': $rawfile('fonts/Entypo.ttf'),
+              'EvilIcons': $rawfile('fonts/EvilIcons.ttf'),
+              'Feather': $rawfile('fonts/Feather.ttf'),
+              'FontAwesome': $rawfile('fonts/FontAwesome.ttf'),
+              'FontAwesome5Brands-Regular': $rawfile('fonts/FontAwesome5_Brands.ttf'),
+              'FontAwesome5Free-Regular': $rawfile('fonts/FontAwesome5_Regular.ttf'),
+              'FontAwesome5Free-Solid': $rawfile('fonts/FontAwesome5_Solid.ttf'),
+              'FontAwesome6Brands-Regular': $rawfile('fonts/FontAwesome6_Brands.ttf'),
+              'FontAwesome6Free-Regular': $rawfile('fonts/FontAwesome6_Regular.ttf'),
+              'FontAwesome6Free-Solid': $rawfile('fonts/FontAwesome6_Solid.ttf'),
+              'Fontisto': $rawfile('fonts/Fontisto.ttf'),
+              'fontcustom': $rawfile('fonts/Foundation.ttf'),
+              'Ionicons': $rawfile('fonts/Ionicons.ttf'),
+              'Material Design Icons': $rawfile('fonts/MaterialCommunityIcons.ttf'),
+              'Material Icons': $rawfile('fonts/MaterialIcons.ttf'),
+              'Octicons': $rawfile('fonts/Octicons.ttf'),
+              'simple-line-icons': $rawfile('fonts/SimpleLineIcons.ttf'),
+            }
           },
           initialProps: { "foo": "bar" } as Record<string, string>,
           appKey: "app_name",

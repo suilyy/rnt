@@ -52,6 +52,10 @@
     "@react-native-oh-tpl/react-native-image-capinsets-next": "file:../../node_modules/@react-native-oh-tpl/react-native-image-capinsets-next/harmony/rn_image_capinsets.har",
     "@react-native-oh-tpl/react-native-worklets-core": "file:../../node_modules/@react-native-oh-tpl/react-native-worklets-core/harmony/rn_worklets.har",
     "@react-native-oh-tpl/react-native-image-crop-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-crop-picker/harmony/image_crop_picker.har",
-    "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har"
+    "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har",
+    "@react-native-oh-tpl/react-native-theme-switch-animation": "file:../../node_modules/@react-native-oh-tpl/react-native-theme-switch-animation/harmony/react_native_theme_switch.har",
+    "@react-native-oh-tpl/react-native-zip-archive": "file:../../node_modules/@react-native-oh-tpl/react-native-zip-archive/harmony/zipArchive_package.har",
+    "@react-native-oh-tpl/react-native-skia": "file:../../node_modules/@react-native-oh-tpl/react-native-skia/harmony/skia.har",
+    "@react-native-oh-tpl/mixpanel-react-native": "file:../../node_modules/@react-native-oh-tpl/mixpanel-react-native/harmony/mixpanel.har"
   }
 }

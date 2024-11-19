@@ -436,6 +436,26 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-image-viewing/Tester/index'),
   },
+  {
+    key: 'ReactNativeThemeSwitchAnimation',
+    category: 'UI',
+    module: require('../examples/react-native-theme-switch-animation/test/ReactNativeThemeSwitchAnimation'),
+  },
+  {
+    key: 'ReactNativeZipArchive',
+    category: 'UI',
+    module: require('../examples/react-native-zip-archive/ZipArchiveTest'),
+  },
+  {
+    key: 'ReactNativeGraph',
+    category: 'UI',
+    module: require('../examples/react-native-graph/Tester/LineGraphExample'),
+  },
+  {
+    key: 'MixpanelReactNative',
+    category: 'UI',
+    module: require('../examples/mixpanel-react-native/test/MixpanelExample'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

@@ -29,6 +29,8 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp"
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps),
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-worklets-core/src/main/cpp" ./worklets)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-zip-archive/src/main/cpp" ./zipArchive-package)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -59,4 +61,6 @@ target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
 target_link_libraries(rnoh_app PUBLIC rnoh_maps)
 target_link_libraries(rnoh_app PUBLIC rnoh_worklets)
 target_link_libraries(rnoh_app PUBLIC rnoh_video)
+target_link_libraries(rnoh_app PUBLIC nativi_minizip)
+target_link_libraries(rnoh_app PUBLIC rnoh_skia)
 # RNOH_END: link_packages
