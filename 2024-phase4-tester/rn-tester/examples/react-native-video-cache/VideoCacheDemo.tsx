@@ -43,16 +43,16 @@ export default function App() {
     );
 }
 
-export const displayName = 'react-native-video-cahce';
+export const displayName = 'react-native-video-cache';
 export const framework = 'React';
 export const category = 'basic';
-export const title = 'react-native-video-cahce';
-export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-video-cahce.md';
-export const description = 'react-native-video-cahce';
+export const title = 'react-native-video-cache';
+export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-video-cache.md';
+export const description = 'react-native-video-cache';
 
 export const examples = [
     {
-        title: 'react-native-video-cahce',
+        title: 'react-native-video-cache',
         render: function (): any {
             return <App />;
         },
