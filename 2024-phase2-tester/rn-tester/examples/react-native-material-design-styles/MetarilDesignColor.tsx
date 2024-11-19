@@ -9,7 +9,7 @@ export function MetariDesignColorTest() {
     const [titleStyle, setTitleStyle] = useState(styleList);
     return (
         <Tester>
-            <ScrollView>
+            <ScrollView style={{marginBottom:100}}>
                 <TestCase itShould="typography paperFontDisplay1">
                     <Text style={titleStyle}>Display4</Text>
                     <Button title='changeStyle' onPress={() => {
