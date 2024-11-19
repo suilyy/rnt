@@ -132,36 +132,36 @@ export default function () {
   }, []);
 
   return (
-    <Tester>
-      <TestCase
-        itShould='base demo'
-        tags={["C_API"]}>
-        <TourGuideProviderDemo isVisible={isVisible} providerprops={providerprops} />
-      </TestCase>
-      <ScrollView style={{ marginBottom: 350 }}>
-        {
-          props.map(item => {
-            return (
-              <TestCase
-                key={item.key}
-                itShould={item.key}
-                tags={["C_API"]}
-                initialState={0}
-                arrange={({ setState }) =>
-                  <Button onPress={() => {
-                    hideVisible()
-                    setProviderprops(item.value)
-                    setState(100)
-                  }} title={item.key}></Button>
-                }
-                assert={({ expect, state }) => {
-                  expect(state).to.be.eq(100);
-                }}
-              />
-            )
-          })
-        }
-      </ScrollView>
-    </Tester>
+      <Tester style={{ marginBottom: 50 }}>
+        <TestCase
+          itShould='base demo'
+          tags={["C_API"]}>
+          <TourGuideProviderDemo isVisible={isVisible} providerprops={providerprops} />
+        </TestCase>
+        <ScrollView style={{ marginBottom: 350 }}>
+          {
+            props.map(item => {
+              return (
+                <TestCase
+                  key={item.key}
+                  itShould={item.key}
+                  tags={["C_API"]}
+                  initialState={0}
+                  arrange={({ setState }) =>
+                    <Button onPress={() => {
+                      hideVisible()
+                      setProviderprops(item.value)
+                      setState(100)
+                    }} title={item.key}></Button>
+                  }
+                  assert={({ expect, state }) => {
+                    expect(state).to.be.eq(100);
+                  }}
+                />
+              )
+            })
+          }
+        </ScrollView>
+      </Tester>
   )
 };
