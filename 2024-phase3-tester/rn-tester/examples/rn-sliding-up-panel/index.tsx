@@ -16,13 +16,7 @@ export function SlidingUpPanelDemo() {
             ([exampleName, Example]) => {
               return (
                 <Page key={exampleName} name={exampleName}>
-                  <Tester style={{ flex: 1 }}>
-                    <ScrollView style={{ flex: 1 }}>
-                      <TestCase itShould={exampleName}>
-                        <Example />
-                      </TestCase>
-                    </ScrollView>
-                  </Tester>
+                  <Example />
                 </Page>
               );
             }
@@ -32,19 +26,3 @@ export function SlidingUpPanelDemo() {
     </SafeAreaView>
   </View >);
 }
-
-export const displayName = "RNSlidingUpPanel";
-export const framework = "React";
-export const category = "UI";
-export const title = "rn-sliding-up-panel";
-export const documentationURL = "https://github.com/esthor/react-native-swipeable-list";
-export const description = "RN Sliding Up Panel";
-
-export const examples = [
-  {
-    title: "rn-sliding-up-panel",
-    render: function (): any {
-      return <SlidingUpPanelDemo />;
-    },
-  },
-];
