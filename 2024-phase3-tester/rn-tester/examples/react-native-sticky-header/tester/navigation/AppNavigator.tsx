@@ -31,6 +31,7 @@ import {
   AvatarHeaderFlatListDemoChild1,
 } from '../screens/AvatarHeaderFlatList/index';
 import {AvatarHeaderSectionListDemoDefault} from '../screens/AvatarHeaderSectionList/index';
+import {AvatarHeaderScrollViewDemoDefault} from '../screens/AvatarHeaderScrollView/index';
 import {
   DetailsHeaderScrollViewDemoDefault,
   DetailsHeaderScrollViewDemoChild1,
@@ -40,11 +41,9 @@ import {DetailsHeaderSectionListDemoDefault} from '../screens/DetailsHeaderSecti
 import {
   DetailsHeaderFlatListDemoDefault,
   DetailsHeaderFlatListDemoChild1,
+  DetailsHeaderFlatListDemoChild2,
 } from '../screens/DetailsHeaderFlatList/index';
-import {
-  StickyHeaderScrollViewDemoDefault,
-  StickyHeaderScrollViewDemoChild1,
-} from '../screens/StickyHeaderScrollView/index';
+import {StickyHeaderScrollViewDemoDefault} from '../screens/StickyHeaderScrollView/index';
 import {StickyHeaderSectionListDemoDefault} from '../screens/StickyHeaderSectionList/index';
 import {StickyHeaderFlatListDemoDefault} from '../screens/StickyHeaderFlatList/index';
 import {StickyHeaderFlashListDemoDefault} from '../screens/StickyHeaderFlashList/index';
@@ -52,11 +51,13 @@ import {
   TabbedHeaderPagerDemoDefault,
   TabbedHeaderPagerDemoChild1,
   TabbedHeaderPagerDemoChild2,
+  TabbedHeaderPagerDemoChild3,
 } from '../screens/TabbedHeaderPager/index';
 import {
   TabbedHeaderListDemoDefault,
   TabbedHeaderListDemoChild1,
   TabbedHeaderListDemoChild2,
+  TabbedHeaderListDemoChild3,
 } from '../screens/TabbedHeaderList/index';
 import {DetailsHeaderFlashListDemoDefault} from '../screens/DetailsHeaderFlashList/index';
 import {TabbedHeaderFlashListDemoDefault} from '../screens/TabbedHeaderFlashList/index';
@@ -88,6 +89,10 @@ export const App: React.FC = () => (
           name={CHILDROUTES.TabbedHeaderPagerDemoChild2}
           component={TabbedHeaderPagerDemoChild2}
         />
+        <Stack.Screen
+          name={CHILDROUTES.TabbedHeaderPagerDemoChild3}
+          component={TabbedHeaderPagerDemoChild3}
+        />
         {/* 测试TabbedHeaderPager组件end*/}
         {/* 测试TabbedHeaderList组件start*/}
         <Stack.Screen
@@ -105,6 +110,10 @@ export const App: React.FC = () => (
         <Stack.Screen
           name={CHILDROUTES.TabbedHeaderListDemoChild2}
           component={TabbedHeaderListDemoChild2}
+        />
+        <Stack.Screen
+          name={CHILDROUTES.TabbedHeaderListDemoChild3}
+          component={TabbedHeaderListDemoChild3}
         />
         {/* 测试TabbedHeaderList组件end*/}
         {/* 测试DetailsHeaderScrollView组件start*/}
@@ -137,6 +146,10 @@ export const App: React.FC = () => (
         <Stack.Screen
           name={CHILDROUTES.DetailsHeaderFlatListDemoChild1}
           component={DetailsHeaderFlatListDemoChild1}
+        />
+        <Stack.Screen
+          name={CHILDROUTES.DetailsHeaderFlatListDemoChild2}
+          component={DetailsHeaderFlatListDemoChild2}
         />
         {/* 测试DetailsHeaderFlatList组件start*/}
         {/* 测试DetailsHeaderSectionList组件start*/}
@@ -176,6 +189,10 @@ export const App: React.FC = () => (
           name={CHILDROUTES.AvatarHeaderSectionListDemoDefault}
           component={AvatarHeaderSectionListDemoDefault}
         />
+        <Stack.Screen
+          name={CHILDROUTES.AvatarHeaderScrollViewDemoDefault}
+          component={AvatarHeaderScrollViewDemoDefault}
+        />
         {/* 测试AvatarHeaderSectionList组件end*/}
         {/* 测试StickyHeaderScrollView组件start*/}
         <Stack.Screen
@@ -185,10 +202,6 @@ export const App: React.FC = () => (
         <Stack.Screen
           name={CHILDROUTES.StickyHeaderScrollViewDemoDefault}
           component={StickyHeaderScrollViewDemoDefault}
-        />
-        <Stack.Screen
-          name={CHILDROUTES.StickyHeaderScrollViewDemoChild1}
-          component={StickyHeaderScrollViewDemoChild1}
         />
         {/* 测试StickyHeaderScrollView组件end*/}
         {/* 测试StickyHeaderFlatList组件start*/}
