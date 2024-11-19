@@ -152,48 +152,48 @@ export default function () {
     }, 1000)
   };
   return (
-    <Tester>
-      <TestCase itShould='base demo'>
-        <TourGuideProviderDemo isVisible={isVisible} tourGuideZoneprops={tourGuideZoneprops} />
-      </TestCase>
-      <ScrollView style={{ marginBottom: 350 }}>
-        {
-          props.map((item, index) => {
-            return (
-              <>
-                {
-                  index == 2 ? <TestCase
-                    itShould={'显示当前tourKey'}
-                    tags={["C_API"]}>
-                    <Text>tourKey:{currentTourKey}</Text>
-                  </TestCase> : ''
-                }
-                <TestCase
-                  key={item.key}
-                  itShould={item.key}
-                  tags={["C_API"]}
-                  initialState={0}
-                  arrange={({ setState }) =>
-                    <Button onPress={() => {
-                      hideVisible()
-                      setTourGuideZoneprops(item.value)
-                      setState(100)
-                      if (item.label) {
-                        setCurrentTourKey(item.label)
-                      }else{
-                        setCurrentTourKey('_defalut')
-                      }
-                    }} title={item.key}></Button>
+      <Tester style={{ marginBottom: 50 }}>
+        <TestCase itShould='base demo'>
+          <TourGuideProviderDemo isVisible={isVisible} tourGuideZoneprops={tourGuideZoneprops} />
+        </TestCase>
+        <ScrollView style={{ marginBottom: 350 }}>
+          {
+            props.map((item, index) => {
+              return (
+                <>
+                  {
+                    index == 2 ? <TestCase
+                      itShould={'显示当前tourKey'}
+                      tags={["C_API"]}>
+                      <Text>tourKey:{currentTourKey}</Text>
+                    </TestCase> : ''
                   }
-                  assert={({ expect, state }) => {
-                    expect(state).to.be.eq(100);
-                  }}
-                />
-              </>
-            )
-          })
-        }
-      </ScrollView>
-    </Tester>
+                  <TestCase
+                    key={item.key}
+                    itShould={item.key}
+                    tags={["C_API"]}
+                    initialState={0}
+                    arrange={({ setState }) =>
+                      <Button onPress={() => {
+                        hideVisible()
+                        setTourGuideZoneprops(item.value)
+                        setState(100)
+                        if (item.label) {
+                          setCurrentTourKey(item.label)
+                        } else {
+                          setCurrentTourKey('_defalut')
+                        }
+                      }} title={item.key}></Button>
+                    }
+                    assert={({ expect, state }) => {
+                      expect(state).to.be.eq(100);
+                    }}
+                  />
+                </>
+              )
+            })
+          }
+        </ScrollView>
+      </Tester>
   )
 };

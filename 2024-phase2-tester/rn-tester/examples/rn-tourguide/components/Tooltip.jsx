@@ -71,49 +71,49 @@ export default function () {
     }, 1000)
   };
   return (
-    <Tester>
-      <TestCase itShould='base demo'>
-        <ToolTipDemo isVisible={isVisible} toolTipprops={toolTipprops} />
-      </TestCase>
-      <ScrollView style={{ marginBottom: 350 }}>
-        {
-          props.map(item => {
-            return (
-              <TestCase
-                key={item.key}
-                itShould={item.key}
-                tags={["C_API"]}
-                initialState={0}
-                arrange={({ setState }) =>
-                  <Button onPress={() => {
-                    hideVisible();
-                    setToolTipprops(item.value);
-                    setState(100);
-                  }} title={item.key}></Button>
-                }
-                assert={({ expect, state }) => {
-                  expect(state).to.be.eq(100);
-                }}
-              />
-            )
-          })
-        }
-        <TestCase
-          itShould={'handleNext方法,需要点击页面上Next'}
-          tags={["C_API"]}>
-          <Text>handleNext方法,需要点击页面上Next</Text>
+      <Tester style={{ marginBottom: 50 }}>
+        <TestCase itShould='base demo'>
+          <ToolTipDemo isVisible={isVisible} toolTipprops={toolTipprops} />
         </TestCase>
-        <TestCase
-          itShould={'handlePrev方法,需要点击页面上Next'}
-          tags={["C_API"]}>
-          <Text>handlePrev方法,需要点击页面上Previous</Text>
-        </TestCase>
-        <TestCase
-          itShould={'handleStop方法,需要点击页面上Skip'}
-          tags={["C_API"]}>
-          <Text>handleStop方法,需要点击页面上Skip</Text>
-        </TestCase>
-      </ScrollView>
-    </Tester>
+        <ScrollView style={{ marginBottom: 350 }}>
+          {
+            props.map(item => {
+              return (
+                <TestCase
+                  key={item.key}
+                  itShould={item.key}
+                  tags={["C_API"]}
+                  initialState={0}
+                  arrange={({ setState }) =>
+                    <Button onPress={() => {
+                      hideVisible();
+                      setToolTipprops(item.value);
+                      setState(100);
+                    }} title={item.key}></Button>
+                  }
+                  assert={({ expect, state }) => {
+                    expect(state).to.be.eq(100);
+                  }}
+                />
+              )
+            })
+          }
+          <TestCase
+            itShould={'handleNext方法,需要点击页面上Next'}
+            tags={["C_API"]}>
+            <Text>handleNext方法,需要点击页面上Next</Text>
+          </TestCase>
+          <TestCase
+            itShould={'handlePrev方法,需要点击页面上Next'}
+            tags={["C_API"]}>
+            <Text>handlePrev方法,需要点击页面上Previous</Text>
+          </TestCase>
+          <TestCase
+            itShould={'handleStop方法,需要点击页面上Skip'}
+            tags={["C_API"]}>
+            <Text>handleStop方法,需要点击页面上Skip</Text>
+          </TestCase>
+        </ScrollView>
+      </Tester>
   )
 };

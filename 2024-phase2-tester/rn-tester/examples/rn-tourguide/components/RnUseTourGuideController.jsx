@@ -34,7 +34,7 @@ function AppGuide() {
   }, []);
 
   return (
-    <View>
+    <View  style={{marginBottom: 100}}>
       <Tester>
         <TestCase itShould='base demo'>
           <View style={{ height: 200, backgroundColor: '#ffffff' }}>

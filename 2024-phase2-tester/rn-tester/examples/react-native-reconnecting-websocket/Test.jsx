@@ -10,20 +10,21 @@ let ws3 = new ReconnectingWebSocket('ws://121.196.235.57/ws');
 let ws4 = new ReconnectingWebSocket('ws://121.196.235.57/ws');
 let ws5 = new ReconnectingWebSocket('ws://121.196.235.57/ws');
 let ws6 = new ReconnectingWebSocket('ws://121.196.235.57/ws');
+const sendMessageArr = ['橙子', '柠檬', '芒果'];
 const ReconnectingWebsocketTest = () => {
     const currentTime = new Date();
     const hours = currentTime.getHours();
     const minutes = currentTime.getMinutes();
-    const [ws1Text, setWs1Text] = useState('')
-    const [ws2Text, setWs2Text] = useState('')
-    const [ws3Text, setWs3Text] = useState('')
-    const [ws4Text, setWs4Text] = useState('')
-    const [ws5Text, setWs5Text] = useState('')
-    const [ws6Text, setWs6Text] = useState('')
+    const [ws1Text, setWs1Text] = useState('');
+    const [ws2Text, setWs2Text] = useState('');
+    const [ws3Text, setWs3Text] = useState('');
+    const [ws4Text, setWs4Text] = useState('');
+    const [ws5Text, setWs5Text] = useState('');
+    const [ws6Text, setWs6Text] = useState('');
+    const [sendMessageIndex, setSendMessgaeIndex] = useState(0);
 
     useEffect(() => {
         ws6.onmessage = e => {
-            console.log(111)
             setWs6Text(hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' +
                 JSON.stringify(e.data) + '\n' + '\n' + ws6Text)
         }
@@ -147,12 +148,12 @@ const ReconnectingWebsocketTest = () => {
                                             }
                                             ws3.onmessage = e => {
                                                 setWs3Text(JSON.stringify(e.data))
-                                                ws3.send('可口可乐')
-                                                if (e.data === '收到来自客户端的信息: 可口可乐') {
+                                                if (e.data === '收到来自客户端的信息: ' + sendMessageArr[sendMessageIndex]) {
                                                     setState(true) //比对监听到的信息，一致即断言为true
                                                 }
                                             }
-
+                                            ws3.send(sendMessageArr[sendMessageIndex]);
+                                            setSendMessgaeIndex(sendMessageIndex === 2 ? 0 : sendMessageIndex + 1);
                                         }}
                                     >
                                         <Text style={styles.buttonText}>send( )</Text>
@@ -271,7 +272,7 @@ const ReconnectingWebsocketTest = () => {
                                     直到连接成功,
                                     该用例可通过关闭设备网络测试,
                                     当重新联网时,
-                                    下列日志<Text style={{ color: 'deeppink' }}>在尝试重连之后</Text>出现'欢迎连接'即为自动重连成功)
+                                    下列日志<Text style={{ color: 'deeppink' }}>再次</Text>出现'欢迎连接'即为自动重连成功)
                                     {'\n'}
                                     日志信息:
                                     {'\n'}
@@ -302,6 +303,8 @@ const styles = StyleSheet.create({
         verticalAlign: 'middle'
     }
 })
+
+export default ReconnectingWebsocketTest;
 
 export const displayName = 'ReactNativeReconnectingWebSocketDemo';
 export const framework = 'React';
