@@ -72,7 +72,7 @@ export const ContactsDemo = () => {
 
     return (
         <Tester>
-            <ScrollView >
+            <ScrollView style={{margin: 10, height: '85%'}}>
                 <TestSuite name='Contacts' >
                     <TestCase
                         itShould="request contacts permission"
