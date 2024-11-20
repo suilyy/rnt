@@ -540,6 +540,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-flash-message/FlashMessageTest'),
   },
+  {
+    key: 'restyle',
+    category: 'UI',
+    module: require('../examples/restyle/index').default
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
