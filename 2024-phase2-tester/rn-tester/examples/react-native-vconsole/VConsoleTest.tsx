@@ -4,7 +4,24 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 import Vconsole from '@kafudev/react-native-vconsole';
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 
-export const ConsoleTest = () => {
+// 或者使用 export default 导出
+export default {
+    displayName: "VconsoleExample",
+    framework: "React",
+    category: "UI",
+    title: "react-native-vconsole",
+    description: "React Native Vconsole",
+    examples: [
+        {
+            title: "react-native-vconsole",
+            render: function (): any {
+                return <ConsoleTest />;
+            },
+        },
+    ],
+};
+
+function ConsoleTest() {
     return (
         <View style={styles.container}>
             <Tester>
@@ -17,7 +34,7 @@ export const ConsoleTest = () => {
     );
 };
 
-function PropsType() { 
+function PropsType() {
     const appInfo = {
         原生构建类型: "1",
         原生版本号: "ConfigReader.VERSION_NAME",
@@ -32,7 +49,7 @@ function PropsType() {
 
     return (
         <View style={styles.container1}>
-            <Vconsole appInfo={appInfo} console={true} showBtn={true} panels={Panels}/>
+            <Vconsole appInfo={appInfo} console={true} showBtn={true} panels={Panels} />
         </View>
     );
 }
