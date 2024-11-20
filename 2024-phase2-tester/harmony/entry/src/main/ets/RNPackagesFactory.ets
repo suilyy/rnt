@@ -46,6 +46,7 @@ import { VisionCameraModulePackage } from "@react-native-oh-tpl/react-native-vis
 import {RNQrDecodeImageCameraPackage} from '@react-native-oh-tpl/react-native-qr-decode-image-camera/ts';
 import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
 import {RNJPushPackage} from  "@react-native-oh-tpl/jpush-react-native/ts";
+import {RNSharePackage} from '@react-native-oh-tpl/react-native-share/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -96,6 +97,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new VisionCameraModulePackage(ctx),
 	new RNQrDecodeImageCameraPackage(ctx),
 	new AsyncStoragePackage(ctx),
-	new RNJPushPackage(ctx)
+	new RNJPushPackage(ctx),
+	new RNSharePackage(ctx),
   ];
 }

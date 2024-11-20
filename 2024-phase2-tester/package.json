@@ -100,6 +100,7 @@
     "@react-native-oh-tpl/async-storage": "file:rnoh_package/react-native-oh-tpl-async-storage-1.21.0-0.2.1.tgz",
     "@react-native-oh-tpl/jpush-react-native": "file:rnoh_package/react-native-oh-tpl-jpush-react-native-3.1.1-0.0.3.tgz",
     "@react-native-oh-tpl/react-native-shared-element": "file:rnoh_package/react-native-oh-tpl-react-native-shared-element-0.8.9-0.0.2.tgz",
+	"@react-native-oh-tpl/react-native-share": "file:rnoh_package/react-native-oh-tpl-react-native-share-10.2.1-0.0.3.tgz",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "react": "18.2.0",

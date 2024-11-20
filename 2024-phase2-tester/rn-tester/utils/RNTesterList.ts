@@ -47,6 +47,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-better-banner/App'),
   },
   {
+    key: 'ReactNativeShareExample',
+    category: 'UI',
+    module: require('../examples/react-native-share/RNShareExample'),
+  },
+  {
     key: 'EasyToast',
     category: 'Basic',
     module: require('../examples/react-native-easy-toast/EasyToast'),
