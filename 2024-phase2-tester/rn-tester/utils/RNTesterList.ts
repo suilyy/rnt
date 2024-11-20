@@ -177,10 +177,10 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-url-polyfill/index'),
   },
   {
-    key: 'ConsoleTest',
-    category: 'Basic',
-    module: require('../examples/react-native-vconsole/VConsoleTest'),
-  },
+    key: 'VconsoleExample',
+    category: 'UI',
+    module: require('../examples/react-native-vconsole/VConsoleTest').default
+  }
   {
     key: 'ReactNativeSortableList',
     category: 'UI',
