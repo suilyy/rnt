@@ -23,6 +23,7 @@ export function WebWeightsExample() {
               <Text>{sanFranciscoSpacing(20)} </Text>
           </TestCase>
         </TestSuite>
+        <View style={{height: 100}}></View>
       </ScrollView>
     </Tester>
   );

@@ -18,6 +18,7 @@ export function IOSUIKitExample() {
               </TestCase>
             );
           })}
+          <View style={{height: 100}}></View>
         </TestSuite>
       </ScrollView>
     </Tester>

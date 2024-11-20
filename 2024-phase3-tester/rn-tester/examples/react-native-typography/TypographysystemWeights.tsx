@@ -18,6 +18,7 @@ export function SystemWeightsExample() {
               </TestCase>
             );
           })}
+          <View style={{height: 100}}></View>
         </TestSuite>
       </ScrollView>
     </Tester>
