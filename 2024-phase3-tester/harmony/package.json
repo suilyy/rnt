@@ -1,0 +1,6 @@
+{
+  "op-sqlite": {
+    "sqlcipher": false,
+    "libsql": false
+  }
+}

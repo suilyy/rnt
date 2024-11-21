@@ -461,6 +461,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/mixpanel-react-native/test/MixpanelExample'),
   },
+  {
+    key: 'OpSqlite',
+    category: 'UI',
+    module: require('../examples/@op-engineering-op-sqlite/test/TestForOpSqlite'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

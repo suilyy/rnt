@@ -17,6 +17,7 @@
 #include "WorkletsPackage.h"
 #include "RNCVideoPackage.h"
 #include "SkiaPackage.h"
+#include "RNOpSqlitePackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
@@ -40,5 +41,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
     std::make_shared<WorkletsPackage>(ctx),
     std::make_shared<RNCVideoPackage>(ctx),
     std::make_shared<SkiaPackage>(ctx),
+    std::make_shared<RNOpSqlitePackage>(ctx)
   };
 } 

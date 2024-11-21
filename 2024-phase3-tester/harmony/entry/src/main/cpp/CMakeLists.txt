@@ -31,6 +31,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-worklets-core/
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-zip-archive/src/main/cpp" ./zipArchive-package)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/op-sqlite/src/main/cpp" ./rn_op_sqlite)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -63,4 +64,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_worklets)
 target_link_libraries(rnoh_app PUBLIC rnoh_video)
 target_link_libraries(rnoh_app PUBLIC nativi_minizip)
 target_link_libraries(rnoh_app PUBLIC rnoh_skia)
+target_link_libraries(rnoh_app PUBLIC rnoh_rn_op_sqlite)
 # RNOH_END: link_packages
