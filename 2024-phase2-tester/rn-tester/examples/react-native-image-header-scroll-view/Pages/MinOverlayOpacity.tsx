@@ -119,7 +119,8 @@ function MinOverlayOpacity() {
                             maxHeight={MAX_HEIGHT}
                             minHeight={MIN_HEIGHT}
                             renderHeader={() => <Image source={require('./doctorwho.jpg')} style={styles.image} />}
-                            minOverlayOpacity={0.2}
+                            minOverlayOpacity={0.1}
+                            disableHeaderGrow={true}
                         >
                             <>
                                 <View style={styles.section}>
