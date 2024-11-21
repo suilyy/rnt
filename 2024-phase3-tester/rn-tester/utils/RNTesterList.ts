@@ -357,6 +357,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-gifted-charts/App'),
   },
   {
+    key: 'ReactNativeMapClustering',
+    category: 'Basic',
+    module: require('../examples/react-native-map-clustering/map-clustering/App'),
+  },
+  {
     key: 'ReactNavigationHeaderButtons',
     category: 'UI',
     module: require('../examples/react-navigation-header-buttons/test/index'),
