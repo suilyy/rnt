@@ -5,10 +5,6 @@ import {
   useSafeAreaFrame, EdgeInsets, Rect, initialWindowMetrics
 } from 'react-native-safe-area-context'
 
-// import {
-//   MySpringScrollview
-// } from '@react-native-oh-tpl/react-native-spring-scrollview2'
-
 function App({ }): JSX.Element {
 
   const STYLES = ['default', 'dark-content', 'light-content'] as const;
@@ -88,7 +84,6 @@ function App({ }): JSX.Element {
           <Text style={{ height: 36 }}>top:{insets?.top},right:{insets?.right},bottom:{insets?.bottom},left:{insets?.left}</Text>
           <Text style={{ height: 36 }}>x:{frame?.x},y:{frame?.y},width:{frame?.width},height:{frame?.height}</Text>
 
-          <MySpringScrollview/>
           <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 20 }}>
             <View style={styles.button}
               onTouchEnd={() =>

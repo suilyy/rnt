@@ -35,7 +35,7 @@ class App extends React.Component {
         return (
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="react-native-root-siblings 组件测试">
-                    <Stack.Screen name="root-siblings测试入口" component={Home} />
+                    <Stack.Screen name="root-siblings测试入口" component={Entrance} />
                     <Stack.Screen name="SetSiblingWrapper" component={setSiblingWrapperTest} />
                     <Stack.Screen name="Sibling" component={SiblingsDemo} />
                 </Stack.Navigator>
@@ -56,7 +56,7 @@ export default {
     {
       title: "root-siblings",
       render: function (): any {
-        return <Entrance />;
+        return <App />;
       },
     },
   ],

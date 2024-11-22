@@ -49,7 +49,8 @@ const line3 = [
 function AMapDemo() {
   return (
     <View style={styles.container}>
-      <MapView
+      <MapView ref={(ref) => mapView = ref}
+        style={{ width: '100%', height: '40%' }}
         mapType={1}
         tiltGesturesEnabled={true}
         rotateGesturesEnabled={true}
@@ -64,22 +65,32 @@ function AMapDemo() {
         scaleControlsEnabled={true}
         initialCameraPosition={{
           target: {
-            latitude: 39.906901, longitude: 116.397972
+            latitude: 39.906901, longitude: 116.397972 //北京
           },
           zoom:11
         }}
-		 onPress={(event: ReactNative.NativeSyntheticEvent<LatLng>) => {
-          Alert.alert("onPress successful")
-        }}
+        onPress={(event: ReactNative.NativeSyntheticEvent<LatLng>) => {
+          if (mapView) {
+            console.log("AMapViewEventType------------");
+          }
+          mapView?.moveCamera(
+            {
+              target: {
+              latitude: 34.341568, longitude: 108.940174 //西安
+              },
+              zoom: 11
+            },
+            1000
+          )
+        }
+        }
         onLongPress={(event: ReactNative.NativeSyntheticEvent<LatLng>) => {
           Alert.alert("onLongPress successful" + event.nativeEvent.latitude + "+" + event.nativeEvent.longitude)
         }}
         onPressPoi={(event: ReactNative.NativeSyntheticEvent<MapPoi>) => {
           Alert.alert(event.nativeEvent.position?.latitude + "+" + event.nativeEvent.position?.longitude)
         }}
-        onLoad={(event: ReactNative.NativeSyntheticEvent<voidEvent>) => {
-          Alert.alert("onLoad successful")
-        }}
+
       >
         <Circle
           strokeWidth={5}

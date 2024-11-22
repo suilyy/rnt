@@ -45,7 +45,7 @@ class Entrance extends React.Component {
     }
 };
 
-class App extends React.Component {
+class AMapApp extends React.Component {
     render() {
         return (
             <NavigationContainer>
@@ -61,7 +61,7 @@ class App extends React.Component {
     }
 }
 
-//export default App;
+//export default AMapApp;
 
 export default {
   displayName: "Amap3dDemo",
@@ -74,7 +74,7 @@ export default {
     {
       title: "amap3d",
       render: function (): any {
-        return <App />;
+        return <AMapApp />;
       },
     },
   ],

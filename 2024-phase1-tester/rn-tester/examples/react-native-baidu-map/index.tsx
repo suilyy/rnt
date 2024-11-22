@@ -1,10 +1,8 @@
 import { View, Text, StyleSheet, Button } from 'react-native';
 import React, { useState, useMemo, useCallback } from 'react';
-import {HookTest} from './HookTest';
-import {SafeAreaFrameContextTest} from './SafeAreaFrameContextTest'
-import {SafeAreaInsetContextTest} from './SafeAreaInsetContextTest';
-import {SafeAreaViewTest} from './SafeAreaViewTest';
-import {WithSafeAreaInsetsTest} from './WithSafeAreaInsetsTest';
+import App from './BaiduMapExample';
+import {BaiduMapPropTest} from './BaiduMapPropTest'
+import {BaiduMapCombinationUseTest} from './BaiduMapCombinationUseTest';
 
 interface IDemoItem {
   name: string;
@@ -15,14 +13,12 @@ interface IDemoItem {
 type TDemoCliCk = (item: IDemoItem) => void
 
 const demos: IDemoItem[] = [
-  { Component: HookTest, name: 'Hook', key: 'HookTest' },
-  { Component: SafeAreaFrameContextTest, name: 'SafeAreaFrameContext', key: 'SafeAreaFrameContextTest' },
-  { Component: SafeAreaInsetContextTest, name: 'SafeAreaInsetContext', key: 'SafeAreaInsetContextTest' },
-  { Component: SafeAreaViewTest, name: 'SafeAreaView', key: 'SafeAreaViewTest' },
-  { Component: WithSafeAreaInsetsTest, name: 'WithSafeAreaInsets', key: 'WithSafeAreaInsetsTest' }
+  { Component: App, name: 'BaiduMap', key: 'BaiduMapTest' },
+  { Component: BaiduMapPropTest, name: 'BaiduMapProp', key: 'BaiduMapPropTest' },
+  { Component: BaiduMapCombinationUseTest, name: 'BaiduMapCombinationUse', key: 'BaiduMapCombinationUseTest' }
 ];
 
-function Demo() {
+function BaiduMapEntrance() {
   const [currentDemoKey, setCurrentDemoKey] = useState('');
 
   const demoNavClickHandle = useCallback<TDemoCliCk>(
@@ -65,21 +61,22 @@ function Demo() {
 }
 
 export default {
-  displayName: "SafeAreaContextDemo",
+  displayName: "BaiduMapDemo",
   framework: "React",
-  category: "UI",
-  title: "SafeAreaContextDemo",
-  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-safe-area-context.md",
-  description: "A flexible way to handle safe area insets in JS",
+  category: "Map",
+  title: "BaiduMapDemo",
+  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-baidu-map.md",
+  description: "百度地图组件",
   examples: [
     {
-      title: "safe-area-context",
+      title: "baidu-map",
       render: function (): any {
-        return <Demo />;
+        return <BaiduMapEntrance />;
       },
     },
   ],
 };
+
 
 
 const styles = StyleSheet.create({

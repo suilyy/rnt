@@ -1,11 +1,12 @@
 import { TestSuite, TestCase, Tester } from '@rnoh/testerino';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import DropShadow from 'react-native-drop-shadow';
 
 function DropShadowTest() {
     return (
         <Tester>
+		<ScrollView keyboardShouldPersistTaps={'always'} keyboardDismissMode={'none'}>
             <TestSuite name="DropShadow">
                 <TestCase itShould="DropShadow: shadowRadius、shadowColor、shadowOpacity">
                     <View style={styles.container}>
@@ -47,6 +48,7 @@ function DropShadowTest() {
                     </View>
                 </TestCase>
             </TestSuite>
+			</ScrollView>
         </Tester>
     );
 }
