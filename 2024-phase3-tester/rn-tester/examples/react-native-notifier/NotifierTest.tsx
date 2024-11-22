@@ -332,6 +332,7 @@ export default function NotifierTest() {
                     onPress={() =>
                       Notifier.showNotification({
                         title: 'swipeEnabled',
+                        duration: 10000,
                         description: '测试swipeEnabled属性，默认为true',
                       })
                     }
@@ -344,6 +345,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'swipeEnabled-false',
                         description: '测试swipeEnabled属性，设置false',
+                        duration: 10000,
                         swipeEnabled: false
                       })
                     }
@@ -546,6 +548,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'onPress',
                         description: '测试onPress方法',
+                        duration:10000,
                         onPress: () => setText('用户按下通知时调用的函数'),
                       })
                     }
@@ -558,6 +561,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'hideOnPress',
                         description: '默认为true，按下隐藏通知',
+                        duration:10000,
                       })
                     }
                   />
@@ -569,6 +573,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'hideOnPress',
                         description: '设置false，按下不隐藏通知',
+                        duration:10000,
                         hideOnPress: false
                       })
                     }
@@ -580,6 +585,7 @@ export default function NotifierTest() {
                     onPress={() =>
                       Notifier.showNotification({
                         title: 'swipePixelsToClose',
+                        duration:10000,
                         description: '用户滑动关闭通知，默认20像素',
                       })
                     }
@@ -591,6 +597,7 @@ export default function NotifierTest() {
                     onPress={() =>
                       Notifier.showNotification({
                         title: 'swipePixelsToClose',
+                        duration:10000,
                         description: '用户滑动关闭通知，设置10像素',
                         swipePixelsToClose: 10
                       })
@@ -604,6 +611,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'swipeEasing',
                         description: 'swipeEasing:Easing.bounce',
+                        duration:10000,
                         swipeEasing: Easing.bounce,
                       })
                     }
@@ -616,6 +624,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'swipeEasing',
                         description: 'swipeEasing:Easing.circle',
+                        duration:10000,
                         swipeEasing: Easing.circle,
                       })
                     }
@@ -627,6 +636,7 @@ export default function NotifierTest() {
                     onPress={() =>
                       Notifier.showNotification({
                         title: 'swipeAnimationDuration',
+                        duration:10000,
                         description: '用户滑动动画速度，默认200',
                       })
                     }
@@ -639,6 +649,7 @@ export default function NotifierTest() {
                       Notifier.showNotification({
                         title: 'swipeAnimationDuration',
                         description: '用户滑动动画速度，设置1000',
+                        duration:10000,
                         swipeAnimationDuration: 1000
                       })
                     }
