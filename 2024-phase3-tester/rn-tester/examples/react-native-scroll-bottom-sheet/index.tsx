@@ -34,7 +34,7 @@ const App = () => {
   return (
     <View style={{backgroundColor: 'black'}}>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView>
+      <SafeAreaView style={{marginBottom:100}}>
         <NavigationContainer>
           <Page
             name={`EXAMPLE: ScrollBottomSheetDemoDefault1 componentType="FlatList"`}>
