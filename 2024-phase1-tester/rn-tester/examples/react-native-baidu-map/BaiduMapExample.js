@@ -149,21 +149,4 @@ const styles = StyleSheet.create({
     },
 });
 
-//export default App;
-
-export default {
-  displayName: "BaiduMapDemo",
-  framework: "React",
-  category: "Map",
-  title: "BaiduMapDemo",
-  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-baidu-map.md",
-  description: "百度地图组件",
-  examples: [
-    {
-      title: "baidu-map",
-      render: function (): any {
-        return <App />;
-      },
-    },
-  ],
-};
+export default App;

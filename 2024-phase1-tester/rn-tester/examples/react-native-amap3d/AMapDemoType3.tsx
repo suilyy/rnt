@@ -56,6 +56,7 @@ function AMapDemo3() {
   return (
     <View style={styles.container}>
       <MapView
+	    style={{ width: '100%', height: '100%' }}
         mapType={2}
         tiltGesturesEnabled={false}
         rotateGesturesEnabled={false}

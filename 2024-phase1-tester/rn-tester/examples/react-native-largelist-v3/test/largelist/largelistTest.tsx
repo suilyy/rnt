@@ -22,7 +22,7 @@ import {
   import {LargeList, StickyForm} from 'react-native-largelist';
   import {messages} from './DataSource';
   
-function largelistTest() {
+function LargelistTest() {
     return (
       <Tester>
         <ScrollView keyboardShouldPersistTaps={'always'} keyboardDismissMode={'none'} style={{marginBottom: 50, marginTop: 20}}>
@@ -146,7 +146,7 @@ export default {
     {
       title: "Largelist",
       render: function (): any {
-        return <largelistTest />;
+        return <LargelistTest />;
       },
     },
   ],
