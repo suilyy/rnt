@@ -7,7 +7,7 @@ export const FeatherExample = () => {
 
     return (
           <Tester>
-            <ScrollView>
+            <ScrollView style={{marginBottom:100}}>
                 <TestSuite name="FeatherExample">
                     <TestCase
                         tags={['C_API']}

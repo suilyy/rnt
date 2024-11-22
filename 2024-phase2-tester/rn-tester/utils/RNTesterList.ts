@@ -456,7 +456,7 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-text-input-mask/TextInputDemo'),
   },
   {
-    key: 'ReactNativeDropDownExample',
+    key: 'ReactNativeAutocompleteDropDownExample',
     category: 'UI',
     module: require('../examples/react-native-autocomplete-dropdown/index'),
   },

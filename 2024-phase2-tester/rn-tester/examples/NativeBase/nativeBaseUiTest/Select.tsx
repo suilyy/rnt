@@ -1121,7 +1121,7 @@ const SelectTest = () => {
             <TestCase
               itShould="FormControlled-MaterialIcons（icon）"
               tags={['dev']}>
-              <View style={styles.section}>
+              <View style={styles.opneSection}>
                 <Text>dropdownOpenIcon</Text>
                 <View style={styles.subSection}>
                   <Select
@@ -1157,6 +1157,10 @@ const styles = StyleSheet.create({
   content: {
     width: '100%',
     height: '100%',
+  },
+  opneSection: {
+    marginBottom:300,
+    backgroundColor: '#f2f2f2',
   },
   section: {
     backgroundColor: '#f2f2f2',

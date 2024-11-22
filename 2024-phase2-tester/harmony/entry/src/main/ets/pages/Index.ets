@@ -267,73 +267,7 @@ const fonts: font.FontOptions[] = [
   {
     familyName: 'StintUltraCondensed-Regular',
     familySrc: '/assets/fonts/StintUltraCondensed-Regular.ttf'
-  },
-    {
-    familyName: 'FontAwesome',
-    familySrc: '/assets/fonts/FontAwesome.ttf'
-  },
-  {
-    familyName: 'FontAwesome5_Brands',
-    familySrc: '/assets/fonts/FontAwesome5_Brands.ttf'
-  },
-  {
-    familyName: 'FontAwesome5_Regular',
-    familySrc: '/assets/fonts/FontAwesome5_Regular.ttf'
-  },
-  {
-    familyName: 'FontAwesome5_Solid',
-    familySrc: '/assets/fonts/FontAwesome5_Solid.ttf'
-  },
-  {
-    familyName: 'Material Icons',
-    familySrc: $rawfile('assets/assets/fonts/MaterialIcons.ttf')
-  },
-  {
-    familyName: 'Entypo',
-    familySrc: $rawfile('assets/assets/fonts/Entypo.ttf')
-  },
-  {
-    familyName: 'EvilIcons',
-    familySrc: $rawfile('assets/assets/fonts/EvilIcons.ttf')
-  },
-  {
-    familyName: 'Feather',
-    familySrc: $rawfile('assets/assets/fonts/Feather.ttf')
-  },
-  {
-    familyName: 'Foundation',
-    familySrc: $rawfile('assets/assets/fonts/Foundation.ttf')
-  },
-  {
-    familyName: 'Ionicons',
-    familySrc: $rawfile('assets/assets/fonts/Ionicons.ttf')
-  },
-  {
-    familyName: 'Foundation',
-    familySrc: $rawfile('assets/assets/fonts/Foundation.ttf')
-  },
-  {
-    familyName: 'MaterialCommunityIcons',
-    familySrc: $rawfile('assets/assets/fonts/MaterialCommunityIcons.ttf')
-  },
-  {
-    familyName: 'Octicons',
-    familySrc: $rawfile('assets/assets/fonts/Octicons.ttf')
-  },
-  {
-    familyName: 'SimpleLineIcons',
-    familySrc: $rawfile('assets/assets/fonts/SimpleLineIcons.ttf')
-  },
-  {
-    familyName: 'Octicons',
-    familySrc: $rawfile('assets/assets/fonts/Octicons.ttf')
-  },
-  {
-    familyName: 'Zocial',
-    familySrc: $rawfile('assets/assets/fonts/Zocial.ttf')
   }
-  
-  
 ]
 
 @Entry
@@ -389,9 +323,31 @@ struct Index {
             enableBackgroundExecutor: false,
             enableCAPIArchitecture: true,
             arkTsComponentNames: arkTsComponentNames,
-            fontResourceByFontFamily: {
-              'FontAwesome': $rawfile('fonts/Pacifico-Regular.ttf'),
-            },            
+            fontResourceByFontFamily:{
+              'anticon': $rawfile('fonts/AntDesign.ttf'),
+              'Entypo': $rawfile('fonts/Entypo.ttf'),
+              'EvilIcons': $rawfile('fonts/EvilIcons.ttf'),
+              'Feather': $rawfile('fonts/Feather.ttf'),
+              'FontAwesome': $rawfile('fonts/FontAwesome.ttf'),
+              'FontAwesome5Brands-Regular': $rawfile('fonts/FontAwesome5_Brands.ttf'),
+              'FontAwesome5Free-Regular': $rawfile('fonts/FontAwesome5_Regular.ttf'),
+              'FontAwesome5Free-Solid': $rawfile('fonts/FontAwesome5_Solid.ttf'),
+              'FontAwesome6Brands-Regular': $rawfile('fonts/FontAwesome6_Brands.ttf'),
+              'FontAwesome6Free-Regular': $rawfile('fonts/FontAwesome6_Regular.ttf'),
+              'FontAwesome6Free-Solid': $rawfile('fonts/FontAwesome6_Solid.ttf'),
+              'Fontisto': $rawfile('fonts/Fontisto.ttf'),
+              'fontcustom': $rawfile('fonts/Foundation.ttf'),
+              'Ionicons': $rawfile('fonts/Ionicons.ttf'),
+              'Material Design Icons': $rawfile('fonts/MaterialCommunityIcons.ttf'),
+              'Material Icons': $rawfile('fonts/MaterialIcons.ttf'),
+              'Octicons': $rawfile('fonts/Octicons.ttf'),
+              'simple-line-icons': $rawfile('fonts/SimpleLineIcons.ttf'),
+              'zocial': $rawfile('fonts/Zocial.ttf'),
+              // 以下三种为外部字体，这里是举例说明，以用户实际为准
+              // 'icomoon': $rawfile('fonts/icomoon.ttf'),
+              // 'fontello': $rawfile('fonts/fontello.ttf'),
+              // 'poppy-icon': $rawfile('fonts/test.ttf')
+            }           
           },
           initialProps: { "foo": "bar" } as Record<string, string>,
           appKey: "app_name",
