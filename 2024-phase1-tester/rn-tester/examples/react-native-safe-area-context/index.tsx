@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HookTest from './HookTest';
-import SafeAreaFrameContextTest from './SafeAreaFrameContextTest';
-import SafeAreaInsetContextTest from './SafeAreaInsetContextTest';
-import SafeAreaViewTest from './SafeAreaViewTest';
-import WithSafeAreaInsetsTest from './WithSafeAreaInsetsTest';
+import {HookTest} from './HookTest';
+import {SafeAreaViewExample} from './SafeAreaFrameContextTest';
+import {SafeAreaFrameContextExample} from './SafeAreaInsetContextTest';
+import {SafeAreaInsetsContextExample} from './SafeAreaViewTest';
+import {WithSafeAreaInsetsExample} from './WithSafeAreaInsetsTest';
 
 
 const Stack = createStackNavigator();
@@ -56,13 +56,13 @@ class App extends React.Component {
     render() {
         return (
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="safe-area组件测试">
-                    <Stack.Screen name="safe-area测试入口" component={Entrance} />
-                    <Stack.Screen name="HookTest" component={HookTest} />
-                    <Stack.Screen name="SafeAreaFrameContextTest" component={SafeAreaFrameContextTest} />
-                    <Stack.Screen name="SafeAreaInsetContextTest" component={SafeAreaInsetContextTest} />
-                    <Stack.Screen name="SafeAreaViewTest" component={SafeAreaViewTest} />
-					<Stack.Screen name="WithSafeAreaInsetsTest" component={WithSafeAreaInsetsTest} />
+                <Stack.Navigator initialRouteName="safe-area">
+                    <Stack.Screen name="safe-area" component={Entrance} />
+                    <Stack.Screen name="HookTest" component={HooksExample} />
+                    <Stack.Screen name="SafeAreaFrameContextTest" component={SafeAreaViewExample} />
+                    <Stack.Screen name="SafeAreaInsetContextTest" component={SafeAreaFrameContextExample} />
+                    <Stack.Screen name="SafeAreaViewTest" component={SafeAreaInsetsContextExample} />
+					<Stack.Screen name="WithSafeAreaInsetsTest" component={WithSafeAreaInsetsExample} />
                 </Stack.Navigator>
             </NavigationContainer>
         );
