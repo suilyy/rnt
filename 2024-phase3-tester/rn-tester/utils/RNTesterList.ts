@@ -289,7 +289,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeCopilot',
     category: 'UI',
-    module: require('../examples/react-native-copilot/CopilotExample'),
+    module: require('../examples/react-native-copilot/test/CopilotExample'),
   },
   {
     key: 'ReactNavigationBottomSheet',
