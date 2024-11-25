@@ -93,7 +93,16 @@
           }
         ],
         "srcEntry": "./ets/entryability/EntryAbility.ets"
+      },
+      {
+        "name": "ImageCropAbility",
+        "srcEntry": "./ets/entryability/ImageCropAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "removeMissionAfterTerminate": true,
       }
-    ]
+    ],
   }
 }
