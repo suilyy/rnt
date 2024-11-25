@@ -6,7 +6,12 @@
   "version": "1.0.0",
   "dependencies": {
     "@rnoh/react-native-openharmony": "file:../react_native_openharmony",
-    "@react-native-oh-tpl/svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har"
-
+    "@react-native-oh-tpl/svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
+    "@react-native-oh-tpl/react-native-ssl-pinning": "file:../../node_modules/@react-native-oh-tpl/react-native-ssl-pinning/harmony/ssl_pinning.har",
+	"@react-native-oh-tpl/realm": "file:../../node_modules/@react-native-oh-tpl/realm/binding/harmony/realm.har",
+	"@react-native-oh-tpl/rn-bugly": "file:../../node_modules/@react-native-oh-tpl/rn-bugly/harmony/bugly.har",
+	"@react-native-oh-tpl/react-native-search-bar": "file:../../node_modules/@react-native-oh-tpl/react-native-search-bar/harmony/search_bar.har",
+    "@react-native-oh-tpl/react-native-file-selector": "file:../../node_modules/@react-native-oh-tpl/react-native-file-selector/harmony/file_selector.har",
+    "@react-native-oh-tpl/react-native-safe-area-context": "file:../../node_modules/@react-native-oh-tpl/react-native-safe-area-context/harmony/safe_area.har"
   }
 }

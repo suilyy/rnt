@@ -13,12 +13,14 @@ import {
 import font from '@ohos.font';
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
+import { RNCSearchBar } from "@react-native-oh-tpl/react-native-search-bar"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME
+  SVG_VIEW_TYPE_NAME,
+  RNCSearchBar.NAME
 ];
 
 @Builder
@@ -30,6 +32,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
       })
+    }
+	if (ctx.componentName === RNCSearchBar.NAME) {
+     RNCSearchBar({
+       ctx: ctx.rnComponentContext,
+       tag: ctx.tag,
+     })
     }
   }
   .position({ x: 0, y: 0 })

@@ -16,6 +16,31 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-svg/App'),
   },
+  {
+    key: 'react-native-waterflow-list',
+    category: 'UI',
+    module: require('../examples/react-native-waterflow-list/wateflowListDemo').default,
+  },
+  {
+    key: 'realm-js',
+    category: '数据库',
+    module: require('../examples/realm-js/demoIndex').default,
+  },
+  {
+    key: 'react-native-ssl-pinning',
+    category: 'NetWork',
+    module: require('../examples/react-native-ssl-pinning/SslPinningDemo').default,
+  },
+  {
+    key: 'rn-bugly',
+    category: 'Tools',
+    module: require('../examples/rn-bugly/BuglyDemo').default,
+  },
+  {
+    key: 'react-native-search-bar',
+    category: 'UI',
+    module: require('../examples/react-native-search-bar/demo/search-bar').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
