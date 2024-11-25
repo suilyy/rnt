@@ -189,7 +189,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'react-native-baidu-map',
     category: 'Map',
-    module: require('../examples/react-native-baidu-map/BaiduMapExample').default,
+    module: require('../examples/react-native-baidu-map/index').default,
   },
   {
     key: 'react-native-storage',
