@@ -254,7 +254,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeLoadingSpinnerOverlay',
     category: 'UI',
-    module: require('../examples/react-native-loading-spinner-overlay/LoadingSpinnerOverlayExample'),
+    module: require('../examples/react-native-loading-spinner-overlay/LoadingSpinnerOverlayDemo'),
   },
   {
     key: 'ReactNativeWalkthroughTooltip',
