@@ -153,6 +153,7 @@ export default class ToastsScreen extends Component {
                 showDismiss={showDismiss}
                 // action={{iconSource: Assets.icons.x, onPress: () => console.log('dismiss')}}
                 showLoader={showLoader}
+                style={{opacity: 1}}
               />
               <Toast
                 renderAttachment={this.renderAboveToast}
@@ -166,10 +167,12 @@ export default class ToastsScreen extends Component {
                 showDismiss={showDismiss}
                 action={{label: 'Undo', onPress: () => console.log('undo')}}
                 showLoader={showLoader}
+                style={{opacity: 1}}
               />
               <Toast
                 visible={this.state.showCustomToast}
                 position={'bottom'}
+                style={{opacity: 1}}
                 onDismiss={this.dismissCustomToast}>
                 {this.renderCustomContent()}
               </Toast>

@@ -55,9 +55,9 @@ enum SizeType {
 
 enum SvgType {
   File = 'file',
-  Uri = 'uri',
+  // Uri = 'uri',
   // UriWithCss = 'use_with_css',
-  Xml = 'xml',
+  // Xml = 'xml',
 }
 
 interface State {
@@ -91,13 +91,8 @@ class ImageScreen extends Component<{}, State> {
     switch (svgType) {
       case SvgType.File:
         return file;
-      case SvgType.Uri:
-        return uri;
-      // case SvgType.UriWithCss:
-      //   return uriWithCss;
-      case SvgType.Xml:
       default:
-        return xml;
+        return file;
     }
   }
 
@@ -160,7 +155,7 @@ class ImageScreen extends Component<{}, State> {
   renderSvgImage() {
     const {sizeType} = this.state;
     const size: any = Number(sizeType) || sizeType;
-    const source = this.getSvgSource();
+    const source = this.getSvgSource() || require('../../assets/svgs/headerLogo.svg');;
     return (
       <>
         {size ? (
