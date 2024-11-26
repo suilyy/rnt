@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text ,View} from "react-native";
 import { BarChart } from "react-native-gifted-charts";
 import { Tester, TestCase } from "@rnoh/testerino";
 import { Pattern, Rect } from "react-native-svg";
@@ -180,12 +180,12 @@ export default function () {
           <BarChart {...{
             data: [
               {
-                value: 50, label: 50, onLongPress: () => {
+                value: 50, label: 50, onPressOut: () => {
                   setOnPressText('onPressOut被触发，value：50');
                 }
               },
               {
-                value: 60, label: 60, onLongPress: () => {
+                value: 60, label: 60, onPressOut: () => {
                   setOnPressText('onPressOut被触发，value：60');
                 }
               }]
@@ -237,6 +237,7 @@ export default function () {
               { value: 70, label: 70, }]
           }}></BarChart>
         </TestCase>
+        <View style={{height:100}}></View>
       </ScrollView>
     </Tester >
 

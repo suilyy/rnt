@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, Text ,View} from 'react-native';
 import { Tester, TestCase } from '@rnoh/testerino';
 import BothSideFocusPie from './BothSideFocusPie';
 import InwardFocusPie from './InwardFocusPie';
@@ -40,6 +40,7 @@ export default function () {
           <TestCase itShould='demo8'>
             <ThreeDPie></ThreeDPie>
           </TestCase>
+          <View style={{height:100}}></View>
         </ScrollView>
       </Tester>
     </>

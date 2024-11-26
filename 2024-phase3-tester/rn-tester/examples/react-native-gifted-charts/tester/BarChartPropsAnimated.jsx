@@ -30,6 +30,7 @@ export default function () {
             </TestCase>)
           })
         }
+        <View style={{height:100}}></View>
       </ScrollView>
     </Tester >
 

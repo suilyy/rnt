@@ -24,6 +24,7 @@ export default function () {
             )
           })
         }
+        <View style={{height:100}}></View>
       </ScrollView>
     </Tester>
   )

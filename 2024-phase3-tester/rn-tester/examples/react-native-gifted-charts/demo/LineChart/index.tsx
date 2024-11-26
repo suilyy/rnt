@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ScrollView,Text } from 'react-native';
+import { ScrollView,Text ,View} from 'react-native';
 import { Tester, TestCase } from '@rnoh/testerino';
 import AnimatedArea from './AnimatedArea';
 import AreaChartDynamicData from './AreaChartDynamicData';
@@ -105,6 +105,7 @@ export default function () {
               </TestCase>
             </>
           }
+          <View style={{height:100}}></View>
         </ScrollView>
       </Tester>
     </>

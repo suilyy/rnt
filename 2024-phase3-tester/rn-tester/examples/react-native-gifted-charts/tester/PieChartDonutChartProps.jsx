@@ -1,4 +1,4 @@
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, Text ,View} from 'react-native';
 import { PieChart } from 'react-native-gifted-charts';
 import { TestCase, Tester } from "@rnoh/testerino";
 
@@ -38,6 +38,7 @@ export default function () {
             )
           })
         }
+        <View style={{height:100}}></View>
       </ScrollView>
     </Tester>
   )

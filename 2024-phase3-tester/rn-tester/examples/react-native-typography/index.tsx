@@ -10,6 +10,8 @@ import {IOSUIKitExample} from './TypographyIOSUIKit';
 import {IOSUIKitDenseExample} from './TypographyIOSUIKitDense';
 import {IOSUIKitTallExample} from './TypographyIOSUIKitTall';
 import {MaterialExample} from './TypographyMaterial';
+import {MaterialTallExample} from './TypographyMaterialTall';
+import {MaterialDenseExample} from './TypographyMaterialDense';
 import {MaterialColorsExample} from './TypographymaterialColors';
 import {NotoCJKWeightsExample} from './TypographynotoCJKWeights';
 import {NotoTallWeightsExample} from './TypographynotoTallWeights';
@@ -23,7 +25,7 @@ import {WebWeightsExample} from './TypographywebWeights';
 export function TypographyExample() {
 
   return (
-    <View style={{backgroundColor: 'black'}}>
+    <View style={{backgroundColor: 'black',paddingBottom:40}}>
     <NavigationContainer>
         <PortalProvider>
           <Page name ='humanExample'><HumanExample/></Page>
@@ -34,6 +36,8 @@ export function TypographyExample() {
           <Page name ='IOSUIKitDenseExample'><IOSUIKitDenseExample/></Page>
           <Page name ='IOSUIKitTallExample'><IOSUIKitTallExample/></Page>
           <Page name ='MaterialExample'><MaterialExample/></Page>
+          <Page name ='MaterialTallExample'><MaterialTallExample/></Page>
+          <Page name ='MaterialDenseExample'><MaterialDenseExample/></Page>
           <Page name ='MaterialColorsExample'><MaterialColorsExample/></Page>
           <Page name ='NotoCJKWeightsExample'><NotoCJKWeightsExample/></Page>
           <Page name ='NotoTallWeightsExample'><NotoTallWeightsExample/></Page>
@@ -43,7 +47,6 @@ export function TypographyExample() {
           <Page name ='SystemTallWeightsExample'><SystemTallWeightsExample/></Page>
           <Page name ='SystemWeightsExample'><SystemWeightsExample/></Page>
           <Page name ='WebWeightsExample'><WebWeightsExample/></Page>
-
           <View
           style={[
             StyleSheet.absoluteFill,

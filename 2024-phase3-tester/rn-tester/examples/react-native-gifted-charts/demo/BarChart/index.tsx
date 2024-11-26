@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, Text ,View} from 'react-native';
 import { Tester, TestCase } from '@rnoh/testerino';
 import BarChartWithGivenNumberOfVerticalLines from './BarChartWithGivenNumberOfVerticalLines';
 import BarPairWithLine from './BarPairWithLine';
@@ -65,6 +65,7 @@ export default function () {
           <TestCase itShould='demo12'>
             <StackWithNegative></StackWithNegative>
           </TestCase>
+          <View style={{height:100}}></View>
         </ScrollView>
       </Tester>
     </>

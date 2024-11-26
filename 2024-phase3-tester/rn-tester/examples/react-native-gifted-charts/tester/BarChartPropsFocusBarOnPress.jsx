@@ -1,4 +1,4 @@
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text ,View} from "react-native";
 import { BarChart } from "react-native-gifted-charts";
 import { Tester, TestCase } from "@rnoh/testerino";
 
@@ -28,6 +28,7 @@ export default function () {
             </TestCase>)
           })
         }
+        <View style={{height:100}}></View>
       </ScrollView>
     </Tester >
 

@@ -5,8 +5,8 @@ import {
   Text,
   View,
 } from 'react-native';
-import { NavigationContainer, Page } from './Navigation';
-import { PortalProvider } from '@gorhom/portal';
+import {NavigationContainer, Page} from './Navigation';
+import {PortalProvider} from '@gorhom/portal';
 import testSuiteByName from './tester';
 
 const comList = Object.keys(testSuiteByName).map(testSuiteName => {
@@ -20,30 +20,30 @@ comList.sort((a, b) => {
   return a.name.localeCompare(b.name)
 })
 function App() {
-  return (
-    <View style={{ backgroundColor: 'black' }}>
-      <StatusBar barStyle="light-content" />
-      <SafeAreaView>
-        <NavigationContainer>
-          <PortalProvider>
-            {comList.map(com => {
-              const TestSuite = com.com
-              return (
-                <Page
-                  key={com.name}
-                  name={`${com.name}`}>
-                  <TestSuite key={com.name} />
-                </Page>
-              );
-            })}
-
-          </PortalProvider>
-        </NavigationContainer>
-      </SafeAreaView>
-    </View>
-  );
-}
-export default App;
+    return (
+      <View style={{backgroundColor: 'black',marginBottom:30}}>
+        <StatusBar barStyle="light-content" />
+        <SafeAreaView>
+          <NavigationContainer>
+            <PortalProvider>
+              {comList.map(com => {
+                const TestSuite = com.com
+                return (
+                  <Page
+                    key={com.name}
+                    name={`${com.name}`}>
+                        <TestSuite key={com.name} />
+                  </Page>
+                );
+              })}
+              
+            </PortalProvider>
+          </NavigationContainer>
+        </SafeAreaView>
+      </View>
+    );
+  }
+  export default App;
 
 export const displayName = "ReactNativeGiftedCharts";
 export const framework = "React";
