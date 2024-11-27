@@ -13,12 +13,7 @@ import RootSiblings, {
     setSiblingWrapper
 } from 'react-native-root-siblings';
 
-// 自定义 sibling 的包裹器
-const customWrapper = component => (
-    <View style={styles.wrapper}>{component}</View>
-);
 
-setSiblingWrapper(customWrapper)
 
 export default class setSiblingWrapperTest extends React.Component {
 

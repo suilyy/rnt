@@ -5,14 +5,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import setSiblingWrapperTest from './setSiblingWrapperTest';
 import SiblingsDemo from './SiblingsDemo';
 
+
 const Stack = createStackNavigator();
 
 class Entrance extends React.Component {
     onPress1 = () => {
-        this.props.navigation.navigate('SetSiblingWrapper');
+        this.props.navigation.navigate('setSiblingWrapper');
     }
     onPress2 = () => {
-        this.props.navigation.navigate('Sibling');
+        this.props.navigation.navigate('Siblings');
     }
 
 
@@ -20,24 +21,24 @@ class Entrance extends React.Component {
         return (
             <View style={{padding:14}}>
                 <View style={{height:50}}>
-                    <Button title="SetSiblingWrapper"  onPress={this.onPress1}></Button>
+                    <Button title="setSiblingWrapper"  onPress={this.onPress1}></Button>
                 </View>
                 <View style={{height:50,marginTop:12}}>
-                    <Button title="Sibling"  onPress={this.onPress2}></Button>
+                    <Button title="Siblings"  onPress={this.onPress2}></Button>
                 </View>
             </View>
         );
     }
 };
 
-class App extends React.Component {
+class RootSiblingsDemo extends React.Component {
     render() {
         return (
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="react-native-root-siblings 组件测试">
-                    <Stack.Screen name="root-siblings测试入口" component={Entrance} />
-                    <Stack.Screen name="SetSiblingWrapper" component={setSiblingWrapperTest} />
-                    <Stack.Screen name="Sibling" component={SiblingsDemo} />
+                <Stack.Navigator initialRouteName="root-sibling测试入口">
+                    <Stack.Screen name="测试入口" component={Entrance} />
+                    <Stack.Screen name="setSiblingWrapper" component={setSiblingWrapperTest} />
+                    <Stack.Screen name="Siblings" component={SiblingsDemo} />
                 </Stack.Navigator>
             </NavigationContainer>
         );
@@ -56,7 +57,7 @@ export default {
     {
       title: "root-siblings",
       render: function (): any {
-        return <App />;
+        return <RootSiblingsDemo />;
       },
     },
   ],
