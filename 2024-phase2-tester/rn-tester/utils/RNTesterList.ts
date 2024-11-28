@@ -448,7 +448,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeMMKVStorageExample',
     category: 'Basic',
-    module: require('../examples/react-native-mmkv-storage/MMKVStorageTest')
+     module: require('../examples/react-native-mmkv-storage/index')
   },
   {
     key: 'ReactNativeTextInputExample',
