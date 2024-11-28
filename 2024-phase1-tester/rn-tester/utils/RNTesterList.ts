@@ -200,6 +200,11 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'react-native-splash-screen',
     category: 'Map',
     module: require('../examples/react-native-splash-screen/SplashScreenDemo').default,
+  },
+  {
+    key: 'react-native-reanimated',
+    category: 'Map',
+    module: require('../examples/react-native-reanimated/ReanimateListDemo').default,
   }
 ];
 

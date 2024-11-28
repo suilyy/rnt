@@ -51,6 +51,7 @@
 	"@react-native-oh-tpl/react-native-ble-plx":"file:rnoh_package/react-native-oh-tpl-react-native-ble-plx-3.2.0-0.0.3.tgz",
 	"@react-native-oh-tpl/react-native-baidu-map": "file:rnoh_package/react-native-oh-tpl-react-native-baidu-map-1.0.37-0.0.4.tgz",
 	"@react-native-oh-tpl/react-native-splash-screen":"file:rnoh_package/react-native-oh-tpl-react-native-splash-screen-3.3.0-0.0.2.tgz",
+	"@react-native-oh-tpl/react-native-reanimated":"file:rnoh_package/react-native-oh-tpl-react-native-reanimated-3.6.3.tgz",
 	"react-native-storage":"1.0.1",
 	"@react-native-oh-tpl/async-storage":"file:rnoh_package/react-native-oh-tpl-async-storage-1.21.0-0.1.6.tgz",
 	"apsl-react-native-button":"3.1.1",

@@ -23,6 +23,7 @@ import {BlePlxPackage} from '@react-native-oh-tpl/react-native-ble-plx/ts';
 import {BaiduMapPackage} from '@react-native-oh-tpl/react-native-baidu-map/ts';
 import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
 import {SplashScreenPackage} from '@react-native-oh-tpl/react-native-splash-screen/ts';
+import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -49,6 +50,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new BlePlxPackage(ctx),
     new BaiduMapPackage(ctx),
     new AsyncStoragePackage(ctx),
-    new SplashScreenPackage(ctx)
+    new SplashScreenPackage(ctx),
+    new ReanimatedPackage(ctx),
   ];
 }

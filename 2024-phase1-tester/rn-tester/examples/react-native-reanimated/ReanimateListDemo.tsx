@@ -165,4 +165,21 @@ function App() {
     );
 }
 
-export default App;
+//export default App;
+
+export default {
+  displayName: "ReanimatedDemo",
+  framework: "React",
+  category: "Animated",
+  title: "ReanimatedDemo",
+  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-reanimated.md",
+  description: "动画库",
+  examples: [
+    {
+      title: "reanimated",
+      render: function (): any {
+        return <App />;
+      },
+    },
+  ],
+};

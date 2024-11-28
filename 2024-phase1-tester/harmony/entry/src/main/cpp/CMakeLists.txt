@@ -1,5 +1,6 @@
 project(rnapp)
 cmake_minimum_required(VERSION 3.4.1)
+set(NODE_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../node_modules")
 set(OH_MODULES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(OH_MODULES "${CMAKE_CURRENT_SOURCE_DIR}/../../../oh_modules")
 set(RNOH_APP_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
@@ -32,6 +33,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-color-matrix-i
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-baidu-map/src/main/cpp" ./baidu-map)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-amap3d/src/main/cpp" ./rn_amap3d)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src/main/cpp" ./reanimated)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -66,4 +68,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_color_matrix_image_filters )
 target_link_libraries(rnoh_app PUBLIC rnoh_amap3d)
 target_link_libraries(rnoh_app PUBLIC rnoh_baidu_map)
 target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
+target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 # RNOH_END: link_packages

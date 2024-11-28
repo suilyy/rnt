@@ -21,6 +21,7 @@
 #include "MapViewPackage.h"
 #include "BaiduMapPackage.h"
 #include "AsyncStoragePackage.h"
+#include "ReanimatedPackage.h"
 
 using namespace rnoh;
 
@@ -49,5 +50,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(
      std::make_shared<MapViewPackage>(ctx),
      std::make_shared<BaiduMapPackage>(ctx),
      std::make_shared<AsyncStoragePackage>(ctx),
+     std::make_shared<ReanimatedPackage>(ctx)
   };
 } 

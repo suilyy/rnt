@@ -37,6 +37,7 @@
     "@react-native-oh-tpl/react-native-baidu-map": "file:../../node_modules/@react-native-oh-tpl/react-native-baidu-map/harmony/baidu_map.har",
     "@react-native-oh-tpl/react-native-amap3d": "file:../../node_modules/@react-native-oh-tpl/react-native-amap3d/harmony/rn_amap3d.har",
     "@react-native-oh-tpl/async-storage": "file:../../node_modules/@react-native-oh-tpl/async-storage/harmony/async_storage.har",
-    "@react-native-oh-tpl/react-native-splash-screen": "file:../../node_modules/@react-native-oh-tpl/react-native-splash-screen/harmony/splash_screen.har"
+    "@react-native-oh-tpl/react-native-splash-screen": "file:../../node_modules/@react-native-oh-tpl/react-native-splash-screen/harmony/splash_screen.har",
+    "@react-native-oh-tpl/react-native-reanimated": "file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har"
   }
 }
