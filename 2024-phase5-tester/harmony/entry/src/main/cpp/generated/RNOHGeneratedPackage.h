@@ -6,16 +6,21 @@
  *
  * @generatorVersion: 1
  */
+
 #pragma once
 
 #include "RNOH/Package.h"
 #include "RNOH/ArkTSTurboModule.h"
+#include "generated/RNCDocViewer.h"
 
 namespace rnoh {
 
 class RNOHGeneratedPackageTurboModuleFactoryDelegate : public TurboModuleFactoryDelegate {
   public:
     SharedTurboModule createTurboModule(Context ctx, const std::string &name) const override {
+        if (name == "RNCDocViewer") {
+            return std::make_shared<RNCDocViewer>(ctx, name);
+        }
         return nullptr;
     };
 };

@@ -11,7 +11,7 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
+import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/react-native-svg"
 import { createRNPackages } from '../RNPackagesFactory';
 
 const arkTsComponentNames: Array<string> = [

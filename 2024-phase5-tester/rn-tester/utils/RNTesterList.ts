@@ -16,6 +16,21 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-svg/App'),
   },
+  {
+    key: 'ReactNativeCalendars',
+    category: 'Basic',
+    module: require('../examples/react-native-calendars/App'),
+  },
+  {
+    key: 'ReactNativeChartKit',
+    category: 'Basic',
+    module: require('../examples/react-native-chart-kit/App'),
+  },
+  {
+    key: 'ReactNativeDocViewer',
+    category: 'Basic',
+    module: require('../examples/react-native-doc-viewer/DocViewerTest'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [
