@@ -11,6 +11,7 @@
 
 #include "RNOH/Package.h"
 #include "RNOH/ArkTSTurboModule.h"
+#include "generated/AlipayNativeModule.h"
 #include "generated/RNCDocViewer.h"
 
 namespace rnoh {
@@ -18,6 +19,9 @@ namespace rnoh {
 class RNOHGeneratedPackageTurboModuleFactoryDelegate : public TurboModuleFactoryDelegate {
   public:
     SharedTurboModule createTurboModule(Context ctx, const std::string &name) const override {
+        if (name == "AlipayNativeModule") {
+            return std::make_shared<AlipayNativeModule>(ctx, name);
+        }
         if (name == "RNCDocViewer") {
             return std::make_shared<RNCDocViewer>(ctx, name);
         }

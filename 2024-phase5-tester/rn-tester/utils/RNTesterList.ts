@@ -27,6 +27,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-chart-kit/App'),
   },
   {
+    key: 'ReactNativeAlipay',
+    category: 'Basic',
+    module: require('../examples/react-native-alipay/ReactNativeAlipayTest'),
+  },
+  {
     key: 'ReactNativeDocViewer',
     category: 'Basic',
     module: require('../examples/react-native-doc-viewer/DocViewerTest'),
