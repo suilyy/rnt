@@ -6,6 +6,9 @@
       "react-native": [
         "./node_modules/react-native-harmony"
       ],
+      "react-navigation-header-buttons":[
+        "./node_modules/react-navigation-header-buttons/lib/module/index.js"
+      ]
     },
   },
   "include": ["./rn-tester/types/rn-tester.d.ts"],

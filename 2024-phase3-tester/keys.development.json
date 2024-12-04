@@ -1,0 +1,13 @@
+{
+    "secure": {
+      "GOOGLE_API": "ABCD",
+      "BRANCH_API": "ABCDEF"
+    },
+    "public": {
+      "APP_NAME": "Keys Example",
+      "BUNDLE_ID": "com.example.rnkeys.dev",
+      "ANDROID_CODE": "50",
+      "PACKAGE_ID": "com.example.rnkeys.dev"
+    }
+  }
+  

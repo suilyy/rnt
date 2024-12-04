@@ -1,5 +1,5 @@
 import React, { useState,} from 'react';
-import { StyleSheet,Button,TextInput,Alert} from 'react-native';
+import { StyleSheet,Button,TextInput,Alert,ScrollView} from 'react-native';
 import {TestSuite, Tester,TestCase} from '@rnoh/testerino';
 import dgram from 'react-native-udp';
 
@@ -75,6 +75,7 @@ export function UDPTest() {
     }
 
     return (
+        <ScrollView>
         <Tester>
          <TestSuite name="UDPTest">
             <TestCase  itShould="createUDP" >
@@ -121,6 +122,7 @@ export function UDPTest() {
              </TestCase>
          </TestSuite>
         </Tester>
+        </ScrollView>
     );
 }
 

@@ -15,7 +15,7 @@ import font from '@ohos.font';
 import { createRNPackages } from '../RNPackagesFactory';
 import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview";
 import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
-import { abilityAccessCtrl, Permissions ,bundleManager, common} from '@kit.AbilityKit';
+import { abilityAccessCtrl, Permissions, bundleManager, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import {
   AIRMap,
@@ -137,15 +137,16 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
     // },
     if (ctx.componentName === WEB_VIEW) {
       WebView({
-          ctx: ctx.rnComponentContext,
-          tag: ctx.tag
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
       })
     }
     if (ctx.componentName === VisionCameraView.NAME) {
-       VisionCameraView({
-       ctx: ctx.rnComponentContext,
-       tag: ctx.tag,
-   })
+      VisionCameraView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
     if (ctx.componentName === AIR_MAP_TYPE) {
       AIRMap({
         ctx: ctx.rnComponentContext,
@@ -224,8 +225,7 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
         tag: ctx.tag
       })
     }
- }
-}
+  }
   .position({ x: 0, y: 0 })
 
 }

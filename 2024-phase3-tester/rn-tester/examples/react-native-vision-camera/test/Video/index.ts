@@ -1,7 +1,7 @@
 
 export * from './FpsTest'
 export * from './VideoHdrTest'
-export * from './PreviewTest'
+export * from './previewTest'
 export * from './VideoStabilizationModeTest'
 export * from './FormatTest'
 
