@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {PALETTE} from '../../../../components/Palette';
+import {PALETTE} from '../../components/palette';
 
 const NavigationContext = React.createContext<
   | {

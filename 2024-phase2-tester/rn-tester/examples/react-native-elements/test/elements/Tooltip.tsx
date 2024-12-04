@@ -18,7 +18,7 @@ class ImageComponent extends React.Component {
     return (
       <Image
         source={{
-          uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
+          uri: 'https://randomuser.me/api/portraits/men/4.jpg',
         }}
         style={{width: 100, height: 100}}></Image>
     );
@@ -208,11 +208,13 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
           <TestCase itShould="fade" tags={['C_API']}>
             <View style={styles.view}>
               <Tooltip
+                overlayColor='yellow'
                 animationType="fade"
                 visible={open2}
                 onOpen={() => {
                   setOpen2(true);
                 }}
+
                 onClose={() => {
                   setOpen2(false);
                 }}
@@ -227,6 +229,7 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
           <TestCase itShould="none" tags={['C_API']}>
             <View style={styles.view}>
               <Tooltip
+               overlayColor='yellow'
                 animationType="none"
                 visible={open3}
                 onOpen={() => {
@@ -248,6 +251,7 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
           <TestCase itShould="backgroundColor" tags={['C_API']}>
             <View style={styles.view}>
               <Tooltip
+   
                 animationType="fade"
                 visible={open4}
                 onOpen={() => {
@@ -518,7 +522,7 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
             </View>
           </TestCase>
         </TestSuite>
-        {/* <TestSuite name="Tooltip的skipAndroidStatusBar属性  设置skipAndroidStatusBar无效">
+        <TestSuite name="Tooltip的skipAndroidStatusBar属性  设置skipAndroidStatusBar无效">
           <TestCase itShould="skipAndroidStatusBar" tags={['C_API']}>
             <View style={styles.view}>
               <Tooltip
@@ -546,11 +550,12 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
               </Tooltip>
             </View>
           </TestCase>
-        </TestSuite> */}
+        </TestSuite>
         <TestSuite name="Tooltip的toggleAction属性  toggleAction  自定义弹出Tooltip事件 自定义为长按事件">
           <TestCase itShould="toggleAction" tags={['C_API']}>
             <View style={styles.view}>
               <Tooltip
+               skipAndroidStatusBar={false}
                 toggleOnPress={true}
                 toggleAction={'onLongPress'}
                 pointerColor={'blue'}

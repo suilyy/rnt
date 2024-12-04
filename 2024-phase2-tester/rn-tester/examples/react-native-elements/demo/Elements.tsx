@@ -51,7 +51,7 @@ const theme = createTheme({
   },
 });
 
-function SnapCarouselExample(): JSX.Element {
+export default function SnapCarouselExample(): JSX.Element {
   return (
 
     <ThemeProvider theme={theme}>
@@ -149,21 +149,7 @@ function SnapCarouselExample(): JSX.Element {
     </ThemeProvider>
   );
 }
-export const displayName = 'react-native-elements (demo)';
-export const framework = 'React';
-export const category = 'UI';
-export const title = 'react-native-elements (demo)';
-export const documentationURL = 'https://github.com/react-native-elements/react-native-elements/tree/next';
-export const description = 'React Native elements';
 
-export const examples = [
-  {
-    title: 'react-native-elements',
-    render: function () {
-      return <SnapCarouselExample />;
-    },
-  },
-];
 
 
 

@@ -36,6 +36,9 @@ import {NavigationContainer, Page} from './elements/Navigation';
 import {ThemeProvider, createTheme} from '@rneui/themed';
 import Switchs from './elements/Switch';
 import ButtonGroups from './elements/ButtonGrounps';
+// import OpenModal from './elements/OpenModal'
+// import Center from './elements/textCenter'
+import List3 from './elements/Lists3'
 const theme = createTheme({
   lightColors: {
     primary: '#3d5afe',
@@ -53,10 +56,19 @@ const theme = createTheme({
   },
 });
 
-function SampleElementExample(): JSX.Element {
+function SampleElementExample(): JSX.Element{
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
+      {/* <Page name="Center">
+          <Center />
+        </Page>
+      <Page name="OpenModal">
+          <OpenModal />
+        </Page> */}
+        <Page name="List3">
+          <List3 />
+        </Page>
         <Page name="AirbnbRating">
           <AirbnbRatings />
         </Page>
@@ -167,6 +179,7 @@ function SampleElementExample(): JSX.Element {
     </ThemeProvider>
   );
 }
+
 export const displayName = 'react-native-elements (test)';
 export const framework = 'React';
 export const category = 'UI';

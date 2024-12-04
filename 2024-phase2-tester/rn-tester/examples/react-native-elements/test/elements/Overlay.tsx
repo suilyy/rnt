@@ -389,13 +389,11 @@ const ModalComponent = ({ visible,onPress }) => {
         </TestSuite>
         <TestSuite name="Overlay属性overlayStyle	 设置模态框样式">
           <TestCase itShould="测试overlayStyle" tags={['C_API']}>
-            <View style={{height: 150}}> 
             <Button
               title="Open Overlay1111111"
               onPress={toggleOverlay7}
               buttonStyle={styles.button}
             />
-            </View>
             <Overlay
               isVisible={visible7}
               overlayStyle={{backgroundColor: 'green', borderRadius: 20}}
