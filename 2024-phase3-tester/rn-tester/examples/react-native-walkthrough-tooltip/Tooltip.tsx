@@ -21,25 +21,7 @@ return(
 }
 
 
-export function  TooltipAccessible (props:any){
-  const {accessible} =props
-  const [toolTipAccessibleVisible,setToolTipAccessibleVisible] = useState(false);
-    return(
-    <Tooltip 
-      isVisible={toolTipAccessibleVisible}
-      content={<Text>气泡accessible属性测试!</Text>}
-      placement="top"
-      onClose={() => setToolTipAccessibleVisible(false)}
-      accessible={accessible}
-      contentStyle={{margin:5}}
- 
-    >
-      <TouchableHighlight onPress={() => setToolTipAccessibleVisible(!toolTipAccessibleVisible)}>
-        <Text style={{color:'red',fontWeight:'900'}}>点击气泡accessible属性测试</Text>
-      </TouchableHighlight>
-    </Tooltip>
-    )
-}
+
 
 
 
@@ -138,6 +120,8 @@ export function  TooltipBackgroundColor (props:any){
         placement="top"
         onClose={() =>onclikcloseOnChildInteraction() }
         closeOnChildInteraction={closeOnChildInteraction}
+        closeOnBackgroundInteraction={false}
+        closeOnContentInteraction={false}
         contentStyle={{margin:5}}
       >
       <TouchableHighlight onPress={() => setToolTipCloseOnChildInteractionVisible(!toolTipCloseOnChildInteractionVisible)}>
