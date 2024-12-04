@@ -14,10 +14,10 @@ const Colors = {
     SHUTTLE_GREY: '#565E67'
 };
 export const ICONS = {
-    ARROW_DOWN: require('../assets/down.png'),
-    ARROW_UP: require('../assets/up.png'),
-    TICK: require('../assets/tick.png'),
-    CLOSE: require('../assets/close.png')
+    ARROW_DOWN: require('../assets.bak/down.png'),
+    ARROW_UP: require('../assets.bak/up.png'),
+    TICK: require('../assets.bak/tick.png'),
+    CLOSE: require('../assets.bak/close.png')
 };
 
 export default StyleSheet.create({

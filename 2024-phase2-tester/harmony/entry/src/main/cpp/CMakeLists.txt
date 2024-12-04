@@ -13,7 +13,7 @@ add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 
 
 # RNOH_BEGIN: manual_package_linking_1
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/svg/src/main/cpp" ./svg)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-context/src/main/cpp" ./safe-area)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-linear-gradient/src/main/cpp" ./linear-gradient)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-hole-view/src/main/cpp" ./rnohkeys)
@@ -26,7 +26,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/masked-view/src/main/cpp" .
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-unistyles/src/main/cpp" ./unistyles)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-blurhash/src/main/cpp" ./blurhash)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/picker/src/main/cpp" ./picker)
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mmkv-storage/src/main/cpp" ./mmkv-storage
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mmkv-storage/src/main/cpp" ./mmkv-storage)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-text-input-mask/src/main/cpp" ./RNTextInputMask)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-keyboard-controller/src/main/cpp" ./keyboard-controller)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)

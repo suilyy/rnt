@@ -185,7 +185,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'VconsoleExample',
     category: 'UI',
     module: require('../examples/react-native-vconsole/VConsoleTest').default
-  }
+  },
   {
     key: 'ReactNativeSortableList',
     category: 'UI',
