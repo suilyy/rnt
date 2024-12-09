@@ -3,7 +3,7 @@ import {View, ScrollView, Text} from 'react-native';
 import JSONTree from 'react-native-json-tree';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
 
-export const App= () => {
+export const App = () => {
   const data = {
     name: 'John Doe',
     age: 30,
@@ -151,6 +151,13 @@ export const App= () => {
             </View>
           </TestCase>
           <TestCase
+            itShould="JsonTree no shouldExpandNode"
+            tags={['C_API']}>
+            <View>
+              <JSONTree data={data2} />
+            </View>
+          </TestCase>
+          <TestCase
             itShould="JsonTree hideRoot={true}, hideRoot={false}"
             tags={['C_API']}>
             <View>
@@ -231,10 +238,33 @@ export const App= () => {
             </View>
           </TestCase>
           <TestCase
-            itShould="JsonTree postprocessValue 根据数据类型格式化, 展示经过处理的数据"
+            itShould="JsonTree No postprocessValue"
+            tags={['C_API']}>
+            <View>
+              <JSONTree data={data7} />
+            </View>
+          </TestCase>
+          <TestCase
+            itShould="
+            JsonTree postprocessValue=(value: any) => {
+    if (value instanceof Date) {
+      return formatDate(value)
+    }
+    if (typeof value === 'number') {
+      return value.toFixed(2);
+    }
+    return value
+  } 根据数据类型格式化, 展示经过处理的数据"
             tags={['C_API']}>
             <View>
               <JSONTree data={data7} postprocessValue={postprocessValue} />
+            </View>
+          </TestCase>
+          <TestCase
+            itShould="JsonTree No postprocessValue 不设置postprocessValue默认效果"
+            tags={['C_API']}>
+            <View>
+              <JSONTree data={data7} />
             </View>
           </TestCase>
           <TestCase
@@ -260,13 +290,14 @@ export const displayName = 'RNJsonTree';
 export const framework = 'React';
 export const category = 'UI';
 export const title = 'JsonTree';
-export const documentationURL = "https://github.com/Dean177/react-native-json-tree";
+export const documentationURL =
+  'https://github.com/Dean177/react-native-json-tree';
 export const description = 'React Native json tree';
 
 export const examples = [
   {
     title: 'React Native json tree',
-    render: function (){
+    render: function () {
       return <App />;
     },
   },
