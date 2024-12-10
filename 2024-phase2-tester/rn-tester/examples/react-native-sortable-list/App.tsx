@@ -140,10 +140,10 @@ function App() {
         <Page name="ScrollMethod Test x (need horizontal)">
           <SortableScrollMethod2 />
         </Page>
-        
-
+        <Page name="">
+          <View />
+        </Page>
         {/* SortableList end */}
-
         </NavigationContainer>
       </SafeAreaView>
     </View>
