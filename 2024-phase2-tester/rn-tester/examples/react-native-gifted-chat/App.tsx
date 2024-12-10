@@ -1,16 +1,21 @@
 import React from 'react';
 import {
   StatusBar,
-  View,
+  Text,
+  View,Button
 } from 'react-native';
 import { GiftedChatDemo } from './index'
+import { SafeAreaProvider,SafeAreaView,initialWindowMetrics } from '@react-native-oh-tpl/react-native-safe-area-context';
+import "react-native-get-random-values";
 
 function App() {
   return (
-    <View style={{ backgroundColor: 'black' }}>
-      <StatusBar barStyle="light-content" />
-        <GiftedChatDemo />
-    </View>
+    <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle="light-content" />
+          <GiftedChatDemo />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
