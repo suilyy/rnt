@@ -35,8 +35,10 @@ export const ImageMarker = () => {
   const [url_backscale1_5, seturl_backscale1_5] = useState('');
   // image alpha
   const [url_alpha0_1, seturl_alpha0_1] = useState('');
+  const [url_alpha0_5, seturl_alpha0_5] = useState('');
   const [url_alpha1, seturl_alpha1] = useState('');
   const [url_backalpha0_1, seturl_backalpha0_1] = useState('');
+  const [url_backalpha0_5, seturl_backalpha0_5] = useState('');
   const [url_backalpha1, seturl_backalpha1] = useState('');
   // image position
   const [url_icon_topLeft, seturl_icon_topLeft] = useState('');
@@ -139,6 +141,15 @@ export const ImageMarker = () => {
     }
     ]
   }
+  const image_options_alpha0_5: ImageMarkOptions = {
+    backgroundImage: { src: require('./assets/code-images/1.png') },
+    watermarkImages: [{
+      src: require('./assets/pravatar-131.jpg'),
+      alpha: 0.5
+    }
+    ]
+  }
+
   const image_options_alpha1: ImageMarkOptions = {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkImages: [{
@@ -147,6 +158,18 @@ export const ImageMarker = () => {
     }
     ]
   }
+
+  const image_options_backalpha0_5: ImageMarkOptions = {
+    backgroundImage: {
+      src: require('./assets/code-images/1.png'),
+      alpha: 0.5
+    },
+    watermarkImages: [{
+      src: require('./assets/pravatar-131.jpg')
+    }
+    ]
+  }
+
   const image_options_backalpha0_1: ImageMarkOptions = {
     backgroundImage: {
       src: require('./assets/code-images/1.png'),
@@ -426,6 +449,13 @@ export const ImageMarker = () => {
       console.log('error', error)
     })
   }
+  const markImagealpha0_5 = () => {
+    Marker.markImage(image_options_alpha0_5).then((result) => {
+      seturl_alpha0_5(result)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
   const markImagealpha1 = () => {
     Marker.markImage(image_options_alpha1).then((result) => {
       seturl_alpha1(result)
@@ -436,6 +466,13 @@ export const ImageMarker = () => {
   const markImagebackalpha0_1 = () => {
     Marker.markImage(image_options_backalpha0_1).then((result) => {
       seturl_backalpha0_1(result)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
+  const markImagebackalpha0_5 = () => {
+    Marker.markImage(image_options_backalpha0_5).then((result) => {
+      seturl_backalpha0_5(result)
     }).catch(error => {
       console.log('error', error)
     })
@@ -537,6 +574,7 @@ export const ImageMarker = () => {
   const [url_text_textalain_right, seturl_text_textalain_right] = useState('');
   // image alpha
   const [url_backalpha0_1_text, seturl_backalpha0_1_text] = useState('');
+  const [url_backalpha0_5_text, seturl_backalpha0_5_text] = useState('');
   const [url_backalpha1_text, seturl_backalpha1_text] = useState('');
   // text position
   const [url_text_topLeft, seturl_text_topLeft] = useState('');
@@ -578,6 +616,8 @@ export const ImageMarker = () => {
   const [url_text_shadowStyle1, seturl_text_shadowStyle1] = useState('');
   //rotate
   const [url_text_shadowStyle2, seturl_text_shadowStyle2] = useState('');
+  const [url_text_shadowStyle3, seturl_text_shadowStyle3] = useState('');
+  const [url_text_shadowStyle4, seturl_text_shadowStyle4] = useState('');
   // text style
   // textBackgroundStyle
   // color
@@ -654,7 +694,7 @@ export const ImageMarker = () => {
   const text_options_textalain_left: TextMarkOptions = {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
-      text: 'test text',
+      text: 'test text \n left',
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -666,7 +706,7 @@ export const ImageMarker = () => {
   const text_options_textalain_center: TextMarkOptions = {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
-      text: 'test text',
+      text: 'test text \n center',
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -678,7 +718,7 @@ export const ImageMarker = () => {
   const text_options_textalain_right: TextMarkOptions = {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
-      text: 'test text',
+      text: 'test text \n right',
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -692,13 +732,16 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
         textBackgroundStyle: {
           color: '#0FFF00',
           padding: '10%'
-        }
+        },
+      
+    
       }
     }
     ]
@@ -707,6 +750,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -722,6 +766,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -737,6 +782,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -752,6 +798,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -767,6 +814,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -782,6 +830,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -797,6 +846,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -812,6 +862,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -827,6 +878,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -842,6 +894,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -857,6 +910,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -874,6 +928,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         fontSize: 100,
         color: '#FF0000',
@@ -889,6 +944,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -904,6 +960,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -919,6 +976,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -934,6 +992,7 @@ export const ImageMarker = () => {
     backgroundImage: { src: require('./assets/code-images/1.png') },
     watermarkTexts: [{
       text: 'test text',
+      position:{position:Position.center},
       style: {
         color: '#FF0000',
         fontSize: 100,
@@ -1034,6 +1093,40 @@ export const ImageMarker = () => {
           dx: 50,
           dy: 50,
           radius: 20,
+          color: '#FC0700'
+        }
+      }
+    }
+    ]
+  }
+  const text_options_shadowStyle3: TextMarkOptions = {
+    backgroundImage: { src: require('./assets/code-images/1.png') },
+    watermarkTexts: [{
+      text: 'test text',
+      style: {
+        color: '#FF0000',
+        fontSize: 100,
+        shadowStyle: {
+          dx: 30,
+          dy: 50,
+          radius: 10,
+          color: '#FC0700'
+        }
+      }
+    }
+    ]
+  }
+  const text_options_shadowStyle4: TextMarkOptions = {
+    backgroundImage: { src: require('./assets/code-images/1.png') },
+    watermarkTexts: [{
+      text: 'test text',
+      style: {
+        color: '#FF0000',
+        fontSize: 100,
+        shadowStyle: {
+          dx: 50,
+          dy: 30,
+          radius: 10,
           color: '#FC0700'
         }
       }
@@ -1265,6 +1358,17 @@ export const ImageMarker = () => {
     backgroundImage: {
       src: require('./assets/code-images/1.png'),
       alpha: 0.1
+    },
+    watermarkTexts: [{
+      text: 'test text',
+      style: { color: '#FFFF00', fontSize: 100, }
+    }
+    ]
+  }
+  const text_options_backalpha0_5: TextMarkOptions = {
+    backgroundImage: {
+      src: require('./assets/code-images/1.png'),
+      alpha: 0.5
     },
     watermarkTexts: [{
       text: 'test text',
@@ -1583,6 +1687,20 @@ export const ImageMarker = () => {
       console.log('error', error)
     })
   }
+  const markTextShadowStyle3 = () => {
+    Marker.markText(text_options_shadowStyle3).then((result) => {
+      seturl_text_shadowStyle3(result)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
+  const markTextShadowStyle4 = () => {
+    Marker.markText(text_options_shadowStyle4).then((result) => {
+      seturl_text_shadowStyle4(result)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
   // bold
   const markTextFontBold = () => {
     Marker.markText(text_options_bold).then((result) => {
@@ -1773,6 +1891,13 @@ export const ImageMarker = () => {
       console.log('error', error)
     })
   }
+  const markTextbackalpha0_5 = () => {
+    Marker.markText(text_options_backalpha0_5).then((result) => {
+      seturl_backalpha0_5_text(result)
+    }).catch(error => {
+      console.log('error', error)
+    })
+  }
   const markTextbackalpha1 = () => {
     Marker.markText(text_options_backalpha1).then((result) => {
       seturl_backalpha1_text(result)
@@ -1857,7 +1982,7 @@ export const ImageMarker = () => {
                   {"network_image"}
                 </Text>
                 <Button
-                  title="network_image "
+                  title="ImageOptions_src_network_image "
                   color="#9a73ef"
                   onPress={markImageNetWorkImage}
                 />
@@ -1877,7 +2002,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_topleft "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_topleft "
                   color="#9a73ef"
                   onPress={markImagetopleft}
                 />
@@ -1889,7 +2014,7 @@ export const ImageMarker = () => {
             </View>
           </TestCase>
           <TestCase
-            itShould=' icon_topright '
+            itShould='icon_topright '
             tags={['C_API']}>
             <View style={styles.body}>
               <View style={styles.sectionContainer}>
@@ -1897,7 +2022,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_topright "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_topright "
                   color="#9a73ef"
                   onPress={markImagetopright}
                 />
@@ -1917,7 +2042,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_topcenter "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_topcenter "
                   color="#9a73ef"
                   onPress={markImagetopcenter}
                 />
@@ -1937,7 +2062,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_bottomleft "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_bottomleft "
                   color="#9a73ef"
                   onPress={markImagebottomleft}
                 />
@@ -1957,7 +2082,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_bottomcenter "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_bottomcenter "
                   color="#9a73ef"
                   onPress={markImagebottomcenter}
                 />
@@ -1977,7 +2102,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_bottomright "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_bottomright "
                   color="#9a73ef"
                   onPress={markImagebottomright}
                 />
@@ -1997,7 +2122,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_center "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_position_center "
                   color="#9a73ef"
                   onPress={markImagecenter}
                 />
@@ -2017,7 +2142,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_xy "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_xynumber__x30y50 "
                   color="#9a73ef"
                   onPress={markImagexy}
                 />
@@ -2037,7 +2162,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_xypercent "
+                  title="markImage_ImageMarkOptions_watermarkImages_WatermarkImageOptions_position_PositionOptions_xypercent_x10%y20% "
                   color="#9a73ef"
                   onPress={markImagexppercentt}
                 />
@@ -2057,7 +2182,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_alpha0_1 "
+                  title="markImage_backgroundImage__ImageOptions_alpha0_1 "
                   color="#9a73ef"
                   onPress={markImagebackalpha0_1}
                 />
@@ -2065,6 +2190,26 @@ export const ImageMarker = () => {
                   {url_backalpha0_1}
                 </Text>
                 <Image resizeMode='contain' source={{ uri: url_backalpha0_1, width: 300, height: 150 }} />
+              </View>
+            </View>
+          </TestCase>
+          <TestCase
+            itShould=' back_alpha0_5'
+            tags={['C_API']}>
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>
+                  {"image marker"}
+                </Text>
+                <Button
+                  title="markImage_backgroundImage__ImageOptions_alpha0_5"
+                  color="#9a73ef"
+                  onPress={markImagebackalpha0_5}
+                />
+                <Text style={styles.sectionTitle}>
+                  {url_backalpha0_5}
+                </Text>
+                <Image resizeMode='contain' source={{ uri: url_backalpha0_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2077,7 +2222,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_alpha1"
+                  title="markImage_backgroundImage__ImageOptions_alpha1"
                   color="#9a73ef"
                   onPress={markImagebackalpha1}
                 />
@@ -2097,7 +2242,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_alpha0_1 "
+                  title="markImage_watermarkImages__WatermarkImageOptions_alpha0_1 "
                   color="#9a73ef"
                   onPress={markImagealpha0_1}
                 />
@@ -2105,6 +2250,26 @@ export const ImageMarker = () => {
                   {url_alpha0_1}
                 </Text>
                 <Image resizeMode='contain' source={{ uri: url_alpha0_1, width: 300, height: 150 }} />
+              </View>
+            </View>
+          </TestCase>
+          <TestCase
+            itShould=' icon_alpha0_5 '
+            tags={['C_API']}>
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>
+                  {"image marker"}
+                </Text>
+                <Button
+                  title="markImage_watermarkImages__WatermarkImageOptions_alpha0_5 "
+                  color="#9a73ef"
+                  onPress={markImagealpha0_5}
+                />
+                <Text style={styles.sectionTitle}>
+                  {url_alpha0_5}
+                </Text>
+                <Image resizeMode='contain' source={{ uri: url_alpha0_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2117,7 +2282,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_alpha1"
+                  title="markImage_watermarkImages__WatermarkImageOptions_alpha1"
                   color="#9a73ef"
                   onPress={markImagealpha1}
                 />
@@ -2137,14 +2302,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_scale0_5 "
+                  title="markImage_backgroundImage__ImageOptions_scale0_5 "
                   color="#9a73ef"
                   onPress={markImagebackscale0_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_backscale0_5}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_backscale0_5, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_backscale0_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2157,14 +2322,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_scale1_5"
+                  title="markImage_backgroundImage__ImageOptions_scale1_5"
                   color="#9a73ef"
                   onPress={markImagebackscale1_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_backscale1_5}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_backscale1_5, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_backscale1_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2177,14 +2342,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_scale0_5 "
+                  title="markImage_watermarkImages__WatermarkImageOptions_scale0_5 "
                   color="#9a73ef"
                   onPress={markImagescale0_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_scale0_5}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_scale0_5, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_scale0_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2197,14 +2362,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_scale1_5"
+                  title="markImage_watermarkImages__WatermarkImageOptions_scale1_5"
                   color="#9a73ef"
                   onPress={markImagescale1_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_scale1_5}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_scale1_5, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_scale1_5, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -2217,7 +2382,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_rotate_50 "
+                  title="markImage_backgroundImage__ImageOptions_rotate_50 "
                   color="#9a73ef"
                   onPress={markImagebackrotate_50}
                 />
@@ -2237,7 +2402,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_rotate_20"
+                  title="markImage_backgroundImage__ImageOptions_rotate_20"
                   color="#9a73ef"
                   onPress={markImagebackrotate_20}
                 />
@@ -2257,7 +2422,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_rotate_50 "
+                  title="markImage_watermarkImages__WatermarkImageOptions_rotate_50 "
                   color="#9a73ef"
                   onPress={markImagerotate_50}
                 />
@@ -2277,7 +2442,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="icon_rotate_20"
+                  title="markImage_watermarkImages__WatermarkImageOptions_rotate_20"
                   color="#9a73ef"
                   onPress={markImagerotate_20}
                 />
@@ -2297,7 +2462,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="qualityurl_100 "
+                  title="markImage_ImageMarkOptions_qualityurl_100 "
                   color="#9a73ef"
                   onPress={markImagequalityurl_100}
                 />
@@ -2317,7 +2482,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="qualityurl_20"
+                  title="markImage_ImageMarkOptions_qualityurl_20"
                   color="#9a73ef"
                   onPress={markImagequalityurl_20}
                 />
@@ -2337,7 +2502,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filename test1"
+                  title="markImage_ImageMarkOptions_filename test1"
                   color="#9a73ef"
                   onPress={markImageFilename1}
                 />
@@ -2357,7 +2522,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filename test2"
+                  title="markImage_ImageMarkOptions_filename test2"
                   color="#9a73ef"
                   onPress={markImageFilename2}
                 />
@@ -2377,7 +2542,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filetype png"
+                  title="markImage_ImageMarkOptions_saveFormat png"
                   color="#9a73ef"
                   onPress={markImageFiletypepng}
                 />
@@ -2397,7 +2562,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="file type jpg"
+                  title="markImage_ImageMarkOptions_saveFormat jpg"
                   color="#9a73ef"
                   onPress={markImageFiletypejpg}
                 />
@@ -2417,7 +2582,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="file type base64"
+                  title="markImage_ImageMarkOptions_saveFormat base64"
                   color="#9a73ef"
                   onPress={markImageFiletypebase64}
                 />
@@ -2439,7 +2604,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_fontName"
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_fontName"
                   color="#9a73ef"
                   onPress={markTextFontName}
                 />
@@ -2460,7 +2625,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_textalain_left "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textAlign_left "
                   color="#9a73ef"
                   onPress={markTextTextAlainLeft}
                 />
@@ -2481,7 +2646,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_textalain_center "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textAlign_center "
                   color="#9a73ef"
                   onPress={markTextTextAlainCenter}
                 />
@@ -2502,7 +2667,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_textalain_right "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textAlign_right "
                   color="#9a73ef"
                   onPress={markTextTextAlainRight}
                 />
@@ -2522,7 +2687,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_skewX "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_skewX 0.5 "
                   color="#9a73ef"
                   onPress={markTextskewX}
                 />
@@ -2542,7 +2707,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_italic "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_italic "
                   color="#9a73ef"
                   onPress={markTextFontItalic}
                 />
@@ -2562,7 +2727,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_fontSize_100 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_fontSize_100 "
                   color="#9a73ef"
                   onPress={markTextFontSize100}
                 />
@@ -2582,7 +2747,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_fontSize_30 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_fontSize_30 "
                   color="#9a73ef"
                   onPress={markTextFontSize30}
                 />
@@ -2602,7 +2767,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_color_red "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_color_red "
                   color="#9a73ef"
                   onPress={markTextColor2}
                 />
@@ -2622,7 +2787,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_color_yellow "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_color_yellow "
                   color="#9a73ef"
                   onPress={markTextColor1}
                 />
@@ -2642,7 +2807,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_test1 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_text_test1 "
                   color="#9a73ef"
                   onPress={markTextText1}
                 />
@@ -2662,7 +2827,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_test2 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_text_test2 "
                   color="#9a73ef"
                   onPress={markTextText2}
                 />
@@ -2683,7 +2848,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_all1 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_padding 10% "
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingAll1}
                 />
@@ -2703,7 +2868,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_all2 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_padding 10% 15%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingAll2}
                 />
@@ -2723,7 +2888,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_all3 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_padding 10% 15% 20%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingAll3}
                 />
@@ -2743,7 +2908,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_all4 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_padding 10% 15% 20% 5%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingAll4}
                 />
@@ -2764,7 +2929,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_top "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingTop 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingTop}
                 />
@@ -2784,7 +2949,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_bottom "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingBottom 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingBottom}
                 />
@@ -2804,7 +2969,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_left "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingLeft 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingLeft}
                 />
@@ -2824,7 +2989,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_right "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingRight 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingRight}
                 />
@@ -2844,7 +3009,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_horizontal "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingHorizontal 10% "
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingHorizontal}
                 />
@@ -2864,7 +3029,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_vertical "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingVertical 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingVertical}
                 />
@@ -2884,7 +3049,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_x "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingX 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingX}
                 />
@@ -2904,7 +3069,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_padding_y "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_paddingY 10%"
                   color="#9a73ef"
                   onPress={markTextbackgroundstylePaddingY}
                 />
@@ -2924,7 +3089,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_cornerRadius_all "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_cornerRadius_all { x  20%, y 30% }  "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleCornerRadiusAll}
                 />
@@ -2944,7 +3109,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_cornerRadius_topLeft "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_cornerRadius_topLeft { x  20%, y 30% } "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleCornerRadiustopLeft}
                 />
@@ -2964,7 +3129,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_cornerRadius_topRight "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_cornerRadius_topRight { x  20%, y 30% }"
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleCornerRadiustopRight}
                 />
@@ -2984,7 +3149,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_cornerRadius_bottomLeft "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_cornerRadius_bottomLeft { x  20%, y 30% }"
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleCornerRadiusbottomLeft}
                 />
@@ -3004,7 +3169,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_cornerRadius_bottomRight "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_cornerRadius_bottomRight { x  20%, y 30% }"
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleCornerRadiusbottomRight}
                 />
@@ -3024,7 +3189,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_type_stretchX "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_type_stretchX "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleTypeStretchX}
                 />
@@ -3044,7 +3209,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_type_stretchY "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_type_stretchY "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleTypeStretchY}
                 />
@@ -3064,7 +3229,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_color_green "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_color_green "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleColorGreen}
                 />
@@ -3084,7 +3249,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_backgroundStyle_color_red "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_textBackgroundStyle_color_red "
                   color="#9a73ef"
                   onPress={markTextbackgroundstyleColorRed}
                 />
@@ -3104,7 +3269,12 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_shadowStyle1 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_shadowStyle {
+                    dx: 50,
+                    dy: 50,
+                    radius: 10,
+                    color: '#008F6D'
+                  } "
                   color="#9a73ef"
                   onPress={markTextShadowStyle1}
                 />
@@ -3124,7 +3294,12 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_shadowStyle2 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_shadowStyle  {
+                    dx: 50,
+                    dy: 50,
+                    radius: 20,
+                    color: '#FC0700'
+                  }"
                   color="#9a73ef"
                   onPress={markTextShadowStyle2}
                 />
@@ -3132,6 +3307,56 @@ export const ImageMarker = () => {
                   {url_text_shadowStyle2}
                 </Text>
                 <Image resizeMode='contain' source={{ uri: url_text_shadowStyle2, width: 300, height: 150 }} />
+              </View>
+            </View>
+          </TestCase>
+          <TestCase
+            itShould=' text_shadowStyle3 '
+            tags={['C_API']}>
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>
+                  {"image marker"}
+                </Text>
+                <Button
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_shadowStyle  {
+                    dx: 30,
+                    dy: 50,
+                    radius: 20,
+                    color: '#FC0700'
+                  }"
+                  color="#9a73ef"
+                  onPress={markTextShadowStyle3}
+                />
+                <Text style={styles.sectionTitle}>
+                  {url_text_shadowStyle3}
+                </Text>
+                <Image resizeMode='contain' source={{ uri: url_text_shadowStyle3, width: 300, height: 150 }} />
+              </View>
+            </View>
+          </TestCase>
+          <TestCase
+            itShould=' text_shadowStyle4 '
+            tags={['C_API']}>
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>
+                  {"image marker"}
+                </Text>
+                <Button
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_shadowStyle  {
+                    dx: 50,
+                    dy: 30,
+                    radius: 20,
+                    color: '#FC0700'
+                  }"
+                  color="#9a73ef"
+                  onPress={markTextShadowStyle4}
+                />
+                <Text style={styles.sectionTitle}>
+                  {url_text_shadowStyle4}
+                </Text>
+                <Image resizeMode='contain' source={{ uri: url_text_shadowStyle4, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -3144,7 +3369,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_bold "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle__bold "
                   color="#9a73ef"
                   onPress={markTextFontBold}
                 />
@@ -3164,7 +3389,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_rotate30 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_rotate30 "
                   color="#9a73ef"
                   onPress={markTextRotate30}
                 />
@@ -3184,7 +3409,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_rotate50 "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_rotate50 "
                   color="#9a73ef"
                   onPress={markTextRotate50}
                 />
@@ -3204,7 +3429,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_underline "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_underline "
                   color="#9a73ef"
                   onPress={markTextUnderline}
                 />
@@ -3224,7 +3449,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_strikeThrough "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_style_TextStyle_strikeThrough "
                   color="#9a73ef"
                   onPress={markTextFontStrikeThrough}
                 />
@@ -3244,7 +3469,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_topleft "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_topleft "
                   color="#9a73ef"
                   onPress={markTexttopleft}
                 />
@@ -3264,7 +3489,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_topright "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_topright "
                   color="#9a73ef"
                   onPress={markTexttopright}
                 />
@@ -3284,7 +3509,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_topcenter "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_topcenter "
                   color="#9a73ef"
                   onPress={markTexttopcenter}
                 />
@@ -3304,7 +3529,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_bottomleft "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_bottomleft "
                   color="#9a73ef"
                   onPress={markTextbottomleft}
                 />
@@ -3324,7 +3549,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_bottomcenter "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_bottomcenter "
                   color="#9a73ef"
                   onPress={markTextbottomcenter}
                 />
@@ -3344,7 +3569,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_bottomright "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptionsposition_bottomright "
                   color="#9a73ef"
                   onPress={markTextbottomright}
                 />
@@ -3364,7 +3589,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_center "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_position_center "
                   color="#9a73ef"
                   onPress={markTextcenter}
                 />
@@ -3384,7 +3609,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_xy "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_xynumber { X: 30, Y: 50 }"
                   color="#9a73ef"
                   onPress={markTextxy}
                 />
@@ -3404,7 +3629,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="text_xypercent "
+                  title="markText_TextMarkOptions_watermarkTexts_TextOptions_position_PositionOptions_xypercent { X: '10%', Y: '20%' }"
                   color="#9a73ef"
                   onPress={markTextxppercentt}
                 />
@@ -3424,7 +3649,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_alpha0_1 "
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_alpha0_1 "
                   color="#9a73ef"
                   onPress={markTextbackalpha0_1}
                 />
@@ -3432,6 +3657,26 @@ export const ImageMarker = () => {
                   {url_backalpha0_1_text}
                 </Text>
                 <Image resizeMode='contain' source={{ uri: url_backalpha0_1_text, width: 300, height: 150 }} />
+              </View>
+            </View>
+          </TestCase>
+          <TestCase
+            itShould=' back_alpha0_5 '
+            tags={['C_API']}>
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <Text style={styles.sectionTitle}>
+                  {"image marker"}
+                </Text>
+                <Button
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_alpha0_5 "
+                  color="#9a73ef"
+                  onPress={markTextbackalpha0_5}
+                />
+                <Text style={styles.sectionTitle}>
+                  {url_backalpha0_5_text}
+                </Text>
+                <Image resizeMode='contain' source={{ uri: url_backalpha0_5_text, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -3444,7 +3689,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_alpha1"
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_alpha1"
                   color="#9a73ef"
                   onPress={markTextbackalpha1}
                 />
@@ -3464,14 +3709,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_scale0_5 "
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_scale0_5 "
                   color="#9a73ef"
                   onPress={markTextbackscale0_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_backscale0_5_text}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_backscale0_5_text, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_backscale0_5_text, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -3484,14 +3729,14 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_scale1_5"
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_scale1_5"
                   color="#9a73ef"
                   onPress={markTextbackscale1_5}
                 />
                 <Text style={styles.sectionTitle}>
                   {url_backscale1_5_text}
                 </Text>
-                <Image resizeMode='contain' source={{ uri: url_backscale1_5_text, width: 300, height: 150 }} />
+                <Image resizeMode='center' source={{ uri: url_backscale1_5_text, width: 300, height: 150 }} />
               </View>
             </View>
           </TestCase>
@@ -3504,7 +3749,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_rotate_50 "
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_rotate_50 "
                   color="#9a73ef"
                   onPress={markTextbackrotate_50}
                 />
@@ -3524,7 +3769,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="back_rotate_20"
+                  title="markText_TextMarkOptions_backgroundImage_ImageOptions_rotate_20"
                   color="#9a73ef"
                   onPress={markTextbackrotate_20}
                 />
@@ -3544,7 +3789,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="qualityurl_100 "
+                  title="markText_TextMarkOptions_qualityurl_100 "
                   color="#9a73ef"
                   onPress={markTextqualityurl_100}
                 />
@@ -3564,7 +3809,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="qualityurl_20"
+                  title="markText_TextMarkOptions_qualityurl_20"
                   color="#9a73ef"
                   onPress={markTextqualityurl_20}
                 />
@@ -3584,7 +3829,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filename test1"
+                  title="markText_TextMarkOptions_filename test1"
                   color="#9a73ef"
                   onPress={markTextFilename1}
                 />
@@ -3604,7 +3849,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filename test2"
+                  title="markText_TextMarkOptions_filename test2"
                   color="#9a73ef"
                   onPress={markTextFilename2}
                 />
@@ -3624,7 +3869,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="filetype png"
+                  title="markText_TextMarkOptions_saveFormat png"
                   color="#9a73ef"
                   onPress={markTextFiletypepng}
                 />
@@ -3644,7 +3889,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="file type jpg"
+                  title="markText_TextMarkOptions_saveFormat jpg"
                   color="#9a73ef"
                   onPress={markTextFiletypejpg}
                 />
@@ -3664,7 +3909,7 @@ export const ImageMarker = () => {
                   {"image marker"}
                 </Text>
                 <Button
-                  title="file type base64"
+                  title="markText_TextMarkOptions_saveFormat base64"
                   color="#9a73ef"
                   onPress={markTextFiletypebase64}
                 />
