@@ -3695,3 +3695,19 @@ const styles = StyleSheet.create({
     color: Colors.white,
   }
 });
+
+export const displayName = "ReactNativeImageMarker";
+export const framework = "React";
+export const category = "UI";
+export const title = "react-native-image-marker";
+export const documentationURL = "https://github.com/react-native-oh-library/react-native-image-marker";
+export const description = "React Native Image Marker";
+
+export const examples = [
+    {
+        title: "react-native-image-marker",
+        render: function (): any {
+            return <ImageMarker />;
+        },
+    },
+];
