@@ -1,4 +1,4 @@
-import type { RNPackageContext, RNPackage } from '@rnoh/react-native-openharmony/ts';
+import type { RNPackage, RNPackageContext } from '@rnoh/react-native-openharmony/ts';
 import { SvgPackage } from '@react-native-oh-tpl/react-native-svg/ts';
 import { AsyncStoragePackage } from '@react-native-oh-tpl/async-storage/ts';
 import { ImagePickerViewPackage } from '@react-native-oh-tpl/react-native-image-picker/ts';
@@ -17,15 +17,16 @@ import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/t
 import { PushNotificationPackage } from '@react-native-oh-tpl/push-notification-ios/ts';
 import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
 import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
-import { RNVideoCachePackage } from '@react-native-oh-tpl/rnoh-video-cache/ts';
+import { RNVideoCachePackage } from '@react-native-oh-tpl/react-native-video-cache/ts';
 import { CameraRollPackage } from '@react-native-oh-tpl/camera-roll/ts';
 import { BlobUtilPackage } from '@react-native-oh-tpl/react-native-blob-util/ts';
 import { NetInfoPackage } from '@react-native-oh-tpl/netinfo/ts';
-import { PickerViewPackage } from "@react-native-oh-tpl/react-native-picker/ts"
+import { PickerViewPackage } from '@react-native-oh-tpl/react-native-picker/ts';
 import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 import { MapsPackage } from '@react-native-oh-tpl/react-native-maps/ts';
 import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-exception-handler/ts';
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
+import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -55,6 +56,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new BlobUtilPackage(ctx),
     new ExceptionHandlerPackage(ctx),
     new GestureHandlerPackage(ctx),
-
+    new RNDatePickerPackage(ctx)
   ];
 }
