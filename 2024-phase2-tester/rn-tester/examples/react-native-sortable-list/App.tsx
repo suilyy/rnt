@@ -140,9 +140,12 @@ function App() {
         <Page name="ScrollMethod Test x (need horizontal)">
           <SortableScrollMethod2 />
         </Page>
-        <Page name="">
-          <View />
-        </Page>
+        <Page name={`占位符1`}>
+            <View style={{ flex: 1 }}></View>
+          </Page>
+          <Page name={`占位符2`}>
+            <View style={{ flex: 1 }}></View>
+          </Page>
         {/* SortableList end */}
         </NavigationContainer>
       </SafeAreaView>

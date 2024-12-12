@@ -26,7 +26,10 @@ export function CountryPickerTestApp() {
               </Page>
             );
           })}
-          <Page name={``}>
+          <Page name={`占位符1`}>
+            <View style={{ flex: 1 }}></View>
+          </Page>
+          <Page name={`占位符2`}>
             <View style={{ flex: 1 }}></View>
           </Page>
         </NavigationContainer>
