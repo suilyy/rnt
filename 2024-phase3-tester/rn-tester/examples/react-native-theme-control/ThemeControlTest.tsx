@@ -16,7 +16,7 @@ import {
 import { Tester, TestCase } from "@rnoh/testerino";
 import { use } from "chai";
 
-export const themeControlTest = () => {
+export const ThemeControlTest = () => {
   const themePreference = useThemePreference();
   const colorScheme = useColorScheme();
   const isDarkMode = colorScheme === "dark";
