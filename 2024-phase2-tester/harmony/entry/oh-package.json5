@@ -22,7 +22,7 @@
     "@react-native-oh-tpl/netinfo": "file:../../node_modules/@react-native-oh-tpl/netinfo/harmony/netinfo.har",
     "@react-native-oh-tpl/react-native-camera-kit": "file:../../node_modules/@react-native-oh-tpl/react-native-camera-kit/harmony/camera_kit.har",
     "@react-native-oh-tpl/react-native-keep-awake": "file:../../node_modules/@react-native-oh-tpl/react-native-keep-awake/harmony/keep_awake.har",
-    "@react-native-oh-tpl/react-native-orientation": "file:../../node_modules/@react-native-oh-tpl/react-native-orientation/harmony/rn_orientation.har"
+    "@react-native-oh-tpl/react-native-orientation": "file:../../node_modules/@react-native-oh-tpl/react-native-orientation/harmony/rn_orientation.har",
     "@react-native-oh-tpl/react-native-randombytes": "file:../../node_modules/@react-native-oh-tpl/react-native-randombytes/harmony/random_bytes.har",
     "@react-native-oh-tpl/react-native-background-timer": "file:../../node_modules/@react-native-oh-tpl/react-native-background-timer/harmony/background_timer.har",
     "@react-native-oh-tpl/react-native-contacts": "file:../../node_modules/@react-native-oh-tpl/react-native-contacts/harmony/contacts.har",

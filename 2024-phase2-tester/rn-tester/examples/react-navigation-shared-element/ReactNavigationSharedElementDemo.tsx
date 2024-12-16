@@ -5,7 +5,7 @@ import {
     Platform,
     StatusBar,
 } from 'react-native';
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView, initialWindowMetrics } from '@react-native-oh-tpl/react-native-safe-area-context';
 
 import { Router } from "./reactNativeShared/components";
 import { Tests } from "./reactNativeShared/tests";
@@ -20,10 +20,12 @@ if (Platform.OS === "android") {
 function ReactNavigationSharedElementDemo() {
     return (
         <View style={[styles.container]}>
-            <SafeAreaProvider>
-                <View style={{ flex: 1, marginTop: 0, transform: [{ translateY: 0 }] }}>
-                    <Router initialNode={<TestsScreen tests={Tests} />} />
-                </View>
+            <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+                <SafeAreaView style={{ flex: 1 }}>
+                    <View style={{ flex: 1, marginTop: 0, transform: [{ translateY: 0 }] }}>
+                        <Router initialNode={<TestsScreen tests={Tests} />} />
+                    </View>
+                </SafeAreaView>
             </SafeAreaProvider>
         </View>
     )

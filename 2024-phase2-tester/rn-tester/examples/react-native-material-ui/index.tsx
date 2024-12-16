@@ -3,7 +3,7 @@ import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import { NavigationContainer, Page } from "./components/navitagiton"
 import ActionButtonDemo from "./components/ActionButton"
 import AvatarDemo from './components/Avatar';
-import {ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import BadgeDemo from './components/Badge';
 import IconDemo from './components/Icon'
 import BottomNavigationDome from './components/BottomNavigation'
@@ -31,75 +31,79 @@ export const MaterialUiDemo = () => {
     }
   };
   return (
-<ThemeContext.Provider value={getTheme(uiTheme)}>
-    <Tester>
-      <TestCase tags={['C_API']} itShould="material-ui">
-      
-        <NavigationContainer>
-      
-          <Page name="ActionButton">
-            <ActionButtonDemo />
-          </Page>
-          <Page name="Avatar">
-            <AvatarDemo />
-          </Page>
-          <Page name="Badge">
-            <BadgeDemo></BadgeDemo>
-          </Page>
-          <Page name="Icon">
-            <IconDemo></IconDemo>
-          </Page>
-          <Page name="IconToggle">
-            <IconToggleDemo></IconToggleDemo>
-          </Page>
-          <Page name="BottomNavigation">
-            <BottomNavigationDome></BottomNavigationDome>
-          </Page>
-          <Page name="ButtonDemo">
-            <ButtonDemo></ButtonDemo>
-          </Page>
-          <Page name="CardDemo">
-            <CardDemo></CardDemo>
-          </Page>
-          <Page name="CheckboxDemo">
-            <CheckboxDemo></CheckboxDemo>
-          </Page>
-          <Page name="DialogDemo">
-            <DialogDemo></DialogDemo>
-          </Page>
-          <Page name="DividerDemo">
-            <DividerDemo></DividerDemo>
-          </Page>
-          <Page name="DrawerDemo">
-            <DrawerDemo></DrawerDemo>
-          </Page>
-          <Page name="ListItemDemo">
-            <ListItemDemo></ListItemDemo>
-          </Page>
-          <Page name="SnackbarDemo">
-            <SnackbarDemo></SnackbarDemo>
-          </Page>
-          <Page name="SubheaderDemo">
-            <SubheaderDemo></SubheaderDemo>
-          </Page>
-          <Page name="ToolbarDemo">
-            <ToolbarDemo></ToolbarDemo>
-          </Page>
-        </NavigationContainer>
-     
-      </TestCase>
-    </Tester>
+    <ThemeContext.Provider value={getTheme(uiTheme)}>
+      <Tester>
+        <ScrollView style={{ marginBottom: 100 }}>
+          <TestCase tags={['C_API']} itShould="material-ui">
+
+            <NavigationContainer>
+
+              <Page name="ActionButton">
+                <ActionButtonDemo />
+              </Page>
+              <Page name="Avatar">
+                <AvatarDemo />
+              </Page>
+              <Page name="Badge">
+                <BadgeDemo></BadgeDemo>
+              </Page>
+              <Page name="Icon">
+                <IconDemo></IconDemo>
+              </Page>
+              <Page name="IconToggle">
+                <IconToggleDemo></IconToggleDemo>
+              </Page>
+              <Page name="BottomNavigation">
+                <BottomNavigationDome></BottomNavigationDome>
+              </Page>
+              <Page name="ButtonDemo">
+                <ButtonDemo></ButtonDemo>
+              </Page>
+              <Page name="CardDemo">
+                <CardDemo></CardDemo>
+              </Page>
+              <Page name="CheckboxDemo">
+                <CheckboxDemo></CheckboxDemo>
+              </Page>
+              <Page name="DialogDemo">
+                <DialogDemo></DialogDemo>
+              </Page>
+              <Page name="DividerDemo">
+                <DividerDemo></DividerDemo>
+              </Page>
+              <Page name="DrawerDemo">
+                <DrawerDemo></DrawerDemo>
+              </Page>
+              <Page name="ListItemDemo">
+                <ListItemDemo></ListItemDemo>
+              </Page>
+              <Page name="SnackbarDemo">
+                <SnackbarDemo></SnackbarDemo>
+              </Page>
+              <Page name="SubheaderDemo">
+                <SubheaderDemo></SubheaderDemo>
+              </Page>
+              <Page name="ToolbarDemo">
+                <ToolbarDemo></ToolbarDemo>
+              </Page>
+            </NavigationContainer>
+
+          </TestCase>
+        </ScrollView>
+      </Tester>
     </ThemeContext.Provider>
   )
 }
 
 // 使用 export 导出
+
 export const displayName = "MaterialUiExample";
 export const framework = "React";
 export const category = "UI";
 export const title = "react-native-material-ui";
 export const documentationURL = "https://github.com/react-native-oh-library/react-native-material-ui";
 export const description = "Simple React Native material ui component.";
+
 
 export const examples = [
   {

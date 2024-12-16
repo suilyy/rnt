@@ -221,11 +221,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-elements/test/SampleElementExample'),
   },
   {
-    key: 'ReactNativeElements (test)',
-    category: 'Basic',
-    module: require('../examples/react-native-elements/test/SampleElementExample'),
-  },
-  {
     key: 'NativeBase',
     category: 'UI',
     module: require('../examples/NativeBase/SamplenNativeBaseExample'),
@@ -466,7 +461,7 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-PDFView/AppPDF'),
   },
   {
-    key: 'ReactNativeReconnectingWebSocketDemo',
+    key: 'ReactNativeGiftedChatDemo',
     category: 'Basic',
     module: require('../examples/react-native-gifted-chat/App')
   },
