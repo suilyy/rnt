@@ -483,6 +483,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     box: {
+        width: '100%',
         height: 150,
         backgroundColor: '#6C7A89',
         justifyContent: 'center',
