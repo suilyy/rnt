@@ -84,7 +84,7 @@ export function ChipText() {
       text:'Chip Content' 
      },
      {
-      key: 'Chip style: icon  is <Image source={require("../assets/images/avatar.png")} accessibilityIgnoresInvertColors/>',
+      key: 'Chip style: avtar  is <Image source={require("../assets/images/avatar.png")} accessibilityIgnoresInvertColors/>',
       value: {
         style:[styles.chip],
         avatar:<Image
@@ -213,7 +213,7 @@ export function ChipText() {
      {
       key: 'Chip style: background  is {color:MD2Colors.red100}',
       value: {
-        style:[styles.chip,{backgroundColor:MD2Colors.red100}],
+        // style:[styles.chip,{backgroundColor:MD2Colors.red100}],
         selected:true,
         showSelectedOverlay:true,
         onPress:_onPress,
@@ -444,14 +444,15 @@ export function ChipText() {
       text:'With custom text' 
      },
      {
-      key: 'Chip style: theme = {{ colors: { primary:"green"}}}',
+      key: 'Chip style: icon theme is { colors: { primary: "green" } }',
       value: {
-        style:[styles.chip],
-        onPress:_onPress,
-        theme:{ colors: { primary:"green"}}
+        icon:"information",
+        style: [styles.chip],
+        onPress: _onPress,
+        theme: { colors: { primary: "green" } }
       },
-      text:'With custom text' 
-     },
+      text: 'With custom text'
+    },
      {
       key: 'Chip style: elevated = {true}',
       value: {

@@ -44,6 +44,11 @@ function FABText() {
     console.info('fuction onPress')
   }
 
+  const [isActive, setIsActive] = React.useState(false); // 管理 FAB 的状态
+  const _onPress3 = () => {
+    setIsActive(prev => !prev); // 切换状态
+  };
+
   const _onLongPress =() => {
     console.info('fuction onLongPress')
   }
@@ -61,7 +66,6 @@ function FABText() {
   const [icon1 , setIcon1 ] = React.useState<string>('plus');
 
   React.useState<boolean>(false);
-
 
   const FabProps = [
     {
@@ -125,12 +129,13 @@ function FABText() {
       },
     },
     {
-      key: 'fab style:accessibilityState={disabled:true}',
+      key: 'fab style:accessibilityState',
       value: {
-        icon:'email',
+        icon : isActive ? 'check' : 'plus', // 根据状态显示不同的图标
         style:styles.fab,
-        label: 'Email',
-        accessibilityState:{disabled:true},
+        label: 'accessibilityState is ' + isActive,
+        onPress:_onPress3, // 点击事件处理
+        accessibilityState: { disable: isActive } // 设置可访问性状态
       },
     },
     {
@@ -235,7 +240,7 @@ function FABText() {
     {
       key: 'fab fuction:onPress',
       value: {
-        icon:'email',
+        icon:icon,
         style:styles.fab,
         label: 'Email',
         onPress:_onPress,
@@ -378,14 +383,24 @@ function FABText() {
       },
     },
     {
-      key: 'fab style:Theme { colors: { primary: "green"} }',
+      key: 'fab style: theme { colors: { onPrimaryContainer: "red"} }',
       value: {
         icon:'email',
         style:styles.fab,
         label:'Email',
-        theme:{ colors: { primary: 'green' } }
+        theme:{ colors: { onPrimaryContainer: 'red'} }
       },
     },
+    {
+      key: 'fab style: theme { colors: { onPrimaryContainer: "yellow"} }',
+      value: {
+        icon:'email',
+        style:styles.fab,
+        label:'Email',
+        theme:{ colors: { onPrimaryContainer: 'yellow'} }
+      },
+    },
+
   ]
 
   const [isExtended, setIsExtended] = React.useState(false);
@@ -399,10 +414,10 @@ function FABText() {
       key: ' AnimatedFAB style:icon={"plus"} label={"Label"}',
       value: {
         icon :'plus',
-        label:"label",
-        extended:false,
+        label:'label',
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -411,9 +426,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         uppercase:true,
         style:styles.fabStyle
       },
@@ -423,9 +438,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         uppercase:false,
         style:styles.fabStyle
       },
@@ -435,9 +450,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         background:{color:MD2Colors.red100},
         style:styles.fabStyle
       },
@@ -447,9 +462,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         accessibilityLabel:"accessibilityLabel1",
         style:styles.fabStyle
       },
@@ -459,9 +474,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         accessibilityLabel:"accessibilityLabel2",
         style:styles.fabStyle
       },
@@ -471,9 +486,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         accessibilityState:{disabled:true},
         style:styles.fabStyle
       },
@@ -483,9 +498,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         color:'red',
         style:styles.fabStyle
       },
@@ -495,9 +510,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         color:'blue',
         style:styles.fabStyle
       },
@@ -507,9 +522,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         rippleColor:MD2Colors.red100,
         style:styles.fabStyle
       },
@@ -519,9 +534,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         rippleColor:MD2Colors.blue100,
         style:styles.fabStyle
       },
@@ -531,9 +546,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         disabled:true,
         style:styles.fabStyle
       },
@@ -543,9 +558,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         disabled:false,
         style:styles.fabStyle
       },
@@ -555,9 +570,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         visible:true,
         style:styles.fabStyle
       },
@@ -567,9 +582,9 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         visible:false,
         style:styles.fabStyle
       },
@@ -581,7 +596,7 @@ function FABText() {
         label:"label",
         extended:_getExtended('AnimatedFAB'),
         onPress:_showExtended('AnimatedFAB'),
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -590,10 +605,10 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         onLongPress:_onLongPress,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -602,11 +617,11 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         onLongPress:_onLongPress,
         delayLongPress:1000,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -615,11 +630,11 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         onLongPress:_onLongPress,
         delayLongPress:10000,
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -641,8 +656,8 @@ function FABText() {
         label:"label",
         extended:_getExtended('AnimatedFAB3'),
         onPress:_showExtended('AnimatedFAB3'),
-        animateFromL:'right' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        animateFrom:'right' as 'left' | 'right',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -653,8 +668,8 @@ function FABText() {
         label:"label",
         extended:_getExtended('AnimatedFAB4'),
         onPress:_showExtended('AnimatedFAB4'),
-        animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        animateFrom:'left' as 'left' | 'right',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -666,7 +681,7 @@ function FABText() {
         extended:_getExtended('AnimatedFAB22'),
         onPress:_showExtended('AnimatedFAB22'),
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
@@ -675,10 +690,10 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         labelMaxFontSizeMultiplier:1,
         style:styles.fabStyle
       },
@@ -688,24 +703,24 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         labelMaxFontSizeMultiplier:2,
         style:styles.fabStyle
       },
     },
     {
-      key: ' iconMode style:variant={"primary"}',
+      key: ' iconMode style:variant={"tertiary"}',
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
-        variant :"primary" as 'primary' | 'secondary' | 'tertiary' | 'surface',
+        iconMode:'dynamic' as 'static' | 'dynamic',
+        variant :"tertiary" as 'primary' | 'secondary' | 'tertiary' | 'surface',
         style:styles.fabStyle
       },
     },
@@ -714,24 +729,37 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle
       },
     },
     {
-      key: ' iconMode style:theme ={ colors: { primary:"green" } }',
+      key: ' iconMode style:theme ={ colors: { onPrimaryContainer:"green" } }',
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle,
-        theme:{ colors: { primary: 'green' } }
+        theme:{ colors: { onPrimaryContainer: 'green' } }
+      },
+    },
+    {
+      key: ' iconMode style:theme ={ colors: { onPrimaryContainer:"red" } }',
+      value: {
+        icon :'plus',
+        label:"label",
+        extended:true,
+        onPress:_onPress,
+        animateFromL:'left' as 'left' | 'right',
+        iconMode:'dynamic' as 'static' | 'dynamic',
+        style:styles.fabStyle,
+        theme:{ colors: { onPrimaryContainer: 'red' } }
       },
     },
     {
@@ -739,10 +767,10 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle,
         testID:"testID1"
       },
@@ -752,10 +780,10 @@ function FABText() {
       value: {
         icon :'plus',
         label:"label",
-        extended:false,
+        extended:true,
         onPress:_onPress,
         animateFromL:'left' as 'left' | 'right',
-        iconMode:'static' as 'static' | 'dynamic',
+        iconMode:'dynamic' as 'static' | 'dynamic',
         style:styles.fabStyle,
         testID:"testID2"
       },
@@ -931,7 +959,7 @@ function FABText() {
         icon:_getOpen('FABGroup11') ? 'calendar-today' : 'plus',
         actions:actions,
         onStateChange:_showOpen('FABGroup11'),
-        onLongPress:_onLongPress,
+        //onLongPress:_onLongPress,
         toggleStackOnLongPress:true
       },
     },
@@ -943,12 +971,12 @@ function FABText() {
         icon:_getOpen('FABGroup12') ? 'calendar-today' : 'plus',
         actions:actions,
         onStateChange:_showOpen('FABGroup12'),
-        onLongPress:_onLongPress,
+        //onLongPress:_onLongPress,
         toggleStackOnLongPress:false
       },
     },
     {
-      key: ' FABGroup style:delayLongPress={10000}',
+      key: ' FABGroup style:delayLongPress={1000}',
       value: {
         open:_getOpen('FABGroup13'),
         visible:true,
@@ -956,11 +984,11 @@ function FABText() {
         actions:actions,
         onStateChange:_showOpen('FABGroup13'),
         onLongPress:_onLongPress,
-        delayLongPress:10000
+        delayLongPress:1000
       },
     },
     {
-      key: ' FABGroup style:delayLongPress={100000}',
+      key: ' FABGroup style:delayLongPress={10000}',
       value: {
         open:_getOpen('FABGroup14'),
         visible:true,
@@ -968,7 +996,7 @@ function FABText() {
         actions:actions,
         onStateChange:_showOpen('FABGroup14'),
         onLongPress:_onLongPress,
-        delayLongPress:100000
+        delayLongPress:10000
       },
     },
     {
@@ -1104,14 +1132,25 @@ function FABText() {
       },
     },
     {
-      key: ' FABGroup style :theme = { colors: { primary: "green" } }',
+      key: ' FABGroup style :theme = { onPrimaryContainer: { primary: "green" } }',
       value: {
         open:_getOpen('FABGroup28'),
         visible:true,
         icon:_getOpen('FABGroup28') ? 'calendar-today' : 'plus',
         actions:actions,
         onStateChange:_showOpen('FABGroup28'),
-        theme :{ colors: { primary: 'green' } }
+        theme :{ colors: { onPrimaryContainer: 'green' } }
+      },
+    },
+    {
+      key: ' FABGroup style :theme = { onPrimaryContainer: { primary: "pink" } }',
+      value: {
+        open:_getOpen('FABGroup28'),
+        visible:true,
+        icon:_getOpen('FABGroup28') ? 'calendar-today' : 'plus',
+        actions:actions,
+        onStateChange:_showOpen('FABGroup28'),
+        theme :{ colors: { onPrimaryContainer: 'pink' } }
       },
     },
     {

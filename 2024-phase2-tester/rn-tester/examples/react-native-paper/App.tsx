@@ -42,6 +42,18 @@ import TouchableRippleDemo from './examples/TouchableRippleExample';
 import BottomNavigationExample from './examples/BottomNavigationExample';
 import RadioButtonExample from './examples/RadioButtonExample';
 import PortalDemo from './examples/PortalDemo';
+import BannerExample2 from './examples/BannerExample2';
+import BannerExample3 from './examples/BannerExample3';
+import CheckboxAndroid from './examples/CheckboxAndroid';
+import CheckboxIOS from './examples/CheckboxIOS';
+import CheckboxItem from './examples/CheckboxItem';
+import ListAccordion from './examples/ListAccordion';
+import ListAccordionBox from './examples/ListAccordionBox';
+import DataTableHeader from './examples/DataTableHeader';
+import HelperTextTheme from './examples/HelperTextTheme';
+import IconTheme from './examples/IconTheme';
+import ListTheme from './examples/ListTheme';
+
 
 function App() {
   return (
@@ -66,6 +78,12 @@ function App() {
             <Page name="EXAMPLE: BannerExample">
               <BannerExample/>
             </Page>
+            <Page name="EXAMPLE: BannerExample2">
+              <BannerExample2/>
+            </Page>
+            <Page name="EXAMPLE: BannerExample3">
+              <BannerExample3/>
+            </Page>
             <Page name="EXAMPLE: ButtonExample">
               <ButtonExample/>
             </Page>
@@ -79,6 +97,15 @@ function App() {
             <Page name="EXAMPLE: CheckboxItemExample">
               <CheckboxItemExample/>
             </Page>
+            <Page name="EXAMPLE: CheckboxAndroid">
+              <CheckboxAndroid/>
+            </Page>
+            <Page name="EXAMPLE: CheckboxIOS">
+              <CheckboxIOS/>
+            </Page>
+            <Page name="EXAMPLE: CheckboxItem">
+              <CheckboxItem/>
+            </Page>
 
             <Page name="EXAMPLE: ChipExample">
               <ChipExample/>
@@ -86,6 +113,9 @@ function App() {
 
             <Page name="EXAMPLE: DataTable">
               <DataTable/>
+            </Page>
+            <Page name="EXAMPLE: DataTableHeader">
+              <DataTableHeader/>
             </Page>
 
             <Page name="EXAMPLE: Dialog">
@@ -104,14 +134,29 @@ function App() {
             <Page name="EXAMPLE: HelperTextExample">
               <HelperTextExample/>
             </Page>
+            <Page name="EXAMPLE: HelperTextTheme">
+              <HelperTextTheme/>
+            </Page>
             <Page name="EXAMPLE: IconExample">
               <IconExample/>
+            </Page>
+            <Page name="EXAMPLE: IconTheme">
+              <IconTheme/>
             </Page>
             <Page name="EXAMPLE: IconButtonExample">
               <IconButtonExample/>
             </Page>
             <Page name="EXAMPLE: ListAccordionExample">
               <ListAccordionExample/>
+            </Page>
+            <Page name="EXAMPLE: ListAccordion">
+              <ListAccordion/>
+            </Page>
+            <Page name="EXAMPLE: ListTheme">
+              <ListTheme/>
+            </Page>
+            <Page name="EXAMPLE: ListAccordionBox">
+              <ListAccordionBox/>
             </Page>
             <Page name="EXAMPLE: MenuExample">
               <MenuExample/>
@@ -173,4 +218,3 @@ function App() {
 }
 
 export default App;
-
