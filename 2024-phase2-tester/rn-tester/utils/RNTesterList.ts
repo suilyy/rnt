@@ -185,7 +185,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'VconsoleExample',
     category: 'UI',
     module: require('../examples/react-native-vconsole/VConsoleTest').default
-  }
+  },
   {
     key: 'ReactNativeSortableList',
     category: 'UI',
@@ -214,11 +214,6 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeImageHeaderScrollView',
     category: 'Basic',
     module: require('../examples/react-native-image-header-scroll-view/App'),
-  },
-  {
-    key: 'ReactNativeElements (demo)',
-    category: 'Basic',
-    module: require('../examples/react-native-elements/demo/Elements'),
   },
   {
     key: 'ReactNativeElements (test)',
@@ -466,7 +461,7 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-PDFView/AppPDF'),
   },
   {
-    key: 'ReactNativeReconnectingWebSocketDemo',
+    key: 'ReactNativeGiftedChatDemo',
     category: 'Basic',
     module: require('../examples/react-native-gifted-chat/App')
   },

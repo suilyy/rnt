@@ -12,11 +12,10 @@ import {
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
 import { SpinKitView } from "@react-native-oh-tpl/react-native-spinkit";
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { RTNCameraKitView } from "@react-native-oh-tpl/react-native-camera-kit";
 import { SignatureCaptureArkView } from '@react-native-oh-tpl/react-native-signature-capture';
-import { RNPDFView } from '@react-native-oh-tpl/react-native-view-pdf'；
+import { RNPDFView } from '@react-native-oh-tpl/react-native-view-pdf';
 import {
   BarCharts,
   LineCharts,
@@ -33,7 +32,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
 import { RNCSkiaDomView, SKIA_DOM_VIEW_TYPE } from '@react-native-oh-tpl/react-native-skia';
 import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker";
-import {  BlurView, BLUR_TYPE } from "@react-native-oh-tpl/blur";
 import { HighlighterView } from "@react-native-oh-tpl/react-native-ui-lib";
 import { VisionCameraView } from "@react-native-oh-tpl/react-native-vision-camera";
 import { NativeScan } from "@react-native-oh-tpl/react-native-qr-decode-image-camera";
@@ -97,7 +95,6 @@ const arkTsComponentNames: Array<string> = [
   "GeneratedSampleView",
   "PropsDisplayer",
   SpinKitView.NAME,
-  SVG_VIEW_TYPE_NAME,
   RTNCameraKitView.NAME,
   BarCharts.NAME,
   LineCharts.NAME,
@@ -113,7 +110,6 @@ const arkTsComponentNames: Array<string> = [
   PICKER_TYPE,
   SKIA_DOM_VIEW_TYPE,
   DATETIME_PICKER_VIEW_TYPE,
-  BLUR_TYPE,
   HighlighterView.NAME,
   VisionCameraView.NAME,
 ];
@@ -122,12 +118,6 @@ const arkTsComponentNames: Array<string> = [
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
-      SVGView({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag
-      })
-    }
     if (ctx.componentName === RTNCameraKitView.NAME) {
       RTNCameraKitView({
        ctx: ctx.rnComponentContext,
@@ -221,12 +211,6 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
 	if (ctx.componentName === DATETIME_PICKER_VIEW_TYPE) {
       RNDateTimePicker({
         ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    }
-	if (ctx.componentName === BLUR_TYPE) {
-      BlurView({
-        ctx: ctx.rnohContext,
         tag: ctx.tag,
       })
     }

@@ -592,7 +592,9 @@ class RNInput extends React.Component<{}, {}> {
   }
 }
 export default () => {
-  const [error, setError] = useState(false);
+   const [error, setError] = useState(false);
+   const [value1,setValue1] = useState('')
+   const [dimensions, setDimensions] = useState({ width: '100%', height: 80 });
 
   return (
     <Tester>
@@ -633,11 +635,18 @@ export default () => {
           </TestCase>
         </TestSuite>
         <TestSuite name="Input属性disabled 设置disable input禁止输入">
-          <TestCase itShould="设置后input无法输入" tags={['C_API']}>
+          <TestCase itShould="设置后disable为true" tags={['C_API']}>
             <View style={styles.container}>
-              <Text style={styles.subText}>设置disable</Text>
+              <Text style={styles.subText}>设置后disable为true</Text>
               <Input inputStyle={{ color: 'red', fontSize: 20, fontWeight: '500' }}
                 disabled={true} placeholder="请输入" />
+            </View>
+          </TestCase>
+          <TestCase itShould="设置后disable为false" tags={['C_API']}>
+            <View style={styles.container}>
+              <Text style={styles.subText}>设置后disable为false</Text>
+              <Input inputStyle={{ color: 'red', fontSize: 20, fontWeight: '500' }}
+                disabled={false} placeholder="请输入" />
             </View>
           </TestCase>
         </TestSuite>
@@ -651,19 +660,11 @@ export default () => {
                   fontWeight: '400',
                   backgroundColor: 'red'
                 }}
-                value='disable的样式'
                 disabled={true}
                 placeholder="请输入"
               />
             </View>
-            <View style={styles.container}>
-              <Text style={styles.subText}>未设置disable的样式</Text>
-              <Input
-                inputStyle={{ color: 'red', fontSize: 20, fontWeight: '500' }}
-                disabled={false}
-                placeholder="请输入"
-              />
-            </View>
+           
           </TestCase>
         </TestSuite>
         <TestSuite name="Input属性errorMessage  显示errorMessage">
@@ -722,7 +723,6 @@ export default () => {
                   padding: 10,
                   borderRadius: 10,
                 }}
-                value='请输入'
                 placeholder="INPUT WITH  MESSAGE"
               />
             </View>
@@ -742,7 +742,6 @@ export default () => {
                   padding: 10,
                   borderRadius: 10,
                 }}
-                value='请输入'
                 inputStyle={{ color: 'black', fontSize: 20, fontWeight: '400' }}
                 placeholder="INPUT WITH  MESSAGE"
               />
@@ -860,7 +859,7 @@ export default () => {
             </View>
           </TestCase>
         </TestSuite>
-        <TestSuite name="Input属性rightIconContainerStyle rightIcon设置样式">
+        <TestSuite name="Input属性editable rightIcon设置样式">
           <TestCase itShould="设置rightIconContainerStyle" tags={['C_API']}>
             <View style={styles.container}>
               <Text style={styles.subText}>rightIconContainerStyle</Text>
@@ -919,6 +918,134 @@ export default () => {
                 label="label"
                 placeholder="INPUT WITH MESSAGE"
               />
+            </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Input属性editable  接收React-Native原生Input组件的editable">
+          <TestCase itShould="接收React-Native原生Input组件的editable" tags={['C_API']}>
+            <View style={styles.container}>
+              <Text style={styles.subText}>原生Input组件的editable 设置未false不可输入</Text>
+              <Input
+                editable={false}
+                inputStyle={{ color: '#222222' }}
+                rightIconContainerStyle={{
+                  width: 40,
+                  borderWidth: 1,
+                  backgroundColor: 'blue',
+                  paddingLeft: 5,
+                  borderRadius: 20,
+                }}
+                rightIcon={{
+                  type: 'font-awesome',
+                  name: 'close',
+                  color: 'pink',
+                  size: 30,
+                }}
+                labelStyle={{ fontSize: 30, fontWeight: '400', color: 'pink' }}
+                label="label"
+                placeholder="原生Input组件的editable"
+              />
+            </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Input属性autoFocus  接收React-Native原生Input组件的autoFocus">
+          <TestCase itShould="接收React-Native原生Input组件的autoFocus" tags={['C_API']}>
+            <View style={styles.container}>
+              <Text style={styles.subText}>原生Input组件的autoFocus设置为true input框自动聚焦</Text>
+              <Input
+                autoFocus={true}
+                inputStyle={{ color: '#222222' }}
+                rightIconContainerStyle={{
+                  width: 40,
+                  borderWidth: 1,
+                  backgroundColor: 'blue',
+                  paddingLeft: 5,
+                  borderRadius: 20,
+                }}
+                rightIcon={{
+                  type: 'font-awesome',
+                  name: 'close',
+                  color: 'pink',
+                  size: 30,
+                }}
+                labelStyle={{ fontSize: 30, fontWeight: '400', color: 'pink' }}
+                label="label"
+                placeholder="原生Input组件的autoFocus"
+              />
+            </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Input属性style  接收React-Native原生View组件的style">
+          <TestCase itShould="接收React-Native原生View组件的style" tags={['C_API']}>
+            <View style={styles.container}>
+              <Text style={styles.subText}>原生View组件的style设置</Text>
+              <Input
+                style={{width:200,height:80,backgroundColor:'red'}}
+                inputStyle={{ color: '#222222' }}
+                rightIconContainerStyle={{
+                  width: 40,
+                  borderWidth: 1,
+                  backgroundColor: 'blue',
+                  paddingLeft: 5,
+                  borderRadius: 20,
+                }}
+                rightIcon={{
+                  type: 'font-awesome',
+                  name: 'close',
+                  color: 'pink',
+                  size: 30,
+                }}
+                labelStyle={{ fontSize: 30, fontWeight: '400', color: 'pink' }}
+                label="label"
+                placeholder="原生View组件的style"
+              />
+            </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="Input属性onLayout 接收React-Native原生View组件的onLayout">
+          <TestCase itShould="接收React-Native原生View组件的onLayout" tags={['C_API']}>
+            <View style={styles.container}>
+              <Text style={styles.subText}>原生View组件的onLayout设置</Text>
+              <Input
+               onLayout={(event) => {
+                const { width, height } = event.nativeEvent.layout;
+                const layoutString = `width: ${width}, height: ${height}`;
+                setValue1(layoutString);
+                console.log('Layout:', layoutString);
+              }}
+                style={{width:dimensions.width,height:dimensions.height}}
+                testID='InputViewStyle'
+                inputStyle={{ color: '#222222' }}
+                rightIconContainerStyle={{
+                  width: 40,
+                  borderWidth: 1,
+                  backgroundColor: 'blue',
+                  paddingLeft: 5,
+                  borderRadius: 20,
+                }}
+                rightIcon={{
+                  type: 'font-awesome',
+                  name: 'close',
+                  color: 'pink',
+                  size: 30,
+                }}
+                labelStyle={{ fontSize: 30, fontWeight: '400', color: 'pink' }}
+                label="label"
+                placeholder="原生View组件的onLayout"
+              />
+            </View>
+            <View style={{ width: 200, marginLeft: 20, paddingBottom: 20, marginTop: 20 }}>
+              <Text style={{ color: 'black' }}>onLayout回调方法显示组件的宽高</Text>
+              <Text style={{ color: 'black' }}>
+                {value1}
+              </Text>
+              <Button onPress={()=>{
+                if (dimensions.height == 80 ) {
+                  setDimensions({ width: '100%', height: 50 })
+                }else{
+                  setDimensions({ width: '100%', height: 80 })
+                }       
+              }}>修改组件的size</Button>
             </View>
           </TestCase>
         </TestSuite>

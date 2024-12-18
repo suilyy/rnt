@@ -5,42 +5,52 @@ import {
   MetroJSBundleProvider,
   ResourceJSBundleProvider,
   RNApp,
+  RNOHCoreContext,
   RNOHErrorDialog,
   RNOHLogger,
-  TraceJSBundleProviderDecorator,
-  RNOHCoreContext
+  TraceJSBundleProviderDecorator
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
 import { createRNPackages } from '../RNPackagesFactory';
-import { ProgressBarAndroid, PROGRESS_BAR_TYPE } from "@react-native-oh-tpl/progress-bar-android"
-import { BlurView, BLUR_TYPE } from "@react-native-oh-tpl/blur"
-import { RNCSlider, SLIDER_TYPE } from "@react-native-oh-tpl/slider"
-import { WebView, WEB_VIEW } from "@react-native-oh-tpl/react-native-webview"
+import { PROGRESS_BAR_TYPE, ProgressBarAndroid } from '@react-native-oh-tpl/progress-bar-android';
+import { RNCSlider, SLIDER_TYPE } from '@react-native-oh-tpl/slider';
+import { WEB_VIEW, WebView } from '@react-native-oh-tpl/react-native-webview';
 import {
-  RNCToolbarAndroid,
-  RNC_TOOLBAR_ANDROID_TYPE
-} from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid'
-import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-oh-tpl/checkbox"
-import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
-import { RTNPdfView, PDF_VIEW_TYPE } from '@react-native-oh-tpl/react-native-pdf';
-import { RNCPicker, PICKER_TYPE } from "@react-native-oh-tpl/picker"
-import { RNCProgressView, PROGRESS_VIEW_TYPE } from "@react-native-oh-tpl/progress-view"
-import { RNDateTimePicker, DATETIME_PICKER_VIEW_TYPE } from "@react-native-oh-tpl/datetimepicker"
-import { LottieAnimationView, LOTTIE_TYPE } from "@react-native-oh-tpl/lottie-react-native"
-import { NativeDatePickerView } from "@react-native-oh-tpl/react-native-date-picker"
-import { AIRMap, AIR_MAP_TYPE, AIRMapMarker, AIR_MAP_MARKER_TYPE, AIRMapPolyline, AIR_MAP_POLYLINE_TYPE, AIRMapPolygon,
- AIR_MAP_POLYGON_TYPE, AIRMapCircle, AIR_MAP_CIRCLE_TYPE, AIR_MAP_CALLOUT_SUBVIEW_TYPE, AIR_MAP_CALLOUT_TYPE,
- AIRMapCallout,
- AIRMapCalloutSubview,
- Geojson,
- AIR_GEOJSON_TYPE,
- AIRMapUrlTile,
- AIR_URLTILE_TYPE,
- AIRMapWMSTile,
- AIR_WMSTILE_TYPE,
- AIR_OVERLAY_TYPE,
- AIRMapOverlay
-  } from "@react-native-oh-tpl/react-native-maps"
+  RNC_TOOLBAR_ANDROID_TYPE,
+  RNCToolbarAndroid
+} from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid';
+import { CHECKBOX_TYPE, RNCCheckbox } from '@react-native-oh-tpl/checkbox';
+import { RNC_VIDEO_TYPE, RNCVideo } from '@react-native-oh-tpl/react-native-video';
+import { PDF_VIEW_TYPE, RTNPdfView } from '@react-native-oh-tpl/react-native-pdf';
+import { PICKER_TYPE, RNCPicker } from '@react-native-oh-tpl/picker';
+import { PROGRESS_VIEW_TYPE, RNCProgressView } from '@react-native-oh-tpl/progress-view';
+import { DATETIME_PICKER_VIEW_TYPE, RNDateTimePicker } from '@react-native-oh-tpl/datetimepicker';
+import { LOTTIE_TYPE, LottieAnimationView } from '@react-native-oh-tpl/lottie-react-native';
+import { RNDatePicker } from '@react-native-oh-tpl/react-native-date-picker';
+import {
+  AIR_GEOJSON_TYPE,
+  AIR_MAP_CALLOUT_SUBVIEW_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_MARKER_TYPE,
+  AIR_MAP_POLYGON_TYPE,
+  AIR_MAP_POLYLINE_TYPE,
+  AIR_MAP_TYPE,
+  AIR_OVERLAY_TYPE,
+  AIR_URLTILE_TYPE,
+  AIR_WMSTILE_TYPE,
+  AIRMap,
+  AIRMapCallout,
+  AIRMapCalloutSubview,
+  AIRMapCircle,
+  AIRMapMarker,
+  AIRMapOverlay,
+  AIRMapPolygon,
+  AIRMapPolyline,
+  AIRMapUrlTile,
+  AIRMapWMSTile,
+  Geojson
+} from '@react-native-oh-tpl/react-native-maps';
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -49,7 +59,7 @@ const arkTsComponentNames: Array<string> = [
   PROGRESS_BAR_TYPE,
   DATETIME_PICKER_VIEW_TYPE,
   RNC_TOOLBAR_ANDROID_TYPE,
-  BLUR_TYPE,
+  RNDatePicker.NAME,
   SLIDER_TYPE,
   WEB_VIEW,
   RNC_VIDEO_TYPE,
@@ -58,7 +68,6 @@ const arkTsComponentNames: Array<string> = [
   PICKER_TYPE,
   PROGRESS_VIEW_TYPE,
   LOTTIE_TYPE,
-  NativeDatePickerView.NAME,
   AIR_MAP_TYPE,
   AIR_MAP_MARKER_TYPE,
   AIR_MAP_POLYLINE_TYPE,
@@ -73,79 +82,72 @@ const arkTsComponentNames: Array<string> = [
 
 @Builder
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
-  // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === BLUR_TYPE) {
-      BlurView({
-        ctx: ctx.rnohContext,
-        tag: ctx.tag,
+    if (ctx.componentName === RNDatePicker.NAME) {
+      RNDatePicker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
       })
     }
     if (ctx.componentName === AIR_MAP_TYPE) {
-        AIRMap({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
-        AIRMapMarker({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
-        AIRMapPolyline({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
-        AIRMapPolygon({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
-        AIRMapCircle({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
-        AIRMapCallout({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
-        AIRMapCalloutSubview({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
-        AIRMapCalloutSubview({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_GEOJSON_TYPE) {
-        Geojson({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_URLTILE_TYPE) {
-        AIRMapUrlTile({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_WMSTILE_TYPE) {
-        AIRMapWMSTile({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }else if (ctx.componentName === AIR_OVERLAY_TYPE) {
-        AIRMapOverlay({
-            ctx: ctx.rnComponentContext,
-            tag: ctx.tag,
-          })
-        }
-    if (ctx.componentName === NativeDatePickerView.NAME) {
-      NativeDatePickerView({
+      AIRMap({
         ctx: ctx.rnComponentContext,
-        tag: ctx.tag
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
+      AIRMapMarker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
+      AIRMapPolyline({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
+      AIRMapPolygon({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
+      AIRMapCircle({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
+      AIRMapCallout({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_GEOJSON_TYPE) {
+      Geojson({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_URLTILE_TYPE) {
+      AIRMapUrlTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_WMSTILE_TYPE) {
+      AIRMapWMSTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_OVERLAY_TYPE) {
+      AIRMapOverlay({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
       })
     }
     if (ctx.componentName === LOTTIE_TYPE) {

@@ -472,7 +472,6 @@ export default function ButtonGroups(): JSX.Element {
         </TestSuite> */}
         <TestSuite name="ButtonGroup属性vertical的验证  设置vertical 按钮垂直方向显示">
           <TestCase itShould='vertical' tags={['C_API']}>
-            <View style={{height: 300}}>
             <ButtonGroup
             textStyle={{color:'orange',fontSize:20}}
             vertical={true}
@@ -481,10 +480,11 @@ export default function ButtonGroups(): JSX.Element {
               activeOpacity={0.1}
             disabledSelectedStyle={{backgroundColor:'green'}}
             />
-            </View>
           </TestCase>
         </TestSuite>
       </ScrollView>
     </Tester >
   );
 }
+
+

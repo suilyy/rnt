@@ -12,7 +12,6 @@
 #include "ToolbarAndroidPackage.h"
 #include "CheckboxPackage.h"
 #include "WebViewPackage.h"
-#include "FsPackage.h"
 #include "RNCVideoPackage.h"
 #include "generated/RNOHGeneratedPackage.h"
 #include "ReanimatedPackage.h"
@@ -58,7 +57,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<ToolbarAndroidPackage>(ctx),
         std::make_shared<CheckboxPackage>(ctx),
         std::make_shared<WebViewPackage>(ctx),
-        std::make_shared<FsPackage>(ctx),
         std::make_shared<ReanimatedPackage>(ctx),
         std::make_shared<SafeAreaViewPackage>(ctx),
         std::make_shared<PdfViewPackage>(ctx),

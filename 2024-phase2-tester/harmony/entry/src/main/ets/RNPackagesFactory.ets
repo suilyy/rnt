@@ -1,4 +1,5 @@
 import type {RNPackageContext, RNPackage} from '@rnoh/react-native-openharmony/ts';
+import { SvgPackage } from '@react-native-oh-tpl/react-native-svg/ts';
 import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
 import {RNPerformancePackage} from '@react-native-oh-tpl/react-native-performance/ts'
 import { RNRestartPackage } from '@react-native-oh-tpl/react-native-restart/ts';
@@ -11,7 +12,7 @@ import { ShakePackage } from "@react-native-oh-tpl/react-native-shake/ts";
 import {NetInfoPackage} from '@react-native-oh-tpl/netinfo/ts';
 import { RTNCameraKitPackage } from "@react-native-oh-tpl/react-native-camera-kit/ts";
 import { RNKeepAwakePackage } from "@react-native-oh-tpl/react-native-keep-awake/ts";
-import { RNOrientationPackage } from '@react-native-oh-tpl/rnoh-orientation/ts';
+import { RNOrientationPackage } from '@react-native-oh-tpl/react-native-orientation/ts';
 import { RandomBytesPackage } from '@react-native-oh-tpl/react-native-randombytes/ts';
 import { BackgroundTimerTurboModulePackage } from '@react-native-oh-tpl/react-native-background-timer/ts';
 import {ContactsPackage} from '@react-native-oh-tpl/react-native-contacts/ts';
@@ -50,6 +51,7 @@ import {RNSharePackage} from '@react-native-oh-tpl/react-native-share/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
+    new SvgPackage(ctx),
     new DocumentPickerPackage(ctx),
     new RNPerformancePackage(ctx),
     new RNRestartPackage(ctx),

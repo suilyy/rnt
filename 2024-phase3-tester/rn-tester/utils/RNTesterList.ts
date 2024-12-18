@@ -334,7 +334,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeImageMarker',
     category: 'UI',
-    module: require('../examples/react-native-image-marker/ImageMarkerNomal'),
+    module: require('../examples/react-native-image-marker/ImageMarker'),
   },
   {
     key: 'ReactNativeIncallManager',

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Animated} from 'react-native';
+import {View, StyleSheet, ScrollView, Button} from 'react-native';
 import {Slider, Text, Icon} from '@rneui/themed';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
 
@@ -10,6 +10,24 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
   const [vertValue, setVertValue] = useState(10);
   const [sliderStrat, setSliderStrat] = useState(false);
   const [value1, setValue1] = useState(10);
+  const [value2, setValue2] = useState(10);
+  const [value3, setValue3] = useState(10);
+  const [value4, setValue4] = useState(10);
+  const [value5, setValue5] = useState(10);
+  const [value6, setValue6] = useState(10);
+  const [value7, setValue7] = useState(10);
+  const [value8, setValue8] = useState(10);
+  const [value9, setValue9] = useState(10);
+  const [value10, setValue10] = useState(10);
+  const [value11, setValue11] = useState(10);
+  const [value12, setValue12] = useState(10);
+
+  const [animateTransitinsValue, setAnimateTransitinsValue] = useState(0);
+  const [animationConfigValue, setAnimationConfigValue] = useState(0);
+  const [animationTypeValue, setAnimationTypeValue] = useState(0);
+  const [animateTransitinsFlag, setAnimateTransitinsFlag] = useState(true);
+  const [animationConfigFlag, setAnimationConfigFlag] = useState(500);
+  const [animationTypeFlag, setAnimationTypeFlag] = useState<'spring' | 'timing'>('spring');
   const interpolate = (start: number, end: number) => {
     let k = (value - 0) / 10; // 0 =>min  && 10 => MAX
     return Math.ceil((1 - k) * start + k * end) % 256;
@@ -21,33 +39,6 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
     let b = interpolate(0, 0);
     return `rgb(${r},${g},${b})`;
   };
-  //   <TestCase itShould='Slider Vertical' tags={['C_API']}>
-  //   <View style={{ ...styles.verticalContent, height: 400 }}>
-  //     <Slider
-  //       value={vertValue}
-  //       onValueChange={setVertValue}
-  //       maximumValue={50}
-  //       minimumValue={20}
-  //       step={1}
-  //       orientation="vertical"
-  //       allowTouchTrack
-  //       thumbStyle={{ height: 20, width: 16, backgroundColor: 'transparent' }}
-  //       thumbProps={{
-  //         children: (
-  //           <Icon
-  //             name="heartbeat"
-  //             type="font-awesome"
-  //             size={20}
-  //             reverse
-  //             containerStyle={{ bottom: 20, right: 20 }}
-  //             color="#f50"
-  //           />
-  //         ),
-  //       }}
-  //     />
-  //   </View>
-  //   <Text style={{ paddingLeft: 25, color: '#000' }}>Value: {vertValue}</Text>
-  // </TestCase>
   return (
     <Tester>
       <ScrollView>
@@ -58,18 +49,28 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
             </View>
           </TestCase>
         </TestSuite>
+
+        {/* 与iOS保持一致 */}
         <TestSuite name="Slider属性animateTransitions  拖动时有动画效果">
           <TestCase itShould="animateTransitions" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
+                minimumValue={0}
+                maximumValue={10}
+                value={animateTransitinsValue}
+                onValueChange={setAnimateTransitinsValue}
                 allowTouchTrack
-                animateTransitions={true}
+                animateTransitions={animateTransitinsFlag}
                 animationConfig={{
-                  toValue: 100,
-                  duration: 2000,
-                  useNativeDriver: true,
+                  toValue: 10,
+                  duration: 1000,
+                  useNativeDriver: false,
                 }}
+                animationType='timing'
               />
+              <Button title='Press to change the value to 2' onPress={() => { setAnimateTransitinsValue(2) }} />
+              <Button title='Press to change the value to 8' onPress={() => { setAnimateTransitinsValue(8) }} />
+              <Button title={'animateTransitions:' + animateTransitinsFlag} onPress={() => { setAnimateTransitinsFlag(!animateTransitinsFlag) }} />
             </View>
           </TestCase>
         </TestSuite>
@@ -77,12 +78,25 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="animationConfig" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
+                minimumValue={0}
+                maximumValue={10}
+                value={animationConfigValue}
+                onValueChange={setAnimationConfigValue}
                 allowTouchTrack
                 animateTransitions={true}
                 animationConfig={{
-                  toValue: 100,
-                  duration: 2000,
-                  useNativeDriver: true,
+                  toValue: 10,
+                  duration: animationConfigFlag,
+                  useNativeDriver: false,
+                }}
+                animationType="timing"
+              />
+              <Button title='Press to change the value to 2' onPress={() => { setAnimationConfigValue(2) }} />
+              <Button title='Press to change the value to 8' onPress={() => { setAnimationConfigValue(8) }} />
+              <Button
+                title={'animationConfig.duration:' + animationConfigFlag}
+                onPress={() => {
+                  setAnimationConfigFlag(animationConfigFlag === 500 ? 3000 : 500)
                 }}
               />
             </View>
@@ -92,14 +106,31 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="animationType" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
+                minimumValue={0}
+                maximumValue={10}
+                value={animationTypeValue}
+                onValueChange={setAnimationTypeValue}
                 allowTouchTrack
                 animateTransitions={true}
-                animationConfig={{
-                  toValue: 1000,
-                  duration: 100,
-                  useNativeDriver: true,
+                animationConfig={animationTypeFlag === 'spring' ?
+                  {
+                    toValue: value2,
+                    useNativeDriver: false,
+                  } :
+                  {
+                    toValue: 10,
+                    duration: 1000,
+                    useNativeDriver: false,
+                  }}
+                animationType={animationTypeFlag}
+              />
+              <Button title='Press to change the value to 2' onPress={() => { setAnimationTypeValue(2) }} />
+              <Button title='Press to change the value to 8' onPress={() => { setAnimationTypeValue(8) }} />
+              <Button
+                title={'animationType:' + animationTypeFlag}
+                onPress={() => {
+                  setAnimationTypeFlag(animationTypeFlag === 'spring' ? 'timing' : 'spring')
                 }}
-                animationType="timing"
               />
             </View>
           </TestCase>
@@ -206,7 +237,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           </TestCase>
         </TestSuite>
         <TestSuite name="Slider属性disabled 设置为true slider将无法拖动 ">
-          <TestCase itShould="disabled" tags={['C_API']}>
+          <TestCase itShould="disabled 为true" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
                 allowTouchTrack
@@ -217,6 +248,56 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                   useNativeDriver: true,
                 }}
                 disabled={true}
+                debugTouchArea={true}
+                animationType="timing"
+                containerStyle={{
+                  containerHorizontal: {
+                    height: 10,
+                    justifyContent: 'center',
+                  },
+                  containerVertical: {
+                    width: 100,
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  },
+                  track: {
+                    borderRadius: 100,
+                  },
+                  trackHorizontal: {
+                    height: 10,
+                  },
+                  trackVertical: {
+                    flex: 0,
+                    width: 100,
+                  },
+                  touchArea: {
+                    position: 'absolute',
+                    backgroundColor: 'green',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                  },
+                  debugThumbTouchArea: {
+                    position: 'absolute',
+                    backgroundColor: 'pink',
+                    opacity: 0.7,
+                  },
+                }}
+              />
+            </View>
+          </TestCase>
+          <TestCase itShould="disabled 为false" tags={['C_API']}>
+            <View style={[styles.contentView]}>
+              <Slider
+                allowTouchTrack
+                animateTransitions={true}
+                animationConfig={{
+                  toValue: 1000,
+                  duration: 100,
+                  useNativeDriver: true,
+                }}
+                disabled={false}
                 debugTouchArea={true}
                 animationType="timing"
                 containerStyle={{
@@ -312,21 +393,10 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="maximumValue" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={10}
                 allowTouchTrack
-                animateTransitions={true}
-                animationConfig={{
-                  toValue: 1000,
-                  duration: 100,
-                  useNativeDriver: true,
-                }}
-                onValueChange={value => {
-                  console.log(value);
-                  setValue(value);
-                }}
+                onSlidingComplete={(value)=>{setValue3(value)}}
                 maximumTrackTintColor={'pink'}
                 maximumValue={40}
-                animationType="timing"
                 containerStyle={{
                   containerHorizontal: {
                     height: 100,
@@ -363,7 +433,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value}
+                Value: {value3}
               </Text>
             </View>
           </TestCase>
@@ -427,10 +497,8 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 value={10}
                 minimumValue={5}
                 allowTouchTrack
-                onValueChange={value => {
-                  console.log(value);
-                  setValue(value);
-                }}
+                onSlidingComplete={(value)=>{setValue(value)}}
+
                 maximumTrackTintColor={'pink'}
                 maximumValue={40}
                 animationType="timing"
@@ -458,7 +526,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
                 onValueChange={value => {
                   console.log(value);
-                  setValue(value);
+                  setValue4(value);
                 }}
                 onSlidingStart={() => {
                   setSliderStrat(true);
@@ -505,7 +573,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value}
+                Value: {value4}
               </Text>
             </View>
           </TestCase>
@@ -514,7 +582,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="onValueChange" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value5}
                 allowTouchTrack
                 // animateTransitions={true}
                 // animationConfig={{
@@ -524,7 +592,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 // }}
                 onValueChange={value => {
                   console.log(value);
-                  setValue1(value);
+                  setValue5(value);
                 }}
                 maximumTrackTintColor={'pink'}
                 maximumValue={40}
@@ -565,7 +633,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 // }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value5}
               </Text>
             </View>
           </TestCase>
@@ -586,7 +654,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
             <View style={{...styles.verticalContent, height: 400}}>
               <Slider
                 value={vertValue}
-                onValueChange={setVertValue}
+                onSlidingComplete={setVertValue}
                 maximumValue={50}
                 minimumValue={20}
                 step={1}
@@ -620,16 +688,16 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="step" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value6}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
                 maximumValue={40}
                 step={2}
-                onValueChange={value => setValue1(value)}
+                onSlidingComplete={value => setValue6(value)}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value6}
               </Text>
             </View>
           </TestCase>
@@ -638,13 +706,13 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="style" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value7}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
                 maximumValue={40}
                 step={2}
-                onValueChange={value => setValue1(value)}
+                onSlidingComplete={value => setValue7(value)}
                 style={{
                   height: 20,
                   backgroundColor: 'yellow',
@@ -652,7 +720,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value7}
               </Text>
             </View>
           </TestCase>
@@ -661,7 +729,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="thumbProps" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value8}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
@@ -679,7 +747,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                     />
                   ),
                 }}
-                onValueChange={value => setValue1(value)}
+                onSlidingComplete={value => setValue8(value)}
                 style={{
                   height: 20,
                   backgroundColor: 'yellow',
@@ -687,7 +755,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value8}
               </Text>
             </View>
           </TestCase>
@@ -696,7 +764,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="thumbStyle" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value9}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
@@ -715,7 +783,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                     />
                   ),
                 }}
-                onValueChange={value => setValue1(value)}
+                onSlidingComplete={value => setValue9(value)}
                 style={{
                   height: 20,
                   backgroundColor: 'yellow',
@@ -723,7 +791,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value9}
               </Text>
             </View>
           </TestCase>
@@ -732,7 +800,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="thumbTintColor" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value10}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
@@ -740,7 +808,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 step={2}
                 thumbTintColor={'blue'}
                 thumbStyle={{width: 40, height: 40}}
-                onValueChange={value => setValue1(value)}
+                onSlidingComplete={value => setValue10(value)}
                 style={{
                   height: 20,
                   backgroundColor: 'yellow',
@@ -748,7 +816,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value10}
               </Text>
             </View>
           </TestCase>
@@ -757,7 +825,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="thumbTouchSize" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value11}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}
@@ -765,8 +833,8 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 step={2}
                 thumbTintColor={'blue'}
                 thumbStyle={{width: 40, height: 40}}
-                thumbTouchSize={{width: 200, height: 20}}
-                onValueChange={value => setValue1(value)}
+                thumbTouchSize={{height: 100, width: 0}}
+                onSlidingComplete={value => setValue11(value)}
                 style={{
                   height: 20,
                   backgroundColor: 'yellow',
@@ -808,7 +876,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
                 }}
               />
               <Text style={{paddingLeft: 25, color: '#000'}}>
-                Value: {value1}
+                Value: {value11}
               </Text>
             </View>
           </TestCase>
@@ -817,7 +885,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
           <TestCase itShould="trackStyle" tags={['C_API']}>
             <View style={[styles.contentView]}>
               <Slider
-                value={value1}
+                value={value12}
                 allowTouchTrack
                 orientation={'horizontal'}
                 maximumTrackTintColor={'pink'}

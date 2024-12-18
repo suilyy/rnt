@@ -51,15 +51,11 @@
             }
         },
       {
-          "name": "fs.OpenMode.READ_ONLY",
-          "reason": "$string:fs_reason",
-          "usedScene": {
-              "abilities": [
-                  "EntryAbility"
-                ],
-              "when":"always"
-            }
-        },
+        "name": "ohos.permission.ACCELEROMETER"
+      },
+      {
+        "name": "ohos.permission.VIBRATE"
+      },
       {
         "name": "ohos.permission.LOCATION",
         "reason": "$string:Access_location",
@@ -68,29 +64,6 @@
             "EntryAbility"
           ],
           "when": "always"
-        }
-      },
-      {
-        "name" : "ohos.permission.PERMISSION1",
-        "reason": "$string:reason",
-        "usedScene": {
-          "abilities": [
-            "FormAbility"
-          ],
-          "when":"inuse"
-        }
-      },
-//      {
-//        "name": "ohos.permission.ACCESS_IDS"
-//      },
-      {
-        "name" : "ohos.permission.PERMISSION2",
-        "reason": "$string:reason",
-        "usedScene": {
-          "abilities": [
-            "FormAbility"
-          ],
-          "when":"always"
         }
       },
 

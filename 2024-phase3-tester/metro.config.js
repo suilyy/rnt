@@ -15,6 +15,7 @@ const config = {
   },
   resolver: {
     assetExts: [...defaultConfig.resolver.assetExts, 'pem', 'p12'],
+    unstable_enablePackageExports: true,
   },
 };
 

@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@rnoh/react-native-openharmony": "file:../react_native_openharmony",
-    "@react-native-oh-tpl/svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
+    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
     "@react-native-oh-tpl/react-native-document-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-document-picker/harmony/document_picker.har",
     "@react-native-oh-tpl/react-native-performance": "file:../../node_modules/@react-native-oh-tpl/react-native-performance/harmony/react_native_performance.har",
     "@react-native-oh-tpl/react-native-restart": "file:../../node_modules/@react-native-oh-tpl/react-native-restart/harmony/rn_restart.har",
@@ -22,7 +22,7 @@
     "@react-native-oh-tpl/netinfo": "file:../../node_modules/@react-native-oh-tpl/netinfo/harmony/netinfo.har",
     "@react-native-oh-tpl/react-native-camera-kit": "file:../../node_modules/@react-native-oh-tpl/react-native-camera-kit/harmony/camera_kit.har",
     "@react-native-oh-tpl/react-native-keep-awake": "file:../../node_modules/@react-native-oh-tpl/react-native-keep-awake/harmony/keep_awake.har",
-    "@react-native-oh-tpl/rnoh-orientation": "file:../../node_modules/@react-native-oh-tpl/react-native-orientation/harmony/rn_orientation.har",
+    "@react-native-oh-tpl/react-native-orientation": "file:../../node_modules/@react-native-oh-tpl/react-native-orientation/harmony/rn_orientation.har",
     "@react-native-oh-tpl/react-native-randombytes": "file:../../node_modules/@react-native-oh-tpl/react-native-randombytes/harmony/random_bytes.har",
     "@react-native-oh-tpl/react-native-background-timer": "file:../../node_modules/@react-native-oh-tpl/react-native-background-timer/harmony/background_timer.har",
     "@react-native-oh-tpl/react-native-contacts": "file:../../node_modules/@react-native-oh-tpl/react-native-contacts/harmony/contacts.har",
@@ -46,7 +46,7 @@
     "@react-native-oh-tpl/react-native-apple-authentication": "file:../../node_modules/@react-native-oh-tpl/react-native-apple-authentication/harmony/react-native-apple-authentication.har",
     "@react-native-oh-tpl/react-native-localization": "file:../../node_modules/@react-native-oh-tpl/react-native-localization/harmony/react_localization.har",
     "@react-native-oh-tpl/react-native-mmkv-storage": "file:../../node_modules/@react-native-oh-tpl/react-native-mmkv-storage/harmony/mmkv_storage.har",
-    "@react-native-oh-tpl/react-native-text-input-mask": "file:../../node_modules/@react-native-oh-tpl/react-native-text-input-mask/harmony/text_input_mask.har"
+    "@react-native-oh-tpl/react-native-text-input-mask": "file:../../node_modules/@react-native-oh-tpl/react-native-text-input-mask/harmony/text_input_mask.har",
     "@react-native-oh-tpl/react-native-bootsplash": "file:../../node_modules/@react-native-oh-tpl/react-native-bootsplash/harmony/boot_splash.har",
     "@react-native-oh-tpl/react-native-print": "file:../../node_modules/@react-native-oh-tpl/react-native-print/harmony/print.har",
     "@react-native-oh-tpl/react-native-keyboard-controller": "file:../../node_modules/@react-native-oh-tpl/react-native-keyboard-controller/harmony/keyboard_controller.har",

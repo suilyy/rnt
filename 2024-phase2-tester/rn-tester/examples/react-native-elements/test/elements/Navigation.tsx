@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {PALETTE} from '../../../../components/Palette';
+import {PALETTE} from './palette';
 
 const NavigationContext = React.createContext<
   | {
@@ -47,7 +47,7 @@ export function NavigationContainer({
         },
         registeredPageNames,
       }}>
-      <View style={{width: '100%', height: '100%', flexDirection: 'column'}}>
+      <View style={{width: '100%', height: '100%', flexDirection: 'column',marginTop:20,paddingBottom:40}}>
         <Page name="INDEX">
           <IndexPage />
         </Page>

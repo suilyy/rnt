@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Switch as S, View, ScrollView} from 'react-native';
-import {CheckBox, Icon, Switch, Text} from '@rneui/themed';
+import {CheckBox, Icon, Switch, Text, Button} from '@rneui/themed';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
-
+import  {safeStringify} from './log'
 type CheckboxComponentProps = {};
 
 class ViewComponent extends React.Component<{}, {}> {
@@ -34,7 +34,13 @@ const CheckboxComponent: React.FunctionComponent<
   const [check4, setCheck4] = useState(false);
   const [check5, setCheck5] = useState(false);
   const [check6, setCheck6] = useState(false);
-
+  const [check7, setCheck7] = useState(false);
+  const [check8, setCheck8] = useState(false);
+  const [check9, setCheck9] = useState(false);
+  const [value, setValue] = useState('')
+  const [value1, setValue1] = useState('')
+  const [changeBg,setChangeBg] = useState(false)
+  const [dimensions, setDimensions] = useState({ width: 300, height: 50 });
   return (
     <Tester>
       <ScrollView>
@@ -74,11 +80,19 @@ const CheckboxComponent: React.FunctionComponent<
           </TestCase>
         </TestSuite>
         <TestSuite name="CheckBox属性disabled验证 ckeckbox不可点击状态">
-          <TestCase itShould="disabled" tags={['C_API']}>
+          <TestCase itShould="disabled为true" tags={['C_API']}>
             <CheckBox
               checked={check2}
               disabled={true}
               onPress={() => setCheck2(!check2)}
+              checkedTitle="checkbox选中时的title"
+              title="checkbox未选中的title"
+            />
+          </TestCase>
+          <TestCase itShould="disabled为false" tags={['C_API']}>
+            <CheckBox
+              checked={check7}
+              onPress={() => setCheck7(!check7)}
               checkedTitle="checkbox选中时的title"
               title="checkbox未选中的title"
             />
@@ -231,34 +245,52 @@ const CheckboxComponent: React.FunctionComponent<
             />
           </TestCase>
         </TestSuite>
+        <TestSuite name="CheckBox属性onLayout验证 接收React-Native原生View组件的onLayout属性">
+          <TestCase itShould="设置React-Native原生View组件的onLayout属性 点击区域放大" tags={['C_API']}>
+            <CheckBox
+             onLayout={(event)=>{
+              const { width, height } = event.nativeEvent.layout;
+              const layoutString = `width: ${width}, height: ${height}`;
+              setValue1(layoutString);
+             }}
+              checked={check8}
+              onPress={() => setCheck8(!check8)}
+              title={'接收React-Native原生View组件的onLayout属性'}
+              checkedColor="#5C5C5C"
+              containerStyle={{width:dimensions.width,height:dimensions.height}}
+            />
+
+              <View style={{ width: 200, marginLeft: 20, paddingBottom: 20, marginTop: 20 }}>
+              <Text style={{ color: 'black' }}>onLayout回调方法显示组件的宽高</Text>
+              <Text style={{ color: 'black' }}>
+                {value1}
+              </Text>
+              <Button onPress={()=>{
+                if (dimensions.width == 300 ) {
+                  setDimensions({ width: 200, height: 100 })
+                }else{
+                  setDimensions({ width: 300, height: 50 })
+                }       
+              }}>修改组件的size</Button>
+            </View>
+          </TestCase>
+        </TestSuite>
+        <TestSuite name="CheckBox属性hitSlop验证 接收React-Native原生View组件的hitSlop属性">
+          <TestCase itShould="设置React-Native原生View组件的hitSlop属性" tags={['C_API']}>
+            <View style={{marginTop:50,marginBottom:50}}>
+            <CheckBox
+              hitSlop={{top:50,bottom:50,left:0,right:0}}
+              checked={check9}
+              onPress={() => setCheck9(!check9)}
+              title={'接收React-Native原生View组件的hitSlop属性'}
+              checkedColor= {changeBg ? "red" : "#5C5C5C"} 
+            />
+           </View>
+          </TestCase>
+        </TestSuite>
       </ScrollView>
     </Tester>
   );
 };
-// import * as React from "react";
-// import { CheckBox } from "@rneui/base";
-
-// export default () => {
-//   const [checked, setChecked] = React.useState(false);
-//   return (
-//     <CheckBox
-//       checked={checked}
-//       checkedColor="#0F0"
-//       checkedTitle="Great!"
-//       containerStyle={{ width: "75%" }}
-//       onIconPress={() => setChecked(!checked)}
-//       onLongIconPress={() =>
-//         console.log("onLongIconPress()")
-//       }
-//       onLongPress={() => console.log("onLongPress()")}
-//       onPress={() => console.log("onPress()")}
-//       size={30}
-//       textStyle={{}}
-//       title="Check for Awesomeness"
-//       titleProps={{}}
-//       uncheckedColor="#F00"
-//     />
-//   );
-// }
 
 export default CheckboxComponent;

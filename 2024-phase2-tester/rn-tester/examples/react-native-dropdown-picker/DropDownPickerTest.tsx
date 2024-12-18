@@ -3,7 +3,7 @@ import React,{ useState } from 'react'
 import { View, Text, Pressable, SafeAreaView, StatusBar, ScrollView, StyleSheet, Button, Image, Alert, TouchableOpacity } from 'react-native'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
-let ImageSource = require('./assets/up.png')
+let ImageSource = require('./assets.bak/up.png')
 
 const MyTheme = require("./MyTheme");
 
