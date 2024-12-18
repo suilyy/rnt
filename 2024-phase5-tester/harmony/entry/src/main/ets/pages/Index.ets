@@ -13,12 +13,18 @@ import {
 import font from '@ohos.font';
 import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/react-native-svg"
 import { createRNPackages } from '../RNPackagesFactory';
+import { IMAGE_CAP_INSETS, RNCImageCapInsets } from "@react-native-oh-tpl/react-native-image-capinsets-next";
+import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video";
+import { RNCSkiaDomView, SKIA_DOM_VIEW_TYPE } from '@react-native-oh-tpl/react-native-skia';
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME
+  SVG_VIEW_TYPE_NAME,
+  // IMAGE_CAP_INSETS,
+  // RNC_VIDEO_TYPE,
+  SKIA_DOM_VIEW_TYPE
 ];
 
 @Builder
@@ -31,9 +37,29 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
         tag: ctx.tag
       })
     }
+
+    if (ctx.componentName === IMAGE_CAP_INSETS) {
+      RNCImageCapInsets({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    }
+
+    if (ctx.componentName === RNC_VIDEO_TYPE) {
+       RNCVideo({
+           ctx: ctx.rnComponentContext,
+           tag: ctx.tag
+       })
+    }
+
+    if (ctx.componentName === SKIA_DOM_VIEW_TYPE) {
+        RNCSkiaDomView({
+            ctx: ctx.rnComponentContext,
+            tag: ctx.tag
+        })
+    }
   }
   .position({ x: 0, y: 0 })
-
 }
 
 const wrappedCustomRNComponentBuilder = wrapBuilder(buildCustomRNComponent)

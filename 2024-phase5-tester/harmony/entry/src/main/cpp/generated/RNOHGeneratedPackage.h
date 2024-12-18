@@ -12,7 +12,13 @@
 #include "RNOH/Package.h"
 #include "RNOH/ArkTSTurboModule.h"
 #include "generated/AlipayNativeModule.h"
+#include "generated/ConfigNativeModule.h"
 #include "generated/RNCDocViewer.h"
+#include "generated/IdleTimerNativeModule.h"
+#include "generated/TextInputMaxlengthFixedTurboModule.h"
+#include "generated/ThumbnailTurboModule.h"
+#include "generated/RNCImageCapInsetsComponentDescriptor.h"
+#include "generated/RNCImageCapInsetsJSIBinder.h"
 
 namespace rnoh {
 
@@ -22,8 +28,20 @@ class RNOHGeneratedPackageTurboModuleFactoryDelegate : public TurboModuleFactory
         if (name == "AlipayNativeModule") {
             return std::make_shared<AlipayNativeModule>(ctx, name);
         }
+        if (name == "ConfigNativeModule") {
+            return std::make_shared<ConfigNativeModule>(ctx, name);
+        }
         if (name == "RNCDocViewer") {
             return std::make_shared<RNCDocViewer>(ctx, name);
+        }
+        if (name == "IdleTimerNativeModule") {
+            return std::make_shared<IdleTimerNativeModule>(ctx, name);
+        }
+        if (name == "TextInputMaxlengthFixedTurboModule") {
+            return std::make_shared<TextInputMaxlengthFixedTurboModule>(ctx, name);
+        }
+        if (name == "ThumbnailTurboModule") {
+            return std::make_shared<ThumbnailTurboModule>(ctx, name);
         }
         return nullptr;
     };
@@ -55,11 +73,13 @@ class RNOHGeneratedPackage : public Package {
 
     std::vector<facebook::react::ComponentDescriptorProvider> createComponentDescriptorProviders() override {
         return {
+            facebook::react::concreteComponentDescriptorProvider<facebook::react::RNCImageCapInsetsComponentDescriptor>(),
         };
     }
 
     ComponentJSIBinderByString createComponentJSIBinderByName() override {
         return {
+            {"RNCImageCapInsets", std::make_shared<RNCImageCapInsetsJSIBinder>()},
         };
     };
 
