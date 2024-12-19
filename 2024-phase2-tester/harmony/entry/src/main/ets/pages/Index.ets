@@ -325,6 +325,7 @@ struct Index {
               'Material Design Icons': $rawfile('fonts/MaterialCommunityIcons.ttf'),
               'Material Icons': $rawfile('fonts/MaterialIcons.ttf'),
               'Octicons': $rawfile('fonts/Octicons.ttf'),
+			  'Pacifico-Regular': $rawfile('fonts/Pacifico-Regular.ttf'),
               'simple-line-icons': $rawfile('fonts/SimpleLineIcons.ttf'),
               'zocial': $rawfile('fonts/Zocial.ttf'),
               // 以下三种为外部字体，这里是举例说明，以用户实际为准
