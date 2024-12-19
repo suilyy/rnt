@@ -67,7 +67,7 @@ export function DataTableText() {
       }
     },
     {
-      key: 'DataTableCell style: numeric is true',
+      key: 'DataTableCell style: numeric is false',
       value: {
         numeric: false
       }
@@ -360,7 +360,7 @@ export function DataTableText() {
       }
     },
     {
-      key: 'DataTablePaginationProps style: accessibilityLabel  = { "accessibilityLabel1"}',
+      key: 'DataTablePaginationProps style: style  = {backgroundColor:MD2Colors.yellow500}"}',
       value: {
         page: _getPage('DataTablePagination2'),
         onPageChange: _showPage('DataTablePagination2'),
