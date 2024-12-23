@@ -156,7 +156,7 @@ export default function BottomSheetDemo () {
             {...bottomSheetProps} /> : null}
         </GestureHandlerRootView>
       </TestCase>
-      <ScrollView style={{ flex: 1, paddingBottom: 400 }}>
+      <ScrollView style={{ flex: 1, paddingBottom: 250 }}>
         <TestCase itShould="snapPoints">
           <View style={{ flex: 1, gap: 10 }}>
             <Button title="snapPoints: ['50%', '30%', '10%']" onPress={() => {
