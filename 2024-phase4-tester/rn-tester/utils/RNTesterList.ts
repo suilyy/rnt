@@ -360,11 +360,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-input-scroll-view/index'),
   },
   {
-    key: 'react-native-maps',
-    category: 'basic',
-    module: require('../examples/react-native-maps/Test/App'),
-  },
-  {
     key: 'react-native-screens',
     category: 'basic',
     module: require('../examples/react-native-screens/test/ScreensTest'),

@@ -17,7 +17,8 @@
     "babel-loader": "^8.3.0"
   },
   "dependencies": {
-    "@ant-design/react-native": "^5.2.2",
+    "@ant-design/icons-react-native": "^2.3.2",
+    "@ant-design/react-native": "^5.3.2",
     "@gorhom/portal": "^1.0.14",
     "@openspacelabs/react-native-zoomable-view": "^2.1.6",
     "@react-native-async-storage/async-storage": "^2.0.0",
@@ -55,9 +56,8 @@
     "@react-native-oh-tpl/react-native-image-picker": "^7.0.3-0.1.6",
     "@react-native-oh-tpl/react-native-input-scroll-view": "^1.11.0-0.0.1",
     "@react-native-oh-tpl/react-native-keyboard-aware-scroll-view": "^0.9.5-0.0.4",
-    "@react-native-oh-tpl/react-native-maps": "^1.10.3-0.1.0",
     "@react-native-oh-tpl/react-native-modal-popover": "^2.1.3-0.0.1",
-    "@react-native-oh-tpl/react-native-modalBox": "file:./libs/react-native-oh-tpl-react-native-modalbox-2.0.2-0.0.1.tgz",
+    "@react-native-oh-tpl/react-native-modalbox": "^2.0.2-0.0.1",
     "@react-native-oh-tpl/react-native-pager-view": "^6.2.3-0.2.8",
     "@react-native-oh-tpl/react-native-pdf": "^6.7.4-0.3.0",
     "@react-native-oh-tpl/react-native-permissions": "^4.1.2-0.1.5",
@@ -65,14 +65,14 @@
     "@react-native-oh-tpl/react-native-progress": "^5.0.1-0.0.3",
     "@react-native-oh-tpl/react-native-qrcode": "^0.2.7-0.0.2",
     "@react-native-oh-tpl/react-native-reanimated": "^3.6.3",
-    "@react-native-oh-tpl/react-native-safe-area-context": "4.7.4-0.1.6",
+    "@react-native-oh-tpl/react-native-safe-area-context": "^4.7.4-0.2.0",
     "@react-native-oh-tpl/react-native-slider": "^0.11.0-0.1.5",
     "@react-native-oh-tpl/react-native-snap-carousel": "^3.9.1-0.1.3",
     "@react-native-oh-tpl/react-native-sound": "^0.11.2-0.0.13",
-    "@react-native-oh-tpl/react-native-svg": "^15.0.0-0.5.9",
+    "@react-native-oh-tpl/react-native-svg": "^15.0.0-0.6.0",
     "@react-native-oh-tpl/react-native-tab-navigator": "^0.3.4-0.0.2",
-    "@react-native-oh-tpl/react-native-text-size": "^4.0.0-0.0.8",
     "@react-native-oh-tpl/react-native-tab-view": "^3.5.2-0.1.4",
+    "@react-native-oh-tpl/react-native-text-size": "^4.0.0-0.0.8",
     "@react-native-oh-tpl/react-native-transitiongroup": "^1.2.0-0.0.1",
     "@react-native-oh-tpl/react-native-translucent-modal": "^1.1.0-0.0.3",
     "@react-native-oh-tpl/react-native-video": "^5.2.1-0.2.33",
@@ -94,6 +94,7 @@
     "htmlparser2": "^9.1.0",
     "react": "18.2.0",
     "react_native_mqtt": "^1.3.1",
+    "react-dom": "^19.0.0",
     "react-native": "0.72.5",
     "react-native-action-button": "^2.8.5",
     "react-native-aria": "^0.2.3",
@@ -107,10 +108,11 @@
     "react-native-date-picker": "^5.0.7",
     "react-native-document-picker": "^9.3.1",
     "react-native-drag-sort": "^2.4.4",
-    "react-native-drax": "^0.10.3",
+    "react-native-dynamic": "^1.0.0",
     "react-native-exception-handler": "^2.10.10",
     "react-native-fs": "^2.20.0",
-    "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.28.tgz",
+    "react-native-gesture-handler": "^2.14.1",
+    "react-native-harmony": "file:rnoh_package/react-native-harmony/rnoh-react-native-harmony-0.72.43.tgz",
     "react-native-image-picker": "^7.1.2",
     "react-native-maps": "^1.18.2",
     "react-native-md5": "^1.0.0",
@@ -123,6 +125,7 @@
     "react-native-progress": "^5.0.1",
     "react-native-qrcode": "^0.2.7",
     "react-native-qrcode-svg": "^6.3.2",
+    "react-native-reanimated": "^3.6.0",
     "react-native-reanimated-carousel": "^3.5.1",
     "react-native-redash": "^18.1.3",
     "react-native-render-html": "^6.3.4",
@@ -132,6 +135,7 @@
     "react-native-slider": "^0.11.0",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-sound": "^0.11.2",
+    "react-native-svg": "^15.10.1",
     "react-native-tab-navigator": "^0.3.4",
     "react-native-text-size": "^4.0.0-rc.1",
     "react-native-translucent-modal": "^1.1.2",
@@ -139,10 +143,10 @@
     "react-native-video": "^6.6.4",
     "react-native-view-shot": "^3.8.0",
     "react-native-webview": "^13.12.2",
-    "react-router-dom": "^6.27.0",
+    "react-router-dom": "^6.22.3",
     "react-subscribe": "^1.3.2",
     "recyclerlistview": "^4.2.0",
-    "react-native-dynamic":"1.0.0"
+    "shallowequal": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -166,14 +170,12 @@
     "react-native-iconfont-cli": "^2.2.4",
     "react-test-renderer": "18.2.0",
     "typescript": "4.8.4"
-
   },
   "jest": {
     "preset": "react-native"
   },
   "overrides": {
-    "@rnoh/react-native-harmony-cli": "file:rnoh_package/react-native-harmony-cli/rnoh-react-native-harmony-cli-0.0.26.tgz",
+    "@rnoh/react-native-harmony-cli": "file:rnoh_package/react-native-harmony-cli/rnoh-react-native-harmony-cli-0.0.27.tgz",
     "@react-native/codegen": "0.74.0"
-
   }
 }
