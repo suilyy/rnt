@@ -11,7 +11,6 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/react-native-svg"
 import { createRNPackages } from '../RNPackagesFactory';
 import { IMAGE_CAP_INSETS, RNCImageCapInsets } from "@react-native-oh-tpl/react-native-image-capinsets-next";
 import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video";
@@ -21,9 +20,8 @@ const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
   "PropsDisplayer",
-  SVG_VIEW_TYPE_NAME,
-  // IMAGE_CAP_INSETS,
-  // RNC_VIDEO_TYPE,
+  IMAGE_CAP_INSETS,
+  RNC_VIDEO_TYPE,
   SKIA_DOM_VIEW_TYPE
 ];
 
@@ -31,12 +29,6 @@ const arkTsComponentNames: Array<string> = [
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
-    if (ctx.componentName === SVG_VIEW_TYPE_NAME) {
-      SVGView({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag
-      })
-    }
 
     if (ctx.componentName === IMAGE_CAP_INSETS) {
       RNCImageCapInsets({
@@ -118,6 +110,32 @@ struct Index {
             enableBackgroundExecutor: false,
             enableCAPIArchitecture: true,
             arkTsComponentNames: arkTsComponentNames,
+            fontResourceByFontFamily:{
+              'anticon': $rawfile('fonts/AntDesign.ttf'),
+              'Entypo': $rawfile('fonts/Entypo.ttf'),
+              'EvilIcons': $rawfile('fonts/EvilIcons.ttf'),
+              'Feather': $rawfile('fonts/Feather.ttf'),
+              'FontAwesome': $rawfile('fonts/FontAwesome.ttf'),
+              'FontAwesome5Brands-Regular': $rawfile('fonts/FontAwesome5_Brands.ttf'),
+              'FontAwesome5Free-Regular': $rawfile('fonts/FontAwesome5_Regular.ttf'),
+              'FontAwesome5Free-Solid': $rawfile('fonts/FontAwesome5_Solid.ttf'),
+              'FontAwesome6Brands-Regular': $rawfile('fonts/FontAwesome6_Brands.ttf'),
+              'FontAwesome6Free-Regular': $rawfile('fonts/FontAwesome6_Regular.ttf'),
+              'FontAwesome6Free-Solid': $rawfile('fonts/FontAwesome6_Solid.ttf'),
+              'Fontisto': $rawfile('fonts/Fontisto.ttf'),
+              'fontcustom': $rawfile('fonts/Foundation.ttf'),
+              'Ionicons': $rawfile('fonts/Ionicons.ttf'),
+              'Material Design Icons': $rawfile('fonts/MaterialCommunityIcons.ttf'),
+              'Material Icons': $rawfile('fonts/MaterialIcons.ttf'),
+              'Octicons': $rawfile('fonts/Octicons.ttf'),
+              'Pacifico-Regular': $rawfile('fonts/Pacifico-Regular.ttf'),
+              'simple-line-icons': $rawfile('fonts/SimpleLineIcons.ttf'),
+              'zocial': $rawfile('fonts/Zocial.ttf'),
+              // 以下三种为外部字体，这里是举例说明，以用户实际为准
+              // 'icomoon': $rawfile('fonts/icomoon.ttf'),
+              // 'fontello': $rawfile('fonts/fontello.ttf'),
+              // 'poppy-icon': $rawfile('fonts/test.ttf')
+            }
           },
           initialProps: { "foo": "bar" } as Record<string, string>,
           appKey: "app_name",

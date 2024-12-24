@@ -1,46 +1,36 @@
 import type { RNTesterModuleInfo } from '../types/RNTesterTypes';
 
 const Components: Array<RNTesterModuleInfo> = [
-  // {
-  //   key: 'ButtonExample',
-  //   category: 'UI',
-  //   module: require('../examples/Button/ButtonExample'),
-  // },
   {
     key: 'ReactNativeButton',
     category: 'Basic',
     module: require('../examples/react-native-button/index'),
   },
-  // {
-  //   key: 'ReactNativeSVG',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-svg/App'),
-  // },
   {
     key: 'ReactNativeCalendars',
     category: 'Basic',
     module: require('../examples/react-native-calendars/App'),
   },
-  // {
-  //   key: 'ReactNativeChartKit',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-chart-kit/App'),
-  // },
-  // {
-  //   key: 'ReactNativeAlipay',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-alipay/ReactNativeAlipayTest'),
-  // },
+  {
+    key: 'ReactNativeChartKit',
+    category: 'Basic',
+    module: require('../examples/react-native-chart-kit/App'),
+  },
+  {
+    key: 'ReactNativeAlipay',
+    category: 'Basic',
+    module: require('../examples/react-native-alipay/ReactNativeAlipayTest'),
+  },
   {
     key: 'ReactNativeDocViewer',
     category: 'Basic',
     module: require('../examples/react-native-doc-viewer/DocViewerTest'),
   },
-  // {
-  //   key: 'ReactNativeConfig',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-config/RNConfigTest'),
-  // },
+  {
+    key: 'ReactNativeConfig',
+    category: 'Basic',
+    module: require('../examples/react-native-config/RNConfigTest'),
+  },
   {
     key: 'ReactNativeBounceable',
     category: 'Basic',
@@ -51,11 +41,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-bouncy-checkbox/BouncyCheckboxExample'),
   },
-  // {
-  //   key: 'ReactNativeIdleTimer',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-idle-timer/IdleTimerTest'),
-  // },
+  {
+    key: 'ReactNativeIdleTimer',
+    category: 'Basic',
+    module: require('../examples/react-native-idle-timer/IdleTimerTest'),
+  },
   {
     key: 'ReactNativeImageCapinsetsNext',
     category: 'Basic',
@@ -66,11 +56,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-swipe-gestures/SwipeGesturesTest'),
   },
-  // {
-  //   key: 'ReactNativeThumbnail',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-thumbnail/ThumbnailExample'),
-  // },
+  {
+    key: 'ReactNativeThumbnail',
+    category: 'Basic',
+    module: require('../examples/react-native-thumbnail/ThumbnailExample'),
+  },
   {
     key: 'ReactNativeVideoControls',
     category: 'Basic',
@@ -86,41 +76,41 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/victory-native-xl/App'),
   },
-  // {
-  //   key: 'CustomKeyboard',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-custom-keyboard/App'),
-  // },
-  // {
-  //   key: 'ImageRotate',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-image-rotate/App'),
-  // },
-  // {
-  //   key: 'UserAgent',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-user-agent/UserAgentTest'),
-  // },
-  // {
-  //   key: 'ExitApp',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-exit-app/App'),
-  // },
-  // {
-  //   key: 'FileSelector',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-file-selector/FileSelectorTest'),
-  // },
-  // {
-  //   key: 'AudioToolkit',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-audio-toolkit/AudioToolkitTest'),
-  // },
-  // {
-  //   key: 'IdfaAaid',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-idfa-aaid/App'),
-  // },
+  {
+    key: 'CustomKeyboard',
+    category: 'Basic',
+    module: require('../examples/react-native-custom-keyboard/App'),
+  },
+  {
+    key: 'ImageRotate',
+    category: 'Basic',
+    module: require('../examples/react-native-image-rotate/App'),
+  },
+  {
+    key: 'UserAgent',
+    category: 'Basic',
+    module: require('../examples/react-native-user-agent/UserAgentTest'),
+  },
+  {
+    key: 'ExitApp',
+    category: 'Basic',
+    module: require('../examples/react-native-exit-app/App'),
+  },
+  {
+    key: 'FileSelector',
+    category: 'Basic',
+    module: require('../examples/react-native-file-selector/FileSelectorTest'),
+  },
+  {
+    key: 'AudioToolkit',
+    category: 'Basic',
+    module: require('../examples/react-native-audio-toolkit/AudioToolkitTest'),
+  },
+  {
+    key: 'IdfaAaid',
+    category: 'Basic',
+    module: require('../examples/react-native-idfa-aaid/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

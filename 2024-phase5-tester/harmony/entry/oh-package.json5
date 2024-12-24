@@ -5,15 +5,29 @@
   "description": "example description",
   "version": "1.0.0",
   "dependencies": {
-    "@rnoh/react-native-openharmony": "file:../react_native_openharmony",
-    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
+    "@rnoh/react-native-openharmony": "file:../react_native_openharmony/react_native_openharmony-5.0.0.811.har",
     "@react-native-oh-tpl/react-native-gesture-handler": "file:../../node_modules/@react-native-oh-tpl/react-native-gesture-handler/harmony/gesture_handler.har",
     "@react-native-oh-tpl/react-native-reanimated": "file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har",
     "@react-native-oh-tpl/react-native-skia": "file:../../node_modules/@react-native-oh-tpl/react-native-skia/harmony/skia.har",
     "@react-native-oh-tpl/react-native-doc-viewer": "file:../../node_modules/@react-native-oh-tpl/react-native-doc-viewer/harmony/doc_viewer.har",
     "@react-native-oh-tpl/react-native-textinput-maxlength-fixed": "file:../../node_modules/@react-native-oh-tpl/react-native-textinput-maxlength-fixed/harmony/textinput_maxlength_fixed.har",
     "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har",
-    "@react-native-oh-tpl/react-native-image-capinsets-next": "file:../../node_modules/@react-native-oh-tpl/react-native-image-capinsets-next/harmony/rn_image_capinsets.har"
+    "@react-native-oh-tpl/react-native-image-capinsets-next": "file:../../node_modules/@react-native-oh-tpl/react-native-image-capinsets-next/harmony/rn_image_capinsets.har",
+    "@react-native-oh-tpl/audio-toolkit": "file:../../node_modules/@react-native-oh-tpl/audio-toolkit/harmony/audio_toolkit.har",
+    "@react-native-oh-tpl/react-native-custom-keyboard": "file:../../node_modules/@react-native-oh-tpl/react-native-custom-keyboard/harmony/custom_keyboard.har",
+    "@react-native-oh-tpl/react-native-image-rotate": "file:../../node_modules/@react-native-oh-tpl/react-native-image-rotate/harmony/imageRotate.har",
+    "@react-native-oh-tpl/react-native-image-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-picker/harmony/image_picker.har",
+    "@react-native-oh-tpl/react-native-alipay": "file:../../node_modules/@react-native-oh-tpl/react-native-alipay/harmony/alipay.har",
+    "@alipay/afservicesdk": "file:../../node_modules/@react-native-oh-tpl/react-native-alipay/harmony/alipay/libs/AFServiceSDK.har",
+    "@react-native-oh-tpl/react-native-config": "file:../config",
+    "@react-native-oh-tpl/react-native-idle-timer": "file:../../node_modules/@react-native-oh-tpl/react-native-idle-timer/harmony/idle_timer.har",
+    "@react-native-oh-tpl/react-native-thumbnail": "file:../../node_modules/@react-native-oh-tpl/react-native-thumbnail/harmony/thumbnail.har",
+    "@react-native-oh-tpl/react-native-user-agent": "file:../../node_modules/@react-native-oh-tpl/react-native-user-agent/harmony/user_agent.har",
+    "@react-native-oh-tpl/react-native-exit-app": "file:../../node_modules/@react-native-oh-tpl/react-native-exit-app/harmony/exit_app.har",
+    "@react-native-oh-tpl/react-native-file-selector": "file:../../node_modules/@react-native-oh-tpl/react-native-file-selector/harmony/file_selector.har",
+    "@react-native-oh-tpl/react-native-idfa-aaid": "file:../../node_modules/@react-native-oh-tpl/react-native-idfa-aaid/harmony/getOaid.har",
+    "@react-native-oh-tpl/react-native-permissions": "file:../../node_modules/@react-native-oh-tpl/react-native-permissions/harmony/permissions.har",
+    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har"
   },
   "dynamicDependencies": {}
 }

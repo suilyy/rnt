@@ -11,12 +11,19 @@
 
 #include "RNOH/Package.h"
 #include "RNOH/ArkTSTurboModule.h"
+#include "generated/RCTAudioPlayer.h"
+#include "generated/RCTAudioRecorder.h"
 #include "generated/AlipayNativeModule.h"
 #include "generated/ConfigNativeModule.h"
 #include "generated/RNCDocViewer.h"
+#include "generated/RNExitApp.h"
+#include "generated/RNFileSelector.h"
+#include "generated/RTNGetOaidNativeModule.h"
 #include "generated/IdleTimerNativeModule.h"
+#include "generated/ImageRotateNativeModule.h"
 #include "generated/TextInputMaxlengthFixedTurboModule.h"
 #include "generated/ThumbnailTurboModule.h"
+#include "generated/UserAgentNativeModule.h"
 #include "generated/RNCImageCapInsetsComponentDescriptor.h"
 #include "generated/RNCImageCapInsetsJSIBinder.h"
 
@@ -25,6 +32,12 @@ namespace rnoh {
 class RNOHGeneratedPackageTurboModuleFactoryDelegate : public TurboModuleFactoryDelegate {
   public:
     SharedTurboModule createTurboModule(Context ctx, const std::string &name) const override {
+        if (name == "RCTAudioPlayer") {
+            return std::make_shared<RCTAudioPlayer>(ctx, name);
+        }
+        if (name == "RCTAudioRecorder") {
+            return std::make_shared<RCTAudioRecorder>(ctx, name);
+        }
         if (name == "AlipayNativeModule") {
             return std::make_shared<AlipayNativeModule>(ctx, name);
         }
@@ -34,14 +47,29 @@ class RNOHGeneratedPackageTurboModuleFactoryDelegate : public TurboModuleFactory
         if (name == "RNCDocViewer") {
             return std::make_shared<RNCDocViewer>(ctx, name);
         }
+        if (name == "RNExitApp") {
+            return std::make_shared<RNExitApp>(ctx, name);
+        }
+        if (name == "RNFileSelector") {
+            return std::make_shared<RNFileSelector>(ctx, name);
+        }
+        if (name == "RTNGetOaidNativeModule") {
+            return std::make_shared<RTNGetOaidNativeModule>(ctx, name);
+        }
         if (name == "IdleTimerNativeModule") {
             return std::make_shared<IdleTimerNativeModule>(ctx, name);
+        }
+        if (name == "ImageRotateNativeModule") {
+            return std::make_shared<ImageRotateNativeModule>(ctx, name);
         }
         if (name == "TextInputMaxlengthFixedTurboModule") {
             return std::make_shared<TextInputMaxlengthFixedTurboModule>(ctx, name);
         }
         if (name == "ThumbnailTurboModule") {
             return std::make_shared<ThumbnailTurboModule>(ctx, name);
+        }
+        if (name == "UserAgentNativeModule") {
+            return std::make_shared<UserAgentNativeModule>(ctx, name);
         }
         return nullptr;
     };

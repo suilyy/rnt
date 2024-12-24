@@ -35,6 +35,7 @@ export const category = 'UI';
 export const title = 'react-native-exit-app';
 export const documentationURL = 'https://github.com/react-native-oh-library/RNOHDCS/tree/main/react-native-exit-app';
 export const description = 'React Native exit app';
+
 export const examples = [
     {
       title: 'React Native exit app',

@@ -2,15 +2,16 @@
   "modelVersion": "5.0.0",
   "license": "ISC",
   "devDependencies": {
-    "@ohos/hypium": "1.0.6"
+    "@ohos/hypium": "1.0.17",
+    "@ohos/hamock": "1.0.1-rc2"
   },
   "name": "rnoh",
   "description": "example description",
   "version": "1.0.0",
   "dependencies": {
-    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony.har"
+    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.811.har"
   },
   "overrides": {
-    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony.har"
+    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.811.har"
   }
 }

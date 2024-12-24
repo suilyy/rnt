@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "page_show",
+      "value": "page from npm package"
     }
   ]
 }

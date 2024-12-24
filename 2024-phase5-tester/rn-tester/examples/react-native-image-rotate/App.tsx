@@ -13,9 +13,9 @@ import{
   TestCase,
 } from '@rnoh/testerino';
 
-import ImageRotate from "react-native-image-rotate";
+import ImageRotate from "@react-native-oh-tpl/react-native-image-rotate";
 
-const SOURCE_IMAGE = 'https://upload.wikimedia.org/wikipedia/en/5/56/Warcraft_Teaser_Poster.jpg';
+const SOURCE_IMAGE = 'https://filesamples.com/samples/image/jpg/sample_640×426.jpg';
 
 class App extends Component {
 
