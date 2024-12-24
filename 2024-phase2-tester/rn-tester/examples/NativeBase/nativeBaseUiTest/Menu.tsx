@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text, Alert} from 'react-native';
+import { useState } from 'react';
+import { View, StyleSheet, ScrollView, Text, Alert } from 'react-native';
 import {
   Button,
   Box,
@@ -11,9 +11,9 @@ import {
   Select,
   CheckIcon,
 } from 'native-base';
-import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import React from 'react';
-import {color} from 'harmony/react-native-native-base/lib/commonjs/theme/styled-system';
+import { color } from 'harmony/react-native-native-base/lib/commonjs/theme/styled-system';
 
 const MenuTest = () => {
   const [shouldOverlapWithTrigger] = useState(false);
@@ -76,7 +76,7 @@ const MenuTest = () => {
                           </Pressable>
                         );
                       }}>
-                      <Menu.Item _text={{color: 'amber.800'}}>Arial</Menu.Item>
+                      <Menu.Item _text={{ color: 'amber.800' }}>Arial</Menu.Item>
                       <Menu.Item>Nunito Sans</Menu.Item>
                       <Menu.Item>Roboto</Menu.Item>
                       <Menu.Item>Poppins</Menu.Item>
@@ -142,7 +142,7 @@ const MenuTest = () => {
                           </Pressable>
                         );
                       }}>
-                      <Menu.Item _stack={{fontSize: 10, color: 'red'}}>
+                      <Menu.Item _stack={{ fontSize: 10, color: 'red' }}>
                         Arial
                       </Menu.Item>
                       <Menu.Item>Nunito Sans</Menu.Item>
@@ -300,7 +300,7 @@ const MenuTest = () => {
                           </Pressable>
                         );
                       }}>
-                      <Menu.Item _stack={{fontSize: 10, color: 'red'}}>
+                      <Menu.Item _stack={{ fontSize: 10, color: 'red' }}>
                         Arial
                       </Menu.Item>
                       <Menu.Item>Nunito Sans</Menu.Item>
@@ -334,7 +334,7 @@ const MenuTest = () => {
                           </Pressable>
                         );
                       }}>
-                      <Menu.Item _stack={{fontSize: 10, color: 'red'}}>
+                      <Menu.Item _stack={{ fontSize: 10, color: 'red' }}>
                         Arial
                       </Menu.Item>
                       <Menu.Item>Nunito Sans</Menu.Item>
@@ -837,7 +837,7 @@ const MenuTest = () => {
                         title="free"
                         type="radio">
                         <Menu.ItemOption
-                          _stack={{backgroundColor: 'red.100'}}
+                          _stack={{ backgroundColor: 'red.100' }}
                           value="Arial">
                           Arial
                         </Menu.ItemOption>
@@ -868,7 +868,7 @@ const MenuTest = () => {
                         title="free"
                         type="radio">
                         <Menu.ItemOption
-                          _icon={{backgroundColor: 'red.100'}}
+                          _icon={{ backgroundColor: 'red.100' }}
                           value="Arial">
                           _icon
                         </Menu.ItemOption>
@@ -899,7 +899,7 @@ const MenuTest = () => {
                         title="free"
                         type="radio">
                         <Menu.ItemOption
-                          _text={{color: 'red.100'}}
+                          _text={{ color: 'red.100' }}
                           value="Arial">
                           _text
                         </Menu.ItemOption>
@@ -985,7 +985,7 @@ const MenuTest = () => {
                         defaultValue="_text"
                         title="title"
                         type="radio"
-                        _title={{color: 'red.200'}}>
+                        _title={{ color: 'red.200' }}>
                         <Menu.ItemOption value="Arial">_title</Menu.ItemOption>
                       </Menu.OptionGroup>
                     </Menu>
@@ -1117,47 +1117,49 @@ const MenuTest = () => {
               </View>
             </TestCase>
           </TestSuite>
-
-          <TestSuite name="MenuGroup value改变触发onChange">
-            <TestCase itShould="MenuGroup value改变触发onChange" tags={['dev']}>
-              <View style={styles.section}>
-                <View style={styles.subSection}>
-                  <Box w="90%" alignItems="center">
-                    <Menu
-                      w="190"
-                      trigger={triggerProps => {
-                        return (
-                          <Pressable {...triggerProps}>
-                            <HamburgerIcon />
-                            <Text>value: {optionValue}</Text>
-                          </Pressable>
-                        );
-                      }}>
-                      <Menu.OptionGroup
-                        defaultValue="Arial"
-                        value={optionValue}
-                        onChange={() => {
-                          Alert.alert('value改变触发onChange');
-                        }}
-                        title="free"
-                        type="radio">
-                        <Menu.ItemOption
-                          onPress={() => setOptionValue('Arial')}
-                          value="Arial">
-                          Arial
-                        </Menu.ItemOption>
-                        <Menu.ItemOption
-                          onPress={() => setOptionValue('Roboto')}
-                          value="Roboto">
-                          Roboto
-                        </Menu.ItemOption>
-                      </Menu.OptionGroup>
-                    </Menu>
-                  </Box>
+          
+          <View style={{ marginBottom: 100 }}>
+            <TestSuite name="MenuGroup value改变触发onChange">
+              <TestCase itShould="MenuGroup value改变触发onChange" tags={['dev']}>
+                <View style={styles.section}>
+                  <View style={styles.subSection}>
+                    <Box w="90%" alignItems="center">
+                      <Menu
+                        w="190"
+                        trigger={triggerProps => {
+                          return (
+                            <Pressable {...triggerProps}>
+                              <HamburgerIcon />
+                              <Text>value: {optionValue}</Text>
+                            </Pressable>
+                          );
+                        }}>
+                        <Menu.OptionGroup
+                          defaultValue="Arial"
+                          value={optionValue}
+                          onChange={() => {
+                            Alert.alert('value改变触发onChange');
+                          }}
+                          title="free"
+                          type="radio">
+                          <Menu.ItemOption
+                            onPress={() => setOptionValue('Arial')}
+                            value="Arial">
+                            Arial
+                          </Menu.ItemOption>
+                          <Menu.ItemOption
+                            onPress={() => setOptionValue('Roboto')}
+                            value="Roboto">
+                            Roboto
+                          </Menu.ItemOption>
+                        </Menu.OptionGroup>
+                      </Menu>
+                    </Box>
+                  </View>
                 </View>
-              </View>
-            </TestCase>
-          </TestSuite>
+              </TestCase>
+            </TestSuite>
+          </View>
         </ScrollView>
       </Tester>
     </>

@@ -1,5 +1,7 @@
 import { Icon } from 'react-native-material-ui'
 import { Tester, TestSuite, TestCase } from "@rnoh/testerino"
+import { ScrollView } from 'react-native'
+
 const IconDemo = () => {
   return (
     <Tester>

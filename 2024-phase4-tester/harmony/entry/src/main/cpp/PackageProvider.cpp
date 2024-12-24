@@ -27,7 +27,6 @@
 #include "RNCNetInfoPackage.h"
 #include "PickerPackage.h"
 #include "SafeAreaViewPackage.h"
-#include "MapsPackage.h"
 #include "ExceptionHandlerPackage.h"
 #include "GestureHandlerPackage.h"
 
@@ -47,7 +46,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<RNCVideoPackage>(ctx),
         std::make_shared<PermissionsPackage>(ctx),
         std::make_shared<RNCNetInfoPackage>(ctx),
-        std::make_shared<MapsPackage>(ctx),
         std::make_shared<LottieAnimationViewPackage>(ctx),
         std::make_shared<ViewPagerPackage>(ctx),
         std::make_shared<BlurPackage>(ctx),

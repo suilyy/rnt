@@ -27,30 +27,7 @@ import { PROGRESS_VIEW_TYPE, RNCProgressView } from '@react-native-oh-tpl/progre
 import { DATETIME_PICKER_VIEW_TYPE, RNDateTimePicker } from '@react-native-oh-tpl/datetimepicker';
 import { LOTTIE_TYPE, LottieAnimationView } from '@react-native-oh-tpl/lottie-react-native';
 import { RNDatePicker } from '@react-native-oh-tpl/react-native-date-picker';
-import {
-  AIR_GEOJSON_TYPE,
-  AIR_MAP_CALLOUT_SUBVIEW_TYPE,
-  AIR_MAP_CALLOUT_TYPE,
-  AIR_MAP_CIRCLE_TYPE,
-  AIR_MAP_MARKER_TYPE,
-  AIR_MAP_POLYGON_TYPE,
-  AIR_MAP_POLYLINE_TYPE,
-  AIR_MAP_TYPE,
-  AIR_OVERLAY_TYPE,
-  AIR_URLTILE_TYPE,
-  AIR_WMSTILE_TYPE,
-  AIRMap,
-  AIRMapCallout,
-  AIRMapCalloutSubview,
-  AIRMapCircle,
-  AIRMapMarker,
-  AIRMapOverlay,
-  AIRMapPolygon,
-  AIRMapPolyline,
-  AIRMapUrlTile,
-  AIRMapWMSTile,
-  Geojson
-} from '@react-native-oh-tpl/react-native-maps';
+
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -68,16 +45,6 @@ const arkTsComponentNames: Array<string> = [
   PICKER_TYPE,
   PROGRESS_VIEW_TYPE,
   LOTTIE_TYPE,
-  AIR_MAP_TYPE,
-  AIR_MAP_MARKER_TYPE,
-  AIR_MAP_POLYLINE_TYPE,
-  AIR_MAP_POLYGON_TYPE,
-  AIR_MAP_CIRCLE_TYPE,
-  AIR_MAP_CALLOUT_TYPE,
-  AIR_GEOJSON_TYPE,
-  AIR_URLTILE_TYPE,
-  AIR_WMSTILE_TYPE,
-  AIR_OVERLAY_TYPE
 ];
 
 @Builder
@@ -87,67 +54,6 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       RNDatePicker({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
-      })
-    }
-    if (ctx.componentName === AIR_MAP_TYPE) {
-      AIRMap({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
-      AIRMapMarker({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
-      AIRMapPolyline({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
-      AIRMapPolygon({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
-      AIRMapCircle({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
-      AIRMapCallout({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
-      AIRMapCalloutSubview({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
-      AIRMapCalloutSubview({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_GEOJSON_TYPE) {
-      Geojson({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_URLTILE_TYPE) {
-      AIRMapUrlTile({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_WMSTILE_TYPE) {
-      AIRMapWMSTile({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
-      })
-    } else if (ctx.componentName === AIR_OVERLAY_TYPE) {
-      AIRMapOverlay({
-        ctx: ctx.rnComponentContext,
-        tag: ctx.tag,
       })
     }
     if (ctx.componentName === LOTTIE_TYPE) {
@@ -315,9 +221,6 @@ struct Index {
           jsBundleProvider: new TraceJSBundleProviderDecorator(
             new AnyJSBundleProvider([
               new MetroJSBundleProvider(),
-              // NOTE: to load the bundle from file, place it in
-              // `/data/app/el2/100/base/com.rnoh.tester/files/bundle.harmony.js`
-              // on your device. The path mismatch is due to app sandboxing on HarmonyOS
               new FileJSBundleProvider('/data/storage/el2/base/files/bundle.harmony.js'),
               new ResourceJSBundleProvider(this.rnohCoreContext.uiAbilityContext.resourceManager, 'hermes_bundle.hbc'),
               new ResourceJSBundleProvider(this.rnohCoreContext.uiAbilityContext.resourceManager, 'bundle.harmony.js')

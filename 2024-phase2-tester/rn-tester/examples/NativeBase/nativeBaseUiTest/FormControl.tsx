@@ -1,4 +1,4 @@
-import {View, StyleSheet, ScrollView, Text} from 'react-native';
+import { View, StyleSheet, ScrollView, Text } from 'react-native';
 import {
   VStack,
   FormControl,
@@ -14,8 +14,8 @@ import {
   Select,
   Icon,
 } from 'native-base';
-import {useState} from 'react';
-import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+import { useState } from 'react';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import React from 'react';
 
 function BuildingAFormExample() {
@@ -23,10 +23,10 @@ function BuildingAFormExample() {
   return (
     <VStack width="90%" mx="3" maxW="300px">
       <FormControl nativeID="nativeID">
-        <FormControl.Label _text={{bold: true}}>Name</FormControl.Label>
+        <FormControl.Label _text={{ bold: true }}>Name</FormControl.Label>
         <Input
           placeholder="John"
-          onChangeText={value => setData({...formData, name: value})}
+          onChangeText={value => setData({ ...formData, name: value })}
         />
         <FormControl.HelperText
           _text={{
@@ -364,23 +364,25 @@ const FormControlTest = () => {
               </View>
             </TestCase>
           </TestSuite>
-
-          <TestSuite name="_stack">
-            <TestCase itShould="_stack 添加背景色" tags={['dev']}>
-              <View style={styles.section}>
-                <View style={styles.subSection}>
-                  <FormControl w="3/4" maxW="300" isRequired isInvalid>
-                    <Input type="text" />
-                    <FormControl.ErrorMessage
-                      _stack={{backgroundColor: 'red.200'}}
-                      leftIcon={<WarningOutlineIcon size="xs" />}>
-                      icon
-                    </FormControl.ErrorMessage>
-                  </FormControl>
+          
+          <View style={{ marginBottom: 100 }}>
+            <TestSuite name="_stack">
+              <TestCase itShould="_stack 添加背景色" tags={['dev']}>
+                <View style={styles.section}>
+                  <View style={styles.subSection}>
+                    <FormControl w="3/4" maxW="300" isRequired isInvalid>
+                      <Input type="text" />
+                      <FormControl.ErrorMessage
+                        _stack={{ backgroundColor: 'red.200' }}
+                        leftIcon={<WarningOutlineIcon size="xs" />}>
+                        icon
+                      </FormControl.ErrorMessage>
+                    </FormControl>
+                  </View>
                 </View>
-              </View>
-            </TestCase>
-          </TestSuite>
+              </TestCase>
+            </TestSuite>
+          </View>
         </ScrollView>
       </Tester>
     </>

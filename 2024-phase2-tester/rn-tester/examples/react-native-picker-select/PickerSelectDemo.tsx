@@ -301,7 +301,8 @@ export default function PickerSelectDemo() {
                   <RNPickerSelect
                     items={sports}
                     textInputProps={selectVal.textInputProps}
-                    onValueChange={(value) => {
+                    onValueChange={(value) => { }}
+                    onDonePress={() => {
                       setSelectVal({ ...selectVal, textInputProps: { secureTextEntry: !selectVal.textInputProps.secureTextEntry } });
                       setState(true);
                     }}

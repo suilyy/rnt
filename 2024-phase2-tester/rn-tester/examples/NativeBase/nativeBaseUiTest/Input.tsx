@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
   Button,
   View,
@@ -8,8 +8,8 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import {Box, Stack, Input} from 'native-base';
-import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+import { Box, Stack, Input } from 'native-base';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 const InputTest = () => {
   const ref = React.useRef({});
   const mywrapperRef = React.useRef({});
@@ -124,7 +124,7 @@ const InputTest = () => {
               itShould="ref1"
               initialState={true}
               tags={['dev']}
-              arrange={({setState}) => {
+              arrange={({ setState }) => {
                 return (
                   <>
                     <Input defaultValue="" ref={ref}></Input>
@@ -140,7 +140,7 @@ const InputTest = () => {
                   </>
                 );
               }}
-              assert={({expect, state}) => {
+              assert={({ expect, state }) => {
                 expect(state).to.be.true;
               }}
             />
@@ -151,7 +151,7 @@ const InputTest = () => {
               itShould="wrapperRef-会报错wrapperRef-undefined"
               initialState={true}
               tags={['dev']}
-              arrange={({setState}) => {
+              arrange={({ setState }) => {
                 return (
                   <>
                     <Input defaultValue="" wrapperRef={mywrapperRef}></Input>
@@ -168,7 +168,7 @@ const InputTest = () => {
                   </>
                 );
               }}
-              assert={({expect, state}) => {
+              assert={({ expect, state }) => {
                 expect(state).to.be.true;
               }}
             />
@@ -178,13 +178,13 @@ const InputTest = () => {
             <TestCase itShould="_focus" tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _focus={{fontSize: 20, color: 'amber.600'}}
+                  _focus={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_focus"
                   value="_focus"
                 />
                 <Input
                   isFocused
-                  _focus={{fontSize: 20, color: 'amber.600'}}
+                  _focus={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_focus"
                   value="_focus"
                 />
@@ -195,13 +195,13 @@ const InputTest = () => {
             <TestCase itShould="_disabled" tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _disabled={{fontSize: 20, color: 'amber.600'}}
+                  _disabled={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_disabled"
                   value="_disabled"
                 />
                 <Input
                   isDisabled
-                  _disabled={{fontSize: 20, color: 'amber.600'}}
+                  _disabled={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_disabled"
                   value="_disabled"
                 />
@@ -212,13 +212,13 @@ const InputTest = () => {
             <TestCase itShould="_readOnly" tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _readOnly={{fontSize: 20, color: 'amber.600'}}
+                  _readOnly={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_readOnly"
                   value="_readOnly"
                 />
                 <Input
                   isReadOnly
-                  _readOnly={{fontSize: 20, color: 'amber.600'}}
+                  _readOnly={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_readOnly"
                   value="_readOnly"
                 />
@@ -231,13 +231,13 @@ const InputTest = () => {
               tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _invalid={{fontSize: 20, color: 'amber.600'}}
+                  _invalid={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_invalid"
                   value="_invalid"
                 />
                 <Input
                   isInvalid
-                  _invalid={{fontSize: 20, color: 'amber.600'}}
+                  _invalid={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_invalid"
                   value="_invalid"
                 />
@@ -248,12 +248,12 @@ const InputTest = () => {
             <TestCase itShould="_input" tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _input={{fontSize: 10, color: 'amber.600'}}
+                  _input={{ fontSize: 10, color: 'amber.600' }}
                   placeholder="_input"
                   value="_input"
                 />
                 <Input
-                  _input={{fontSize: 20, color: 'amber.600'}}
+                  _input={{ fontSize: 20, color: 'amber.600' }}
                   placeholder="_input"
                   value="_input"
                 />
@@ -266,7 +266,7 @@ const InputTest = () => {
               tags={['dev']}>
               <Stack space={4} w="75%" maxW="300px" mx="auto">
                 <Input
-                  _stack={{backgroundColor: 'yellow.200'}}
+                  _stack={{ backgroundColor: 'yellow.200' }}
                   placeholder="_stack"
                   value="_stack">
                   <Text>_stack001</Text>
@@ -299,15 +299,17 @@ const InputTest = () => {
               </Stack>
             </TestCase>
           </TestSuite>
-
-          <TestSuite name="isInvalid">
-            <TestCase itShould="isInvalid" tags={['dev']}>
-              <Stack space={4} w="75%" maxW="300px" mx="auto">
-                <Input isInvalid value="isInvalid:true" />
-                <Input isInvalid={false} value="isInvalid：:false" />
-              </Stack>
-            </TestCase>
-          </TestSuite>
+          
+          <View style={{ marginBottom: 100 }}>
+            <TestSuite name="isInvalid">
+              <TestCase itShould="isInvalid" tags={['dev']}>
+                <Stack space={4} w="75%" maxW="300px" mx="auto">
+                  <Input isInvalid value="isInvalid:true" />
+                  <Input isInvalid={false} value="isInvalid：:false" />
+                </Stack>
+              </TestCase>
+            </TestSuite>
+          </View>
         </ScrollView>
       </Tester>
     </>

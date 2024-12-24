@@ -1,5 +1,5 @@
-import {useState, useRef} from 'react';
-import {View, StyleSheet, ScrollView, Text, Alert} from 'react-native';
+import { useState, useRef } from 'react';
+import { View, StyleSheet, ScrollView, Text, Alert } from 'react-native';
 import {
   Popover,
   Box,
@@ -13,7 +13,7 @@ import {
   HStack,
   Divider,
 } from 'native-base';
-import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
+import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import React from 'react';
 
 const PopoverTest = () => {
@@ -936,47 +936,49 @@ const PopoverTest = () => {
               </View>
             </TestCase>
           </TestSuite>
-
-          <TestSuite name="onOpen">
-            <TestCase itShould="onOpen" tags={['dev']}>
-              <View style={styles.section}>
-                <Text>onOpen</Text>
-                <View style={styles.subSection}>
-                  <Box w="100%" alignItems="center">
-                    <VStack space={6} alignSelf="flex-start" w="100%">
-                      <Popover
-                        onOpen={() => Alert.alert('执行onOpen')}
-                        trigger={triggerProps => {
-                          return (
-                            <Button {...triggerProps} colorScheme="danger">
-                              useRNModal
-                            </Button>
-                          );
-                        }}>
-                        <Popover.Content
-                          accessibilityLabel="Delete Customerd"
-                          w="56">
-                          <Popover.Arrow />
-                          <Popover.CloseButton />
-                          <Popover.Header>
-                            shouldOverlapWithTrigger-值为true
-                          </Popover.Header>
-                          <Popover.Footer justifyContent="flex-end">
-                            <Button.Group space={2}>
-                              <Button colorScheme="coolGray" variant="ghost">
-                                Cancel
+          
+          <View style={{ marginBottom: 100 }}>
+            <TestSuite name="onOpen">
+              <TestCase itShould="onOpen" tags={['dev']}>
+                <View style={styles.section}>
+                  <Text>onOpen</Text>
+                  <View style={styles.subSection}>
+                    <Box w="100%" alignItems="center">
+                      <VStack space={6} alignSelf="flex-start" w="100%">
+                        <Popover
+                          onOpen={() => Alert.alert('执行onOpen')}
+                          trigger={triggerProps => {
+                            return (
+                              <Button {...triggerProps} colorScheme="danger">
+                                useRNModal
                               </Button>
-                              <Button colorScheme="danger">Delete</Button>
-                            </Button.Group>
-                          </Popover.Footer>
-                        </Popover.Content>
-                      </Popover>
-                    </VStack>
-                  </Box>
+                            );
+                          }}>
+                          <Popover.Content
+                            accessibilityLabel="Delete Customerd"
+                            w="56">
+                            <Popover.Arrow />
+                            <Popover.CloseButton />
+                            <Popover.Header>
+                              shouldOverlapWithTrigger-值为true
+                            </Popover.Header>
+                            <Popover.Footer justifyContent="flex-end">
+                              <Button.Group space={2}>
+                                <Button colorScheme="coolGray" variant="ghost">
+                                  Cancel
+                                </Button>
+                                <Button colorScheme="danger">Delete</Button>
+                              </Button.Group>
+                            </Popover.Footer>
+                          </Popover.Content>
+                        </Popover>
+                      </VStack>
+                    </Box>
+                  </View>
                 </View>
-              </View>
-            </TestCase>
-          </TestSuite>
+              </TestCase>
+            </TestSuite>
+          </View>
         </ScrollView>
       </Tester>
     </>

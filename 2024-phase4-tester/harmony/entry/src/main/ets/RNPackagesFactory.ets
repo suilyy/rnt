@@ -23,7 +23,6 @@ import { BlobUtilPackage } from '@react-native-oh-tpl/react-native-blob-util/ts'
 import { NetInfoPackage } from '@react-native-oh-tpl/netinfo/ts';
 import { PickerViewPackage } from '@react-native-oh-tpl/react-native-picker/ts';
 import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area-context/ts';
-import { MapsPackage } from '@react-native-oh-tpl/react-native-maps/ts';
 import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-exception-handler/ts';
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
@@ -50,7 +49,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNCPickerPackage(ctx),
     new ViewPagerPackage(ctx),
     new NetInfoPackage(ctx),
-    new MapsPackage(ctx),
     new SafeAreaViewPackage(ctx),
     new PickerViewPackage(ctx),
     new BlobUtilPackage(ctx),
