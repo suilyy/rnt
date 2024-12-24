@@ -187,11 +187,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-switch/SwitchDemo'),
   },
   {
-    key: 'ReactNativeSvgCharts',
-    category: 'UI',
-    module: require('../examples/react-native-svg-charts/App'),
-  },
-  {
     key: 'ReactContentLoader',
     category: 'UI',
     module: require('../examples/react-content-loader/APP'),
@@ -302,11 +297,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-awesome-gallery/test/index'),
   },
   {
-    key: 'ReactNativeTypography',
-    category: 'UI',
-    module: require('../examples/react-native-typography/index'),
-  },
-  {
     key: 'ReactNativeNetworkInfo',
     category: 'UI',
     module: require('../examples/react-native-network-info/NetworkInfoTest'),
@@ -352,11 +342,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-theme-control/ThemeControlTest'),
   },
   {
-    key: 'ReactNativeGiftedCharts',
-    category: 'UI',
-    module: require('../examples/react-native-gifted-charts/App'),
-  },
-  {
     key: 'ReactNativeMapClustering',
     category: 'Basic',
     module: require('../examples/react-native-map-clustering/map-clustering/App'),
@@ -390,11 +375,6 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeMail',
     category: 'Basic',
     module: require('../examples/react-native-mail/App'),
-  },
-  {
-    key: 'GalioFramework',
-    category: 'Basic',
-    module: require('../examples/galio-framework/APP'),
   },
   {
     key: 'EmojiKeyboard',
@@ -465,6 +445,11 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'OpSqlite',
     category: 'UI',
     module: require('../examples/@op-engineering-op-sqlite/test/TestForOpSqlite'),
+  },
+  {
+    key: 'react-native-maps',
+    category: 'basic',
+    module: require('../examples/react-native-maps/Test/App'),
   },
 ];
 

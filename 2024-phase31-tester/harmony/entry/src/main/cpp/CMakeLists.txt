@@ -26,7 +26,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-incall-manager
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-mlkit-ocr/src/main/cpp" ./rn_mlkit_ocr)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-linear-gradient/src/main/cpp" ./linear-gradient)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps),
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-worklets-core/src/main/cpp" ./worklets)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-zip-archive/src/main/cpp" ./zipArchive-package)
@@ -39,7 +39,7 @@ file(GLOB VISION_CAMERA_CPP_FILES "${OH_MODULES}/@react-native-oh-tpl/react-nati
 add_library(rnoh_app SHARED
     ${GENERATED_CPP_FILES}
     "./PackageProvider.cpp"
-    "${RNOH_CPP_DIR}/RNOHAppNapiBridge.cpp",
+    "${RNOH_CPP_DIR}/RNOHAppNapiBridge.cpp"
     ${VISION_CAMERA_CPP_FILES}
 )
 
