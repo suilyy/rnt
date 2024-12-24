@@ -2,21 +2,6 @@ import type { RNTesterModuleInfo } from '../types/RNTesterTypes';
 
 const Components: Array<RNTesterModuleInfo> = [
   {
-    key: 'ButtonExample',
-    category: 'UI',
-    module: require('../examples/Button/ButtonExample'),
-  },
-  {
-    key: 'ReactNativeButton',
-    category: 'Basic',
-    module: require('../examples/react-native-button/index').default,
-  },
-  {
-    key: 'ReactNativeSVG',
-    category: 'Basic',
-    module: require('../examples/react-native-svg/App').default,
-  },
-  {
     key: 'ReactNativeGiftedCharts',
     category: 'UI',
     module: require('../examples/react-native-gifted-charts/App'),
@@ -35,6 +20,16 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeTypography',
     category: 'UI',
     module: require('../examples/react-native-typography/index'),
+  },
+  {
+    key: 'ReactNativeBarcodeBuilder',
+    category: 'UI',
+    module: require('../examples/react-native-barcode-builder/BarcodeBuilderExample'),
+  },
+  {
+    key: 'ReactNativeAwesomeGallery',
+    category: 'UI',
+    module: require('../examples/react-native-awesome-gallery/test/index'),
   },
 ];
 
