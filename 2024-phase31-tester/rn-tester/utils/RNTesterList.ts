@@ -66,11 +66,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'UI',
     module: require('../examples/react-native-shake/ShakeExampleDemo'),
   },
-  // {
-  //   key: '@react-navigation',
-  //   category: 'Basic',
-  //   module: require('../examples/@react-navigation/App'),
-  // },
+  {
+    key: '@react-navigation',
+    category: 'Basic',
+    module: require('../examples/@react-navigation/App'),
+  },
   {
     key: 'ReactNativeTts',
     category: 'Basic',
