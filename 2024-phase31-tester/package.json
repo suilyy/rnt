@@ -45,6 +45,7 @@
     "@react-native-oh-tpl/react-native-image-pan-zoom": "^2.1.12-0.0.1",
     "@react-native-oh-tpl/react-native-image-viewing": "^0.2.2-0.0.4",
     "@react-native-oh-tpl/react-native-incall-manager": "^4.2.0-0.0.3",
+    "@react-native-oh-tpl/react-native-keep-awake": "^4.0.0-0.0.1",
     "@react-native-oh-tpl/react-native-keyboard-accessory": "^0.1.16-0.0.2",
     "@react-native-oh-tpl/react-native-keys": "^0.7.10-0.0.2",
     "@react-native-oh-tpl/react-native-linear-gradient": "^3.0.0-0.5.0",

@@ -20,7 +20,7 @@ comList.sort((a, b) => {
 
 function App() {
   return (
-    <View style={{ backgroundColor: 'black' }}>
+    <View style={{ backgroundColor: 'black' ,marginBottom:40 }}>
       <SafeAreaView>
         <NavigationContainer>
           <PortalProvider>

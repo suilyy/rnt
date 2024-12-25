@@ -58,7 +58,8 @@
     "@react-native-oh-tpl/react-native-skia": "file:../../node_modules/@react-native-oh-tpl/react-native-skia/harmony/skia.har",
     "@react-native-oh-tpl/mixpanel-react-native": "file:../../node_modules/@react-native-oh-tpl/mixpanel-react-native/harmony/mixpanel.har",
     "@react-native-oh-tpl/op-sqlite": "file:../../node_modules/@react-native-oh-tpl/op-sqlite/harmony/rn_op_sqlite.har",
-    "@react-native-oh-tpl/react-native-fs": "file:../../node_modules/@react-native-oh-tpl/react-native-fs/harmony/fs.har"
+    "@react-native-oh-tpl/react-native-fs": "file:../../node_modules/@react-native-oh-tpl/react-native-fs/harmony/fs.har",
+    "@react-native-oh-tpl/react-native-keep-awake": "file:../../node_modules/@react-native-oh-tpl/react-native-keep-awake/harmony/keep_awake.har"
     
   }
 }
