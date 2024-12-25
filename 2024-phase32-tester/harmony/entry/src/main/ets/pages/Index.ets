@@ -106,6 +106,7 @@ struct Index {
               'Material Icons': $rawfile('fonts/MaterialIcons.ttf'),
               'Octicons': $rawfile('fonts/Octicons.ttf'),
               'simple-line-icons': $rawfile('fonts/SimpleLineIcons.ttf'),
+              'zocial': $rawfile('fonts/Zocial.ttf'),
             }
           },
           initialProps: { "foo": "bar" } as Record<string, string>,
