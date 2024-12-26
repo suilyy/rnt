@@ -83,7 +83,6 @@
     "@react-native-oh-tpl/react-native-localization": "^2.3.2-0.0.1",
     "@react-native-oh-tpl/react-native-mmkv-storage": "^0.10.3-0.0.2",
     "@react-native-oh-tpl/react-native-text-input-mask": "^3.1.5-0.0.3",
-    "@react-native-oh-tpl/react-native-bootsplash": "^6.1.1-0.0.3",
     "@react-native-oh-tpl/react-native-print": "^0.11.0-0.0.3",
     "@react-native-oh-tpl/react-native-keyboard-controller": "^1.12.7-0.0.5",
     "@react-native-oh-tpl/bottom-sheet": "^4.6.4-0.0.2",

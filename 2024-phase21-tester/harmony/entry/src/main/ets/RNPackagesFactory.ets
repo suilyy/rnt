@@ -37,7 +37,6 @@ import { RNAppleAuthPackage } from '@react-native-oh-tpl/react-native-apple-auth
 import { RNReactLocalizationPackage } from '@react-native-oh-tpl/react-native-localization';
 import {RNMMKVStoragePackage} from '@react-native-oh-tpl/react-native-mmkv-storage';
 import { RNTextInputMaskPackage } from '@react-native-oh-tpl/react-native-text-input-mask/ts'
-import { RNBootSplashPackage } from '@react-native-oh-tpl/react-native-bootsplash/ts';
 import {RNPrintPackage} from '@react-native-oh-tpl/react-native-print/ts';
 import {RNKeyboardControllerPackage,RNStatusBarManagerCompatPackage} from  "@react-native-oh-tpl/react-native-keyboard-controller/ts";
 import {RNSkiaPackage} from '@react-native-oh-tpl/react-native-skia/ts';
@@ -89,7 +88,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RNReactLocalizationPackage(ctx),
 	new RNMMKVStoragePackage(ctx),
 	new RNTextInputMaskPackage(ctx),
-	new RNBootSplashPackage(ctx),
 	new RNPrintPackage(ctx),
 	new RNKeyboardControllerPackage(ctx),
     new RNStatusBarManagerCompatPackage(ctx),
