@@ -15,10 +15,9 @@ export const PlatformColorsTest = () => {
     }, []);
 
     return (
-        <View style={{ top: 48, flex: 1 }}>
+        <ScrollView style={{ flex: 1 }}>
             <Tester>
                 <TestSuite name="KLAPlatformColorsTest">
-                    <ScrollView>
                         <TestCase itShould="Show the color of [rnpc_background]">
                             <ColorRow label="show color of id: rnpc_background" color={PlatformColor('rnpc_background')} />
                         </TestCase>
@@ -37,10 +36,9 @@ export const PlatformColorsTest = () => {
                         <TestCase itShould="Show the color of [rnpc_accent] by resolveColorSync api">
                             <ColorRow label="get 'rnpc_accent' color by resolveColorSync api" color={syncColor} />
                         </TestCase>
-                    </ScrollView>
                 </TestSuite>
             </Tester>
-        </View>
+        </ScrollView>
     );
 };
 const ColorRow = ({ label, color }: { label: string; color?: ColorValue }) => (

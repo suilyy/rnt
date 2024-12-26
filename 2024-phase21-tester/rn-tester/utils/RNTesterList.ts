@@ -471,11 +471,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-element-dropdown/test/App').default,
   },
   {
-    key: 'ReactNativeBootSplashExample',
-    category: 'UI',
-    module: require('../examples/react-native-bootsplash/test/BootSplashExample'),
-  },
-  {
     key: 'ReactNativePrintExample',
     category: 'Basic',
     module: require('../examples/react-native-print/PrintTest')
