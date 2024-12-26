@@ -2,7 +2,6 @@ import { RNAbility } from "@rnoh/react-native-openharmony";
 import Want from '@ohos.app.ability.Want';
 import { RNNfcManagerModule } from '@react-native-oh-tpl/react-native-nfc-manager';
 import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { RNBootSplashScreen } from '@react-native-oh-tpl/react-native-bootsplash/src/main/ets/RNBootSplashScreen';
 import { JPushInterface } from "@react-native-oh-tpl/jpush-react-native";
 import { abilityAccessCtrl, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 import { notificationManager } from '@kit.NotificationKit';
