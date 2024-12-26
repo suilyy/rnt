@@ -2,8 +2,8 @@ module.exports = {
   "prefix": "rnpc_",
   "colors": {
     "background": {
-      "light": "#ffffff",
-      "dark": "#000000"
+      "light": "#000000",
+      "dark": "#ffffff"
     },
     "text": "#696969",
     "accent": "pink",
