@@ -176,7 +176,7 @@ let key2 =
   'crr271wZvdNcLRzP0uWot2XNNuY=\n' +
   '-----END PRIVATE KEY-----';
 
-const keystore = require('../ca/server-keystore.p12');
+const keystore = require('./ca/server-keystore.p12');
 
 let instanceNumber = 0;
 
