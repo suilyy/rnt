@@ -18,7 +18,7 @@ Parse.initialize(
   'JSKey@Parse#2024!Secure',
   'P@rseM@sterKey#2024',
 );
-Parse.serverURL = 'http://localhost:1338/parse';
+Parse.serverURL = 'http://localhost:1337/parse';
 Parse.CoreManager.set('REQUEST_HEADERS', {
   'X-Parse-REST-API-Key': 'MYRESTAPIKEY',
 });
