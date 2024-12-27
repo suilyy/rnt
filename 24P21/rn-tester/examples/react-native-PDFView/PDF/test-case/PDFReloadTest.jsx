@@ -34,7 +34,7 @@ export function PDFReLoadTest() {
   };
   return (
     <Tester>
-      <ScrollView>
+      <ScrollView style ={{marginBottom:50}}>
         <TestSuite name="Test reload">
           <TestCase itShould={'Test reload'}>
             <Text>reload times:{reloadTimes}</Text>
