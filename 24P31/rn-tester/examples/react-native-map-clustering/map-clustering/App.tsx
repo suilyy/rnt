@@ -149,7 +149,7 @@ const App = () => {
                   <Tester>
                     <TestSuite name={'mapClusterDemo'}>
                       <TestCase itShould={com.name} tags={['C_API']} >
-                        <View style={{ height: height - 200 }}>
+                        <View style={{ height: height - 300 }}>
                           <MapView
                             initialRegion={INITIAL_REGION}
                             style={{ flex: 1 }}
