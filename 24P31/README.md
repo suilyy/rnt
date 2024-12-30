@@ -18,3 +18,6 @@
   "overrides": {
     "use-latest-callback": "^0.2.3"
   }
+
+7.react-native-reanimated 需要按照指导文档安装指定版本
+文档地址：https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-reanimated.md
