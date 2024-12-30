@@ -135,7 +135,7 @@
     "react-native-slider": "^0.11.0",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-sound": "^0.11.2",
-    "react-native-svg": "^15.10.1",
+    "react-native-svg": "^15.0.0",
     "react-native-tab-navigator": "^0.3.4",
     "react-native-text-size": "^4.0.0-rc.1",
     "react-native-translucent-modal": "^1.1.2",
