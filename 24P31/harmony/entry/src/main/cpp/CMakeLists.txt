@@ -32,6 +32,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-zip-archive/src/main/cpp" ./zipArchive-package)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/op-sqlite/src/main/cpp" ./rn_op_sqlite)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-pager-view/src/main/cpp" ./pager_view)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -65,4 +66,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_video)
 target_link_libraries(rnoh_app PUBLIC nativi_minizip)
 target_link_libraries(rnoh_app PUBLIC rnoh_skia)
 target_link_libraries(rnoh_app PUBLIC rnoh_rn_op_sqlite)
+target_link_libraries(rnoh_app PUBLIC rnoh_pager_view )
 # RNOH_END: link_packages

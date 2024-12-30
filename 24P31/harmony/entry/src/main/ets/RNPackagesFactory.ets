@@ -52,6 +52,7 @@ import { MixpanelPackage } from '@react-native-oh-tpl/mixpanel-react-native/ts';
 import { RNOpSqlitePackage } from '@react-native-oh-tpl/op-sqlite/ts';
 import { FsPackage } from '@react-native-oh-tpl/react-native-fs/ts';
 import { RNKeepAwakePackage } from "@react-native-oh-tpl/react-native-keep-awake/ts";
+import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new FastImagePackage(ctx),
@@ -106,6 +107,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new MixpanelPackage(ctx),
     new RNOpSqlitePackage(ctx),
     new FsPackage(ctx),
-    new RNKeepAwakePackage(ctx)
+    new RNKeepAwakePackage(ctx),
+    new ViewPagerPackage(ctx)
   ];
 }
