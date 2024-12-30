@@ -22,7 +22,7 @@ jpush-react-native三方库测试需要配置的文件
       }
     ]
 
-3.请配置工程的签名，签名文件在signingConfig文件夹下。打开DevEco Studio编译器， 点击右上角菜单“file”文件按钮，选择“Project Structure”，按照弹窗配置签名文件，别名和密码如下：
+3.请配置工程的签名，签名文件在signingConfig文件夹下。打开DevEco Studio编译器， 点击左上角菜单“file”文件按钮，选择“Project Structure”，按照弹窗配置签名文件，别名和密码如下：
 Store password:   arc123456
 Key alias:	test_rn
 Key password:  arc123456
