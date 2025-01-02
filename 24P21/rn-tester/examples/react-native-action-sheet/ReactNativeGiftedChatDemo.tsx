@@ -48,9 +48,6 @@ class App extends React.Component<Props, State> {
   _renderButtons() {
     const { showActionSheetWithOptions } = this.props;
     return (
-
-      <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar></StatusBar>
         <Tester style={{ flex: 1 }}>
           <ScrollView>
 
@@ -487,21 +484,17 @@ class App extends React.Component<Props, State> {
                 />
               </TestCase>
             </TestSuite>
-
           </ScrollView>
         </Tester>
-      </SafeAreaView >
     );
   }
 
   render() {
     return (
-      <SafeAreaView style={styles.flex}>
         <ScrollView style={styles.flex} contentContainerStyle={styles.contentContainer}>
           {this._renderButtons()}
           {this._renderSelectionText()}
         </ScrollView>
-      </SafeAreaView>
     );
   }
 }
