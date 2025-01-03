@@ -116,3 +116,16 @@ npm install
     },
   ];
   ```
+
+  在2024-phase5中需要在harmony目录下的build-profile.json5中添加如下配置
+  ```js
+    products: [
+      {
+        "buildOption": {
+          "strictMode": {
+            "useNormalizedOHMUrl": true
+          }
+        }
+      },
+    ],
+  ```
