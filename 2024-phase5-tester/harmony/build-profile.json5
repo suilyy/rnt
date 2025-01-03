@@ -1,0 +1,65 @@
+{
+  app: {
+    products: [
+      {
+        name: 'default',
+        signingConfig: 'default',
+        compileSdkVersion: '5.0.1(13)',
+        compatibleSdkVersion: '5.0.1(13)',
+        runtimeOS: 'HarmonyOS',
+        "buildOption": {
+          "arkOptions": {
+            "buildProfileFields": {
+              "debug": ".env.development",
+              "release": ".env.production"
+            }
+          },
+          "strictMode": {
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    buildModeSet: [
+      {
+        name: 'debug'
+      },
+      {
+        name: 'release'
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\zwx1359268\\.ohos\\config\\default_harmony_m0juUasNYOiQ74YOqvKK_1MfepGXwI8X_gORbjgvPIQ=.cer",
+          "storePassword": "0000001BF9C9F79C7E5E0737FF97DA1F9A4963507519E68185F0A39C12A870E336FB9EBE66891EA9270EA8",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B629F8B8BE22273D7D0443A425A92FF6415162024965036DED3D9D69E11B2BCD3CC76504B72AEE1",
+          "profile": "C:\\Users\\zwx1359268\\.ohos\\config\\default_harmony_m0juUasNYOiQ74YOqvKK_1MfepGXwI8X_gORbjgvPIQ=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\zwx1359268\\.ohos\\config\\default_harmony_m0juUasNYOiQ74YOqvKK_1MfepGXwI8X_gORbjgvPIQ=.p12"
+        }
+      }
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+      targets: [
+        {
+          name: 'default',
+          applyToProducts: [
+            'default'
+          ],
+        },
+      ],
+    },
+//        {
+//          name: 'config',
+//          srcPath: './config',
+//        }
+  ],
+}
