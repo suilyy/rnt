@@ -19,7 +19,6 @@ import {
   RNC_TOOLBAR_ANDROID_TYPE,
   RNCToolbarAndroid
 } from '@react-native-oh-tpl/toolbar-android/src/main/ets/RNCToolbarAndroid';
-import { CHECKBOX_TYPE, RNCCheckbox } from '@react-native-oh-tpl/checkbox';
 import { RNC_VIDEO_TYPE, RNCVideo } from '@react-native-oh-tpl/react-native-video';
 import { PDF_VIEW_TYPE, RTNPdfView } from '@react-native-oh-tpl/react-native-pdf';
 import { PICKER_TYPE, RNCPicker } from '@react-native-oh-tpl/picker';
@@ -27,6 +26,7 @@ import { PROGRESS_VIEW_TYPE, RNCProgressView } from '@react-native-oh-tpl/progre
 import { DATETIME_PICKER_VIEW_TYPE, RNDateTimePicker } from '@react-native-oh-tpl/datetimepicker';
 import { LOTTIE_TYPE, LottieAnimationView } from '@react-native-oh-tpl/lottie-react-native';
 import { RNDatePicker } from '@react-native-oh-tpl/react-native-date-picker';
+import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-ohos/checkbox"
 
 
 const arkTsComponentNames: Array<string> = [

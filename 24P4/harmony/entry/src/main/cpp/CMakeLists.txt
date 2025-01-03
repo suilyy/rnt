@@ -26,7 +26,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-picker/src/mai
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-video/src/main/cpp" ./video)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-webview/src/main/cpp" ./webview)
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/checkbox/src/main/cpp" ./checkbox)
+add_subdirectory("${OH_MODULES}/@react-native-ohos/checkbox/src/main/cpp" ./checkbox)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-pdf/src/main/cpp" ./pdfview)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-text-size/src/main/cpp" ./text-size)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-sound/src/main/cpp" ./sound)

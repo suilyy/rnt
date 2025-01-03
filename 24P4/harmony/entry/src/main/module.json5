@@ -10,10 +10,11 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
-    "metadata": [ // 配置如下信息 测试地图功能
+    "metadata": [
+      // 配置如下信息 测试地图功能
       {
-        "name" :  "client_id",
-        "value":  "111918079"
+        "name": "client_id",
+        "value": "111918079"
       }
     ],
     "requestPermissions": [
@@ -21,15 +22,15 @@
         "name": "ohos.permission.INTERNET"
       },
       {
-            "name": "ohos.permission.READ_PASTEBOARD",
-            "reason": "$string:Access_clipboard",
-            "usedScene": {
-              "abilities": [
-                  "EntryAbility"
-                ],
-              "when":"always"
-            }
-          },
+        "name": "ohos.permission.READ_PASTEBOARD",
+        "reason": "$string:Access_clipboard",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
       {
         "name": "ohos.permission.APPROXIMATELY_LOCATION",
         "reason": "$string:Access_location",
@@ -41,15 +42,15 @@
         }
       },
       {
-          "name": "ohos.permission.PRINT",
-          "reason": "$string:print_reason",
-          "usedScene": {
-              "abilities": [
-                  "EntryAbility"
-                ],
-              "when":"always"
-            }
-        },
+        "name": "ohos.permission.PRINT",
+        "reason": "$string:print_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "always"
+        }
+      },
       {
         "name": "ohos.permission.ACCELEROMETER"
       },
@@ -66,7 +67,6 @@
           "when": "always"
         }
       },
-
     ],
     "abilities": [
       {

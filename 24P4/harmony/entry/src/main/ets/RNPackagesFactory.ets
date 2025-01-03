@@ -26,6 +26,7 @@ import { SafeAreaViewPackage } from '@react-native-oh-tpl/react-native-safe-area
 import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-exception-handler/ts';
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
+import { RNCCheckBoxPackage } from '@react-native-ohos/checkbox/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -54,6 +55,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new BlobUtilPackage(ctx),
     new ExceptionHandlerPackage(ctx),
     new GestureHandlerPackage(ctx),
-    new RNDatePickerPackage(ctx)
+    new RNDatePickerPackage(ctx),
+    new RNCCheckBoxPackage(ctx)
   ];
 }
