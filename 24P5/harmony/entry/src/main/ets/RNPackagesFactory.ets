@@ -1,7 +1,7 @@
 import type {RNPackageContext, RNPackage} from '@rnoh/react-native-openharmony/ts';
 import { DocViewPackage } from "@react-native-oh-tpl/react-native-doc-viewer/ts";
 import {RNAlipayPackage} from '@react-native-oh-tpl/react-native-alipay/ts';
-import { RNConfigPackage } from '@react-native-oh-tpl/react-native-config/ts';
+// import { RNConfigPackage } from '@react-native-oh-tpl/react-native-config/ts';
 import {RNIdleTimerPackage}  from '@react-native-oh-tpl/react-native-idle-timer/ts';
 import { RNCImageCapInsetsPackage } from '@react-native-oh-tpl/react-native-image-capinsets-next/ts';
 import { RNThumbnailPackage } from '@react-native-oh-tpl/react-native-thumbnail/ts';
@@ -26,7 +26,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new DocViewPackage(ctx),
     new RNAlipayPackage(ctx),
-    new RNConfigPackage(ctx),
+    // new RNConfigPackage(ctx),
     new RNIdleTimerPackage(ctx),
     new RNCImageCapInsetsPackage(ctx),
     new RNThumbnailPackage(ctx),
