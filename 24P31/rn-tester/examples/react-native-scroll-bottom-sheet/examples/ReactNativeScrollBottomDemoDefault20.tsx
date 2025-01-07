@@ -49,7 +49,7 @@ export default function ScrollBottomSheetDemoDefault20() {
       <ScrollBottomSheet
         ref={sheetRef}
         componentType="ScrollView"
-        snapPoints={[128, '40%', '60%']}
+        snapPoints={[128, '60%', '80%']}
         initialSnapIndex={0}
         renderHandle={() => (
           <View style={styles.header}>

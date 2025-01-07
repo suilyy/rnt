@@ -32,10 +32,10 @@ import ScrollBottomSheetDemoDefault20 from './examples/ReactNativeScrollBottomDe
 const App = () => {
   // renders
   return (
-    <View style={{backgroundColor: 'black'}}>
+    <View style={{backgroundColor: 'black' }}>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={{marginBottom:100}}>
-        <NavigationContainer>
+      <SafeAreaView style={{marginBottom: 100}}>
+        <NavigationContainer >
           <Page
             name={`EXAMPLE: ScrollBottomSheetDemoDefault1 componentType="FlatList"`}>
             <ScrollBottomSheetDemoDefault1 />

@@ -30,7 +30,7 @@ export default function ScrollBottomSheetDemoDefault8() {
     <View style={styles.screenbox}>
       <ScrollBottomSheet
         componentType="FlatList"
-        snapPoints={[128, '50%', WINDOW_HEIGHT - 200]}
+        snapPoints={[128, '60%', WINDOW_HEIGHT - 200]}
         initialSnapIndex={1}
         renderHandle={() => (
           <View style={styles.header}>
