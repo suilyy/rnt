@@ -159,10 +159,15 @@
               "entity.system.home"
             ],
             "actions": [
+              "action.system.home"
+            ]
+          },
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
               "action.system.home",
-              // other declared actions,
-
-              // add the nfc tag action
               "ohos.nfc.tag.action.TAG_FOUND"
             ],
             "uris": [
@@ -172,8 +177,6 @@
               {
                 "type": "tag-tech/IsoDep"
               }
-              // Add other technology if neccessary,
-              // such as: NfcB/NfcF/NfcV/Ndef/MifareClassic/MifareUL/NdefFormatable
             ]
           }
         ],
