@@ -11,16 +11,24 @@ import inter from "../../assets/inter-medium.ttf";
 import { appColors } from "./consts/colors";
 import { Button } from "../components/Button";
 import { Tester, TestCase, TestSuite } from '@rnoh/testerino';
-
+const TestNumber = [1,15,25,90,45,60,8,16];
 const DATA = (length: number = 10) =>
   Array.from({ length }, (_, index) => ({
     month: index + 1,
     listenCount: Math.floor(Math.random() * (20)) + 10,
   }));
 
+const DATATest = (length: number = 8) =>
+  Array.from({ length }, (_, index) => ({
+    month: index + 1,
+    listenCount: TestNumber[index],
+  }));  
+
 export default function ScatterPage() {
   const font = useFont(inter, 12);
   const [dataTest, setDataTest] = useState(DATA(5));
+  const [data5, setData5] = useState(DATATest())
+  const [data6, setData6] = useState(DATATest())
   const [radius, setRadius] = useState(10);
   const [shape, setShape] = useState("circle" as ScatterShape);
   const [color, setColor] = useState("#0000FF");
@@ -46,7 +54,7 @@ export default function ScatterPage() {
             axisOptions={{ 
               font
             }}
-            data={dataTest}
+            data={data6}
           >
             {({ points }) => {
               return (
@@ -91,13 +99,15 @@ export default function ScatterPage() {
               <Button
                 style={{ flex: 1 }}
                 onPress={() => {
-                  setDataTest((data) => DATA(6))
+                  setData6((data6) => DATA(6))
                 }}
                 title="points num 6"
               />
               <Button
                 style={{ flex: 1 }}
-                onPress={() => setDataTest((data) => DATA(4))}
+                onPress={() => 
+                  setData6((data6) => DATA(4))
+                }
                 title="points num 4"
               />
             </View>
@@ -269,7 +279,7 @@ export default function ScatterPage() {
           >
             <Button
               style={{ flex: 1 }}
-              onPress={() => setDataTest((data) => DATA(data.length))}
+              onPress={() => setData6((data6) => DATA(data6.length))}
               title="animate"
             />
           </View>

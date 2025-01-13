@@ -1,4 +1,4 @@
-import { useFont } from "@react-native-oh-tpl/react-native-skia";
+import { useFont } from "@shopify/react-native-skia";
 import * as React from "react";
 import { useState } from "react";
 import { SafeAreaView, ScrollView, StyleSheet, View, Text } from "react-native";
@@ -18,10 +18,11 @@ import inter from "../../assets/inter-medium.ttf";
 import { appColors } from "./consts/colors";
 import { Button } from "../components/Button";
 import { Tester, TestCase, TestSuite } from '@rnoh/testerino';
-import { LinearGradient, vec } from "@react-native-oh-tpl/react-native-skia";
+import { LinearGradient, vec } from "@shopify/react-native-skia";
 
 const randomNumber = () => Math.floor(Math.random() * (50 - 25 + 1)) + 25;
-
+const TestNumber = [1,7,25,8,45,15,8,16];
+const TestNumber2 = [1,7,25,8,45,60,15,16,1,7,25,8,45,60,15,16,1,7,25,8,45,60,15,16,1,7,25,8,45,60,15,16];
 const SKIP = [7, 8, 15];
 
 const DATA = (numberPoints = 13) =>
@@ -33,6 +34,17 @@ const DATA = (numberPoints = 13) =>
 const DATA1 = Array.from({ length: 20 }, (_, i) => ({
   day: i,
   sales: SKIP.includes(i) ? null : Math.random() * 100,
+}));
+
+const DATATest= (numberPoints = 8) =>
+Array.from({ length: numberPoints }, (_, index) => ({
+  day: index + 1,
+  sales: TestNumber[index],
+}));
+
+const DATATestSkip = Array.from({ length: 20 }, (_, i) => ({
+  day: i,
+  sales: SKIP.includes(i) ? null : TestNumber2[i],
 }));
 
 export default function AreaChartPage() {
@@ -80,6 +92,9 @@ export default function AreaChartPage() {
   const [data2, setData2] = useState(DATA(6));
   const [data3, setData3] = useState(DATA(7));
   const [data4, setData4] = useState(DATA(8));
+  const [data5, setData5] = useState(DATATest());
+  const [data6, setData6] = useState(DATATest());
+  const [data7, setData7] = useState(DATATest());
 
   return (
       <ScrollView>
@@ -91,9 +106,8 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={data}
+                data={data6}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
-                domain={{y: [-10, 100]}}
               >
                 {({ points, chartBounds }) => (
                   <>
@@ -120,7 +134,7 @@ export default function AreaChartPage() {
             >
               <Button
                 style={{ flex: 1 }}
-                onPress={() => setData((data) => DATA(data.length))}
+                onPress={() => setData6((data) => DATA(data.length))}
                 title="Shuffle Data"
               />
             </View>
@@ -134,7 +148,7 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={data1}
+                data={data7}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
               >
                 {({ points, chartBounds }) => (
@@ -164,11 +178,11 @@ export default function AreaChartPage() {
               <Button
                 style={{ flex: 1 }}
                 onPress={() =>
-                  setData1((data1) => [
-                    ...data1,
+                  setData7((data7) => [
+                    ...data7,
                     {
-                      day: data1.length + 1,
-                      sales: randomNumber(),
+                      day: data7.length + 1,
+                      sales: (data7.length+1)%3*10,
                     },
                   ])
                 }
@@ -184,9 +198,9 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={data4}
+                // data={data4}改动位置
+                data={data5}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
-                domain={{y: [-10, 100]}}
               >
                 {({ points, chartBounds }) => (
                   <>
@@ -230,9 +244,8 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={data2}
+                data={data5}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
-                domain={{y: [-10, 100]}}
               >
                 {({ points, chartBounds }) => (
                   <>
@@ -282,9 +295,8 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={DATA1}
+                data ={DATATestSkip}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
-                domain={{y: [-10, 100]}}
               >
                 {({ points, chartBounds }) => (
                   <>
@@ -329,9 +341,9 @@ export default function AreaChartPage() {
                 padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
                 yKeys={["sales"]}
                 axisOptions={{ font }}
-                data={data3}
+                // data={data3}改动位置
+                data={data5}
                 domainPadding={{ left: 0, right: 50, top: 30 }}
-                domain={{y: [-10, 100]}}
               >
                 {({ points, chartBounds }) => (
                   <>
@@ -354,9 +366,8 @@ export default function AreaChartPage() {
               padding={{ left: 10, right: 10, bottom: 10, top: 15 }}
               yKeys={["sales"]}
               axisOptions={{ font }}
-              data={data2}
+              data={data5}
               domainPadding={{ left: 0, right: 50, top: 30 }}
-              domain={{y: [-10, 100]}}
             >
               {({ points, chartBounds }) => (
                 <>
