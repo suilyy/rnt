@@ -25,12 +25,7 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'ReactNativeBarcodeBuilder',
     category: 'UI',
     module: require('../examples/react-native-barcode-builder/BarcodeBuilderExample'),
-  },
-  {
-    key: 'ReactNativeAwesomeGallery',
-    category: 'UI',
-    module: require('../examples/react-native-awesome-gallery/test/index'),
-  },
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

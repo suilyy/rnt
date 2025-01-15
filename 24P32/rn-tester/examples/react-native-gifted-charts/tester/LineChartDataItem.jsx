@@ -16,7 +16,8 @@ export default function () {
         { value: 50, label: '50', labelTextStyle: { color: 'red', fontSize: 14 } },
         { value: 80, label: '80', labelTextStyle: { color: 'blue', fontSize: 16 } },
         { value: 90, label: '90', labelTextStyle: { color: 'blue', fontSize: 18 } },
-        { value: 70, label: '70', labelTextStyle: { color: 'blue', fontSize: 20 } }]
+        { value: 70, label: '70', labelTextStyle: { color: 'blue', fontSize: 20 } }],
+        pointerConfig : {persistPointer: true }
     },
     {
       data: [
