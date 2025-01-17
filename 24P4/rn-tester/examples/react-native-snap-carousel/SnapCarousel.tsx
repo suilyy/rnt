@@ -504,7 +504,29 @@ export default function SnapCarousel(): JSX.Element {
               inactiveSlideShift={40}
             />
           </TestCase>
-          <TestCase itShould="activeSlideAlignment 轮播图对齐方式">
+          <TestCase itShould="activeSlideAlignment 轮播图对齐方式 start">
+            <Carousel
+              data={ENTRIES1}
+              renderItem={_renderItem}
+              sliderWidth={300}
+              itemWidth={100}
+              sliderHeight={200}
+              itemHeight={100}
+              activeSlideAlignment={'start'}
+            />
+          </TestCase>
+          <TestCase itShould="activeSlideAlignment 轮播图对齐方式 center">
+            <Carousel
+              data={ENTRIES1}
+              renderItem={_renderItem}
+              sliderWidth={300}
+              itemWidth={100}
+              sliderHeight={200}
+              itemHeight={100}
+              activeSlideAlignment={'center'}
+            />
+          </TestCase>
+          <TestCase itShould="activeSlideAlignment 轮播图对齐方式 end">
             <Carousel
               data={ENTRIES1}
               renderItem={_renderItem}
@@ -684,6 +706,23 @@ export default function SnapCarousel(): JSX.Element {
               }}
             />
           </TestCase>
+          <TestCase itShould="activeAnimationType自定义动画类型timing activeAnimationOptions自定义动画">
+            <Carousel
+              data={ENTRIES1}
+              renderItem={_renderItem}
+              sliderWidth={300}
+              itemWidth={100}
+              sliderHeight={200}
+              itemHeight={100}
+              activeAnimationType={'timing'}
+              activeAnimationOptions={{
+                duration: 2000,
+                delay: 1,
+                isInteraction: false,
+                useNativeDriver: true
+              }}
+            />
+          </TestCase>
           <TestCase itShould="callbackOffsetMargin 增加的小边距 处理滚动不精确的问题 无明显效果">
             <Carousel
               data={ENTRIES1}
@@ -782,7 +821,7 @@ export default function SnapCarousel(): JSX.Element {
         // inactiveSlideScale={0.5}    //轮播图的缩放效果
         // inactiveSlideShift={40}      // layout 布局为default时候 轮播效果的偏移量
         // activeAnimationType={'spring'}     // 自定义动画类型 decay  spring  timing
-        // activeSlideAlignment={'center'}  //确定活动幻灯片相对于旋转木马的对齐方式 
+        // activeSlideAlignment={'center'}  //确定活动幻灯片相对于旋转木马的对齐方式
         // firstItem={2}    //要显示的第一个轮播图的索引
         enableMomentum={false} //手指滑动轮播的缓冲效果
         // activeSlideOffset={150} //手指滑动距离 才可以滚动
@@ -791,7 +830,7 @@ export default function SnapCarousel(): JSX.Element {
       // lockScrollWhileSnapping={false}  //轮播滚动时 点击轮播图 动画效果停止
       // lockScrollTimeoutDuration={1000}   //配合lockScrollWhileSnapping  停止滚动时触发一个计时器
       // swipeThreshold={50}    //滑动触发快照时的 Delta x
-      // callbackOffsetMargin={100}  
+      // callbackOffsetMargin={100}
       // onScroll={(res)=>{console.log(res)}}
       // onSnapToItem ={(index)=>{
       //   console.log(index);
