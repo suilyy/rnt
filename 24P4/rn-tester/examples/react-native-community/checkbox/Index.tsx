@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, ScrollView} from 'react-native';
-import CheckBox from "@react-native-ohos/checkbox";
+import CheckBox from "@react-native-community/checkbox";
 import {Tester, TestCase, TestSuite} from '@rnoh/testerino';
 
 export function CheckboxTest() {

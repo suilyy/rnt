@@ -71,7 +71,7 @@ const Components: Array<RNTesterModuleInfo> = [
   {
     key: 'ReactNativeAria',
     category: 'Basic',
-    module: require('../examples/react-native-aria/ReactNativeAira'),
+    module: require('../examples/react-native-aria/ReactNativeAria'),
   },
   {
     key: 'ReactNativePermission',
