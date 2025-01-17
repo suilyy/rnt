@@ -27,6 +27,7 @@ import { ExceptionHandlerPackage } from '@react-native-oh-tpl/react-native-excep
 import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture-handler/ts';
 import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
 import { RNCCheckBoxPackage } from '@react-native-ohos/checkbox/ts';
+import {MapsPackage} from '@react-native-oh-tpl/react-native-maps/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -56,6 +57,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new ExceptionHandlerPackage(ctx),
     new GestureHandlerPackage(ctx),
     new RNDatePickerPackage(ctx),
-    new RNCCheckBoxPackage(ctx)
+    new RNCCheckBoxPackage(ctx),
+    new MapsPackage(ctx),
   ];
 }

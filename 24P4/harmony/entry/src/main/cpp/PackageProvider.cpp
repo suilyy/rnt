@@ -29,6 +29,7 @@
 #include "SafeAreaViewPackage.h"
 #include "ExceptionHandlerPackage.h"
 #include "GestureHandlerPackage.h"
+#include "MapsPackage.h"
 
 using namespace rnoh;
 
@@ -64,6 +65,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<PushNotificationPackage>(ctx),
         std::make_shared<ExceptionHandlerPackage>(ctx),
         std::make_shared<GestureHandlerPackage>(ctx),
-        
+        std::make_shared<MapsPackage>(ctx),
     };
 }

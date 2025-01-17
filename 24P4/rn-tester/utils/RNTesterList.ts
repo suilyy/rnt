@@ -369,6 +369,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'basic',
     module: require('../examples/react-native-drax/test/tester/index'),
   },
+  {
+    key: 'react-native-maps',
+    category: 'basic',
+    module: require('../examples/react-native-maps/Test/App'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

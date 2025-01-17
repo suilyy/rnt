@@ -27,7 +27,32 @@ import { DATETIME_PICKER_VIEW_TYPE, RNDateTimePicker } from '@react-native-oh-tp
 import { LOTTIE_TYPE, LottieAnimationView } from '@react-native-oh-tpl/lottie-react-native';
 import { RNDatePicker } from '@react-native-oh-tpl/react-native-date-picker';
 import { RNCCheckbox, CHECKBOX_TYPE } from "@react-native-ohos/checkbox"
-
+import {
+  AIRMap,
+  AIR_MAP_TYPE,
+  AIRMapMarker,
+  AIR_MAP_MARKER_TYPE,
+  AIRMapPolyline,
+  AIR_MAP_POLYLINE_TYPE,
+  AIRMapPolygon,
+  AIR_MAP_POLYGON_TYPE,
+  AIRMapCircle,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_CALLOUT_SUBVIEW_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIRMapCallout,
+  AIRMapCalloutSubview,
+  Geojson,
+  AIR_GEOJSON_TYPE,
+  AIRMapUrlTile,
+  AIR_URLTILE_TYPE,
+  AIRMapWMSTile,
+  AIR_WMSTILE_TYPE,
+  AIR_OVERLAY_TYPE,
+  AIRMapOverlay,
+  AIR_MAP_CLUSTER_TYPE,
+  AIRMapCluster,
+} from '@react-native-oh-tpl/react-native-maps';
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
@@ -45,6 +70,17 @@ const arkTsComponentNames: Array<string> = [
   PICKER_TYPE,
   PROGRESS_VIEW_TYPE,
   LOTTIE_TYPE,
+  AIR_MAP_TYPE,
+  AIR_MAP_MARKER_TYPE,
+  AIR_MAP_POLYLINE_TYPE,
+  AIR_MAP_POLYGON_TYPE,
+  AIR_MAP_CIRCLE_TYPE,
+  AIR_MAP_CALLOUT_TYPE,
+  AIR_GEOJSON_TYPE,
+  AIR_URLTILE_TYPE,
+  AIR_WMSTILE_TYPE,
+  AIR_OVERLAY_TYPE,
+  AIR_MAP_CLUSTER_TYPE,
 ];
 
 @Builder
@@ -120,6 +156,72 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
       ProgressBarAndroid({
         ctx: ctx.rnComponentContext,
         tag: ctx.tag
+      })
+    }
+    if (ctx.componentName === AIR_MAP_TYPE) {
+      AIRMap({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_MARKER_TYPE) {
+      AIRMapMarker({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYLINE_TYPE) {
+      AIRMapPolyline({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_POLYGON_TYPE) {
+      AIRMapPolygon({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CIRCLE_TYPE) {
+      AIRMapCircle({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_TYPE) {
+      AIRMapCallout({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CALLOUT_SUBVIEW_TYPE) {
+      AIRMapCalloutSubview({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_GEOJSON_TYPE) {
+      Geojson({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_URLTILE_TYPE) {
+      AIRMapUrlTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_WMSTILE_TYPE) {
+      AIRMapWMSTile({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_OVERLAY_TYPE) {
+      AIRMapOverlay({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
+      })
+    } else if (ctx.componentName === AIR_MAP_CLUSTER_TYPE) {
+      AIRMapCluster({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag,
       })
     }
   }

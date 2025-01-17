@@ -9,6 +9,7 @@ import {
   Text
 } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
+import 'text-encoding';
 
 export const QrcodeSvgDemo = () => {
    const [value,setValue] = useState("value")
@@ -21,7 +22,7 @@ export const QrcodeSvgDemo = () => {
    const [logoMargin,setLogoMargin] = useState(2)
    const [qrRef,setQrRef] = useState("")
    const [ecl,setEcl] = useState<"L" | "M" | "Q" | "H" | undefined>("L")
-   const [quietZone,setQuietZone] = useState(0) 
+   const [quietZone,setQuietZone] = useState(0)
    const [enableLinearGradient,setEnableLinearGradient] = useState(false)
    const [linearGradient,setLinearGradient] =useState(["rgb(255,0,0)","rgb(0,255,0)"])
    const [gradientDirection,setGradientDirection] =useState( ['0%', '0%', '100%', '100%'])
@@ -39,14 +40,14 @@ export const QrcodeSvgDemo = () => {
             initialState={false}
 
             arrange={({ setState }) => {
-            
+
               return (
                 <View style={{ flex: 1}}>
                    <QRCode value={value}></QRCode>
                   <Button title={"start"} onPress={() => {
-                   
+
                   setValue("changevalue")
-                 
+
                     setState(true)
                   }}></Button>
                 </View>
@@ -122,17 +123,17 @@ export const QrcodeSvgDemo = () => {
             tags={['C_API']}
             initialState={false}
             arrange={({ setState }) => {
-            
+
               return (
                 <View style={{ flex: 1 }}>
-                  
+
                    <QRCode logo={logo} logoSize={20} value={value}></QRCode>
-                  
+
                   <Button title={"start"} onPress={() => {
-                   
-                   setLogo(require("../../assets/pravatar-131.jpg"))  
+
+                   setLogo(require("../../assets/pravatar-131.jpg"))
                     setState(true)
-                  
+
                   }}></Button>
                 </View>
               );
@@ -201,7 +202,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-             <TestCase          
+             <TestCase
             key={"getInitStatus_16"}
             itShould={`设置二维码logo的BorderRadius  logoBorderRadius`}
             tags={['C_API']}
@@ -242,7 +243,7 @@ export const QrcodeSvgDemo = () => {
                      if(qrRef) {
                         setState(true)
                      }
-                    
+
                   }}></Button>
                 </View>
               );
@@ -251,7 +252,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-           
+
             <TestCase
             key={"getInitStatus_10"}
             itShould={`设置纠错级别  ecl`}
@@ -272,7 +273,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-             <TestCase          
+             <TestCase
             key={"getInitStatus_11"}
             itShould={`显示错误信息则证明触发onError事件`}
             tags={['C_API']}
@@ -288,7 +289,7 @@ export const QrcodeSvgDemo = () => {
                       if(error) {
                         setState(true)
                       }
-                        
+
                   }}></Button>
                 </View>
               );
@@ -297,7 +298,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-           <TestCase          
+           <TestCase
             key={"getInitStatus_12"}
             itShould={`设置二维码周围的安静区域的大小  quietZone`}
             tags={['C_API']}
@@ -317,7 +318,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-           <TestCase          
+           <TestCase
             key={"getInitStatus_13"}
             itShould={`设置二维码的颜色是否渐变  enableLinearGradient`}
             tags={['C_API']}
@@ -337,7 +338,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-             <TestCase          
+             <TestCase
             key={"getInitStatus_14"}
             itShould={`设置二维码渐变的颜色  linearGradient`}
             tags={['C_API']}
@@ -354,7 +355,7 @@ export const QrcodeSvgDemo = () => {
                       setLinearGradient(["rgb(0,255,0)","rgb(0,0,255)"])
                       setTimeout(()=> {setIsShow(true)},0)
                         setState(true)
-                       
+
                   }}></Button>
                 </View>
               );
@@ -363,7 +364,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-          <TestCase          
+          <TestCase
             key={"getInitStatus_15"}
             itShould={`设置二维码渐变的线性梯度  linearGradient`}
             tags={['C_API']}
@@ -383,7 +384,7 @@ export const QrcodeSvgDemo = () => {
               expect(state).to.be.true;
             }}
           />
-           
+
         </TestSuite>
 
       </ScrollView>
