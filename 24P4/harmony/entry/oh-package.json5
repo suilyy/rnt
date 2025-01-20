@@ -42,6 +42,6 @@
     "@react-native-oh-tpl/react-native-safe-area-context": "file:../../node_modules/@react-native-oh-tpl/react-native-safe-area-context/harmony/safe_area.har",
     "@react-native-oh-tpl/react-native-exception-handler": "file:../../node_modules/@react-native-oh-tpl/react-native-exception-handler/harmony/exception_handler.har",
     "@react-native-oh-tpl/react-native-gesture-handler": "file:../../node_modules/@react-native-oh-tpl/react-native-gesture-handler/harmony/gesture_handler.har",
-    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har"
+    "@react-native-oh-tpl/react-native-maps": "file:../../node_modules/@react-native-oh-tpl/react-native-maps/harmony/maps.har",
   }
 }

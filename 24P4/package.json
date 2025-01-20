@@ -85,7 +85,7 @@
     "@react-native-oh-tpl/slider": "^4.4.3-0.3.3",
     "@react-native-oh-tpl/toolbar-android": "^0.2.1-0.0.4",
     "@react-native-ohos/checkbox": "^0.5.17-rc.1",
-    "@react-native-ohos/progress-view": "^1.4.3-rc.1",
+    "@react-native-oh-tpl/progress-view": "^1.4.2-0.0.8",
     "@react-native-segmented-control/segmented-control": "^2.5.4",
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/native": "^6.1.18",

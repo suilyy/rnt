@@ -11,6 +11,7 @@
     "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.810.har"
   },
   "overrides": {
-    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.810.har"
+    "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.810.har",
+    "@ohos/materialprogressbar": "2.0.3-rc.0"
   }
 }
