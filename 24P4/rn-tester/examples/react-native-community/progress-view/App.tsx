@@ -51,48 +51,17 @@ const styles = StyleSheet.create({
     },
 });
 
-export const ProgressViewDemo = () => {
+export default function ProgressViewDemo() {
     const [getInitStatu_1progress, setGetInitStatu_1progressProgress] = useState(0)
     const [getInitStatu_2progress, setGetInitStatu_2progressProgress] = useState(0.4)
-    const [progressTintColor, setProgressTintColor] = useState("purple")
-    const [trackTintColor, setTrackTintColor] = useState("purple")
+    const [getInitStatu_2progress_bar, setGetInitStatu_2progressProgress_bar] = useState(0.4)
+    const [progressTintColor, setProgressTintColor] = useState("red")
+    const [progressTintColorBar, setProgressTintColorBar] = useState("red")
+    const [progressViewStyle, setProgressViewStyle] = useState('default')
     return (
-        <Tester style={{ paddingBottom: 80 }}>
+        <Tester>
             <ScrollView>
                 <TestSuite name="react-native-community/progress-view">
-                    <TestCase
-                        key={"getInitStatus_1"}
-                        itShould={`animation progress change`}
-                        tags={['C_API']}
-                        initialState={false}
-
-                        arrange={({ setState }) => {
-                            return (
-                                <View style={{ flex: 1 }}>
-                                    <ProgressView
-                                        style={styles.progressView}
-                                        progress={getInitStatu_1progress}
-                                        testID={'p1'}
-
-                                    />
-                                    <Button title={"start"} onPress={() => {
-                                        let i = 0
-                                        const timer = setInterval(() => {
-                                            i += 0.1
-                                            setGetInitStatu_1progressProgress(i)
-                                            if (i === 1) {
-                                                clearInterval(timer)
-                                            }
-                                        }, 100)
-                                        setState(true)
-                                    }}></Button>
-                                </View>
-                            );
-                        }}
-                        assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
-                        }}
-                    />
                     <TestCase
                         key={"progress number change"}
                         itShould={`change progress`}
@@ -128,7 +97,7 @@ export const ProgressViewDemo = () => {
                     />
                     <TestCase
                         key={"getInitStatus_3"}
-                        itShould={`defalut progressTintColor purple color change color`}
+                        itShould={`default progressTintColor red color change color`}
                         tags={['C_API']}
                         initialState={false}
                         arrange={({ setState }) => {
@@ -136,7 +105,7 @@ export const ProgressViewDemo = () => {
                                 <View style={{ flex: 1 }}>
                                     <ProgressView
                                         style={styles.progressView}
-                                        progress={0.5}
+                                        progress={0.8}
                                         progressTintColor={progressTintColor}
                                         testID={'p3'}
 
@@ -146,7 +115,7 @@ export const ProgressViewDemo = () => {
                                         setState(true)
                                     }}></Button>
                                     <Button title={"setColor:(0,255,0)"} onPress={() => {
-                                        setProgressTintColor("(0,255,0)")
+                                        setProgressTintColor("rgb(0,255,0)")
                                         setState(true)
                                     }}></Button>
                                 </View>
@@ -158,7 +127,7 @@ export const ProgressViewDemo = () => {
                     />
                     <TestCase
                         key={"getInitStatus_4"}
-                        itShould={`defalut trackTintColor purple color change color`}
+                        itShould={`progressViewStyle 进度条样式`}
                         tags={['C_API']}
                         initialState={false}
                         arrange={({ setState }) => {
@@ -167,11 +136,76 @@ export const ProgressViewDemo = () => {
                                     <ProgressView
                                         style={styles.progressView}
                                         progress={0.5}
-                                        trackTintColor={trackTintColor}
+                                        progressViewStyle={progressViewStyle}
                                         testID={'p4'}
                                     />
+                                    <Button title={`progressViewStyle:${progressViewStyle}`} onPress={() => {
+                                        setProgressViewStyle(progressViewStyle == 'default' ? 'bar' : 'default')
+                                        setState(true)
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
+                        key={"progress number change bar"}
+                        itShould={`change progress`}
+                        tags={['C_API']}
+                        initialState={false}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={getInitStatu_2progress_bar}
+                                        testID={'p2'}
+                                        progressViewStyle={'bar'}
+
+                                    />
+                                    <Button title={"add 0.1"} onPress={() => {
+                                        if (getInitStatu_2progress_bar < 1.1) {
+                                            setGetInitStatu_2progressProgress_bar(getInitStatu_2progress_bar + 0.1)
+                                            setState(true)
+                                        }
+                                    }}></Button>
+                                    <Button title={"sub 0.1"} onPress={() => {
+                                        if (getInitStatu_2progress_bar > 0) {
+                                            setGetInitStatu_2progressProgress_bar(getInitStatu_2progress_bar - 0.1)
+                                            setState(true)
+                                        }
+                                    }}></Button>
+                                </View>
+                            );
+                        }}
+                        assert={async ({ expect, state }) => {
+                            expect(state).to.be.true;
+                        }}
+                    />
+                    <TestCase
+                        key={"getInitStatus_5"}
+                        itShould={`default progressTintColor red color change color bar`}
+                        tags={['C_API']}
+                        initialState={false}
+                        arrange={({ setState }) => {
+                            return (
+                                <View style={{ flex: 1,paddingBottom:40,marginBottom:20 }}>
+                                    <ProgressView
+                                        style={styles.progressView}
+                                        progress={0.5}
+                                        progressTintColor={progressTintColorBar}
+                                        testID={'p3'}
+                                        progressViewStyle={'bar'}
+
+                                    />
                                     <Button title={"setColor:#FF69B4"} onPress={() => {
-                                        setTrackTintColor("#FF69B4")
+                                        setProgressTintColorBar("#FF69B4")
+                                        setState(true)
+                                    }}></Button>
+                                    <Button title={"setColor:(0,255,0)"} onPress={() => {
+                                        setProgressTintColorBar("rgb(0,255,0)")
                                         setState(true)
                                     }}></Button>
                                 </View>
