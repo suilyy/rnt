@@ -11,7 +11,8 @@
     "deliveryWithInstall": true,
     "installationFree": false,
     "pages": "$profile:main_pages",
-      "metadata": [
+    "querySchemes": ["maps","http","https","customDomain"],
+    "metadata": [
       // 配置如下信息 测试地图功能
       {
         "name": "client_id",
