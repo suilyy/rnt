@@ -1,20 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
     StyleSheet,
     View,
     Text,
     ScrollView,
-    Animated,
-    Image,
-    Button
-
+    Button,
 } from 'react-native';
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
-import RTNPermissions, { Permission, NotificationsResponse } from "@react-native-oh-tpl/react-native-permissions";
+import RTNPermissions, { Permission } from "react-native-permissions";
 export const PermissionTest = () => {
     const permissionNormal: Permission[] = [
         "ohos.permission.APPROXIMATELY_LOCATION",
-        "ohos.permission.CAMERA",
         "ohos.permission.MICROPHONE",
         "ohos.permission.READ_CALENDAR",
         "ohos.permission.WRITE_CALENDAR",
@@ -38,7 +34,7 @@ export const PermissionTest = () => {
                         key={"getInitStatus_1"}
                         itShould={`check change`}
                         tags={['C_API']}
-                        initialState={false}
+                        initialState={camer}
 
                         arrange={({ setState }) => {
 
@@ -49,14 +45,13 @@ export const PermissionTest = () => {
                                         onPress={async () => {
                                             let check = await RTNPermissions.check("ohos.permission.CAMERA");
                                             setCamer(check)
-                                            setState(true)
-
+                                            setState(check)
                                         }}></Button>
                                 </View>
                             );
                         }}
                         assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
+                            expect(state === 'denied' || state === 'granted').to.be.true;
                         }}
                     />
 
@@ -64,7 +59,7 @@ export const PermissionTest = () => {
                         key={"getInitStatus_2"}
                         itShould={`checkNotifications change`}
                         tags={['C_API']}
-                        initialState={false}
+                        initialState={checkNotifications}
 
                         arrange={({ setState }) => {
 
@@ -75,14 +70,14 @@ export const PermissionTest = () => {
                                         onPress={async () => {
                                             let check = await RTNPermissions.checkNotifications();
                                             setCheckNotifications(JSON.stringify(check))
-                                            setState(true)
+                                            setState(check.status)
 
                                         }}></Button>
                                 </View>
                             );
                         }}
                         assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
+                            expect(state === 'granted' || state === 'blocked').to.be.true;
                         }}
                     />
 
@@ -91,7 +86,7 @@ export const PermissionTest = () => {
                         key={"getInitStatus_4"}
                         itShould={`request change`}
                         tags={['C_API']}
-                        initialState={false}
+                        initialState={camer}
 
                         arrange={({ setState }) => {
 
@@ -101,15 +96,14 @@ export const PermissionTest = () => {
                                         title="设置相机权限"
                                         onPress={async () => {
                                             let request = await RTNPermissions.request("ohos.permission.CAMERA");
-
-                                            setState(true)
+                                            setState(request)
                                         }}
                                     />
                                 </View>
                             );
                         }}
                         assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
+                            expect(state === 'granted' || state === 'blocked' || state === 'denied').to.be.true;
                         }}
                     />
 
@@ -117,7 +111,7 @@ export const PermissionTest = () => {
                         key={"getInitStatus_5"}
                         itShould={`requestNotifications change`}
                         tags={['C_API']}
-                        initialState={false}
+                        initialState={checkNotifications}
 
                         arrange={({ setState }) => {
 
@@ -127,15 +121,14 @@ export const PermissionTest = () => {
                                         title="设置通知权限"
                                         onPress={async () => {
                                             let request = await RTNPermissions.requestNotifications(["alert"]);
-
-                                            setState(true)
+                                            setState(request.status)
                                         }}
                                     />
                                 </View>
                             );
                         }}
                         assert={async ({ expect, state }) => {
-                            expect(state).to.be.true;
+                            expect(state).to.be.eq('granted');
                         }}
                     />
 

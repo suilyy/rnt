@@ -21,6 +21,10 @@
       "value": "access location"
     },
     {
+      "name": "Access_camera",
+      "value": "access camera"
+    },
+    {
       "name": "reason",
       "value": "允许应用使用相机。"
     },
