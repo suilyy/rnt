@@ -539,6 +539,11 @@ const Components: Array<RNTesterModuleInfo> = [
     key: 'restyle',
     category: 'UI',
     module: require('../examples/restyle/index').default
+  },
+  {
+    key: 'ReactNativeOrientationLockerExample',
+    category: 'UI',
+    module: require('../examples/react-native-orientation-locker/OrientationLockerExample')
   }
 ];
 

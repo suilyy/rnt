@@ -47,6 +47,7 @@ import {RNQrDecodeImageCameraPackage} from '@react-native-oh-tpl/react-native-qr
 import {AsyncStoragePackage} from '@react-native-oh-tpl/async-storage/ts';
 import {RNJPushPackage} from  "@react-native-oh-tpl/jpush-react-native/ts";
 import {RNSharePackage} from '@react-native-oh-tpl/react-native-share/ts';
+import { RNOrientationLockerPackage } from '@react-native-oh-tpl/react-native-orientation-locker/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
@@ -99,5 +100,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new AsyncStoragePackage(ctx),
 	new RNJPushPackage(ctx),
 	new RNSharePackage(ctx),
+	new RNOrientationLockerPackage(ctx)
   ];
 }

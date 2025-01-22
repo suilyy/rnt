@@ -78,6 +78,7 @@
     "@react-native-oh-tpl/react-native-material-dropdown": "^0.11.1-0.0.1",
     "@react-native-oh-tpl/react-native-dropdownalert": "^5.1.0-0.1.1",
     "@react-native-oh-tpl/react-native-nfc-manager": "^3.15.0-0.0.4",
+    "@react-native-oh-tpl/react-native-orientation-locker": "^1.7.0-0.0.5",
     "@react-native-oh-tpl/react-native-track-player": "^4.1.1-0.0.1",
     "@react-native-oh-tpl/react-native-apple-authentication": "^2.3.0-0.0.1",
     "@react-native-oh-tpl/react-native-localization": "^2.3.2-0.0.1",
