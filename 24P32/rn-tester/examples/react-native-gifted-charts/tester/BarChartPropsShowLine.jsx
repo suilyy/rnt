@@ -302,12 +302,12 @@ export default function () {
                 setIsShow(true)
               }, 500)
             }}></Button>
-             <Button title='lineConfig: { isAnimated: true, delay: 1500 }lineConfig2: { isAnimated: true, delay: 1500 }' onPress={() => {
+             <Button title='lineConfig: { isAnimated: true, delay: 5000 }lineConfig2: { isAnimated: true, delay: 5000 }' onPress={() => {
               initParams()
               const t = setTimeout(() => {
                 clearTimeout(t)
                 setIsAnimated(true)
-                setDelay(1500)
+                setDelay(5000)
                 setIsShow(true)
               }, 500)
             }}></Button>
