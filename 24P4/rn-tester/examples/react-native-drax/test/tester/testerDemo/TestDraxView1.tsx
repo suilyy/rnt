@@ -20,7 +20,7 @@ const DraxViewDemo1 = () => {
   };
   const onDragHandler = () => {
     console.log('onDrag回调已执行');
-    setResult('onDrag回调已执行');
+    setDrag('onDrag回调已执行');
   };
 
   const resetBtn = () => {
