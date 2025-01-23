@@ -12,19 +12,28 @@ import DraxViewBaseComponent from './components/DraxViewBaseComponent';
 
 const DraxViewDemo1 = () => {
   const [result, setResult] = useState('');
+  const [onDragresult, setDrag] = useState('');
 
   const onDragStartHandler = () => {
+    console.log('onDragStart回调已执行');
     setResult('onDragStart回调已执行');
+  };
+  const onDragHandler = () => {
+    console.log('onDrag回调已执行');
+    setResult('onDrag回调已执行');
   };
 
   const resetBtn = () => {
     setResult('');
+    setDrag('')
   };
 
   return (
     <>
       <View style={styles.inputArea}>
         <Text style={styles.baseText}>{result}</Text>
+        <Text style={styles.baseText}>{onDragresult}</Text>
+
         <Button
           style={styles.resetBtn}
           title="重置"
@@ -36,7 +45,8 @@ const DraxViewDemo1 = () => {
           tags={['C_API']}>
           <View style={{height: 260}}>
             <DraxViewBaseComponent
-              onDragStart={onDragStartHandler}></DraxViewBaseComponent>
+              onDragStart={onDragStartHandler}
+              onDrag={onDragHandler}></DraxViewBaseComponent>
           </View>
         </TestCase>
       </Tester>
@@ -92,7 +102,6 @@ const styles = StyleSheet.create({
   },
   baseText: {
     width: '100%',
-    height: 48,
     fontWeight: 'bold',
     textAlign: 'center',
     fontSize: 14,

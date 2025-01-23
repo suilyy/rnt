@@ -97,7 +97,8 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal2}
               coverScreen={true}
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=>setIsOpenVal2(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by pressing on the backdrop
               </Text>
@@ -112,7 +113,8 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal3}
               coverScreen={true}
-              swipeToClose={true}>
+              swipeToClose={true}
+              onClosed={()=>setIsOpenVal3(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down
               </Text>
@@ -128,7 +130,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal4}
               coverScreen={true}
               swipeToClose={true}
-              swipeThreshold={10}>
+              swipeThreshold={10}
+              onClosed={()=>setIsOpenVal4(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down 10
               </Text>
@@ -144,7 +147,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal25}
               coverScreen={true}
               swipeToClose={true}
-              swipeThreshold={100}>
+              swipeThreshold={100}
+              onClosed={()=>setIsOpenVal25(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down 100
               </Text>
@@ -160,7 +164,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal5}
               coverScreen={true}
               swipeToClose={true}
-              swipeArea={20}>
+              swipeArea={20}
+              onClosed={()=>setIsOpenVal5(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down swipeArea:20
               </Text>
@@ -176,7 +181,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal26}
               coverScreen={true}
               swipeToClose={true}
-              swipeArea={100}>
+              swipeArea={100}
+              onClosed={()=>setIsOpenVal26(false)}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down swipeArea:100
               </Text>
@@ -192,7 +198,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal6}
               coverScreen={true}
               backdropPressToClose={true}
-              position={'center'}>
+              position={'center'}
+              onClosed={()=>setIsOpenVal6(false)}>
               <Text style={[styles.modalText]}>position is center</Text>
             </ModalBox>
             <Button
@@ -204,7 +211,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal7}
               coverScreen={true}
               backdropPressToClose={true}
-              position={'bottom'}>
+              position={'bottom'}
+              onClosed={()=>setIsOpenVal7(false)}>
               <Text style={[styles.modalText]}>position is bottom</Text>
             </ModalBox>
           </TestCase>
@@ -219,7 +227,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal8}
               coverScreen={true}
               backdropPressToClose={true}
-              entry={'top'}>
+              entry={'top'}
+              onClosed={()=>setIsOpenVal8(false)}>
               <Text style={[styles.modalText]}>entry is top</Text>
             </ModalBox>
             <Button
@@ -231,7 +240,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal9}
               coverScreen={true}
               backdropPressToClose={true}
-              entry={'bottom'}>
+              entry={'bottom'}
+              onClosed={()=>setIsOpenVal9(false)}>
               <Text style={[styles.modalText]}>entry is bottom</Text>
             </ModalBox>
           </TestCase>
@@ -245,7 +255,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal10}
               coverScreen={true}
               backdropPressToClose={true}
-              backdrop={false}>
+              backdrop={false}
+              onClosed={()=>setIsOpenVal10(false)}>
               <Text style={[styles.modalText]}>backdrop is false</Text>
             </ModalBox>
           </TestCase>
@@ -259,7 +270,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal11}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropOpacity={0.5}>
+              backdropOpacity={0.5}
+              onClosed={()=>setIsOpenVal11(false)}>
               <Text style={[styles.modalText]}>backdropOpacity: 0.5</Text>
             </ModalBox>
           </TestCase>
@@ -273,7 +285,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal27}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropOpacity={0.8}>
+              backdropOpacity={0.8}
+              onClosed={()=>setIsOpenVal27(false)}>
               <Text style={[styles.modalText]}>backdropOpacity: 0.8</Text>
             </ModalBox>
           </TestCase>
@@ -287,7 +300,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal12}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropColor={'green'}>
+              backdropColor={'green'}
+              onClosed={()=>setIsOpenVal12(false)}>
               <Text style={[styles.modalText]}>backdropColor: 'green'</Text>
             </ModalBox>
           </TestCase>
@@ -301,7 +315,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal17}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropColor={'black'}>
+              backdropColor={'black'}
+              onClosed={()=>setIsOpenVal17(false)}>
               <Text style={[styles.modalText]}>backdropColor: 'black'</Text>
             </ModalBox>
           </TestCase>
@@ -320,7 +335,8 @@ export const ModalBoxDemo = () => {
                 <View style={{flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
                   <Text style={{color: 'red', fontSize: 20}}>这是背景内容</Text>
                 </View>
-              }>
+              }
+              onClosed={()=>setIsOpenVal13(false)}>
               <Text style={[styles.modalText]}>ModalBoxContent</Text>
             </ModalBox>
           </TestCase>
@@ -334,7 +350,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal14}
               coverScreen={true}
               backdropPressToClose={true}
-              animationDuration={1000}>
+              animationDuration={1000}
+              onClosed={()=>setIsOpenVal14(false)}>
               <Text style={[styles.modalText]}>animationDuration:1000ms</Text>
             </ModalBox>
           </TestCase>
@@ -348,7 +365,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal29}
               coverScreen={true}
               backdropPressToClose={true}
-              animationDuration={3000}>
+              animationDuration={3000}
+              onClosed={()=>setIsOpenVal29(false)}>
               <Text style={[styles.modalText]}>animationDuration:3000ms</Text>
             </ModalBox>
           </TestCase>
@@ -362,7 +380,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal15}
               coverScreen={true}
               backdropPressToClose={true}
-              easing={ModalBox.easing}>
+              easing={ModalBox.easing}
+              onClosed={()=>setIsOpenVal15(false)}>
               <Text style={[styles.modalText]}>
                 easing: 使用预定义的easing函数
               </Text>
@@ -376,7 +395,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal16}
               coverScreen={true}
               backdropPressToClose={true}
-              easing={Easing.elastic(8)}>
+              easing={Easing.elastic(8)}
+              onClosed={()=>setIsOpenVal16(false)}>
               <Text style={[styles.modalText]}>easing: 自定义easing函数</Text>
             </ModalBox>
           </TestCase>
@@ -389,7 +409,8 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal19}
               coverScreen={true}
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=>setIsOpenVal19(false)}>
               <Text style={[styles.modalText]}>coverScreen is true</Text>
             </ModalBox>
           </TestCase>
@@ -401,7 +422,8 @@ export const ModalBoxDemo = () => {
             <ModalBox
               style={[styles.modal]}
               isOpen={isOpenVal28}
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=>setIsOpenVal28(false)}>
               <Text style={[styles.modalText]}>coverScreen is false</Text>
             </ModalBox>
           </TestCase>
@@ -416,7 +438,8 @@ export const ModalBoxDemo = () => {
               keyboardTopOffset={0}
               coverScreen={true}
               position="bottom"
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=>setIsOpenVal20(false)}>
               <Text style={[styles.modalText]}>keyboardTopOffset: 默认</Text>
               <TextInput
                 placeholder="text"
@@ -436,7 +459,8 @@ export const ModalBoxDemo = () => {
               keyboardTopOffset={300}
               coverScreen={true}
               position="bottom"
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=>setIsOpenVal30(false)}>
               <Text style={[styles.modalText]}>keyboardTopOffset: 300</Text>
               <TextInput
                 placeholder="text"
@@ -459,7 +483,8 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal21}
               easing={Easing.elastic(8)}
               useNativeDriver={true}
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=> setIsOpenVal21(false)}>
               <Text style={[styles.modalText]}>useNativeDriver is true</Text>
             </ModalBox>
             <ModalBox
@@ -467,7 +492,9 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal32}
               easing={Easing.elastic(8)}
               useNativeDriver={false}
-              backdropPressToClose={true}>
+              backdropPressToClose={true}
+              onClosed={()=> setIsOpenVal32(false)}
+              >
               <Text style={[styles.modalText]}>useNativeDriver is false</Text>
             </ModalBox>
           </TestCase>
@@ -495,7 +522,8 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal22}
                   coverScreen={true}
-                  onOpened={setState(true)}>
+                  onOpened={setState(true)}
+                  onClosed={()=>setIsOpenVal22(false)}>
                   <Text style={[styles.modalText]}>onOpened</Text>
                 </ModalBox>
               </View>
@@ -517,7 +545,9 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal23}
                   coverScreen={true}
-                  onClosed={setState(true)}>
+                  onClosed={()=>{
+                      setState(true)
+                      setIsOpenVal23(false)}}>
                   <Text style={[styles.modalText]}>onClosed</Text>
                 </ModalBox>
               </View>
@@ -539,7 +569,8 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal24}
                   coverScreen={true}
-                  onClosingState={setState(true)}>
+                  onClosingState={setState(true)}
+                  onClosed={()=>setIsOpenVal24(false)}>
                   <Text style={[styles.modalText]}>onClosingState</Text>
                 </ModalBox>
               </View>
@@ -610,7 +641,6 @@ const styles = StyleSheet.create({
 });
 
 
-
 export const displayName = 'react-native-modalbox';
 export const framework = 'React';
 export const category = 'basic';
@@ -626,4 +656,3 @@ export const examples = [
         },
     },
 ];
-
