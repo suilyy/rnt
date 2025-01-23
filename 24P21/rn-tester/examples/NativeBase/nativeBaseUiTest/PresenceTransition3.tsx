@@ -41,7 +41,18 @@ const PresenceTransitionTest3 = () => {
                         scale: 0,
                       }}
                       onTransitionComplete={e => {
-                        Alert.alert('onTransitionComplete')
+                        if(e === 'entered')
+                        {
+                           Alert.alert('onTransitionComplete')
+                        }
+                        if(isOpen4 == false){
+                          if(e === 'entered')
+                            {
+                               Alert.alert('onTransitionComplete')
+                            }
+
+                        }
+                        
                       }}
                       animate={{
                         opacity: 1,

@@ -324,7 +324,7 @@ const MenuTest = () => {
                   <Box w="90%" alignItems="center">
                     <Menu
                       w="190"
-                      offset={50}
+                      offset={-50}
                       trigger={triggerProps => {
                         return (
                           <Pressable
