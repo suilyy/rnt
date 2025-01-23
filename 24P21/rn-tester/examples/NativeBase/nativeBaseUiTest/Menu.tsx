@@ -316,6 +316,7 @@ const MenuTest = () => {
               </View>
             </TestCase>
           </TestSuite>
+          
 
           <TestSuite name="offset">
             <TestCase itShould="offset  菜单Y轴偏移50" tags={['dev']}>
@@ -324,7 +325,7 @@ const MenuTest = () => {
                   <Box w="90%" alignItems="center">
                     <Menu
                       w="190"
-                      offset={-50}
+                      offset={-50}                      
                       trigger={triggerProps => {
                         return (
                           <Pressable

@@ -46,6 +46,7 @@ const PresenceTransitionTest3 = () => {
                            Alert.alert('onTransitionComplete')
                         }
                         if(isOpen4 == false){
+                          
                           if(e === 'entered')
                             {
                                Alert.alert('onTransitionComplete')
