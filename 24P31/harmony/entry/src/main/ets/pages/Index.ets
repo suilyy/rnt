@@ -225,6 +225,12 @@ export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
         tag: ctx.tag
       })
     }
+    if (ctx.componentName === SKIA_DOM_VIEW_TYPE) {
+      RNCSkiaDomView({
+        ctx: ctx.rnComponentContext,
+        tag: ctx.tag
+      })
+    }
   }
   .position({ x: 0, y: 0 })
 
