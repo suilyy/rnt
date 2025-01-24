@@ -169,16 +169,16 @@ const styles = StyleSheet.create({
     },
 });
 
-export const displayName = 'SectionListGetItemLayoutDemo';
+export const displayName = 'react-native-section-list-get-item-layout';
 export const framework = 'React';
 export const category = 'UI';
-export const title = 'SectionListGetItemLayoutDemo';
+export const title = 'react-native-section-list-get-item-layout';
 export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-section-list-get-item-layout.md';
-export const description = 'SectionListGetItemLayoutDemo';
+export const description = 'react-native-section-list-get-item-layout';
 
 export const examples = [
     {
-        title: 'SectionListGetItemLayoutDemo',
+        title: 'react-native-section-list-get-item-layout',
         render: function (): any {
             return <SectionListGetItemLayoutDemo />;
         },

@@ -155,16 +155,16 @@ const styles = StyleSheet.create({
   TextInput: { height: 40, borderColor: '#ccc', borderWidth: 1, borderRadius: 4, width: '100%' },
 });
 
-export const displayName = 'CryptoJSTest';
+export const displayName = 'react-native-crypto-js';
 export const framework = 'React';
 export const category = 'basic';
-export const title = 'CryptoJSTest';
+export const title = 'react-native-crypto-js';
 export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-crypto-js.md';
-export const description = 'CryptoJSTest';
+export const description = 'react-native-crypto-js';
 
 export const examples = [
     {
-        title: 'CryptoJSTest',
+        title: 'react-native-crypto-js',
         render: function (): any {
             return <CryptoJSTest />;
         },

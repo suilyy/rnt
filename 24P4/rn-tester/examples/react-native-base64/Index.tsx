@@ -140,16 +140,16 @@ const styles = StyleSheet.create({
 });
 
 
-export const displayName = 'Base64Test';
+export const displayName = 'react-native-base64';
 export const framework = 'React';
 export const category = 'basic';
-export const title = 'Base64Test';
+export const title = 'react-native-base64';
 export const documentationURL = 'https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-base64.md';
-export const description = 'Base64Test';
+export const description = 'react-native-base64';
 
 export const examples = [
     {
-        title: 'Base64Test',
+        title: 'react-native-base64',
         render: function (): any {
             return <Base64Test />;
         },
