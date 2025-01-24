@@ -170,7 +170,7 @@ export default class DeckSwiperExample extends Component {
                   //滑动覆盖标签，滑动时候卡片上的包装样式
                   overlayLabelWrapperStyle={{
                     position: 'absolute',
-                    backgroundColor: '#F5FCFF',
+                    backgroundColor: '#8DD9FF',
                     zIndex: 2,
                     flex: 1,
                     width: '100%',
