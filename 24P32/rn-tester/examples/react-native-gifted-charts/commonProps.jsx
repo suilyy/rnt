@@ -106,7 +106,7 @@ export const axesProps = [
 
 export const commonPointerProps = [
   { pointerConfig: { width: 10, height: 10,pointerStripColor: 'blue',stripBehindBars: false,persistPointer: true,} }, 
-  { pointerConfig: { width: 30, height: 30 ,pointerStripColor: 'blue',stripBehindBars: false,persistPointer: true,} },
+  { pointerConfig: { width: 30, height: 30 ,radius: 0,pointerStripColor: 'blue',stripBehindBars: false,persistPointer: true,} },
   { pointerConfig: { radius: 8 ,persistPointer: true,} },
   { pointerConfig: { radius: 15 ,persistPointer: true,} },
   { pointerConfig: { pointerColor: 'yellow',persistPointer: true,} }, 
