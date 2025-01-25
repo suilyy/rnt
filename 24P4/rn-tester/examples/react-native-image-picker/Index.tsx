@@ -139,6 +139,7 @@ export const ImagePickerTest = () => {
                                         <Text style={{ width: 160, height: 34, borderRadius: 8, backgroundColor: 'hsl(190,50%,70%)', lineHeight: 28, marginTop: 10, fontWeight: 'bold', textAlign: 'center' }} onPress={() => {
                                             setMediaType(mediaType === 'photo' ? 'video' : 'mixed')
                                         }}>切换:{mediaType}</Text>
+                                        <Text style={{ color: 'black', width: 400, marginTop: 20 }}>{urlInfo}</Text>
                                     </View>
                                 </View>
                             );
@@ -180,6 +181,7 @@ export const ImagePickerTest = () => {
                                         <Text style={{ width: 160, height: 34, borderRadius: 8, backgroundColor: 'hsl(190,50%,70%)', lineHeight: 28, marginTop: 10, fontWeight: 'bold', textAlign: 'center' }} onPress={() => {
                                             setCameraType(cameraType === 'back' ? 'front' : 'back')
                                         }}>切换:{cameraType}</Text>
+                                        <Text style={{ color: 'black', width: 400, marginTop: 20 }}>{urlInfo}</Text>
                                     </View>
                                 </View>
                             );
@@ -221,7 +223,7 @@ export const ImagePickerTest = () => {
                                         </View>
                                         <Text style={{ width: 160, height: 34, borderRadius: 8, backgroundColor: 'hsl(190,50%,70%)', lineHeight: 28, marginTop: 10, fontWeight: 'bold', textAlign: 'center' }} onPress={() => {
                                             setIsBase64(!isBase64)
-                                        }}>{isBase64 + ''}</Text>
+                                        }}>切换:{isBase64+""}</Text>
                                         <Text style={{ color: 'black', width: 260, minHeight: 200, overflow: 'hidden' }}>{urlInfo?.substring(0, 300) + '...'}</Text>
                                     </View>
                                 </View>
