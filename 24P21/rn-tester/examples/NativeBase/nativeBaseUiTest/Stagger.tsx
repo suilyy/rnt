@@ -38,9 +38,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -59,9 +59,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -77,9 +77,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -95,9 +95,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -113,9 +113,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -140,9 +140,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
@@ -169,9 +169,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -190,9 +190,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -208,9 +208,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -226,9 +226,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -244,9 +244,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -271,9 +271,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
@@ -320,9 +320,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -341,9 +341,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -359,9 +359,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -377,9 +377,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -395,9 +395,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -422,9 +422,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
@@ -462,9 +462,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -483,9 +483,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -501,9 +501,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -519,9 +519,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -537,9 +537,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -564,9 +564,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
@@ -624,9 +624,9 @@ const StaggerTest = () => {
               icon={
                 <Icon
                   as={MaterialCommunityIcons}
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                   size="6"
                   name="microphone"
                   color="warmGray.50"
@@ -645,9 +645,9 @@ const StaggerTest = () => {
               icon={
                 <Icon
                   as={MaterialCommunityIcons}
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                   size="6"
                   name="video"
                   color="warmGray.50"
@@ -663,9 +663,9 @@ const StaggerTest = () => {
               icon={
                 <Icon
                   as={MaterialCommunityIcons}
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                   size="6"
                   name="microphone"
                   color="warmGray.50"
@@ -681,9 +681,9 @@ const StaggerTest = () => {
               icon={
                 <Icon
                   as={MaterialCommunityIcons}
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                   size="6"
                   name="video"
                   color="warmGray.50"
@@ -699,9 +699,9 @@ const StaggerTest = () => {
               icon={
                 <Icon
                   as={MaterialCommunityIcons}
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                   size="6"
                   name="video"
                   color="warmGray.50"
@@ -752,6 +752,18 @@ const StaggerTest = () => {
                 scale: 0,
                 translateY: 34,
               }}
+              exit={{
+                translateY: 34,
+                scale: 0.5,
+                opacity: 0,
+                transition: {
+                  duration: 100,
+                  stagger: {
+                    offset: 30,
+                    reverse: true,
+                  },
+                },
+              }}
               animate={{
                 translateY: 0,
                 translateX: 20,
@@ -775,9 +787,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -796,9 +808,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -814,9 +826,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -832,9 +844,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -850,9 +862,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -877,9 +889,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
@@ -894,6 +906,18 @@ const StaggerTest = () => {
                 opacity: 0,
                 scale: 0,
                 translateY: 34,
+              }}
+              exit={{
+                translateY: 34,
+                scale: 0.5,
+                opacity: 0,
+                transition: {
+                  duration: 100,
+                  stagger: {
+                    offset: 30,
+                    reverse: true,
+                  },
+                },
               }}
               animate={{
                 translateY: 0,
@@ -917,9 +941,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -938,9 +962,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -956,9 +980,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="microphone"
                     color="warmGray.50"
@@ -974,9 +998,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -992,9 +1016,9 @@ const StaggerTest = () => {
                 icon={
                   <Icon
                     as={MaterialCommunityIcons}
-                    _dark={{
-                      color: 'warmGray.50',
-                    }}
+                    // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                     size="6"
                     name="video"
                     color="warmGray.50"
@@ -1019,9 +1043,9 @@ const StaggerTest = () => {
                   size="6"
                   name="dots-horizontal"
                   color="warmGray.50"
-                  _dark={{
-                    color: 'warmGray.50',
-                  }}
+                  // _dark={{
+                    //   color: 'warmGray.50',
+                    // }}
                 />
               }
             />
