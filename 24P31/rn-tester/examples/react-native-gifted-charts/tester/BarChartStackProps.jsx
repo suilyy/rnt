@@ -51,6 +51,54 @@ export default function () {
       labelTextStyle: { color: 'blue' },
     },
   ]
+
+  const autoShiftLabelsDatas = [
+      {
+        stacks:
+          [
+            {
+              value: 10, color: 'red', showGradient: true, gradientColor: 'pink',
+            },
+            {
+              value: 20, color: 'blue', showGradient: true, gradientColor: 'green'
+            },
+          ],
+        showXAxisIndex: true,
+        label: 'Jan',
+        labelTextStyle: { color: 'green' },
+        borderRadius: 10,
+      },
+      {
+        stacks:
+          [
+            {
+              value: 8, color: 'red',
+            },
+            {
+              value: 17, color: 'blue', marginBottom: 1,
+            },
+          ],
+        showXAxisIndex: false,
+        label: 'Feb',
+        labelTextStyle: { color: 'blue' },
+        borderRadius: 15,
+      },
+      {
+        stacks:
+          [
+            {
+              value: -8, color: 'red'
+            },
+            {
+              value: -17, color: 'blue', marginBottom: 1
+            },
+          ],
+        showXAxisIndex: true,
+        label: 'Feb',
+        labelTextStyle: { color: 'blue' },
+      },
+    ]
+
   const stackBarChartProps = [
     {
       stackData: stackDatas,
@@ -128,10 +176,10 @@ export default function () {
       stackBorderBottomRightRadius: 20, stackData: stackDatas,
     },
     {
-      autoShiftLabelsForNegativeStacks: true, stackData: stackDatas,
+      autoShiftLabelsForNegativeStacks: true, stackData: autoShiftLabelsDatas,
     },
     {
-      autoShiftLabelsForNegativeStacks: false, stackData: stackDatas,
+      autoShiftLabelsForNegativeStacks: false, stackData: autoShiftLabelsDatas,
     },
   ]
   return (
