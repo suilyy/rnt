@@ -52,12 +52,6 @@ function TestPage() {
             <Page name="EXAMPLE: WebViewTestIncognito">
               <WebViewTestIncognito />
             </Page>
-            <Page name="EXAMPLE: WebViewTestIncognito">
-              <WebViewTestIncognito />
-            </Page>
-            <Page name="EXAMPLE: WebViewTestDomStorageEnabled">
-              <WebViewTestDomStorageEnabled />
-            </Page>
             <Page name="EXAMPLE: WebViewTestDomStorageEnabled">
               <WebViewTestDomStorageEnabled />
             </Page>

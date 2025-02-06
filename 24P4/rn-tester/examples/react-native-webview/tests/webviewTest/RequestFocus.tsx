@@ -19,7 +19,8 @@ export default function WebViewTestRequestFocusRef() {
             initialState={false}
             arrange={({ setState }) => {
               return (
-                <View style={{ padding: 20, height: 500 }}>
+              <ScrollView style={{ padding: 20, height: 400 }}>
+                <View style={{ padding: 20, height: 350 }}>
                   <WebView
                     source={{ uri: 'www.baidu.com' }}
                     ref={requestFocusRef}
@@ -29,6 +30,7 @@ export default function WebViewTestRequestFocusRef() {
                     onPress={requestFocus}></Button>
                   <TextInput style={{ backgroundColor: 'green' }} placeholder='点我聚焦，输入框聚焦' />
                 </View>
+              </ScrollView>
               );
             }}
             assert={async ({ expect, state }) => {

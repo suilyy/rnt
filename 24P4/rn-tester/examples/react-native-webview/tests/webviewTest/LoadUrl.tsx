@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 export default function WebViewTestLoadUrl() {
   const loadUrlRef = useRef<any>();
   const loadUrl = () => {
-    loadUrlRef.current.loadUrl('https://reactnative.dev/');
+    loadUrlRef.current.loadUrl('https://gitee.com/');
   };
   return (
     <View style={{ flex:1}}>
