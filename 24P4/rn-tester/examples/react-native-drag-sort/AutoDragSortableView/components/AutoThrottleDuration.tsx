@@ -28,7 +28,7 @@ export const API_autoThrottleDuration = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   autoThrottleDuration={autoThrottleDuration}
                   renderItem={item => {

@@ -28,7 +28,7 @@ export const API_renderBottomView = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   renderBottomView={renderBottomView}
                   bottomViewHeight={renderBottomView ? 40 : 0}
@@ -47,7 +47,7 @@ export const API_renderBottomView = () => {
                       <View
                         style={{
                           height: 40,
-                          backgroundColor: '#00ff00',
+                          backgroundColor: '#ffff00',
                           justifyContent: 'center',
                           alignItems: 'center',
                         }}>

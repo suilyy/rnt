@@ -13,7 +13,7 @@ import {generateDataSource} from '../../libs';
 const defaultData = generateDataSource(60, '标题');
 
 export const API_childrenHeight = () => {
-  const [childrenHeight, setChildrenHeight] = useState(72);
+  const [childrenHeight, setChildrenHeight] = useState(92);
 
   return (
     <Tester style={{ paddingBottom: 80 }}>

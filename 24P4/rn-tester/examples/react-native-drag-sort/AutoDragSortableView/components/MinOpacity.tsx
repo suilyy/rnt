@@ -28,7 +28,7 @@ export const API_minOpacity = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   minOpacity={minOpacity}
                   renderItem={item => {

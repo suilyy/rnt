@@ -27,7 +27,7 @@ export const API_onDragEnd = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   onDragEnd={() => {
                     Alert.alert('触发onDragEnd', '', [

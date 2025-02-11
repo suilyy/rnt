@@ -28,7 +28,7 @@ export const API_slideDuration = () => {
                 <DragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   slideDuration={slideDuration}
                   renderItem={item => {

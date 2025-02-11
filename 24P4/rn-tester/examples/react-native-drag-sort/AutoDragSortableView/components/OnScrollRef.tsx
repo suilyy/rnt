@@ -29,7 +29,7 @@ export const API_onScrollRef = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   onScrollRef={() => {
                     count = count + 1;

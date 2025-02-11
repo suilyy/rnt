@@ -74,7 +74,7 @@ export function Page({ name, children }: { name: string; children: any }) {
   }, [name]);
 
   return name === currentPageName ? (
-    <View style={{ width: '100%', height: '100%' }}>
+    <View style={{ width: '100%', height: '100%', paddingBottom: 50}}>
       {name !== 'INDEX' && (
         <View style={{ backgroundColor: PALETTE.REACT_CYAN_DARK }}>
           <TouchableOpacity

@@ -28,7 +28,7 @@ export const API_autoThrottle = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   autoThrottle={autoThrottle}
                   renderItem={item => {
@@ -42,7 +42,7 @@ export const API_autoThrottle = () => {
                 <Button
                   title="修改autoThrottle"
                   onPress={() => {
-                    setAutoThrottle(100);
+                    setAutoThrottle(5);
                     setState(true);
                   }}
                 />

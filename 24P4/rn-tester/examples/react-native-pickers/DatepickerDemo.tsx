@@ -4,8 +4,10 @@ import { DatePicker,BaseComponent } from 'react-native-pickers';
 import {Tester, TestSuite, TestCase} from '@rnoh/testerino';
 import { tester_change,tester_back_string} from './utilCompant';
 
-export class DatePickerExample extends BaseComponent {
+const selectedValue1: string = ['2024年', '8月', '6日'];
+const selectedValue2: string = ['2024年', '9月', '6日'];
 
+export class DatePickerExample extends BaseComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +28,7 @@ export class DatePickerExample extends BaseComponent {
       cancelTextColor:'#333333',
       onPickerConfirm:'',
       onPickerCancel:'',
-      selectedValue:[new Date().getFullYear() + '年', new Date().getMonth() + 1 + '月', new Date().getDate() + '日'],
+      selectedValue: [new Date().getFullYear() + '年', new Date().getMonth() + 1 + '月', new Date().getDate() + '日'],
     };
   }
 
@@ -35,7 +37,7 @@ export class DatePickerExample extends BaseComponent {
     <Tester style={{ paddingBottom: 80 }}>
     <ScrollView>
       <TestSuite name='DatePicker'>
-        
+
       { tester_change('时间单位 unit:["年", "月", "日"]','["年", "月", "日"]',()=>{ this.setState({...this.state,unit:['年', '月', '日']});this.dataPicker.show() })}
       { tester_change("时间单位 unit:['year', 'month', 'day']",'["year", "month", "day"]',()=>{ this.setState({...this.state,unit:['year', 'month', 'day']});this.dataPicker.show() })}
 
@@ -68,8 +70,14 @@ export class DatePickerExample extends BaseComponent {
       { tester_change('取消文字大小 cancelTextSize 6','cancelTextSize 6',()=>{ this.setState({...this.state,cancelTextSize:6});this.dataPicker.show() })}
       { tester_change('取消文字颜色 cancelTextColor #333333','cancelTextColor #333333',()=>{ this.setState({...this.state,cancelTextColor:'#333333'});this.dataPicker.show() })}
       { tester_change('取消文字颜色 cancelTextColor #33ff33','cancelTextColor #33ff33',()=>{ this.setState({...this.state,cancelTextColor:'#33ff33'});this.dataPicker.show() })}
-      { tester_change('初始选项 selectedValue '+[new Date().getFullYear() + '年', new Date().getMonth() + 1 + '月', new Date().getDate() + '日'],'selectedValue '+[new Date().getFullYear() + '年', new Date().getMonth() + 1 + '月', new Date().getDate() + '日'],()=>{ this.setState({...this.state,selectedValue:[new Date().getFullYear() + '年', new Date().getMonth() + 1 + '月', new Date().getDate() + '日']});this.dataPicker.show() })}
-      { tester_change('初始选项 selectedValue '+[new Date().getFullYear() + '年', new Date().getMonth() + 2 + '月', new Date().getDate() + '日'],'selectedValue '+[new Date().getFullYear() + '年', new Date().getMonth() + 2 + '月', new Date().getDate() + '日'],()=>{ this.setState({...this.state,selectedValue:[new Date().getFullYear() + '年', new Date().getMonth() + 2 + '月', new Date().getDate() + '日']});this.dataPicker.show() })}
+      {tester_change('初始选项 selectedValue ' + selectedValue1, 'selectedValue ' + selectedValue1, () => {
+        this.setState({...this.state, selectedValue: selectedValue1});
+        this.dataPicker3.show()
+      })}
+      {tester_change('初始选项 selectedValue ' + selectedValue2, 'selectedValue ' + selectedValue2,() => {
+        this.setState({...this.state, selectedValue: selectedValue2});
+        this.dataPicker4.show()
+      })}
 
       {tester_back_string("onPickerConfirm",this.state.onPickerConfirm)}
       {tester_back_string("onPickerCancel",this.state.onPickerCancel)}
@@ -117,7 +125,54 @@ export class DatePickerExample extends BaseComponent {
             ss={false}
             ref={ref => this.dataPicker2 = ref}
           />
+      <DatePicker
+        HH={this.state.HH}
+        mm={this.state.mm}
+        ss={this.state.ss}
+        unit={this.state.unit}
+        itemHeight = {this.state.itemHeight}
+        startYear={this.state.startYear}
+        endYear={this.state.endYear}
+        onPickerConfirm={(value:any) => { this.state.onPickerConfirm = 'pass return：'+value }}
+        onPickerCancel={() => { this.state.onPickerCancel = 'pass' }}
 
+        itemTextColor= {this.state.itemTextColor}
+        itemSelectedColor= {this.state.itemSelectedColor}
+        selectedValue= {selectedValue1}
+
+        confirmText= {this.state.confirmText}
+        confirmTextSize= {this.state.confirmTextSize}
+        confirmTextColor= {this.state.confirmTextColor}
+
+        cancelText= {this.state.cancelText}
+        cancelTextSize= {this.state.cancelTextSize}
+        cancelTextColor= {this.state.cancelTextColor}
+        ref={ref => this.dataPicker3 = ref}
+      />
+      <DatePicker
+        HH={this.state.HH}
+        mm={this.state.mm}
+        ss={this.state.ss}
+        unit={this.state.unit}
+        itemHeight = {this.state.itemHeight}
+        startYear={this.state.startYear}
+        endYear={this.state.endYear}
+        onPickerConfirm={(value:any) => { this.state.onPickerConfirm = 'pass return：'+value }}
+        onPickerCancel={() => { this.state.onPickerCancel = 'pass' }}
+
+        itemTextColor= {this.state.itemTextColor}
+        itemSelectedColor= {this.state.itemSelectedColor}
+        selectedValue= {selectedValue2}
+
+        confirmText= {this.state.confirmText}
+        confirmTextSize= {this.state.confirmTextSize}
+        confirmTextColor= {this.state.confirmTextColor}
+
+        cancelText= {this.state.cancelText}
+        cancelTextSize= {this.state.cancelTextSize}
+        cancelTextColor= {this.state.cancelTextColor}
+        ref={ref => this.dataPicker4 = ref}
+      />
       {/* </View> */}
     </>
   };

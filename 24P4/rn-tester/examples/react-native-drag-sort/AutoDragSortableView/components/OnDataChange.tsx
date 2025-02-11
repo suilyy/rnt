@@ -27,7 +27,7 @@ export const API_onDataChange = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   onDataChange={() => {
                     Alert.alert('触发onDataChange', '', [

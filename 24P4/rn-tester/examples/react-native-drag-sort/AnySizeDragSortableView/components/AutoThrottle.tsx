@@ -87,7 +87,7 @@ export const API_autoThrottle = () => {
                 <Button
                   title="修改autoThrottle"
                   onPress={() => {
-                    setAutoThrottle(100);
+                    setAutoThrottle(5);
                     setState(true);
                   }}
                 />

@@ -30,7 +30,7 @@ export const API_onScrollListener = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   onScrollListener={() => {
                     count = count + 1;

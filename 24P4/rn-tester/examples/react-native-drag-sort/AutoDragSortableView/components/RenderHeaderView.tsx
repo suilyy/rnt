@@ -28,7 +28,7 @@ export const API_renderHeaderView = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   renderHeaderView={renderHeaderView}
                   headerViewHeight={renderHeaderView ? 40 : 0}

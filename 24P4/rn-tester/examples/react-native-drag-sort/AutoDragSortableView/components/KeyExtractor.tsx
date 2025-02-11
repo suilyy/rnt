@@ -22,7 +22,7 @@ export const API_keyExtractor = () => {
             <AutoDragSortableView
               parentWidth={356}
               dataSource={defaultData}
-              childrenHeight={72}
+              childrenHeight={92}
               childrenWidth={89}
               keyExtractor={(item, index) => {
                 return item.key;

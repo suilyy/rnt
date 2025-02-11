@@ -29,7 +29,7 @@ export const API_scaleStatus = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   maxScale={1.2}
                   scaleStatus={scaleStatusX as any}
@@ -66,7 +66,7 @@ export const API_scaleStatus = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   maxScale={1.2}
                   scaleStatus={scaleStatusY as any}

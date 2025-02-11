@@ -36,7 +36,7 @@ export const API_scrollIndicatorInsets = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   scrollIndicatorInsets={scrollIndicatorInsets}
                   renderItem={item => {

@@ -28,7 +28,7 @@ export const API_fixedItems = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   fixedItems={fixedItems}
                   renderItem={item => {

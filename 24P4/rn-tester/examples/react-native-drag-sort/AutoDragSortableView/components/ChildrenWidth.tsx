@@ -29,7 +29,7 @@ export const API_childrenWidth = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={childrenWidth}
                   renderItem={item => {
                     return (

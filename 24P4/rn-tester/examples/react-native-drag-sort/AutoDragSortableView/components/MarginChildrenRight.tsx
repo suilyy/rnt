@@ -28,7 +28,7 @@ export const API_marginChildrenRight = () => {
                 <AutoDragSortableView
                   parentWidth={356}
                   dataSource={defaultData}
-                  childrenHeight={72}
+                  childrenHeight={92}
                   childrenWidth={89}
                   marginChildrenRight={marginChildrenRight}
                   renderItem={item => {
