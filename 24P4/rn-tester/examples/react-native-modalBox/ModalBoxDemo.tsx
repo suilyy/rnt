@@ -6,15 +6,190 @@ import {
   Text,
   StyleSheet,
   TextInput,
+  FlatList,
+  StatusBar,
+  SafeAreaView,
+  TouchableOpacity,
 } from 'react-native';
 import {TestSuite, TestCase, Tester} from '@rnoh/testerino';
-
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 
 import ModalBox from 'react-native-modalbox';
 
+const PALETTE = {
+  REACT_CYAN_LIGHT: 'hsl(193, 95%, 68%)',
+  REACT_CYAN_DARK: 'hsl(193, 95%, 30%)',
+};
+
+const NavigationContext = React.createContext<
+  | {
+      currentPageName: string;
+      navigateTo: (pageName: string) => void;
+      registerPageName: (pageName: string) => void;
+      registeredPageNames: string[];
+    }
+  | undefined
+>(undefined);
+
+function NavigationContainer({
+  initialPage = 'INDEX',
+  hasHeader = true,
+  children,
+}: {
+  initialPage?: string;
+  children: any;
+  hasHeader?: boolean;
+}) {
+  const [currentPageName, setCurrentPageName] = React.useState(initialPage);
+  const [registeredPageNames, setRegisteredPageNames] = React.useState<
+    string[]
+  >([]);
+
+  return (
+    <NavigationContext.Provider
+      value={{
+        currentPageName,
+        navigateTo: setCurrentPageName,
+        registerPageName: (pageName: string) => {
+          setRegisteredPageNames(pageNames => {
+            if (pageNames.includes(pageName)) {
+              return pageNames;
+            }
+            return [...pageNames, pageName];
+          });
+        },
+        registeredPageNames,
+      }}>
+      <View style={{width: '100%', height: '100%', flexDirection: 'column'}}>
+        <Page name="INDEX">
+          <IndexPage hasHeader={hasHeader} />
+        </Page>
+        {children}
+      </View>
+    </NavigationContext.Provider>
+  );
+}
+
+function useNavigation() {
+  return React.useContext(NavigationContext)!;
+}
+
+function Page({name, children}: {name: string; children: any}) {
+  const {currentPageName, navigateTo, registerPageName} = useNavigation();
+
+  useEffect(() => {
+    if (name !== 'INDEX') {
+      registerPageName(name);
+    }
+  }, [name]);
+
+  return name === currentPageName ? (
+    <View style={{width: '100%', height: '100%'}}>
+      {name !== 'INDEX' && (
+        <View style={{backgroundColor: PALETTE.REACT_CYAN_DARK}}>
+          <TouchableOpacity
+            onPress={() => {
+              navigateTo('INDEX');
+            }}>
+            <Text
+              style={[styles.buttonText, {color: PALETTE.REACT_CYAN_LIGHT}]}>
+              {'‹ Back'}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      )}
+      <View style={{width: '100%', flex: 1}}>{children}</View>
+    </View>
+  ) : null;
+}
+
+export function IndexPage({hasHeader}: {hasHeader: boolean}) {
+  const {navigateTo, registeredPageNames} = useNavigation();
+
+  return (
+    <FlatList
+      data={registeredPageNames}
+      ListHeaderComponent={
+        hasHeader ? (
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              paddingHorizontal: 5,
+              paddingVertical: 5,
+            }}></View>
+        ) : null
+      }
+      renderItem={({item}) => {
+        return (
+          <View style={{backgroundColor: PALETTE.REACT_CYAN_DARK}}>
+            <TouchableOpacity
+              onPress={() => {
+                navigateTo(item);
+              }}>
+              <Text style={styles.buttonText}>{item}</Text>
+            </TouchableOpacity>
+          </View>
+        );
+      }}
+      ItemSeparatorComponent={() => (
+        <View
+          style={{height: StyleSheet.hairlineWidth, backgroundColor: '#666'}}
+        />
+      )}
+    />
+  );
+}
+
+const StartOpenModalBox = () => {
+  return (
+    <ModalBox
+      style={[styles.modal]}
+      startOpen={true}
+      backdropPressToClose={true}>
+      <Text style={[styles.modalText]}>startOpen is true</Text>
+    </ModalBox>
+  );
+};
+const StartOpenModalBox1 = () => {
+  const [isOpenVal, setIsOpenVal] = useState(false);
+  return (
+    <View style={{width: '100%', height: '100%'}}>
+      <Button title="点击打开弹框" onPress={() => setIsOpenVal(!isOpenVal)} />
+      <ModalBox
+        style={[styles.modal]}
+        isOpen={isOpenVal}
+        startOpen={false}
+        backdropPressToClose={true}>
+        <Text style={[styles.modalText]}>startOpen is false</Text>
+      </ModalBox>
+    </View>
+  );
+};
 
 export const ModalBoxDemo = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <View style={{backgroundColor: 'black', paddingBottom: 70}}>
+          <NavigationContainer>
+            <Page key="ModalBoxAll" name="ModalBoxAll">
+              <ModalBoxAll />
+            </Page>
+            <Page key="StartOpenModalBox" name="StartOpenModalBox:true">
+              <StartOpenModalBox />
+            </Page>
+            <Page key="StartOpenModalBox1" name="StartOpenModalBox:false">
+              <StartOpenModalBox1 />
+            </Page>
+          </NavigationContainer>
+        </View>
+      </SafeAreaView>
+    </>
+  );
+};
+const ModalBoxAll = () => {
   const [isOpenVal, setIsOpenVal] = useState(false);
   const [isOpenVal1, setIsOpenVal1] = useState(false);
   const [isOpenVal2, setIsOpenVal2] = useState(false);
@@ -97,8 +272,7 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal2}
               coverScreen={true}
-              backdropPressToClose={true}
-              onClosed={()=>setIsOpenVal2(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>
                 Close the the modal by pressing on the backdrop
               </Text>
@@ -113,8 +287,7 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal3}
               coverScreen={true}
-              swipeToClose={true}
-              onClosed={()=>setIsOpenVal3(false)}>
+              swipeToClose={true}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down
               </Text>
@@ -130,8 +303,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal4}
               coverScreen={true}
               swipeToClose={true}
-              swipeThreshold={10}
-              onClosed={()=>setIsOpenVal4(false)}>
+              swipeThreshold={10}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down 10
               </Text>
@@ -147,8 +319,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal25}
               coverScreen={true}
               swipeToClose={true}
-              swipeThreshold={100}
-              onClosed={()=>setIsOpenVal25(false)}>
+              swipeThreshold={100}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down 100
               </Text>
@@ -164,8 +335,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal5}
               coverScreen={true}
               swipeToClose={true}
-              swipeArea={20}
-              onClosed={()=>setIsOpenVal5(false)}>
+              swipeArea={20}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down swipeArea:20
               </Text>
@@ -181,8 +351,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal26}
               coverScreen={true}
               swipeToClose={true}
-              swipeArea={100}
-              onClosed={()=>setIsOpenVal26(false)}>
+              swipeArea={100}>
               <Text style={[styles.modalText]}>
                 Close the the modal by swipe down swipeArea:100
               </Text>
@@ -198,8 +367,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal6}
               coverScreen={true}
               backdropPressToClose={true}
-              position={'center'}
-              onClosed={()=>setIsOpenVal6(false)}>
+              position={'center'}>
               <Text style={[styles.modalText]}>position is center</Text>
             </ModalBox>
             <Button
@@ -211,8 +379,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal7}
               coverScreen={true}
               backdropPressToClose={true}
-              position={'bottom'}
-              onClosed={()=>setIsOpenVal7(false)}>
+              position={'bottom'}>
               <Text style={[styles.modalText]}>position is bottom</Text>
             </ModalBox>
           </TestCase>
@@ -227,8 +394,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal8}
               coverScreen={true}
               backdropPressToClose={true}
-              entry={'top'}
-              onClosed={()=>setIsOpenVal8(false)}>
+              entry={'top'}>
               <Text style={[styles.modalText]}>entry is top</Text>
             </ModalBox>
             <Button
@@ -240,8 +406,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal9}
               coverScreen={true}
               backdropPressToClose={true}
-              entry={'bottom'}
-              onClosed={()=>setIsOpenVal9(false)}>
+              entry={'bottom'}>
               <Text style={[styles.modalText]}>entry is bottom</Text>
             </ModalBox>
           </TestCase>
@@ -255,8 +420,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal10}
               coverScreen={true}
               backdropPressToClose={true}
-              backdrop={false}
-              onClosed={()=>setIsOpenVal10(false)}>
+              backdrop={false}>
               <Text style={[styles.modalText]}>backdrop is false</Text>
             </ModalBox>
           </TestCase>
@@ -270,8 +434,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal11}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropOpacity={0.5}
-              onClosed={()=>setIsOpenVal11(false)}>
+              backdropOpacity={0.5}>
               <Text style={[styles.modalText]}>backdropOpacity: 0.5</Text>
             </ModalBox>
           </TestCase>
@@ -285,8 +448,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal27}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropOpacity={0.8}
-              onClosed={()=>setIsOpenVal27(false)}>
+              backdropOpacity={0.8}>
               <Text style={[styles.modalText]}>backdropOpacity: 0.8</Text>
             </ModalBox>
           </TestCase>
@@ -300,8 +462,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal12}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropColor={'green'}
-              onClosed={()=>setIsOpenVal12(false)}>
+              backdropColor={'green'}>
               <Text style={[styles.modalText]}>backdropColor: 'green'</Text>
             </ModalBox>
           </TestCase>
@@ -315,8 +476,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal17}
               coverScreen={true}
               backdropPressToClose={true}
-              backdropColor={'black'}
-              onClosed={()=>setIsOpenVal17(false)}>
+              backdropColor={'black'}>
               <Text style={[styles.modalText]}>backdropColor: 'black'</Text>
             </ModalBox>
           </TestCase>
@@ -335,8 +495,7 @@ export const ModalBoxDemo = () => {
                 <View style={{flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
                   <Text style={{color: 'red', fontSize: 20}}>这是背景内容</Text>
                 </View>
-              }
-              onClosed={()=>setIsOpenVal13(false)}>
+              }>
               <Text style={[styles.modalText]}>ModalBoxContent</Text>
             </ModalBox>
           </TestCase>
@@ -350,8 +509,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal14}
               coverScreen={true}
               backdropPressToClose={true}
-              animationDuration={1000}
-              onClosed={()=>setIsOpenVal14(false)}>
+              animationDuration={1000}>
               <Text style={[styles.modalText]}>animationDuration:1000ms</Text>
             </ModalBox>
           </TestCase>
@@ -365,8 +523,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal29}
               coverScreen={true}
               backdropPressToClose={true}
-              animationDuration={3000}
-              onClosed={()=>setIsOpenVal29(false)}>
+              animationDuration={3000}>
               <Text style={[styles.modalText]}>animationDuration:3000ms</Text>
             </ModalBox>
           </TestCase>
@@ -380,8 +537,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal15}
               coverScreen={true}
               backdropPressToClose={true}
-              easing={ModalBox.easing}
-              onClosed={()=>setIsOpenVal15(false)}>
+              easing={ModalBox.easing}>
               <Text style={[styles.modalText]}>
                 easing: 使用预定义的easing函数
               </Text>
@@ -395,8 +551,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal16}
               coverScreen={true}
               backdropPressToClose={true}
-              easing={Easing.elastic(8)}
-              onClosed={()=>setIsOpenVal16(false)}>
+              easing={Easing.elastic(8)}>
               <Text style={[styles.modalText]}>easing: 自定义easing函数</Text>
             </ModalBox>
           </TestCase>
@@ -409,8 +564,7 @@ export const ModalBoxDemo = () => {
               style={[styles.modal]}
               isOpen={isOpenVal19}
               coverScreen={true}
-              backdropPressToClose={true}
-              onClosed={()=>setIsOpenVal19(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>coverScreen is true</Text>
             </ModalBox>
           </TestCase>
@@ -422,8 +576,7 @@ export const ModalBoxDemo = () => {
             <ModalBox
               style={[styles.modal]}
               isOpen={isOpenVal28}
-              backdropPressToClose={true}
-              onClosed={()=>setIsOpenVal28(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>coverScreen is false</Text>
             </ModalBox>
           </TestCase>
@@ -438,8 +591,7 @@ export const ModalBoxDemo = () => {
               keyboardTopOffset={0}
               coverScreen={true}
               position="bottom"
-              backdropPressToClose={true}
-              onClosed={()=>setIsOpenVal20(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>keyboardTopOffset: 默认</Text>
               <TextInput
                 placeholder="text"
@@ -459,8 +611,7 @@ export const ModalBoxDemo = () => {
               keyboardTopOffset={300}
               coverScreen={true}
               position="bottom"
-              backdropPressToClose={true}
-              onClosed={()=>setIsOpenVal30(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>keyboardTopOffset: 300</Text>
               <TextInput
                 placeholder="text"
@@ -483,8 +634,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal21}
               easing={Easing.elastic(8)}
               useNativeDriver={true}
-              backdropPressToClose={true}
-              onClosed={()=> setIsOpenVal21(false)}>
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>useNativeDriver is true</Text>
             </ModalBox>
             <ModalBox
@@ -492,9 +642,7 @@ export const ModalBoxDemo = () => {
               isOpen={isOpenVal32}
               easing={Easing.elastic(8)}
               useNativeDriver={false}
-              backdropPressToClose={true}
-              onClosed={()=> setIsOpenVal32(false)}
-              >
+              backdropPressToClose={true}>
               <Text style={[styles.modalText]}>useNativeDriver is false</Text>
             </ModalBox>
           </TestCase>
@@ -522,8 +670,7 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal22}
                   coverScreen={true}
-                  onOpened={setState(true)}
-                  onClosed={()=>setIsOpenVal22(false)}>
+                  onOpened={setState(true)}>
                   <Text style={[styles.modalText]}>onOpened</Text>
                 </ModalBox>
               </View>
@@ -545,9 +692,7 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal23}
                   coverScreen={true}
-                  onClosed={()=>{
-                      setState(true)
-                      setIsOpenVal23(false)}}>
+                  onClosed={setState(true)}>
                   <Text style={[styles.modalText]}>onClosed</Text>
                 </ModalBox>
               </View>
@@ -569,8 +714,7 @@ export const ModalBoxDemo = () => {
                   style={[styles.modal]}
                   isOpen={isOpenVal24}
                   coverScreen={true}
-                  onClosingState={setState(true)}
-                  onClosed={()=>setIsOpenVal24(false)}>
+                  onClosingState={setState(true)}>
                   <Text style={[styles.modalText]}>onClosingState</Text>
                 </ModalBox>
               </View>
@@ -582,11 +726,15 @@ export const ModalBoxDemo = () => {
         </TestSuite>
       </ScrollView>
     </Tester>
-
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#888',
+  },
   input: {},
   modal: {
     height: 300,
