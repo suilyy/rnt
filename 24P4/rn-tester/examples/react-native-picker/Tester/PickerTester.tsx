@@ -886,7 +886,7 @@ export const PickerTester = () => {
                                           Picker.show()
                                           setTimeout(() => {
                                             Picker.toggle()                                                                                 
-                                        }, 1000);
+                                        }, 5000);
                                            setState(true)
                                         }}>picker.toggle </Text>
                                     </View>
@@ -969,7 +969,7 @@ export const PickerTester = () => {
                                           Picker.show()  
                                           setTimeout(() => {
                                             Picker.hide()                                                                                 
-                                        }, 1000);                                  
+                                        }, 5000);                                  
                                            setState(true)
                                         }}>picker.hide() </Text>
                                     </View>
