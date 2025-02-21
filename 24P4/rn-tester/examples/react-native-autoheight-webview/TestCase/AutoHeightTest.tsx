@@ -70,7 +70,7 @@ export const AutoHeightWebViewwDemo = () => {
                 <View style={{ flex: 1 }}>
                   {isShow && <AutoHeightWebView source={{ html: html }} scalesPageToFit={scalesPageToFit} />}
                   <Button title={"start"} onPress={() => {
-                    setScalesPageToFit(true)
+                    setScalesPageToFit(!scalesPageToFit)
                     setIsshow(false)
                     setTimeout(() => { setIsshow(true) }, 0)
                     setState(true)
