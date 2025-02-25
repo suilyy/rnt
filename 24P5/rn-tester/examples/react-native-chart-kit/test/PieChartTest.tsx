@@ -28,35 +28,35 @@ export function PieChartTest() {
       population: 21500000,
       color: 'rgba(131, 167, 234, 1)',
       legendFontColor: '#7F7F7F',
-      legendFontSize: 15,
+      legendFontSize: 10,
     },
     {
       name: 'Toronto',
       population: 2800000,
       color: 'green',
       legendFontColor: '#7F7F7F',
-      legendFontSize: 15,
+      legendFontSize: 10,
     },
     {
       name: 'Beijing',
       population: 87612,
       color: 'red',
       legendFontColor: '#7F7F7F',
-      legendFontSize: 15,
+      legendFontSize: 10,
     },
     {
       name: 'New York',
       population: 8538000,
       color: 'yellow',
       legendFontColor: '#7F7F7F',
-      legendFontSize: 15,
+      legendFontSize: 10,
     },
     {
       name: 'Moscow',
       population: 11920000,
       color: 'rgb(0, 0, 255)',
       legendFontColor: '#7F7F7F',
-      legendFontSize: 15,
+      legendFontSize: 10,
     },
   ];
 
@@ -99,7 +99,7 @@ export function PieChartTest() {
           <TestCase itShould="test Pie Chart backgroundColor property with value transparent or #ffa726">
             <PieChart
               data={data}
-              width={screenWidth}
+              width={screenWidth - 40}
               height={220}
               chartConfig={chartConfig}
               backgroundColor={bgColor}
