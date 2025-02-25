@@ -20,6 +20,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-skia/src/main/cpp" ./skia)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-custom-keyboard/src/main/cpp" ./custom-keyboard)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-permissions/src/main/cpp" ./permissions)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-context/src/main/cpp" ./safe-area)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -41,4 +42,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
 target_link_libraries(rnoh_app PUBLIC rnoh_skia)
 target_link_libraries(rnoh_app PUBLIC rnoh_custom_keyboard_package)
 target_link_libraries(rnoh_app PUBLIC rnoh_permissions)
+target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
 # RNOH_END: link_packages

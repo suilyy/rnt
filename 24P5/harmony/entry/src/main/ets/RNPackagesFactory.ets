@@ -20,6 +20,7 @@ import {RNFileSelectorPackage}  from '@react-native-oh-tpl/react-native-file-sel
 import { GetOaidPackage } from "@react-native-oh-tpl/react-native-idfa-aaid/ts";
 import {PermissionsPackage} from '@react-native-oh-tpl/react-native-permissions/ts';
 import { SvgPackage } from '@react-native-oh-tpl/react-native-svg/ts';
+import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
 
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
@@ -44,6 +45,7 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNFileSelectorPackage(ctx),
     new GetOaidPackage(ctx),
     new PermissionsPackage(ctx),
-    new SvgPackage(ctx)
+    new SvgPackage(ctx),
+    new SafeAreaViewPackage(ctx)
   ];
 }

@@ -27,7 +27,8 @@
     "@react-native-oh-tpl/react-native-file-selector": "file:../../node_modules/@react-native-oh-tpl/react-native-file-selector/harmony/file_selector.har",
     "@react-native-oh-tpl/react-native-idfa-aaid": "file:../../node_modules/@react-native-oh-tpl/react-native-idfa-aaid/harmony/getOaid.har",
     "@react-native-oh-tpl/react-native-permissions": "file:../../node_modules/@react-native-oh-tpl/react-native-permissions/harmony/permissions.har",
-    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har"
+    "@react-native-oh-tpl/react-native-svg": "file:../../node_modules/@react-native-oh-tpl/react-native-svg/harmony/svg.har",
+    "@react-native-oh-tpl/react-native-safe-area-context": "file:../../node_modules/@react-native-oh-tpl/react-native-safe-area-context/harmony/safe_area.har",
   },
   "dynamicDependencies": {}
 }
