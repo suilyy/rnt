@@ -29,18 +29,18 @@ export default function App(): JSX.Element {
        )
 }
 
-// export const displayName = 'ReactNativeConfig';
-// export const framework = 'React';
-// export const category = 'UI';
-// export const title = 'react-native-config';
-// export const documentationURL = 'https://reactnative.dev/docs/button';
-// export const description = 'React Native Config';
+export const displayName = 'ReactNativeConfig';
+export const framework = 'React';
+export const category = 'Basic';
+export const title = 'react-native-config';
+export const documentationURL = 'https://reactnative.dev/docs/button';
+export const description = 'React Native Config';
 
-// export const examples = [
-//   {
-//     title: 'react-native-config',
-//     render: function (): any {
-//       return <App />;
-//     },
-//   },
-// ];
+export const examples = [
+  {
+    title: 'react-native-config',
+    render: function (): any {
+      return <App />;
+    },
+  },
+];

@@ -63,7 +63,7 @@ export function defineBuildConfig() {
           if (process.env.ENVFILE) {
             configFile = process.env.ENVFILE;
           }
-
+          console.log(configFile);
           console.log(conPath + '\\' + configFile);
 
           generateConfigClass(loadEnvFileToMap(conPath + '\\' + configFile));

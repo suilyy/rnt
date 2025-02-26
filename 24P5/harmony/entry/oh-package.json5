@@ -19,7 +19,7 @@
     "@react-native-oh-tpl/react-native-image-picker": "file:../../node_modules/@react-native-oh-tpl/react-native-image-picker/harmony/image_picker.har",
     "@react-native-oh-tpl/react-native-alipay": "file:../../node_modules/@react-native-oh-tpl/react-native-alipay/harmony/alipay.har",
     "@alipay/afservicesdk": "file:../../node_modules/@react-native-oh-tpl/react-native-alipay/harmony/alipay/libs/AFServiceSDK.har",
-//    "@react-native-oh-tpl/react-native-config": "file:../config",
+    "@react-native-oh-tpl/react-native-config": "file:../config",
     "@react-native-oh-tpl/react-native-idle-timer": "file:../../node_modules/@react-native-oh-tpl/react-native-idle-timer/harmony/idle_timer.har",
     "@react-native-oh-tpl/react-native-thumbnail": "file:../../node_modules/@react-native-oh-tpl/react-native-thumbnail/harmony/thumbnail.har",
     "@react-native-oh-tpl/react-native-user-agent": "file:../../node_modules/@react-native-oh-tpl/react-native-user-agent/harmony/user_agent.har",

@@ -26,11 +26,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-doc-viewer/DocViewerTest'),
   },
-  // {
-  //   key: 'ReactNativeConfig',
-  //   category: 'Basic',
-  //   module: require('../examples/react-native-config/RNConfigTest'),
-  // },
+  {
+    key: 'ReactNativeConfig',
+    category: 'Basic',
+    module: require('../examples/react-native-config/RNConfigTest'),
+  },
   {
     key: 'ReactNativeBounceable',
     category: 'Basic',
