@@ -124,7 +124,7 @@ export function ChartConfigTest3() {
     color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     propsForLabels: {
-      fontSize: 24,
+      fontSize: 20,
       fill: 'rgba(0, 0, 0, 1)',
       fontFamily: 'Arial',
     },
@@ -144,7 +144,7 @@ export function ChartConfigTest3() {
     color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     propsForVerticalLabels: {
-      fontSize: 24,
+      fontSize: 20,
       fill: 'rgba(0, 0, 0, 1)',
       fontFamily: 'Arial',
     },
@@ -164,7 +164,7 @@ export function ChartConfigTest3() {
     color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
     propsForHorizontalLabels: {
-      fontSize: 24,
+      fontSize: 20,
       fill: 'rgba(0, 0, 0, 1)',
       fontFamily: 'Arial',
     },
@@ -266,7 +266,7 @@ export function ChartConfigTest3() {
 
       <Tester>
         <TestSuite name="propsForLabels">
-          <TestCase itShould="test Chart Style propsForLabels property with fontSize is 24, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
+          <TestCase itShould="test Chart Style propsForLabels property with fontSize is 20, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
             <LineChart
               data={lineChartData}
               width={screenWidth}
@@ -279,7 +279,7 @@ export function ChartConfigTest3() {
 
       <Tester>
         <TestSuite name="propsForVerticalLabels">
-          <TestCase itShould="test Chart Style propsForVerticalLabels property with fontSize is 24, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
+          <TestCase itShould="test Chart Style propsForVerticalLabels property with fontSize is 20, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
             <LineChart
               data={lineChartData}
               width={screenWidth}
@@ -292,7 +292,7 @@ export function ChartConfigTest3() {
 
       <Tester>
         <TestSuite name="propsForHorizontalLabels">
-          <TestCase itShould="test Chart Style propsForHorizontalLabels property with fontSize is 24, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
+          <TestCase itShould="test Chart Style propsForHorizontalLabels property with fontSize is 20, fill is rgba(0, 0, 0, 1), fontFamily is Arial">
             <LineChart
               data={lineChartData}
               width={screenWidth}
