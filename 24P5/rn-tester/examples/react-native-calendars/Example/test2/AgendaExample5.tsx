@@ -21,6 +21,7 @@ export function AgendaExample5() {
                                 { name: 'item1', height: 11, day: '2024-08-22' },
                             ],
                         }}
+                        selected={'2024-08-05'}
                         showOnlySelectedDayItems={true} />
                 </TestCase>
                 <TestCase itShould="test Agenda showOnlySelectedDayItems properties with the value false">

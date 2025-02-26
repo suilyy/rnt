@@ -14,10 +14,11 @@ export function AgendaExample() {
                 <TestCase itShould="test Agenda items properties">
                     <Agenda
                         items={{
-                            '2024-08-10': [
-                                { name: 'item1', height: 11, day: '2024-08-22' },
+                            '2024-08-07': [
+                                { name: 'item1', height: 11, day: '2024-08-07' },
                             ],
                         }}
+                        selected={'2024-08-05'}
                     />
                 </TestCase>
             </TestSuite>
