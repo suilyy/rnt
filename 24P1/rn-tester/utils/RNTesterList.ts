@@ -12,11 +12,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-button/index'),
   },
   {
-    key: 'ReactNativeSVG',
-    category: 'Basic',
-    module: require('../examples/react-native-svg/App'),
-  },
-  {
     key: 'SyanImagePicker',
     category: 'UI',
     module: require('../examples/react-native-syan-image-picker/SyanImagePickerDemo').default,

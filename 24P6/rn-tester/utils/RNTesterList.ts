@@ -12,11 +12,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-button/index'),
   },
   {
-    key: 'ReactNativeSVG',
-    category: 'Basic',
-    module: require('../examples/react-native-svg/App'),
-  },
-  {
     key: 'react-native-waterflow-list',
     category: 'UI',
     module: require('../examples/react-native-waterflow-list/wateflowListDemo').default,

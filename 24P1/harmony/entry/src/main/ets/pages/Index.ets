@@ -11,7 +11,6 @@ import {
   RNOHCoreContext
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
-import { SVG_VIEW_TYPE_NAME, SVGView } from "@react-native-oh-tpl/react-native-svg";
 import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video";
 import { createRNPackages } from '../RNPackagesFactory';
 import { LottieAnimationView, LOTTIE_TYPE } from "@react-native-oh-tpl/lottie-react-native"
@@ -47,7 +46,6 @@ const arkTsComponentNames: Array<string> = [
   "GeneratedSampleView",
   "PropsDisplayer",
   "LottieAnimationView",
-  SVG_VIEW_TYPE_NAME,
   RNC_VIDEO_TYPE,
   LOTTIE_TYPE,
   A_MAP_CIRCLE_VIEW_TYPE,

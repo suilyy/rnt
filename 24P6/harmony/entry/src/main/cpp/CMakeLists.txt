@@ -13,7 +13,6 @@ add_subdirectory("${RNOH_CPP_DIR}" ./rn)
 
 
 # RNOH_BEGIN: manual_package_linking_1
-add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/svg/src/main/cpp" ./svg)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/realm/src/main/cpp" ./realm)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/rn-bugly/src/main/cpp" ./bugly)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-search-bar/src/main/cpp" ./search-bar)
@@ -31,7 +30,6 @@ add_library(rnoh_app SHARED
 target_link_libraries(rnoh_app PUBLIC rnoh)
 
 # RNOH_BEGIN: manual_package_linking_2
-target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_realm)
 target_link_libraries(rnoh_app PUBLIC rnoh_bugly)
 target_link_libraries(rnoh_app PUBLIC rnoh_search_bar)
