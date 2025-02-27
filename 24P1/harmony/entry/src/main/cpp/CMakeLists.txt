@@ -46,7 +46,6 @@ add_library(rnoh_app SHARED
 target_link_libraries(rnoh_app PUBLIC rnoh)
 
 # RNOH_BEGIN: manual_package_linking_2
-target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 target_link_libraries(rnoh_app PUBLIC rnoh_video)
 target_link_libraries(rnoh_app PUBLIC rnoh_safe_area)
 target_link_libraries(rnoh_app PUBLIC rnoh_linear_gradient)
