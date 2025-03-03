@@ -127,6 +127,18 @@ function App() {
 
   function stop(taskId?: string) {
     BackgroundFetch.stop(taskId);
+    addEvent(taskId||'react-native-background-fetch')
+  }
+  async function status(callback?: (status:BackgroundFetchStatus)=>any) {
+    if(callback){
+      BackgroundFetch.status((value=>{
+        addEvent(`status: ${callback(value)}`)
+      }))
+    }else{
+      let status = BackgroundFetch.status();
+      addEvent(`status: ${status}`)
+
+    }
   }
 
   function renderElement(title: string, fn: Function) {
@@ -195,8 +207,8 @@ function App() {
               {renderElement('测试 stop 接口 停止任务', () => stop())}
               {renderElement('测试 stop 接口 传参 com.transistorsoft.customtask 停止某一个任务', () => stop('com.transistorsoft.customtask'))}
 
-              {renderElement('测试 status 接口', () => BackgroundFetch.status())}
-              {renderElement('测试 status 接口 传参() => 2', () => BackgroundFetch.status(() => 2))}
+              {renderElement('测试 status 接口', () => status())}
+              {renderElement('测试 status 接口 传参() => 2', () => status(() => 2))}
             </TestSuite>
           </Tester>
         </ScrollView>

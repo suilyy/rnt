@@ -129,6 +129,13 @@
         "startWindowBackground": "$color:start_window_background",
         "removeMissionAfterTerminate": true,
       }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "MyWorkSchedulerExtensionAbility",
+        "srcEntry": "./ets/WorkSchedulerExtension/WorkSchedulerExtension.ets",
+        "type": "workScheduler"
+      }
     ]
   }
 }
