@@ -50,7 +50,7 @@ export default function () {
     { spacing: 30 }, { spacing: 60 },
     { adjustToWidth: true }, { adjustToWidth: false },
     { backgroundColor: 'red' }, { backgroundColor: 'blue' },
-    { sectionColors: ['red', 'yellow', 'pink', 'blue'] }, { sectionColors: ['blue', 'pink'] },
+    // { sectionColors: ['red', 'yellow', 'pink', 'blue'] }, { sectionColors: ['blue', 'pink'] },
     { disableScroll: true }, { disableScroll: false },
     { showScrollIndicator: true, indicatorColor: 'black', data: [{ value: 5 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 5 }] },
     { showScrollIndicator: true, indicatorColor: 'white', data: [{ value: 5 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 30 }, { value: 5 }] },
@@ -357,11 +357,11 @@ export default function () {
               },
             }}></LineChart>
         </TestCase>
-        <TestCase itShould='{overflowTop:1}'>
+        <TestCase itShould='{overflowTop:20}'>
           <LineChart scrollRef={scrollref} data={lineData}
             showVerticalLines
             verticalLinesColor={'white'}
-            overflowTop={1}
+            overflowTop={20}
             noOfSections={5}
             pointerConfig={{
               initialPointerIndex: 0,
@@ -398,7 +398,7 @@ export default function () {
             },
           }}></LineChart>
         </TestCase>
-        <TestCase itShould="{focusEnabled: true,delayBeforeUnFocus: 1000,
+        <TestCase itShould="{focusEnabled: true,delayBeforeUnFocus: 3000,
               onFocus: (item, index) => { 
                 setPressText('onFocus被触发');
                },
@@ -406,7 +406,7 @@ export default function () {
           <Text>请点击图形上显示的数据点触发onFocus，{pressText}</Text>
           <LineChart scrollRef={scrollref} data={lineData} {...{
             focusEnabled: true,
-            delayBeforeUnFocus: 1000,
+            delayBeforeUnFocus: 3000,
             onFocus: (item, index) => {
               setPressText('onFocus被触发');
             },

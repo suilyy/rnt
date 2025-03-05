@@ -183,28 +183,28 @@ export default function () {
       showLine: true,
       lineData: [{ value: 80, dataPointText: 80 }, { value: 20, dataPointText: 20 }, { value: 100, dataPointText: 100 }, { value: 40, dataPointText: 40 }, { value: 50, dataPointText: 50 }, { value: 60, dataPointText: 60 }, { value: 70, dataPointText: 70 }],
       lineData2: [{ value: 100, dataPointText: 100 }, { value: 90, dataPointText: 90 }, { value: 80, dataPointText: 80 }, { value: 70, dataPointText: 70 }, { value: 60, dataPointText: 60 }, { value: 50, dataPointText: 50 }, { value: 40, dataPointText: 40 }],
-      lineConfig: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftX: 10 },
+      lineConfig: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftX: 0 },
       lineConfig2: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftX: 10 }
     },
     {
       showLine: true,
       lineData: [{ value: 80, dataPointText: 80 }, { value: 20, dataPointText: 20 }, { value: 100, dataPointText: 100 }, { value: 40, dataPointText: 40 }, { value: 50, dataPointText: 50 }, { value: 60, dataPointText: 60 }, { value: 70, dataPointText: 70 }],
       lineData2: [{ value: 100, dataPointText: 100 }, { value: 90, dataPointText: 90 }, { value: 80, dataPointText: 80 }, { value: 70, dataPointText: 70 }, { value: 60, dataPointText: 60 }, { value: 50, dataPointText: 50 }, { value: 40, dataPointText: 40 }],
-      lineConfig: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftX: 20 },
+      lineConfig: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftX: 0 },
       lineConfig2: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftX: 20 }
     },
     {
       showLine: true,
       lineData: [{ value: 80, dataPointText: 80 }, { value: 20, dataPointText: 20 }, { value: 100, dataPointText: 100 }, { value: 40, dataPointText: 40 }, { value: 50, dataPointText: 50 }, { value: 60, dataPointText: 60 }, { value: 70, dataPointText: 70 }],
       lineData2: [{ value: 100, dataPointText: 100 }, { value: 90, dataPointText: 90 }, { value: 80, dataPointText: 80 }, { value: 70, dataPointText: 70 }, { value: 60, dataPointText: 60 }, { value: 50, dataPointText: 50 }, { value: 40, dataPointText: 40 }],
-      lineConfig: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftY: 10 },
+      lineConfig: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftY: 0 },
       lineConfig2: { textColor: 'red', dataPointsShape: 'rectangular', textFontSize: 20, textShiftY: 10 }
     },
     {
       showLine: true,
       lineData: [{ value: 80, dataPointText: 80 }, { value: 20, dataPointText: 20 }, { value: 100, dataPointText: 100 }, { value: 40, dataPointText: 40 }, { value: 50, dataPointText: 50 }, { value: 60, dataPointText: 60 }, { value: 70, dataPointText: 70 }],
       lineData2: [{ value: 100, dataPointText: 100 }, { value: 90, dataPointText: 90 }, { value: 80, dataPointText: 80 }, { value: 70, dataPointText: 70 }, { value: 60, dataPointText: 60 }, { value: 50, dataPointText: 50 }, { value: 40, dataPointText: 40 }],
-      lineConfig: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftY: 20 },
+      lineConfig: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftY: 0 },
       lineConfig2: { textColor: 'blue', dataPointsShape: 'rectangular', textFontSize: 30, textShiftY: 20 },
     },
     {

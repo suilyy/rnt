@@ -75,7 +75,7 @@ export default function () {
           pointerConfigProps.map(item => {
             return (
               <TestCase key={JSON.stringify(item)} itShould={JSON.stringify(item)} tags={['C_API']}>
-                <Text>请点击图形上显示的数据点，观察效果</Text>
+                <Text>{item?.pointerConfig?.activatePointersOnLongPress ? '长按并滑动' : '请点击'}条形图，观察效果</Text>
                 <LineChart scrollRef={scrollref} data={lineData} {...item}></LineChart>
               </TestCase>
             )
@@ -173,7 +173,6 @@ export default function () {
                 shiftPointerLabelY: 20,
                 pointerLabelWidth: 40,
                 pointerLabelHeight: 30,
-                autoAdjustPointerLabelPosition:true,
                 pointerLabelComponent: (items) => {
                   return (
                     <Text style={{
@@ -195,7 +194,7 @@ export default function () {
               shiftPointerLabelY: 20,
               pointerLabelWidth: 40,
               pointerLabelHeight: 30,
-              autoAdjustPointerLabelPosition: true,
+              // autoAdjustPointerLabelPosition: true,
               pointerLabelComponent: (items) => {
                 return (
                   <Text style={{

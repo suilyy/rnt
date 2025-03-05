@@ -28,8 +28,8 @@ export default function () {
           <Text>请点击条形图触发onPress方法:{pressProText}</Text>
           <Text>请长按条形图触发onLongPress方法:{onLongPressText}</Text>
           <Text>请长按条形图并释放触发onPressOut方法:{onPressOutText}</Text>
-          <Text>开始滚动触发onStartReached方法:{onStartReached}</Text>
-          <Text>结束滚动触发onEndReached方法:{onEndReached}</Text>
+          <Text>滚动到底部触发onEndReached方法:{onEndReached}</Text>
+          <Text>滚动到顶部触发onStartReached方法:{onStartReached}</Text>
           <BarChart
             data={data}
             scrollref={scrollRef}

@@ -100,8 +100,8 @@ export const axesProps = [
   { xAxisLabelsHeight: 20 }, { xAxisLabelsHeight: 30 },
   { xAxisLabelsVerticalShift: 10 }, { xAxisLabelsVerticalShift: 20 },
   { labelsExtraHeight: 20 }, { labelsExtraHeight: 100 },
-  { secondaryData: [0.055, 0.02, 0.1, 0.01, 0.05, 0.06], data: [{ value: 10 }, { value: 20 }, { value: 30 }], secondaryYAxis: { maxValue: 0.2, noOfSections: 4, showFractionalValues: true, roundToDigits: 3, yAxisColor: 'blue', showYAxisIndices: true, yAxisIndicesColor: 'blue', } },
-  { secondaryData: [0.02, 0.055, 0.01, 0.05, 0.06], data: [{ value: 10 }, { value: 20 }, { value: 30 }], secondaryYAxis: { maxValue: 0.2, noOfSections: 4, showFractionalValues: true, roundToDigits: 3, yAxisColor: 'red', showYAxisIndices: true, yAxisIndicesColor: 'red', } }
+  // { secondaryData: [0.055, 0.02, 0.1, 0.01, 0.05, 0.06], data: [{ value: 10 }, { value: 20 }, { value: 30 }], secondaryYAxis: { maxValue: 0.2, noOfSections: 4, showFractionalValues: true, roundToDigits: 3, yAxisColor: 'blue', showYAxisIndices: true, yAxisIndicesColor: 'blue', } },
+  // { secondaryData: [0.02, 0.055, 0.01, 0.05, 0.06], data: [{ value: 10 }, { value: 20 }, { value: 30 }], secondaryYAxis: { maxValue: 0.2, noOfSections: 4, showFractionalValues: true, roundToDigits: 3, yAxisColor: 'red', showYAxisIndices: true, yAxisIndicesColor: 'red', } }
 ];
 
 export const commonPointerProps = [

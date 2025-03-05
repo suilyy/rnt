@@ -21,9 +21,9 @@ export default function () {
     {xAxisThickness: 10,showMidAxis: true ,width:350},
     {xAxisType: 'solid',showMidAxis: true ,width:350},
     {xAxisType: 'dashed',showMidAxis: true ,width:350},
-    {xAxisNoOfSections: 2,showMidAxis: true ,width:350},
-    {xAxisNoOfSections: 3,showMidAxis: true ,width:350},
-    {xAxisNoOfSections: 5,showMidAxis: true ,width:350},
+    {xAxisNoOfSections: 2,showMidAxis: false ,width:350},
+    {xAxisNoOfSections: 3,showMidAxis: false ,width:350},
+    {xAxisNoOfSections: 5,showMidAxis: false ,width:350},
     {showXAxisIndices: false,showMidAxis: true ,width:350},
     {showXAxisIndices: true,showMidAxis: true ,width:350},
     {xAxisIndicesWidth: 5, showXAxisIndices: true,showMidAxis: true ,width:350},
@@ -53,7 +53,8 @@ export default function () {
       showMidAxis: true ,width:350
     },
     {
-      xAxisLabelColor: 'yellow',
+      // xAxisLabelColor: 'yellow',
+      xAxisLabelColor: 'green',
       xAxisLabelFontStyle: 'oblique',
       xAxisLabelFontSize: 18,
       showXAxisLabelTexts: true,

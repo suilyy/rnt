@@ -15,8 +15,8 @@ export default function () {
   ];
 
   const populationPyramidProp = [
-    { barLabelWidth: 5, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
-    { barLabelWidth: 100, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
+    // { barLabelWidth: 5, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
+    // { barLabelWidth: 100, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
     { barLabelFontSize: 14, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
     { barLabelFontSize: 18, showValuesAsBarLabels: true ,showMidAxis: true ,width:350},
     { barLabelColor: 'red', showValuesAsBarLabels: true ,showMidAxis: true ,width:350},

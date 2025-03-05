@@ -135,7 +135,7 @@ function App() {
         addEvent(`status: ${callback(value)}`)
       }))
     }else{
-      let status = BackgroundFetch.status();
+      let status = await BackgroundFetch.status();
       addEvent(`status: ${status}`)
 
     }
