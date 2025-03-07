@@ -16,6 +16,7 @@ import BarChartPropsTooltip from './BarChartPropsTooltip';
 import BarChartStackProps from './BarChartStackProps';
 import BarChartAxesProps from './BarChartAxesProps';
 import BarChartPointerConfigProps from './BarChartPointerConfigProps';
+import BarChartTest from './BarChartTest';
 
 import LineChartDataItem from './LineChartDataItem';
 import LineChartProps from './LineChartProps';
@@ -26,6 +27,7 @@ import LineChartFocusProps from './LineChartFocusProps';
 import LineChartAreaChartProps from './LineChartAreaChartProps';
 import LineChartPointerConfigProps from './LineChartPointerConfigProps';
 import LineChartFunctionProps from './LineChartFunctionProps';
+import LineChartTest from './LineChartTest';
 
 import PieChartDataProps from './PieChartDataProps';
 import PieChartProps from './PieChartProps';
