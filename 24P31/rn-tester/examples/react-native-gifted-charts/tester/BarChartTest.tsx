@@ -5,7 +5,8 @@ import { TestCase, Tester } from "@rnoh/testerino";
 
 const BarChartTest = () => {
   const barData = [
-    { value: 50, label: 'Jan', frontColor: '#177AD5' ,
+    {
+      value: 50, label: 'Jan', frontColor: '#177AD5',
     },
     { value: 80, label: 'Feb', frontColor: '#ED6665' },
     { value: 90, label: 'Mar', frontColor: '#8B78E6' },
@@ -20,13 +21,48 @@ const BarChartTest = () => {
     { value: 90, label: 'Mar', frontColor: '#8B78E6' },
     { value: 70, label: 'Apr', frontColor: '#FFA500' },
   ];
+  const barConfig = {
+    color: 'orange',
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 10,
+  };
+  const lowerarConfig = {
+    color: 'red',
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 5,
+  };
+
+  const stackData = [
+    {
+      stacks: [
+        { value: 80, ...barConfig },
+        { value: -40, ...lowerarConfig },
+      ],
+      label: 'April'
+    },
+    {
+      stacks: [
+        { value: 184, ...barConfig },
+        { value: -168, ...lowerarConfig },
+      ],
+      label: 'Mei'
+    },
+    {
+      stacks: [
+        { value: 210, ...barConfig },
+        { value: -220, ...lowerarConfig },
+      ],
+      label: 'Juni'
+    },
+  ];
 
   return (
-    <Tester style={{ paddingBottom: 30}}>
+    <Tester style={{ paddingBottom: 30 }}>
       <ScrollView>
         <TestCase itShould='test 
             referenceLine2Position 
             referenceLinesOverChartContent
+            showVerticalLines
             '>
           <View style={{ borderWidth: 1 }}>
             <BarChart
@@ -46,6 +82,7 @@ const BarChartTest = () => {
               referenceLine2Position={30} // 第二条参考线位置
               referenceLine2Config={{ color: 'blue', dashWidth: 2, dashGap: 3 }} // 第二条参考线样式
               referenceLinesOverChartContent={true}
+              showVerticalLines ={false}
             />
           </View>
         </TestCase>
@@ -103,7 +140,7 @@ const BarChartTest = () => {
           yAxisIndicesWidth
           yAxisIndicesColor
           '>
-          <View style={{ borderWidth: 1}}>
+          <View style={{ borderWidth: 1 }}>
             <BarChart
               data={barData}
               barWidth={30} // 柱状图宽度
@@ -115,7 +152,6 @@ const BarChartTest = () => {
               yAxisTextStyle={{ color: 'black' }} // Y 轴文本样式
               xAxisLabelTextStyle={{ color: 'black' }} // X 轴标签文本样式
               showXAxisIndices // 显示 X 轴刻度线
-              isAnimated={true} // 启用动画效果
               animationDuration={5000} // 设置动画持续时间为 5000 毫秒
               xAxisIndicesHeight={10} // 设置 X 轴刻度线的高度
               xAxisIndicesColor="blue" // 设置 X 轴刻度线的颜色
@@ -124,6 +160,93 @@ const BarChartTest = () => {
               yAxisIndicesWidth={8}  //设置 Y 轴刻度线的宽度
               yAxisIndicesColor="red" // 设置 Y 轴刻度线的颜色
               secondaryYAxis={false} //显示此Y轴刻度线
+            />
+          </View>
+        </TestCase>
+        <TestCase itShould='test  BarChart
+          borderTopLeftRadius 5
+          borderTopRightRadius 10
+          borderBottomLeftRadius 10
+          borderBottomRightRadius 5
+          formatYLabel
+          '>
+          <View style={{ borderWidth: 1 }}>
+            <BarChart
+              barWidth={20}
+              spacing={40}
+              xAxisLabelTextStyle={{
+                fontFamily: 'Goga-Bold',
+                color: 'black',
+                marginBottom: -20,
+              }}
+              yAxisTextStyle={{
+                left: 0,
+                color: '#FF6B00',
+                fontFamily: 'Goga-Bold',
+              }}
+              stackData={stackData}
+              mostNegativeValue={-220}
+              yAxisThickness={0}
+              xAxisThickness={1}
+              noOfSections={5}
+              rulesThickness={0}
+              formatYLabel={label => `€${label}`}
+              autoShiftLabelsForNegativeStacks={false}
+              labelsDistanceFromXaxis={210}
+            />
+          </View>
+        </TestCase>
+        <TestCase itShould='test  BarChart
+          stripBehindBars false
+
+          '>
+          <View style={{ borderWidth: 1 }}>
+            <BarChart
+              showFractionalValues
+              showYAxisIndices
+              showXAxisIndices
+              hideRules
+              showVerticalLines
+              verticalLinesColor={'white'}
+              overflowTop={10}
+              noOfSections={5}
+              data={barData}
+              showGradient
+              frontColor={'#1B6BB0'}
+              gradientColor={'#FFEEFE'}
+              backgroundColor={'#FECF9E'}
+              pointerConfig={{
+                initialPointerIndex: 0,
+                stripBehindBars: false,
+                pointerStripHeight: 207,
+              }}
+            />
+          </View>
+        </TestCase>
+        <TestCase itShould='test  BarChart
+          stripBehindBars true
+
+          '>
+          <View style={{ borderWidth: 1 }}>
+            <BarChart
+              showFractionalValues
+              showYAxisIndices
+              showXAxisIndices
+              hideRules
+              showVerticalLines
+              verticalLinesColor={'white'}
+              overflowTop={10}
+              noOfSections={5}
+              data={barData}
+              showGradient
+              frontColor={'#1B6BB0'}
+              gradientColor={'#FFEEFE'}
+              backgroundColor={'#FECF9E'}
+              pointerConfig={{
+                initialPointerIndex: 0,
+                stripBehindBars: true,
+                pointerStripHeight: 207,
+              }}
             />
           </View>
         </TestCase>

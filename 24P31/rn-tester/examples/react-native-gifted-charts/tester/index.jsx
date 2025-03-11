@@ -40,6 +40,7 @@ import PopulationPyramid from "./PopulationPyramid";
 import PopulationPyramidYAxis from './PopulationPyramidYAxis';
 import PopulationPyramidXAxis from './PopulationPyramidXAxis';
 import PopulationPyramidBarLabel from './PopulationPyramidBarLabel';
+import PopulationPyramidTest from './PopulationPyramidTest';
 
 export default {
   A_BarChartExample,
@@ -60,7 +61,8 @@ export default {
   BarChartStackProps,
   BarChartAxesProps,
   BarChartPointerConfigProps,
-  
+  BarChartTest,
+
   LineChartDataItem,
   LineChartProps,
   LineChartPropsScrollToEnd,
@@ -70,6 +72,7 @@ export default {
   LineChartAreaChartProps,
   LineChartPointerConfigProps,
   LineChartFunctionProps,
+  LineChartTest,
 
   PieChartDataProps,
   PieChartProps,
@@ -80,5 +83,6 @@ export default {
   PopulationPyramid,
   PopulationPyramidYAxis,
   PopulationPyramidXAxis,
-  PopulationPyramidBarLabel
+  PopulationPyramidBarLabel,
+  PopulationPyramidTest
 }
