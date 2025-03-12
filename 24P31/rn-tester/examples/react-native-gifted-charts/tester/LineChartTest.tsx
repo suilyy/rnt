@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import { ScrollView, View } from 'react-native';
+import { Button, ScrollView, Text, View } from 'react-native';
 import { LineChart } from 'react-native-gifted-charts';
 import { TestCase, Tester } from "@rnoh/testerino";
 
 const SegmentedDataSetChart = () => {
+
   const data = [
     { value: 50 },
     { value: 80 },
@@ -72,6 +73,26 @@ const SegmentedDataSetChart = () => {
     { value: 85 },
   ];
   const scrollref = useRef();
+
+  const lineDataRef = [
+    { value: 0 },
+    { value: 20 },
+    { value: 18 },
+    { value: 40 },
+    { value: 36 },
+    { value: 60 },
+    { value: 54 },
+    { value: 85 },
+    { value: 0 },
+    { value: 20 },
+    { value: 18 },
+    { value: 40 },
+    { value: 36 },
+    { value: 70 },
+    { value: 80 },
+    { value: 90 },
+  ];
+
   const areaChartprops = [
     {
       areaChart: true,
@@ -96,9 +117,9 @@ const SegmentedDataSetChart = () => {
       startFillColor2: 'pink',
       endFillColor2: 'blue',
       startOpacity2: 1,
-      dataPointsWidth2:10,
-      dataPointsColor2:"red",
-      dataPointsShape2:"rectangular",
+      dataPointsWidth2: 10,
+      dataPointsColor2: "red",
+      dataPointsShape2: "rectangular",
       endOpacity1: 0.5,
       data2: [{ value: 50 }, { value: 80 }, { value: 90 }, { value: 70 }],
       data: [{ value: 70 }, { value: 85 }, { value: 95 }, { value: 100 }],
@@ -108,7 +129,7 @@ const SegmentedDataSetChart = () => {
       areaChart3: true,
       startFillColor3: 'orange',
       endFillColor3: 'blue',
-      dataPointsColor3:"blue",
+      dataPointsColor3: "blue",
       startOpacity3: 1,
       endOpacity1: 0.5,
       data: [{ value: 50 }, { value: 80 }, { value: 90 }, { value: 80 }],
@@ -135,6 +156,13 @@ const SegmentedDataSetChart = () => {
       data5: [{ value: 10 }, { value: 20 }, { value: 30 }, { value: 40 }],
     }
   ]
+
+  const datafocused = [
+    { value: 50 },
+    { value: 80 },
+    { value: 90 },
+    { value: 70 },
+];
 
   return (
     <Tester style={{ paddingBottom: 30 }}>
@@ -170,6 +198,7 @@ const SegmentedDataSetChart = () => {
                 endFillColor1="hsla(128, 100.00%, 50.00%, 0.00)"
                 startOpacity1={0.3}
                 isAnimated={true}
+                animationDuration={10000}
               />
             </View>
           </TestCase>
@@ -201,7 +230,7 @@ const SegmentedDataSetChart = () => {
                 lineGradient
                 lineGradientDirection="vertical"
                 lineGradientStartColor="orange"
-                lineGradientEndColor= "red"
+                lineGradientEndColor="red"
               />
             </View>
           </TestCase>
@@ -233,7 +262,7 @@ const SegmentedDataSetChart = () => {
                 lineGradient
                 lineGradientDirection="horizontal"
                 lineGradientStartColor="orange"
-                lineGradientEndColor= "red"
+                lineGradientEndColor="red"
               />
             </View>
           </TestCase>
@@ -316,7 +345,7 @@ const SegmentedDataSetChart = () => {
                 lineGradient
                 lineGradientDirection="horizontal"
                 lineGradientStartColor="orange"
-                lineGradientEndColor= "red"
+                lineGradientEndColor="red"
               />
             </View>
           </TestCase>
@@ -351,18 +380,18 @@ const SegmentedDataSetChart = () => {
                 '>
             <View style={{ borderWidth: 1 }}>
               <LineChart
-                 spacing={30}
-                 curved
-                 thickness={4}
-                 hideRules
-                 hideDataPoints
-                 data={data}
-                 color2="yellow"
-                 thickness2={2}
-                 yAxisTextStyle={{color: 'lightgray'}}
-                 showVerticalLines
-                 verticalLinesUptoDataPoint = {false}
-                 verticalLinesColor={'#243'}
+                spacing={30}
+                curved
+                thickness={4}
+                hideRules
+                hideDataPoints
+                data={data}
+                color2="yellow"
+                thickness2={2}
+                yAxisTextStyle={{ color: 'lightgray' }}
+                showVerticalLines
+                verticalLinesUptoDataPoint={false}
+                verticalLinesColor={'#243'}
               />
             </View>
           </TestCase>
@@ -371,18 +400,18 @@ const SegmentedDataSetChart = () => {
                 '>
             <View style={{ borderWidth: 1 }}>
               <LineChart
-                 spacing={30}
-                 curved
-                 thickness={4}
-                 hideRules
-                 hideDataPoints
-                 data={data}
-                 color2="yellow"
-                 thickness2={2}
-                 yAxisTextStyle={{color: 'lightgray'}}
-                 showVerticalLines
-                 verticalLinesUptoDataPoint
-                 verticalLinesColor={'#243'}
+                spacing={30}
+                curved
+                thickness={4}
+                hideRules
+                hideDataPoints
+                data={data}
+                color2="yellow"
+                thickness2={2}
+                yAxisTextStyle={{ color: 'lightgray' }}
+                showVerticalLines
+                verticalLinesUptoDataPoint
+                verticalLinesColor={'#243'}
               />
             </View>
           </TestCase>
@@ -396,6 +425,54 @@ const SegmentedDataSetChart = () => {
             )
           })
         }
+
+        <TestCase itShould='test LineChart 
+                scrollref
+                '>
+          <View style={{ borderWidth: 1 }}>
+            <Button title="test scrollref" onPress={()=>{
+              scrollref?.current?.scrollToEnd()
+            }}/>
+            <LineChart
+              data={lineDataRef}
+              width={300}
+              height={200}
+              scrollRef={scrollref}
+            />
+          </View>
+        </TestCase>
+        <TestCase itShould='test LineChart 
+                focusEnabled
+                unFocusOnPressOut
+                '>
+          <View style={{ borderWidth: 1 }}>
+            <LineChart
+               data={datafocused}
+               width={325}
+               dataPointsRadius={6}
+               dataPointsWidth={16}
+               dataPointsColor="#077AF1"
+               yAxisThickness={0}
+               initialSpacing={0}
+               adjustToWidth
+               thickness={3}
+               hideRules
+               stepValue={20}
+               maxValue={90}
+               interpolateMissingValues
+               color="#07BAD1"
+               curved
+               curveType={1}
+               areaChart
+               startFillColor="#07BAD1"
+               startOpacity={0.8}
+               endFillColor="#07BAD1"
+               endOpacity={0.3}
+               focusEnabled
+               unFocusOnPressOut ={false}
+            />
+          </View>
+        </TestCase>
       </ScrollView>
     </Tester>
   );

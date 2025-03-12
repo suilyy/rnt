@@ -1,9 +1,11 @@
-import React from 'react';
-import { View, ScrollView } from 'react-native';
+import React, { useRef } from 'react';
+import { View, ScrollView, Button } from 'react-native';
 import { BarChart } from 'react-native-gifted-charts';
 import { TestCase, Tester } from "@rnoh/testerino";
 
 const BarChartTest = () => {
+    const scrollRef = useRef(null);
+  
   const barData = [
     {
       value: 50, label: 'Jan', frontColor: '#177AD5',
@@ -21,10 +23,22 @@ const BarChartTest = () => {
     { value: 90, label: 'Mar', frontColor: '#8B78E6' },
     { value: 70, label: 'Apr', frontColor: '#FFA500' },
   ];
+
+  const barDataRef = [
+    { value: 10, label: 'Jan', frontColor: '#177AD5' },
+    { value: 80, label: 'Feb', frontColor: '#ED6665' },
+    { value: 90, label: 'Mar', frontColor: '#8B78E6' },
+    { value: 70, label: 'Apr', frontColor: '#FFA500' },
+    { value: 10, label: 'Jan', frontColor: '#177AD5' },
+    { value: 80, label: 'Feb', frontColor: '#ED6665' },
+    { value: 90, label: 'Mar', frontColor: 'blue' },
+    { value: 70, label: 'Apr', frontColor: 'red' },
+  ];
   const barConfig = {
     color: 'orange',
     borderTopLeftRadius: 5,
     borderTopRightRadius: 10,
+    barWidth:50
   };
   const lowerarConfig = {
     color: 'red',
@@ -38,7 +52,8 @@ const BarChartTest = () => {
         { value: 80, ...barConfig },
         { value: -40, ...lowerarConfig },
       ],
-      label: 'April'
+      label: 'April',
+      spacing:10
     },
     {
       stacks: [
@@ -55,6 +70,16 @@ const BarChartTest = () => {
       label: 'Juni'
     },
   ];
+
+  const barChartConfig = [
+    {
+      showLine: true,
+      lineData: [{ value: 80 }, { value: 20 }, { value: 60 }, { value: 40 }, { value: 50 }, { value: 60 }],
+      lineData2: [{ value: 70 }, { value: 80 }, { value: 80 }, { value: 70 }, { value: 60 }, { value: 50 }],
+      lineConfig: { dataPointsShape: 'rectangular', dataPointsWidth: 10 ,dataPointsHeight:10},
+      lineConfig2: { dataPointsShape: 'rectangular', dataPointsWidth: 10,dataPointsHeight:10 }
+    },
+  ]
 
   return (
     <Tester style={{ paddingBottom: 30 }}>
@@ -225,7 +250,6 @@ const BarChartTest = () => {
         </TestCase>
         <TestCase itShould='test  BarChart
           stripBehindBars true
-
           '>
           <View style={{ borderWidth: 1 }}>
             <BarChart
@@ -246,10 +270,33 @@ const BarChartTest = () => {
                 initialPointerIndex: 0,
                 stripBehindBars: true,
                 pointerStripHeight: 207,
+                secondaryPointerColor: 'blue'
               }}
             />
           </View>
         </TestCase>
+        <TestCase itShould='test  BarChart
+          stripBehindBars true
+          '>
+          <View style={{ borderWidth: 1 }}>
+            <Button title='点击测试 scrollRef' onPress={()=>{
+              scrollRef?.current?.scrollToEnd()
+            }}></Button>
+            <BarChart
+             data={barDataRef}
+             scrollRef={scrollRef}
+            />
+          </View>
+        </TestCase>
+        {
+          barChartConfig.map((item, index) => {
+            return (
+              <TestCase itShould={JSON.stringify(item)} key={JSON.stringify(item)} tags={['C_API']}>
+                <BarChart data={barData}  {...item}></BarChart>
+              </TestCase>
+            )
+          })
+        }
       </ScrollView>
     </Tester>
   );
