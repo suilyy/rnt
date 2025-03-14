@@ -10,7 +10,7 @@ import { PermissionsPackage } from '@react-native-oh-tpl/react-native-permission
 import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
-import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
+import { DocumentPickerPackage } from '@react-native-ohos/react-native-document-picker/ts';
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
 import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
