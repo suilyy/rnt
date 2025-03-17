@@ -22,7 +22,7 @@
     "@react-native-oh-tpl/react-native-permissions": "file:../../node_modules/@react-native-oh-tpl/react-native-permissions/harmony/permissions.har",
     "@react-native-ohos/checkbox": "file:../../node_modules/@react-native-ohos/checkbox/harmony/checkbox.har",
     "@react-native-oh-tpl/react-native-video": "file:../../node_modules/@react-native-oh-tpl/react-native-video/harmony/rn_video.har",
-    "@react-native-ohos/react-native-document-picker": "file:../../node_modules/@react-native-ohos/react-native-document-picker/harmony/document_picker.har",
+    "@react-native-oh-tpl/react-native-document-picker": "file:../../node_modules/@react-native-ohos/react-native-document-picker/harmony/document_picker.har",
     "@react-native-oh-tpl/react-native-reanimated": "file:../../node_modules/@react-native-oh-tpl/react-native-reanimated/harmony/reanimated.har",
     "@react-native-oh-tpl/react-native-pdf": "file:../../node_modules/@react-native-oh-tpl/react-native-pdf/harmony/pdfview.har",
     "@react-native-oh-tpl/react-native-text-size": "file:../../node_modules/@react-native-oh-tpl/react-native-text-size/harmony/text_size.har",
