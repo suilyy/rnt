@@ -37,7 +37,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-image-picker/s
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-vision-camera/src/main/cpp" ./vision-camera)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-shared-element/src/main/cpp" ./shared-element)
-add_subdirectory("${OH_MODULES}/@react-native-ohos/react-native-document-picker/src/main/cpp" ./document_picker)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-document-picker/src/main/cpp" ./document_picker)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")

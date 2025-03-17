@@ -36,6 +36,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-elements/test/SampleElementExample'),
   },
+  {
+    key: 'ReactNativeDocumentPicker',
+    category: 'Basic',
+    module: require('../examples/react-native-document-picker/documentPicker'),
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

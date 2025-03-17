@@ -27,11 +27,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-ezswiper/App'),
   },
   {
-    key: 'ReactNativeDocumentPicker',
-    category: 'Basic',
-    module: require('../examples/react-native-document-picker/documentPicker'),
-  },
-  {
     key: 'ReactNativeImageGallery',
     category: 'Basic',
     module: require('../examples/react-native-image-gallery/DemoGallery'),

@@ -9,8 +9,10 @@
   "version": "1.0.0",
   "dependencies": {
     "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.810.har"
+//    "@rnoh/react-native-openharmony": "^0.72.53"
   },
   "overrides": {
     "@rnoh/react-native-openharmony": "file:./react_native_openharmony/react_native_openharmony-5.0.0.810.har"
+//    "@rnoh/react-native-openharmony": "^0.72.53"
   }
 }
