@@ -1,0 +1,1 @@
+1.react-native-wechat-lib中的demo需要手动进行修改，即src/constants.ts文件中的APP_ID = "wx7960f233c597c135"需要改成自己微信小程序账号的app_id。详情见小程序官网[小程序 (qq.com)](https://mp.weixin.qq.com/wxamp/devprofile/get_profile?token=374664573&lang=zh_CN)

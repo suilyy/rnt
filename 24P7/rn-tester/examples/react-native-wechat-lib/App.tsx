@@ -212,7 +212,7 @@ export default {
   framework: "React",
   category: "Tools",
   title: "wechat-lib-demo",
-  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-masked-view-masked-view.md",
+  documentationURL: "hhttps://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-wechat-lib.md",
   description: "微信功能集成，包括微信登录，社交分享，微信支付，小程序跳转",
   examples: [
     {
