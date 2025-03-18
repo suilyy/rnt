@@ -1,0 +1,49 @@
+{
+  app: {
+    products: [
+      {
+        name: 'default',
+        signingConfig: 'default',
+        compatibleSdkVersion: '5.0.0(12)',
+        runtimeOS: 'HarmonyOS',
+      },
+    ],
+    buildModeSet: [
+      {
+        name: 'debug',
+      },
+      {
+        name: 'release',
+      },
+    ],
+    signingConfigs: [
+      {
+        name: 'default',
+        type: 'HarmonyOS',
+        material: {
+          certpath: 'C:\\Users\\ding_chengjie\\.ohos\\config\\default_harmony_GQbsmNYum8r02o61wT3NEzf9jVZdO_unUHKcXeXGa6U=.cer',
+          storePassword: '0000001BB6E8468DA3F00F0A9A90C902B77A4A288D6A6D94AC113543AB672C3BDE802A50889080FD81AAAB',
+          keyAlias: 'debugKey',
+          keyPassword: '0000001B2B81B05EBED470FEDD97B55C9D02A7588F1264204FF3F3C3F9B7C3927653E0E439994F52F23438',
+          profile: 'C:\\Users\\ding_chengjie\\.ohos\\config\\default_harmony_GQbsmNYum8r02o61wT3NEzf9jVZdO_unUHKcXeXGa6U=.p7b',
+          signAlg: 'SHA256withECDSA',
+          storeFile: 'C:\\Users\\ding_chengjie\\.ohos\\config\\default_harmony_GQbsmNYum8r02o61wT3NEzf9jVZdO_unUHKcXeXGa6U=.p12',
+        },
+      },
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+      targets: [
+        {
+          name: 'default',
+          applyToProducts: [
+            'default',
+          ],
+        },
+      ],
+    },
+  ],
+}
