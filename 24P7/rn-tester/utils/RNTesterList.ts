@@ -18,8 +18,8 @@ const Components: Array<RNTesterModuleInfo> = [
   },
   {
     key: 'react-native-video',
-    category: 'Tools',
-    module: require('../examples/react-native-video/test/index').default,
+    category: 'Basic',
+    module: require('../examples/react-native-video/test/index'),
   },
 ];
 
