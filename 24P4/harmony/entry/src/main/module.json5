@@ -81,6 +81,7 @@
     "abilities": [
       {
         "name": "EntryAbility",
+        "orientation": "auto_rotation",
         "description": "$string:EntryAbility_desc",
         "icon": "$media:icon",
         "label": "$string:EntryAbility_label",

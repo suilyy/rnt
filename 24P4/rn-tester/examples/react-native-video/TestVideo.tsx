@@ -5,6 +5,8 @@ import type {
     VideoComponentType,
 } from "react-native-video/src/fabric/VideoNativeComponent";
 import RNCVideo from 'react-native-video'
+import VideoFullScreen from "./demo/videoFullScreen";
+
 const fontSpecs: TSFontSpecs = {
     fontFamily: undefined,
     fontSize: 20,
@@ -206,7 +208,7 @@ export function TextVideo(): JSX.Element {
                             expect(state).to.be.true;
                         }}
                     />
-
+                    <VideoFullScreen/>
                 </TestSuite>
             </ScrollView>
         </Tester>

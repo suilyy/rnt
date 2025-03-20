@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import { Image, View, Button, StyleSheet } from 'react-native';
-import Video from '@react-native-oh-tpl/react-native-video';
+import { Image, View, Button, StyleSheet, ScrollView } from 'react-native';
+import Video from 'react-native-video';
+import { Tester } from '@rnoh/testerino';
 
 const App = () => {
   const videoPlayer = useRef(null);
@@ -21,35 +22,39 @@ const App = () => {
     }
   };
 
-  
+
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={{
-          uri: 'https://res.vmallres.com/uomcdn/CN/cms/202502/6a8bb4ea489d48f8878a8a78664a91f1.jpg',
-        }} // 替换为你的图片URL
-        style={styles.image}
-        onLoad={() => console.log('Image loaded!')} // 图片加载完成时触发
-      />
-      
-      {/* 视频组件 */}
-      <Video
-        ref={videoPlayer}
-        source={{
-          uri: 'https://res.vmallres.com//uomcdn/CN/cms/202210/C75C7E20060F3E909F2998E13C3ABC03.mp4',
-        }} // 视频链接
-        style={styles.backgroundVideo}
-        resizeMode="contain"
-        controls={true}
-        paused={true}
-        onFullscreenPlayerDidDismiss={handleExitFullscreen}
-      />
+      <ScrollView>
+        <TestCase itShould='test Video onFullscreenPlayerDidDismiss videoPlayer '>
+          <View style={styles.container}>
+            <Image
+              source={{
+                uri: 'https://res.vmallres.com/uomcdn/CN/cms/202502/6a8bb4ea489d48f8878a8a78664a91f1.jpg',
+              }} // 替换为你的图片URL
+              style={styles.image}
+              onLoad={() => console.log('Image loaded!')} // 图片加载完成时触发
+            />
 
-      {/* 全屏按钮 */}
-      <Button title="Go Fullscreen" onPress={handleFullscreen} />
-      
-    </View>
+            {/* 视频组件 */}
+            <Video
+              ref={videoPlayer}
+              source={{
+                uri: 'https://res.vmallres.com//uomcdn/CN/cms/202210/C75C7E20060F3E909F2998E13C3ABC03.mp4',
+              }} // 视频链接
+              style={styles.backgroundVideo}
+              resizeMode="contain"
+              controls={true}
+              paused={true}
+              onFullscreenPlayerDidDismiss={handleExitFullscreen}
+            />
+
+            {/* 全屏按钮 */}
+            <Button title="Go Fullscreen" onPress={handleFullscreen} />
+
+          </View>
+        </TestCase>
+      </ScrollView>
   );
 };
 
