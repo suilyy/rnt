@@ -16,6 +16,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Tools',
     module: require('../examples/react-native-wechat-lib/App').default,
   },
+  {
+    key: 'react-native-video',
+    category: 'Tools',
+    module: require('../examples/react-native-video/test/index').default,
+  },
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

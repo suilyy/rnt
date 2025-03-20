@@ -22,7 +22,8 @@
     "react-native-qrcode-svg": "^6.2.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
 	"@react-native-ohos/react-native-wechat-lib": "3.0.6-rc.2",
-	"@react-native-oh-tpl/react-native-image-picker": "^7.0.3-0.1.6"
+	"@react-native-oh-tpl/react-native-image-picker": "^7.0.3-0.1.6",
+    "@react-native-oh-tpl/react-native-video": "^5.2.1-0.2.33"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

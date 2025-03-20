@@ -12,17 +12,25 @@ import {
 } from '@rnoh/react-native-openharmony';
 import font from '@ohos.font';
 import { createRNPackages } from '../RNPackagesFactory';
+import { RNCVideo, RNC_VIDEO_TYPE } from "@react-native-oh-tpl/react-native-video"
 
 const arkTsComponentNames: Array<string> = [
   "SampleView",
   "GeneratedSampleView",
-  "PropsDisplayer"
+  "PropsDisplayer",
+  RNC_VIDEO_TYPE
 ];
 
 @Builder
 export function buildCustomRNComponent(ctx: ComponentBuilderContext) {
   // There seems to be a problem with the placement of ArkTS components in mixed mode. Nested Stack temporarily avoided.
   Stack() {
+    if (ctx.componentName === RNC_VIDEO_TYPE) {
+         RNCVideo({
+             ctx: ctx.rnComponentContext,
+             tag: ctx.tag
+             })
+         }
   }
   .position({ x: 0, y: 0 })
 
