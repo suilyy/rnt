@@ -16,6 +16,7 @@ import BarChartPropsTooltip from './BarChartPropsTooltip';
 import BarChartStackProps from './BarChartStackProps';
 import BarChartAxesProps from './BarChartAxesProps';
 import BarChartPointerConfigProps from './BarChartPointerConfigProps';
+import BarChartTest from './BarChartTest';
 
 import LineChartDataItem from './LineChartDataItem';
 import LineChartProps from './LineChartProps';
@@ -26,6 +27,7 @@ import LineChartFocusProps from './LineChartFocusProps';
 import LineChartAreaChartProps from './LineChartAreaChartProps';
 import LineChartPointerConfigProps from './LineChartPointerConfigProps';
 import LineChartFunctionProps from './LineChartFunctionProps';
+import LineChartTest from './LineChartTest';
 
 import PieChartDataProps from './PieChartDataProps';
 import PieChartProps from './PieChartProps';
@@ -38,6 +40,7 @@ import PopulationPyramid from "./PopulationPyramid";
 import PopulationPyramidYAxis from './PopulationPyramidYAxis';
 import PopulationPyramidXAxis from './PopulationPyramidXAxis';
 import PopulationPyramidBarLabel from './PopulationPyramidBarLabel';
+import PopulationPyramidTest from './PopulationPyramidTest';
 
 export default {
   A_BarChartExample,
@@ -58,7 +61,8 @@ export default {
   BarChartStackProps,
   BarChartAxesProps,
   BarChartPointerConfigProps,
-  
+  BarChartTest,
+
   LineChartDataItem,
   LineChartProps,
   LineChartPropsScrollToEnd,
@@ -68,6 +72,7 @@ export default {
   LineChartAreaChartProps,
   LineChartPointerConfigProps,
   LineChartFunctionProps,
+  LineChartTest,
 
   PieChartDataProps,
   PieChartProps,
@@ -78,5 +83,6 @@ export default {
   PopulationPyramid,
   PopulationPyramidYAxis,
   PopulationPyramidXAxis,
-  PopulationPyramidBarLabel
+  PopulationPyramidBarLabel,
+  PopulationPyramidTest
 }
