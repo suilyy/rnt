@@ -30,6 +30,7 @@
 #include "ExceptionHandlerPackage.h"
 #include "GestureHandlerPackage.h"
 #include "MapsPackage.h"
+#include "DocumentPickerPackage.h"
 using namespace rnoh;
 
 std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Context ctx) {
@@ -65,5 +66,6 @@ std::vector<std::shared_ptr<Package>> PackageProvider::getPackages(Package::Cont
         std::make_shared<ExceptionHandlerPackage>(ctx),
         std::make_shared<GestureHandlerPackage>(ctx),
         std::make_shared<MapsPackage>(ctx),
+        std::make_shared<DocumentPickerPackage>(ctx)
     };
 }

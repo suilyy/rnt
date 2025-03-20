@@ -1,6 +1,5 @@
 import type {RNPackageContext, RNPackage} from '@rnoh/react-native-openharmony/ts';
 import { SvgPackage } from '@react-native-oh-tpl/react-native-svg/ts';
-import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
 import {RNPerformancePackage} from '@react-native-oh-tpl/react-native-performance/ts'
 import { RNRestartPackage } from '@react-native-oh-tpl/react-native-restart/ts';
 import {SafeAreaViewPackage} from '@react-native-oh-tpl/react-native-safe-area-context/ts';
@@ -37,7 +36,6 @@ import { RNAppleAuthPackage } from '@react-native-oh-tpl/react-native-apple-auth
 import { RNReactLocalizationPackage } from '@react-native-oh-tpl/react-native-localization';
 import {RNMMKVStoragePackage} from '@react-native-oh-tpl/react-native-mmkv-storage';
 import { RNTextInputMaskPackage } from '@react-native-oh-tpl/react-native-text-input-mask/ts'
-import {RNPrintPackage} from '@react-native-oh-tpl/react-native-print/ts';
 import {RNKeyboardControllerPackage,RNStatusBarManagerCompatPackage} from  "@react-native-oh-tpl/react-native-keyboard-controller/ts";
 import {RNSkiaPackage} from '@react-native-oh-tpl/react-native-skia/ts';
 import { UiLibPackage } from '@react-native-oh-tpl/react-native-ui-lib/ts';
@@ -52,7 +50,6 @@ import { RNOrientationLockerPackage } from '@react-native-oh-tpl/react-native-or
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [
     new SvgPackage(ctx),
-    new DocumentPickerPackage(ctx),
     new RNPerformancePackage(ctx),
     new RNRestartPackage(ctx),
     new SafeAreaViewPackage(ctx),
@@ -89,7 +86,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
 	new RNReactLocalizationPackage(ctx),
 	new RNMMKVStoragePackage(ctx),
 	new RNTextInputMaskPackage(ctx),
-	new RNPrintPackage(ctx),
 	new RNKeyboardControllerPackage(ctx),
     new RNStatusBarManagerCompatPackage(ctx),
 	new RNSkiaPackage(ctx),

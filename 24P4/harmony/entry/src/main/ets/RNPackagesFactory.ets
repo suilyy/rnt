@@ -28,6 +28,7 @@ import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture
 import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
 import { RNCCheckBoxPackage } from '@react-native-ohos/checkbox/ts';
 import {MapsPackage} from '@react-native-oh-tpl/react-native-maps/ts';
+import { DocumentPickerPackage } from '@react-native-ohos/react-native-document-picker/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -59,5 +60,6 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNDatePickerPackage(ctx),
     new RNCCheckBoxPackage(ctx),
     new MapsPackage(ctx),
+    new DocumentPickerPackage(ctx)
   ];
 }

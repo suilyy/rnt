@@ -466,11 +466,6 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-element-dropdown/test/App').default,
   },
   {
-    key: 'ReactNativePrintExample',
-    category: 'Basic',
-    module: require('../examples/react-native-print/PrintTest')
-  },
-  {
     key: 'KeyboardControllerExample',
     category: 'UI',
     module: require('../examples/react-native-keyboard-controller/index'),

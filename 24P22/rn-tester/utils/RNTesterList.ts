@@ -41,6 +41,11 @@ const Components: Array<RNTesterModuleInfo> = [
     category: 'Basic',
     module: require('../examples/react-native-document-picker/documentPicker'),
   },
+  {
+    key: 'ReactNativePrintExample',
+    category: 'Basic',
+    module: require('../examples/react-native-print/PrintTest'),
+  }
 ];
 
 const APIs: Array<RNTesterModuleInfo> = [

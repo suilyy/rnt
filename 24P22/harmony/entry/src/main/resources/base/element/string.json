@@ -11,6 +11,14 @@
     {
       "name": "EntryAbility_label",
       "value": "Tester"
+    },
+    {
+      "name": "print_reason",
+      "value": "使用打印机"
+    },
+    {
+      "name": "internet_reason",
+      "value": "网络请求数据"
     }
   ]
 }

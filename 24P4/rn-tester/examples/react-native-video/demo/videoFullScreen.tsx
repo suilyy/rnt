@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Image, View, Button, StyleSheet, ScrollView } from 'react-native';
 import Video from 'react-native-video';
-import { Tester } from '@rnoh/testerino';
+import { TestCase } from '@rnoh/testerino';
 
 const App = () => {
   const videoPlayer = useRef(null);

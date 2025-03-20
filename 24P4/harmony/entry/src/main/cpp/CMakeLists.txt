@@ -40,6 +40,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-safe-area-cont
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-exception-handler/src/main/cpp" ./exception-handler)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-gesture-handler/src/main/cpp" ./gesture-handler)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-maps/src/main/cpp" ./maps)
+add_subdirectory("${OH_MODULES}/@react-native-ohos/react-native-document-picker/src/main/cpp" ./document_picker)
 # RNOH_END: manual_package_linking_1
 
 
@@ -84,4 +85,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_progress_bar_android)
 target_link_libraries(rnoh_app PUBLIC rnoh_exception_handler)
 target_link_libraries(rnoh_app PUBLIC rnoh_gesture_handler)
 target_link_libraries(rnoh_app PUBLIC rnoh_maps)
+target_link_libraries(rnoh_app PUBLIC rnoh_document_picker)
 # RNOH_END: link_packages
