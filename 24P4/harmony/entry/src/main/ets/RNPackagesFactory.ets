@@ -10,7 +10,7 @@ import { PermissionsPackage } from '@react-native-oh-tpl/react-native-permission
 import { CookiesPackage } from '@react-native-oh-tpl/cookies/ts';
 import { WebViewPackage } from '@react-native-oh-tpl/react-native-webview/ts';
 import { RNCVideoPackage } from '@react-native-oh-tpl/react-native-video/ts';
-import { DocumentPickerPackage } from '@react-native-oh-tpl/react-native-document-picker/ts';
+import { DocumentPickerPackage } from '@react-native-ohos/react-native-document-picker/ts';
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
 import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
@@ -28,7 +28,6 @@ import { GestureHandlerPackage } from '@react-native-oh-tpl/react-native-gesture
 import { RNDatePickerPackage } from '@react-native-oh-tpl/react-native-date-picker/ts';
 import { RNCCheckBoxPackage } from '@react-native-ohos/checkbox/ts';
 import {MapsPackage} from '@react-native-oh-tpl/react-native-maps/ts';
-import { DocumentPickerPackage } from '@react-native-ohos/react-native-document-picker/ts';
 
 export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
   return [new SvgPackage(ctx),
@@ -60,6 +59,5 @@ export function createRNPackages(ctx: RNPackageContext): RNPackage[] {
     new RNDatePickerPackage(ctx),
     new RNCCheckBoxPackage(ctx),
     new MapsPackage(ctx),
-    new DocumentPickerPackage(ctx)
   ];
 }
