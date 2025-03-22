@@ -130,6 +130,9 @@ export default function () {
     },
   ]
   const [onPressText, setOnPressText] = useState(null)
+  const [onLongPressText, setOnLongPressText] = useState(null)
+  const [onPressOutText, setOnPressOutText] = useState(null)
+
   return (
     <Tester>
       <ScrollView>
@@ -160,33 +163,33 @@ export default function () {
           }}></BarChart>
         </TestCase>
         <TestCase itShould="data.onLongPress" tags={['C_API']}>
-          <Text>请点击条形图子项触发onLongPress：{onPressText} </Text>
+          <Text>请点击条形图子项触发onLongPress：{onLongPressText} </Text>
           <BarChart {...{
             data: [
               {
                 value: 50, label: 50, onLongPress: () => {
-                  setOnPressText('onLongPress被触发，value：50');
+                  setOnLongPressText('onLongPress被触发，value：50');
                 }
               },
               {
                 value: 60, label: 60, onLongPress: () => {
-                  setOnPressText('onLongPress被触发，value：60');
+                  setOnLongPressText('onLongPress被触发，value：60');
                 }
               }]
           }}></BarChart>
         </TestCase>
         <TestCase itShould="data.onPressOut" tags={['C_API']}>
-          <Text>请点击条形图子项触发onPressOut：{onPressText} </Text>
+          <Text>请点击条形图子项触发onPressOut：{onPressOutText} </Text>
           <BarChart {...{
             data: [
               {
                 value: 50, label: 50, onPressOut: () => {
-                  setOnPressText('onPressOut被触发，value：50');
+                  setOnPressOutText('onPressOut被触发，value：50');
                 }
               },
               {
                 value: 60, label: 60, onPressOut: () => {
-                  setOnPressText('onPressOut被触发，value：60');
+                  setOnPressOutText('onPressOut被触发，value：60');
                 }
               }]
           }}></BarChart>

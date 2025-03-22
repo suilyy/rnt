@@ -75,7 +75,7 @@ export default function () {
           pointerConfigProps.map(item => {
             return (
               <TestCase key={JSON.stringify(item)} itShould={JSON.stringify(item)} tags={['C_API']}>
-                <Text>{item?.pointerConfig?.activatePointersOnLongPress ? '长按并滑动' : '请点击'}条形图，观察效果</Text>
+                <Text>请点击并滑动条形图数据点，观察效果</Text>
                 <LineChart scrollRef={scrollref} data={lineData} {...item}></LineChart>
               </TestCase>
             )
@@ -86,7 +86,7 @@ export default function () {
               {data : [{ value: 50 }, { value: 80 }, { value: 90 }, { value: 70 },] },
               {data : [{ value: 10 }, { value: 20 }, { value: 30 }, { value: 40 }] }
             ]}`} tags={['C_API']}>
-          <Text>请点击第一个顶点上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动第一个顶点上显示的数据点，观察效果</Text>
           <LineChart pointerConfig= { {pointerColorsForDataSet: ['green', 'yellow', 'blue', 'blue', 'black'],persistPointer : true}}
             dataSet = {[
               {data : [{ value: 50 }, { value: 80 }, { value: 90 }, { value: 70 },] },
@@ -94,22 +94,22 @@ export default function () {
             ]}
           ></LineChart>
         </TestCase>
-        
+
 
         <TestCase itShould={`data={${JSON.stringify(data1)}} secondaryData={${JSON.stringify(data2)}} pointerConfig= { {secondaryPointerColor: 'gray'} }`} tags={['C_API']}>
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={data1} secondaryData={data2} pointerConfig= { {secondaryPointerColor: 'gray',persistPointer : true} } ></LineChart>
         </TestCase>
         <TestCase itShould={`data={${JSON.stringify(data1)}} secondaryData={${JSON.stringify(data2)}} pointerConfig= { {secondaryPointerColor: 'green'} }`} tags={['C_API']}>
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={data1} secondaryData={data2} pointerConfig= { {secondaryPointerColor: 'green',persistPointer: true} } ></LineChart>
         </TestCase>
         <TestCase itShould={`data={${JSON.stringify(data1)}} secondaryData={${JSON.stringify(data2)}} pointerConfig= { {hideSecondaryPointer: true} }`} tags={['C_API']}>
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={data1} secondaryData={data2} pointerConfig= { {hideSecondaryPointer: true} } ></LineChart>
         </TestCase>
         <TestCase itShould={`data={${JSON.stringify(data1)}} secondaryData={${JSON.stringify(data2)}} pointerConfig= { {hideSecondaryPointer: false} }`} tags={['C_API']}>
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={data1} secondaryData={data2} pointerConfig= { {hideSecondaryPointer: false} } ></LineChart>
         </TestCase>
 
@@ -122,7 +122,7 @@ export default function () {
                 }
               }
             }">
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={lineData} {...{
             pointerConfig: {
               pointerComponent: (items) => {
@@ -148,7 +148,7 @@ export default function () {
                 }
               }
             }">
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
           <LineChart scrollRef={scrollref} data={lineData} {...{
             pointerConfig: {
               shiftPointerLabelX: 10,
@@ -186,7 +186,7 @@ export default function () {
                 }
               }
             }">
-          <Text>请点击图形上显示的数据点，观察效果</Text>
+          <Text>请点击并滑动图形上显示的数据点，观察效果</Text>
 
           <LineChart scrollRef={scrollref} data={lineData} {...{
             pointerConfig: {

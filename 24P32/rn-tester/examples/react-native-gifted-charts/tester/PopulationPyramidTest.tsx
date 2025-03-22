@@ -46,6 +46,8 @@ const PopulationPyramidTest = () => {
                             midAxisLeftColor={'blue'}
                             midAxisRightColor={'red'}
                             xAxisRoundToDigits={2}
+                            rightBarBorderWidth={5}
+                            rightBarBorderColor={"blue"}
                         />
                     </View>
                 </TestCase>
