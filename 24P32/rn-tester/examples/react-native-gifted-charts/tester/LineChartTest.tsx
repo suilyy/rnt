@@ -4,6 +4,7 @@ import { LineChart } from 'react-native-gifted-charts';
 import { TestCase, Tester } from "@rnoh/testerino";
 
 const SegmentedDataSetChart = () => {
+  const [fIndex, setFIndex] = useState(2);
   const [datastr, setDatastr] = useState("20000")
   const data = [
     { value: 50 },
@@ -218,7 +219,7 @@ const SegmentedDataSetChart = () => {
     <Tester style={{ paddingBottom: 30 }}>
       <ScrollView>
         <View style={{ borderWidth: 1 }}>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor1
                 endFillColor1
                 startOpacity1
@@ -253,7 +254,7 @@ const SegmentedDataSetChart = () => {
             </View>
           </TestCase>
 
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor2
                 endFillColor2
                 startOpacity2
@@ -285,7 +286,7 @@ const SegmentedDataSetChart = () => {
             </View>
           </TestCase>
 
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor3
                 endFillColor3
                 startOpacity3
@@ -316,7 +317,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor4
                 endFillColor4
                 startOpacity4
@@ -342,7 +343,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor5
                 endFillColor4
                 startOpacity4
@@ -368,7 +369,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor3
                 endFillColor3
                 startOpacity3
@@ -399,7 +400,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 startFillColor4
                 endFillColor4
                 startOpacity4
@@ -425,7 +426,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 verticalLinesUptoDataPoint = {false}
                 '>
             <View style={{ borderWidth: 1 }}>
@@ -445,7 +446,7 @@ const SegmentedDataSetChart = () => {
               />
             </View>
           </TestCase>
-          <TestCase itShould='test LineChart 
+          <TestCase itShould='test LineChart
                 verticalLinesUptoDataPoint
                 '>
             <View style={{ borderWidth: 1 }}>
@@ -476,7 +477,7 @@ const SegmentedDataSetChart = () => {
           })
         }
 
-        <TestCase itShould='test LineChart 
+        <TestCase itShould='test LineChart
                 scrollref
                 '>
           <View style={{ borderWidth: 1 }}>
@@ -491,7 +492,7 @@ const SegmentedDataSetChart = () => {
             />
           </View>
         </TestCase>
-        <TestCase itShould='test LineChart 
+        <TestCase itShould='test LineChart
                 focusEnabled
                 unFocusOnPressOut
                 '>
@@ -524,7 +525,7 @@ const SegmentedDataSetChart = () => {
           </View>
         </TestCase>
 
-        <TestCase itShould='test LineChart 
+        <TestCase itShould='test LineChart
                 scrollEventThrottle
                 '>
           <View style={{ borderWidth: 1 }}>
@@ -537,6 +538,24 @@ const SegmentedDataSetChart = () => {
               onScroll={({ nativeEvent }) => {
                 setDatastr(nativeEvent.contentOffset.x);
               }}
+            />
+          </View>
+        </TestCase>
+
+        <TestCase itShould='test LineChart
+                focusedDataPointColor
+                '>
+          <View style={{ borderWidth: 1 }}>
+            <LineChart
+              data={data}
+              width={300}
+              height={200}
+              focusedDataPointColor={'red'}
+              focusedDataPointRadius={20}
+              focusEnabled
+              unFocusOnPressOut ={false}
+              focusedDataPointIndex={fIndex}
+              onFocus={(item, index) => setFIndex(index)}
             />
           </View>
         </TestCase>
