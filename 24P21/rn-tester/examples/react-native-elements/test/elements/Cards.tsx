@@ -233,13 +233,13 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 containerStyle={{ width: 100, height: 100 }}
                 resizeMode="cover"
                 source={{
-                  uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
+                  uri: 'https://randomuser.me/api/portraits/men/4.jpg',
                 }}></Card.Image>
               <Card.Image
                 style={{ marginTop: 20 }}
                 resizeMode="contain"
                 source={{
-                  uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
+                  uri: 'https://randomuser.me/api/portraits/men/5.jpg',
                 }}></Card.Image>
             </Card>
           </TestCase>
@@ -254,7 +254,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 resizeMode="cover"
                 source={{
                   uri: onlongPress
-                    ? 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                    ? 'https://randomuser.me/api/portraits/men/5.jpg'
                     : 'https://randomuser.me/api/portraits/men/4.jpg',
                 }}></Card.Image>
             </Card>
@@ -270,7 +270,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 resizeMode="cover"
                 source={{
                   uri: onPress
-                    ? 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                    ? 'https://randomuser.me/api/portraits/men/5.jpg'
                     : 'https://randomuser.me/api/portraits/men/4.jpg',
                 }}></Card.Image>
             </Card>
@@ -286,7 +286,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 resizeMode="cover"
                 source={{
                   uri: onPressIn
-                    ? 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                    ? 'https://randomuser.me/api/portraits/men/5.jpg'
                     : 'https://randomuser.me/api/portraits/men/4.jpg',
                 }}></Card.Image>
             </Card>
@@ -302,7 +302,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 resizeMode="cover"
                 source={{
                   uri: onPressOut
-                    ? 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                    ? 'https://randomuser.me/api/portraits/men/5.jpg'
                     : 'https://randomuser.me/api/portraits/men/4.jpg',
                 }}></Card.Image>
             </Card>
@@ -316,7 +316,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 containerStyle={{ width: 100, height: 100 }}
                 resizeMode="cover"
                 source={{
-                  uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                  uri: 'https://randomuser.me/api/portraits/men/5.jpg'
                 }}></Card.Image>
             </Card>
           </TestCase>
@@ -331,7 +331,7 @@ const Cards: React.FunctionComponent<CardsComponentsProps> = () => {
                 containerStyle={{ width: 100, height: 100 }}
                 resizeMode="cover"
                 source={{
-                  uri: 'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg'
+                  uri: 'https://randomuser.me/api/portraits/men/5.jpg'
                 }}></Card.Image>
             </Card>
           </TestCase>
