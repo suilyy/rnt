@@ -170,7 +170,7 @@ function BottomNavigationDemo() {
         onIndexChange: _changeIndex('BottomNavigation7'),
         getBadge: (props: { route: BaseRoute }) => {
           if (props.route.key === 'albums') {
-            return 99;
+            return 999;
           }
           return props.route.badge;
         }
