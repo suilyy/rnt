@@ -18,57 +18,42 @@ import {
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
 import RNCalendarEvents from 'react-native-calendar-events';
 
-const sourceStruct = {
-  /** The Account name */
-  name: "testName",
-  /** The Account type */
-  type: "testTyoe",
-}
 
 //saveEvent
 const calendarOptions = {
+  name: 'test1',
   title: 'test1',
-  type: 'local',
-  displayName: "testSaveCalendar"
+  color: "#aabbcc"
 };
 
-//saveEvent
-const location = {
-  location: "nanjin",
-  longitude: 118,
-  latitude: 31,
-}
-const eventService = {
-  type: 'Meeting',
-  uri: "",
-  description: "testEventService",
-}
-const attendees = {
-  name: "testAttendees",
-  email: "testEmail",
-}
-const recurrenceRuleHarmony = {
-  recurrenceFrequency: 2,
-  expire: 0,
-}
-const eventDetails = {
-  id: 1,
-  type: 0,
-  title: 'testEvent',
-  location: location,
-  startTime: new Date().getTime() + 60 * 60 * 1000 * 3,
-  endTime: new Date().getTime() + 60 * 60 * 1000 * 10,
-  isAllDay: false,
-  attendee: [attendees],
-  timeZone: "beijing",
-  reminderTime: [new Date().getTime()],
-  recurrenceRule: recurrenceRuleHarmony,
-  description: "test",
-  service: eventService,
-};
+
 //fetchAllEvent
-const fetchAllEventStartTime: string = (new Date().getTime() + 60 * 60 * 1000).toString()
-const fetchAllEventEndTime: string = (new Date().getTime() + 60 * 60 * 1000 * 15).toString()
+const fetchAllEventStartTime: string = "2025-09-14T08:30:45.123Z"
+const fetchAllEventEndTime: string = "2025-09-17T08:30:45.123Z"
+
+//
+const recurrenceRuleSourceLibrary = {
+  frequency: "monthly",
+  endDate: (new Date().getTime() + 60 * 60 * 1000).toString(),
+  occurrence: 1,
+  interval: 1,
+}
+//save event
+const calendarEventWritable = {
+  id: "123456",
+  recurrenceRule: recurrenceRuleSourceLibrary,
+  startDate: "2025-09-15T08:30:45.123Z",
+  endDate: "",
+  calendarId: "1",
+  allDay: false,
+  recurrence: "daily",
+  location: "ningbo",
+  isDetached: true,
+  url: "",
+  notes: "notes",
+  description: "description",
+  timeZone: "timeZone",
+}
 function CalendarDemo() {
   return (
     <>
@@ -90,10 +75,10 @@ function CalendarDemo() {
                   title="Request auth"
                   onPress={() => {
                     RNCalendarEvents.requestPermissions().then(
-                      (result) => {
+                      (result:string) => {
                         Alert.alert('Auth requested', result);
                       },
-                      (result) => {
+                      (result:string) => {
                         console.error(result);
                       },
                     );
@@ -104,10 +89,10 @@ function CalendarDemo() {
                   title="Check auth"
                   onPress={() => {
                     RNCalendarEvents.checkPermissions().then(
-                      (result) => {
+                      (result:string) => {
                         Alert.alert('Auth check', result);
                       },
-                      (result) => {
+                      (result:string) => {
                         console.error(result);
                       },
                     );
@@ -216,7 +201,7 @@ function CalendarDemo() {
                 <Button
                   title="saveEvent"
                   onPress={() => {
-                    RNCalendarEvents.saveEvent("test23", eventDetails).then(
+                    RNCalendarEvents.saveEvent("test23", calendarEventWritable).then(
                       (result) => {
                         Alert.alert('save event', result + "");
                       },
@@ -295,21 +280,4 @@ const styles = StyleSheet.create({
   },
 });
 
-//export default CalendarDemo;
-
-export default {
-  displayName: "CalendarEventsDemo",
-  framework: "React",
-  category: "UI",
-  title: "CalendarEventsDemo",
-  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-calendar-events.md",
-  description: "在应用中读取、创建、更新和删除日历事件，适用于需要日历功能的应用场景",
-  examples: [
-    {
-      title: "CalendarEvents",
-      render: function (): any {
-        return <CalendarDemo />;
-      },
-    },
-  ],
-};
+export default CalendarDemo;
