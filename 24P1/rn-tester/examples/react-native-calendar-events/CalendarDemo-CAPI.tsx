@@ -280,4 +280,21 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CalendarDemo;
+// export default CalendarDemo;
+
+export default {
+  displayName: "CalendarEventsDemo",
+  framework: "React",
+  category: "UI",
+  title: "CalendarEventsDemo",
+  documentationURL: "https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-calendar-events.md",
+  description: "在应用中读取、创建、更新和删除日历事件，适用于需要日历功能的应用场景",
+  examples: [
+    {
+      title: "CalendarEvents",
+      render: function (): any {
+        return <CalendarDemo />;
+      },
+    },
+  ],
+};
