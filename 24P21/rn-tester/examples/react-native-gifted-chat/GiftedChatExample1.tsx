@@ -6,7 +6,7 @@ import {
 } from 'react-native-gifted-chat'
 import { Tester, TestSuite, TestCase } from '@rnoh/testerino';
 import Lightbox from 'react-native-lightbox-v2';
-import uuid from 'uuid'
+import { v4 } from 'uuid'
 
 
 
@@ -108,9 +108,9 @@ export function GiftedChatExample1() {
 
                     <TestCase itShould='messageIdGenerator 点击生成uuid'>
                         <View style={{ height: 500, flex: 1 }}>
-                            <Button title='点击生成uuid' onPress={() => { Alert.alert(uuid.v4()) }} />
+                            <Button title='点击生成uuid' onPress={() => { Alert.alert(v4()) }} />
                             <GiftedChat {...prop}
-                                messageIdGenerator={() => uuid.v4()}
+                                messageIdGenerator={() => v4()}
                             />
                         </View>
                     </TestCase>
