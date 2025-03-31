@@ -46,11 +46,12 @@
     "@react-native-oh-tpl/react-native-color-matrix-image-filters": "^6.0.5-0.0.3",
     "@react-native-oh-tpl/react-native-simple-toast": "^3.3.1-0.0.1",
     "@react-native-oh-tpl/react-native-device-info": "^11.1.0-0.0.3",
-    "@react-native-oh-tpl/react-native-amap3d": "^3.2.4-0.0.4",
+    "@react-native-oh-tpl/react-native-amap3d": "file:rnoh_package/react-native-oh-tpl-react-native-amap3d-3.2.4-0.1.0.tgz",
     "@react-native-oh-tpl/react-native-ble-plx": "^3.2.0-0.0.3",
     "@react-native-oh-tpl/react-native-baidu-map": "^1.0.37-0.0.4",
     "@react-native-oh-tpl/react-native-splash-screen": "^3.3.0-0.0.2",
     "@react-native-oh-tpl/react-native-reanimated": "^3.6.3",
+	"@react-native-oh-tpl/react-native-svg":"^15.0.0-0.7.1"
     "react-native-storage": "^1.0.1",
     "@react-native-oh-tpl/async-storage": "^1.21.0-0.2.2",
     "apsl-react-native-button": "^3.1.1",

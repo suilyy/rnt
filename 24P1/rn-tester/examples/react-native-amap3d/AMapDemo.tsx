@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, Text, View, StyleSheet, Alert } from 'react-native';
-import { MapView, Circle, Polygon, Polyline, Marker, LatLng,  voidEvent ,MapPoi} from 'react-native-amap3d';
+import { MapView, Circle, Polygon, Polyline, Marker, LatLng, voidEvent ,MapPoi, CameraPosition} from 'react-native-amap3d';
 
 import type * as ReactNative from "react-native";
 
@@ -90,7 +90,16 @@ function AMapDemo() {
         onPressPoi={(event: ReactNative.NativeSyntheticEvent<MapPoi>) => {
           Alert.alert(event.nativeEvent.position?.latitude + "+" + event.nativeEvent.position?.longitude)
         }}
+        onLoad={(event: ReactNative.NativeSyntheticEvent<voidEvent>) => {
+          console.log("onLoad successful")
+        }}
 
+        onCameraMove={(event: ReactNative.NativeSyntheticEvent<CameraPosition>) => {
+          console.log("onCameraMove successful"+event.nativeEvent.targetValue?.longitude + "+" + event.nativeEvent.targetValue?.latitude)
+        }}
+        onCameraIdle={(event: ReactNative.NativeSyntheticEvent<CameraPosition>) => {
+          console.log("onCameraIdle successful" + event.nativeEvent.targetValue?.longitude + "+" + event.nativeEvent.targetValue?.latitude)
+        }}
       >
         <Circle
           strokeWidth={5}

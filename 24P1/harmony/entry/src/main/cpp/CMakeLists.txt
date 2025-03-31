@@ -33,6 +33,7 @@ add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-baidu-map/src/
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-amap3d/src/main/cpp" ./rn_amap3d)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/async-storage/src/main/cpp" ./async-storage)
 add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-reanimated/src/main/cpp" ./reanimated)
+add_subdirectory("${OH_MODULES}/@react-native-oh-tpl/react-native-svg/src/main/cpp" ./svg)
 # RNOH_END: manual_package_linking_1
 
 file(GLOB GENERATED_CPP_FILES "./generated/*.cpp")
@@ -67,4 +68,5 @@ target_link_libraries(rnoh_app PUBLIC rnoh_amap3d)
 target_link_libraries(rnoh_app PUBLIC rnoh_baidu_map)
 target_link_libraries(rnoh_app PUBLIC rnoh_async_storage)
 target_link_libraries(rnoh_app PUBLIC rnoh_reanimated)
+target_link_libraries(rnoh_app PUBLIC rnoh_svg)
 # RNOH_END: link_packages
