@@ -55,11 +55,11 @@ import FlatListt from './nativeBaseUiTest/FlatList';
 import HiddenColorMode from './nativeBaseUiTest/HiddenColorMode';
 import {NavigationContainer, Page} from './nativeBaseUiTest/Navigation';
 import {PortalProvider} from '@gorhom/portal';
-import {NativeBaseProvider} from 'native-base';
+// import {NativeBaseProvider} from 'native-base';
 
 const SampleNativeBaseExample = () => {
   return (
-    <NativeBaseProvider>
+    // <NativeBaseProvider>
       <SafeAreaView>
         <NavigationContainer>
           <PortalProvider>
@@ -227,7 +227,7 @@ const SampleNativeBaseExample = () => {
           </PortalProvider>
         </NavigationContainer>
       </SafeAreaView>
-    </NativeBaseProvider>
+    // </NativeBaseProvider>
   );
 };
 

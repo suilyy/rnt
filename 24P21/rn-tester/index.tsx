@@ -16,6 +16,20 @@ import {
 } from './utils/testerStateUtils';
 import * as React from 'react';
 import { BackHandler, StyleSheet, View } from 'react-native';
+import {NativeBaseProvider} from 'native-base';
+import { PaperProvider,MD3LightTheme as DefaultTheme,} from 'react-native-paper';
+
+
+const theme = {
+  ...DefaultTheme,
+  // Specify custom property
+  myOwnProperty: true,
+  // Specify custom property in nested object
+  colors: {
+    ...DefaultTheme.colors,
+    myOwnColor: '#BADA55',
+  },
+};
 
 const RNTesterApp = () => {
   const [state, dispatch] = React.useReducer(RNTesterNavigationReducer, initialNavigationState);
@@ -130,41 +144,45 @@ const RNTesterApp = () => {
 
   const showEmptyBookmark = screen === Screens.BOOKMARKS && examplesList.bookmarks.length === 0;
   return (
-    <RNTesterThemeContext.Provider value={theme}>
-      <RNTTitleBar
-        title={title}
-        theme={theme}
-        onBack={activeModule ? handleBackPress : undefined}
-        documentationURL={activeModule?.documentationURL}
-      />
-      <View
-        style={StyleSheet.compose(styles.container, {
-          backgroundColor: theme.GroupedBackgroundColor,
-        })}>
-        {activeModule != null ? (
-          <RNTesterModuleContainer
-            module={activeModule}
-            example={activeModuleExample}
-            onExampleCardPress={handleModuleExampleCardPress}
+    <PaperProvider theme={theme}>
+      <NativeBaseProvider>
+        <RNTesterThemeContext.Provider value={theme}>
+          <RNTTitleBar
+            title={title}
+            theme={theme}
+            onBack={activeModule ? handleBackPress : undefined}
+            documentationURL={activeModule?.documentationURL}
           />
-        ) : showEmptyBookmark ? (
-          <RNTesterEmptyBookmarksState />
-        ) : (
-          <RNTesterModuleList
-            sections={activeExampleList}
-            toggleBookmark={toggleBookmark}
-            handleModuleCardPress={handleModuleCardPress}
-          />
-        )}
-      </View>
-      <View style={styles.bottomNavbar}>
-        <RNTesterNavBar
-          screen={screen || Screens.COMPONENTS}
-          isExamplePageOpen={!!activeModule}
-          handleNavBarPress={handleNavBarPress}
-        />
-      </View>
-    </RNTesterThemeContext.Provider>
+          <View
+            style={StyleSheet.compose(styles.container, {
+              backgroundColor: theme.GroupedBackgroundColor,
+            })}>
+            {activeModule != null ? (
+              <RNTesterModuleContainer
+                module={activeModule}
+                example={activeModuleExample}
+                onExampleCardPress={handleModuleExampleCardPress}
+              />
+            ) : showEmptyBookmark ? (
+              <RNTesterEmptyBookmarksState />
+            ) : (
+              <RNTesterModuleList
+                sections={activeExampleList}
+                toggleBookmark={toggleBookmark}
+                handleModuleCardPress={handleModuleCardPress}
+              />
+            )}
+          </View>
+          <View style={styles.bottomNavbar}>
+            <RNTesterNavBar
+              screen={screen || Screens.COMPONENTS}
+              isExamplePageOpen={!!activeModule}
+              handleNavBarPress={handleNavBarPress}
+            />
+          </View>
+        </RNTesterThemeContext.Provider>
+      </NativeBaseProvider>
+    </PaperProvider>
   );
 };
 
