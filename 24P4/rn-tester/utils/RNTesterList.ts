@@ -245,6 +245,11 @@ const Components: Array<RNTesterModuleInfo> = [
     module: require('../examples/react-native-community-push-notification-ios/test/PushNotificationIos'),
   },
   {
+    key: 'react-native-community-push-notification-ios',
+    category: 'Basic',
+    module: require('../examples/react-native-community-push-notification-ios/demo/index'),
+  },
+  {
     key: 'react-native-community-segmented-control',
     category: 'Basic',
     module: require('../examples/react-native-community-segmented-control/SegmentedControl'),
