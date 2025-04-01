@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import AMapDemo from './AMapDemo';
 import AMapDemo2 from './AMapDemoType2';
 import AMapDemo3 from './AMapDemoType3';
 import AMapDemo4 from './AMapDemoType4';
 import AMapDemo5 from './AMapDemoType5';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 class Entrance extends React.Component {
     onPress1 = () => {
