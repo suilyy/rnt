@@ -275,7 +275,7 @@ Scroll: ${scroll}`;
         panDirection={panDirection}
         containerStyle={isRounded ? styles.roundedDialog : styles.dialog}
         visible={showDialog}
-        // onDismiss={this.hideDialog}
+        onDismiss={this.hideDialog}
         renderPannableHeader={renderPannableHeader}
         pannableHeaderProps={this.pannableTitle}
         supportedOrientations={this.supportedOrientations}
