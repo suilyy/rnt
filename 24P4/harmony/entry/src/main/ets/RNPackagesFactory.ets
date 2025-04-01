@@ -14,7 +14,7 @@ import { DocumentPickerPackage } from '@react-native-ohos/react-native-document-
 import { ReanimatedPackage } from '@react-native-oh-tpl/react-native-reanimated/ts';
 import { SoundPackage } from '@react-native-oh-tpl/react-native-sound/ts';
 import { RNTextSizePackage } from '@react-native-oh-tpl/react-native-text-size/ts';
-import { PushNotificationPackage } from '@react-native-oh-tpl/push-notification-ios/ts';
+import { PushNotificationPackage } from '@react-native-ohos/push-notification-ios/ts';
 import { RNCPickerPackage } from '@react-native-oh-tpl/picker/ts';
 import { ViewPagerPackage } from '@react-native-oh-tpl/react-native-pager-view/ts';
 import { RNVideoCachePackage } from '@react-native-oh-tpl/react-native-video-cache/ts';

@@ -43,7 +43,7 @@
     "@react-native-oh-tpl/netinfo": "^11.1.0-0.0.8",
     "@react-native-oh-tpl/picker": "2.6.1-0.2.5",
     "@react-native-oh-tpl/progress-bar-android": "^1.0.4-0.1.1",
-    "@react-native-oh-tpl/push-notification-ios": "file:rnoh_package/react-native-ohos-push-notification-ios-1.11.1-rc.2.tgz",
+    "@react-native-ohos/push-notification-ios": "file:rnoh_package/react-native-ohos-push-notification-ios-1.11.1-rc.2.tgz",
     "@react-native-oh-tpl/react-native-blob-util": "^0.19.6-0.0.13",
     "@react-native-oh-tpl/react-native-date-picker": "5.0.4-0.0.6",
     "@react-native-ohos/react-native-document-picker": "^9.2.1-rc.1",
