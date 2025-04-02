@@ -48,7 +48,7 @@
     "@react-native-oh-tpl/react-native-device-info": "^11.1.0-0.0.3",
     "@react-native-oh-tpl/react-native-amap3d": "file:rnoh_package/react-native-oh-tpl-react-native-amap3d-3.2.4-0.1.0.tgz",
     "@react-native-oh-tpl/react-native-ble-plx": "^3.2.0-0.0.3",
-    "@react-native-oh-tpl/react-native-baidu-map": "^1.0.37-0.0.4",
+    "@react-native-oh-tpl/react-native-baidu-map": "1.0.37-0.0.5-rc.1",
     "@react-native-oh-tpl/react-native-splash-screen": "^3.3.0-0.0.2",
     "@react-native-oh-tpl/react-native-reanimated": "^3.6.3",
 	"@react-native-oh-tpl/react-native-svg":"^15.0.0-0.7.1",
